@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46A4945833400AE862BBB736 /* Pods_MindWeather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */; };
+		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
+		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
+		6EBE37AF26783D1C008BB15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* ViewController.swift */; };
+		6EBE37B226783D1C008BB15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B026783D1C008BB15D /* Main.storyboard */; };
+		6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B326783D28008BB15D /* Assets.xcassets */; };
+		6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6EBE37AE26783D1C008BB15D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EBE37B126783D1C008BB15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EBE37B326783D28008BB15D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6EBE37B626783D28008BB15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6EBE37B826783D28008BB15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindWeather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.release.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EBE37A426783D1C008BB15D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A4945833400AE862BBB736 /* Pods_MindWeather_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		456D6035C3D1BC3621ECB02B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */,
+				C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6EBE379E26783D1C008BB15D = {
+			isa = PBXGroup;
+			children = (
+				6EBE37A926783D1C008BB15D /* MindWeather-iOS */,
+				6EBE37A826783D1C008BB15D /* Products */,
+				456D6035C3D1BC3621ECB02B /* Pods */,
+				9B1B98016E1A2DC6C48A390D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6EBE37A826783D1C008BB15D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EBE37A926783D1C008BB15D /* MindWeather-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6EBE37AA26783D1C008BB15D /* AppDelegate.swift */,
+				6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */,
+				6EBE37AE26783D1C008BB15D /* ViewController.swift */,
+				6EBE37B026783D1C008BB15D /* Main.storyboard */,
+				6EBE37B326783D28008BB15D /* Assets.xcassets */,
+				6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */,
+				6EBE37B826783D28008BB15D /* Info.plist */,
+			);
+			path = "MindWeather-iOS";
+			sourceTree = "<group>";
+		};
+		9B1B98016E1A2DC6C48A390D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EBE37A626783D1C008BB15D /* MindWeather-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EBE37BB26783D28008BB15D /* Build configuration list for PBXNativeTarget "MindWeather-iOS" */;
+			buildPhases = (
+				EF4EF2DF03CB87D96703FF4F /* [CP] Check Pods Manifest.lock */,
+				6EBE37A326783D1C008BB15D /* Sources */,
+				6EBE37A426783D1C008BB15D /* Frameworks */,
+				6EBE37A526783D1C008BB15D /* Resources */,
+				E597C5D40A04D86555945CCE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MindWeather-iOS";
+			productName = "MindWeather-iOS";
+			productReference = 6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EBE379F26783D1C008BB15D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					6EBE37A626783D1C008BB15D = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 6EBE37A226783D1C008BB15D /* Build configuration list for PBXProject "MindWeather-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6EBE379E26783D1C008BB15D;
+			productRefGroup = 6EBE37A826783D1C008BB15D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EBE37A626783D1C008BB15D /* MindWeather-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EBE37A526783D1C008BB15D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */,
+				6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */,
+				6EBE37B226783D1C008BB15D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E597C5D40A04D86555945CCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF4EF2DF03CB87D96703FF4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindWeather-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EBE37A326783D1C008BB15D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EBE37AF26783D1C008BB15D /* ViewController.swift in Sources */,
+				6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */,
+				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6EBE37B026783D1C008BB15D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EBE37B126783D1C008BB15D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EBE37B626783D28008BB15D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EBE37B926783D28008BB15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6EBE37BA26783D28008BB15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EBE37BC26783D28008BB15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MindWeather-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inju.MindWeather-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EBE37BD26783D28008BB15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MindWeather-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inju.MindWeather-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EBE37A226783D1C008BB15D /* Build configuration list for PBXProject "MindWeather-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBE37B926783D28008BB15D /* Debug */,
+				6EBE37BA26783D28008BB15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EBE37BB26783D28008BB15D /* Build configuration list for PBXNativeTarget "MindWeather-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EBE37BC26783D28008BB15D /* Debug */,
+				6EBE37BD26783D28008BB15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EBE379F26783D1C008BB15D /* Project object */;
+}
