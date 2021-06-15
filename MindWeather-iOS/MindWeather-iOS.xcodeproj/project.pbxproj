@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,7 +48,6 @@
 				9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */,
 				C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +72,71 @@
 		6EBE37A926783D1C008BB15D /* MindWeather-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6EBE37C126784227008BB15D /* Services */,
+				6EBE37BE26784203008BB15D /* Models */,
+				6EBE37C226784296008BB15D /* Views */,
+				6EBE37C02678421E008BB15D /* ViewModels */,
+				6EBE37C3267842F4008BB15D /* Networking */,
+				6EBE37C426784336008BB15D /* Common */,
+				6EBE37C52678434A008BB15D /* Resources */,
 				6EBE37AA26783D1C008BB15D /* AppDelegate.swift */,
 				6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */,
-				6EBE37AE26783D1C008BB15D /* ViewController.swift */,
-				6EBE37B026783D1C008BB15D /* Main.storyboard */,
-				6EBE37B326783D28008BB15D /* Assets.xcassets */,
-				6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */,
 				6EBE37B826783D28008BB15D /* Info.plist */,
 			);
 			path = "MindWeather-iOS";
+			sourceTree = "<group>";
+		};
+		6EBE37BE26784203008BB15D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6EBE37C02678421E008BB15D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6EBE37C126784227008BB15D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6EBE37C226784296008BB15D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EBE37AE26783D1C008BB15D /* ViewController.swift */,
+				6EBE37B026783D1C008BB15D /* Main.storyboard */,
+				6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EBE37C3267842F4008BB15D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6EBE37C426784336008BB15D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6EBE37C52678434A008BB15D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EBE37B326783D28008BB15D /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9B1B98016E1A2DC6C48A390D /* Frameworks */ = {
