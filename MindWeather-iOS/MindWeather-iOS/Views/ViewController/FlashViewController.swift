@@ -13,7 +13,11 @@ class FlashViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.performSegue(withIdentifier: "moveSubIdentify", sender: self)
+            if 1==2 {
+                self.performSegue(withIdentifier: "moveTutorialIdentifier", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "moveLoginIdentifier", sender: self)
+            }
         }
     }
     
