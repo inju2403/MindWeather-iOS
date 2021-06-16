@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FlashViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqe-v5-ECq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음의 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbS-9c-hhJ">
+                                        <rect key="frame" x="172" y="120" width="182" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PbS-9c-hhJ" secondAttribute="trailing" constant="60" id="Mca-cm-USu"/>
+                                    <constraint firstItem="PbS-9c-hhJ" firstAttribute="top" secondItem="rqe-v5-ECq" secondAttribute="top" constant="120" id="r9M-1b-kJm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rqe-v5-ECq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Xb-Y0-nwa"/>
+                            <constraint firstItem="rqe-v5-ECq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D6g-6b-ITh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rqe-v5-ECq" secondAttribute="trailing" id="QNG-u8-j5O"/>
+                            <constraint firstAttribute="bottom" secondItem="rqe-v5-ECq" secondAttribute="bottom" id="mPd-0V-yl6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BjJ-ur-ge5" kind="presentation" identifier="moveSubIdentify" modalPresentationStyle="fullScreen" id="aay-wp-7TF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
+        </scene>
+        <!--SubViewController-->
+        <scene sceneID="Q5z-Z3-3Jv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sub" referencedIdentifier="SubViewController" id="BjJ-ur-ge5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9mi-0u-ip7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UF-Cx-KwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

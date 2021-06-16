@@ -10,21 +10,25 @@
 		46A4945833400AE862BBB736 /* Pods_MindWeather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */; };
 		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
 		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
-		6EBE37AF26783D1C008BB15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* ViewController.swift */; };
-		6EBE37B226783D1C008BB15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B026783D1C008BB15D /* Main.storyboard */; };
+		6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* FlashViewController.swift */; };
+		6EBE37B226783D1C008BB15D /* Flash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B026783D1C008BB15D /* Flash.storyboard */; };
 		6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B326783D28008BB15D /* Assets.xcassets */; };
 		6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */; };
+		6EBE37C926786A13008BB15D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37C826786A13008BB15D /* Sub.storyboard */; };
+		6EBE37CB267871B6008BB15D /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37CA267871B6008BB15D /* SubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6EBE37AE26783D1C008BB15D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6EBE37B126783D1C008BB15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EBE37AE26783D1C008BB15D /* FlashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashViewController.swift; sourceTree = "<group>"; };
+		6EBE37B126783D1C008BB15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Flash.storyboard; sourceTree = "<group>"; };
 		6EBE37B326783D28008BB15D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EBE37B626783D28008BB15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EBE37B826783D28008BB15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EBE37C826786A13008BB15D /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
+		6EBE37CA267871B6008BB15D /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindWeather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.release.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,9 +114,11 @@
 		6EBE37C226784296008BB15D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6EBE37AE26783D1C008BB15D /* ViewController.swift */,
-				6EBE37B026783D1C008BB15D /* Main.storyboard */,
+				6EBE37AE26783D1C008BB15D /* FlashViewController.swift */,
+				6EBE37CA267871B6008BB15D /* SubViewController.swift */,
+				6EBE37B026783D1C008BB15D /* Flash.storyboard */,
 				6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */,
+				6EBE37C826786A13008BB15D /* Sub.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,7 +214,8 @@
 			files = (
 				6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */,
 				6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */,
-				6EBE37B226783D1C008BB15D /* Main.storyboard in Resources */,
+				6EBE37B226783D1C008BB15D /* Flash.storyboard in Resources */,
+				6EBE37C926786A13008BB15D /* Sub.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,21 +268,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EBE37AF26783D1C008BB15D /* ViewController.swift in Sources */,
+				6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */,
 				6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */,
 				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
+				6EBE37CB267871B6008BB15D /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6EBE37B026783D1C008BB15D /* Main.storyboard */ = {
+		6EBE37B026783D1C008BB15D /* Flash.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6EBE37B126783D1C008BB15D /* Base */,
 			);
-			name = Main.storyboard;
+			name = Flash.storyboard;
 			sourceTree = "<group>";
 		};
 		6EBE37B526783D28008BB15D /* LaunchScreen.storyboard */ = {
