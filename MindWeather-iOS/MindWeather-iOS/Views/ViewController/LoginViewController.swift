@@ -14,6 +14,7 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UserDefaults.standard.set("false", forKey: "runFirst") // 최초 실행시 설정
     }
 
 
