@@ -12,8 +12,10 @@ class FlashViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let runFirst = UserDefaults.standard.value(forKey: "runFirst")
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if 1==2 {
+            if runFirst == nil {
                 self.performSegue(withIdentifier: "moveTutorialIdentifier", sender: self)
             } else {
                 self.performSegue(withIdentifier: "moveLoginIdentifier", sender: self)

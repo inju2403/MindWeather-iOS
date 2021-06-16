@@ -12,6 +12,13 @@ class TutorialViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        UserDefaults.standard.set("false", forKey: "runFirst") // 최초 실행시 설정
+        
+        // 임시로 2초 세팅
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.performSegue(withIdentifier: "moveLoginIdentifier", sender: self)
+        }
     }
 
 
