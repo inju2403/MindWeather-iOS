@@ -16,14 +16,29 @@ class LoginViewController : UIViewController {
         
         let loginRequest = LoginRequest(username: "운영", password: "abcd12345!!")
         
-        AF.request(K.API_BASE_URL+"auth/login/",
-                   method: .post,
-                   parameters: loginRequest,
-                   encoder: JSONParameterEncoder.default).responseJSON { response in
-                    print("-------------------")
-                    print(response)
-                    print(response)
-        }
+//        AF.request(K.API_BASE_URL+"auth/login/",
+//                   method: .post,
+//                   parameters: loginRequest,
+//                   encoder: JSONParameterEncoder.default).responseJSON { response in
+//                    print("-------------------")
+//                    print(response)
+//                    print(response)
+//        }
+        
+        AlamofireManager
+            .shared
+            .session
+            .request("\(K.API_BASE_URL)auth/login/",
+                    method: .post,
+                    parameters: loginRequest,
+                    encoder: JSONParameterEncoder())
+            .responseDecodable(of: LoginSignUpReturn.self) { response in
+                print(response)
+            }
+        
+//            .responseJSON(completionHandler: { response in
+//                debugPrint(response)
+//            })
     }
 
 

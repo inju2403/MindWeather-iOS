@@ -15,4 +15,11 @@ final class AlamofireManager {
     
     //interceptors
     let interceptors = Interceptor(interceptors: [BaseInterceptor()])
+    
+    //session
+    var session = Session()
+    
+    private init() {
+        session = Session(interceptor: interceptors)
+    }
 }
