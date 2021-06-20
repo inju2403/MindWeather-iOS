@@ -8,5 +8,5 @@ target 'MindWeather-iOS' do
   # Pods for MindWeather-iOS
   pod 'RxSwift', '~> 6.2.0'
   pod 'RxCocoa', '~> 6.2.0'
-
+  pod 'Alamofire', '~> 5.4'
 end
