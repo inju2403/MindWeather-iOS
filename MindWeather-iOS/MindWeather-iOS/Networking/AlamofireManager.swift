@@ -13,4 +13,6 @@ final class AlamofireManager {
     // Singleton Pattern
     static let shared = AlamofireManager()
     
+    //interceptors
+    let interceptors = Interceptor(interceptors: [BaseInterceptor()])
 }

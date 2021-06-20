@@ -21,6 +21,7 @@
 		6EBE37D5267A2ACA008BB15D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D4267A2ACA008BB15D /* Constants.swift */; };
 		6EBE37D7267ED4FB008BB15D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D6267ED4FB008BB15D /* LoginRequest.swift */; };
 		6EBE37D9267F2C46008BB15D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D8267F2C46008BB15D /* AlamofireManager.swift */; };
+		6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		6EBE37D4267A2ACA008BB15D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6EBE37D6267ED4FB008BB15D /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		6EBE37D8267F2C46008BB15D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindWeather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.release.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				6EBE37D8267F2C46008BB15D /* AlamofireManager.swift */,
+				6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */,
 				6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */,
+				6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */,
 				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
 				6EBE37D1267A262E008BB15D /* LoginViewController.swift in Sources */,
 				6EBE37D9267F2C46008BB15D /* AlamofireManager.swift in Sources */,
