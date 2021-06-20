@@ -24,7 +24,12 @@ class LoginViewController : UIViewController {
                     debugPrint(response)
                     switch response.response?.statusCode {
                     case 200:
-                        print("ok")
+                        UserDefaults.standard.set(response.value?.token, forKey: "token")
+                        UserDefaults.standard.set(response.value?.user.pk, forKey: "pk")
+                        UserDefaults.standard.set(response.value?.user.username, forKey: "username")
+                        UserDefaults.standard.set(response.value?.user.email, forKey: "email")
+                        
+                        //자동로그인, 일기리스트 화면으로 이동 작성 예정
                         break
                     case 400:
                         print("error")
@@ -32,12 +37,6 @@ class LoginViewController : UIViewController {
                     default:
                         break
                     }
-//                    switch response.result {
-//                    case .success(let response) :
-//                        print("ok")
-//                    case .failure(_):
-//                        print("error")
-//                    }
                     
                 }
         
