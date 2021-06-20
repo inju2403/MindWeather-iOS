@@ -9,12 +9,27 @@ import Alamofire
 
 class LoginViewController : UIViewController {
     
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setUI()
         UserDefaults.standard.set("false", forKey: "runFirst") // 최초 실행시 설정
         
-        let loginRequest = LoginRequest(username: "운영", password: "abcd12345!!")
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        guard let username = usernameTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        
+        let loginRequest = LoginRequest(username: username, password: password)
         
         AF.request("\(K.API_BASE_URL)auth/login/",
                    method: .post,
@@ -39,18 +54,23 @@ class LoginViewController : UIViewController {
                     }
                     
                 }
-        
-//        AlamofireManager
-//            .shared
-//            .session
-//            .request("\(K.API_BASE_URL)auth/login/",
-//                    method: .post,
-//                    parameters: loginRequest,
-//                    encoder: JSONParameterEncoder())
-//            .responseDecodable(of: LoginSignUpReturn.self) { response in
-//                print(response)
-//            }
+    }
+    
+    private func setUI() {
+        usernameTextField.underlined()
+        passwordTextField.underlined()
     }
 
+}
 
+extension UITextField {
+    func underlined() {
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.darkGray.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
 }
