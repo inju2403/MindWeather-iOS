@@ -22,6 +22,7 @@ class LoginViewController : UIViewController {
                    encoder: JSONParameterEncoder.default).responseJSON { response in
                     print("-------------------")
                     print(response)
+                    print(response)
         }
     }
 
