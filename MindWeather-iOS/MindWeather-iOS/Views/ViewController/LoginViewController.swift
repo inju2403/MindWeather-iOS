@@ -16,6 +16,8 @@ class LoginViewController : UIViewController {
         super.viewDidLoad()
         
         setUI()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
         UserDefaults.standard.set("false", forKey: "runFirst") // 최초 실행시 설정
         
     }
@@ -56,6 +58,17 @@ class LoginViewController : UIViewController {
                 }
     }
     
+    // 사용자가 바로 입력할 수 있도록 세팅
+    override func viewWillAppear(_ animated: Bool) {
+        self.usernameTextField.becomeFirstResponder()
+    }
+    
+    // 키보드 밖을 클릭하면 키보드가 내려가도록 세팅
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.usernameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
+    
     private func setUI() {
         usernameTextField.underlined()
         passwordTextField.underlined()
@@ -72,5 +85,16 @@ extension UITextField {
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
 }
