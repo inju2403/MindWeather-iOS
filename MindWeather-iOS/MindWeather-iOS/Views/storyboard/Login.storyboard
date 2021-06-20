@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEk-Lv-Daj" userLabel="usernameTextField">
-                                <rect key="frame" x="62.666666666666657" y="319" width="249.99999999999997" height="40"/>
+                                <rect key="frame" x="62.666666666666657" y="274" width="249.99999999999997" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="7NE-k3-zMK"/>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-Mv-pWp">
-                                <rect key="frame" x="62.666666666666657" y="391" width="249.99999999999997" height="40"/>
+                                <rect key="frame" x="62.666666666666657" y="346" width="249.99999999999997" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4Gh-PE-6C7"/>
@@ -38,7 +38,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-4V-wyA">
-                                <rect key="frame" x="131.66666666666666" y="463" width="112" height="40"/>
+                                <rect key="frame" x="131.66666666666666" y="418" width="112" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GOO-Vy-5eJ"/>
@@ -51,10 +51,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2s-5G-Ifg">
-                                <rect key="frame" x="0.0" y="712" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="713" width="375" height="65"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="FqS-Pa-wpy"/>
+                                    <constraint firstAttribute="height" constant="65" id="FqS-Pa-wpy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -63,19 +63,27 @@
                                     <action selector="loginButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CjZ-2j-yFO"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cED-1I-PSc" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="778" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cED-1I-PSc" firstAttribute="top" secondItem="f2s-5G-Ifg" secondAttribute="bottom" id="6b9-KS-JPz"/>
                             <constraint firstItem="vBn-4V-wyA" firstAttribute="top" secondItem="Kww-Mv-pWp" secondAttribute="bottom" constant="32" id="7qC-JZ-lln"/>
-                            <constraint firstItem="rEk-Lv-Daj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="275" id="EA2-ym-sVQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f2s-5G-Ifg" secondAttribute="bottom" id="841-Bx-Cd5"/>
+                            <constraint firstItem="rEk-Lv-Daj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="230" id="EA2-ym-sVQ"/>
                             <constraint firstItem="vBn-4V-wyA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IGa-AY-geW"/>
                             <constraint firstItem="Kww-Mv-pWp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KwC-hG-62t"/>
-                            <constraint firstAttribute="bottom" secondItem="f2s-5G-Ifg" secondAttribute="bottom" id="g61-KY-sTU"/>
+                            <constraint firstAttribute="trailing" secondItem="cED-1I-PSc" secondAttribute="trailing" id="RzT-f3-hvo"/>
                             <constraint firstItem="f2s-5G-Ifg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="g89-Gt-wdd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f2s-5G-Ifg" secondAttribute="trailing" id="hiQ-cy-uCf"/>
+                            <constraint firstItem="cED-1I-PSc" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="qU3-EI-XNX"/>
                             <constraint firstItem="Kww-Mv-pWp" firstAttribute="top" secondItem="rEk-Lv-Daj" secondAttribute="bottom" constant="32" id="rCV-Q5-7WT"/>
                             <constraint firstItem="rEk-Lv-Daj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sFN-4k-TOD"/>
+                            <constraint firstAttribute="bottom" secondItem="cED-1I-PSc" secondAttribute="bottom" id="tnn-E8-0oa"/>
                         </constraints>
                     </view>
                     <connections>
