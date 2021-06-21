@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46A4945833400AE862BBB736 /* Pods_MindWeather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */; };
+		6EB044102680169100E047A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0440F2680169100E047A7 /* SignUpViewController.swift */; };
+		6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB04411268016C200E047A7 /* SignUp.storyboard */; };
 		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
 		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
 		6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* FlashViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EB0440F2680169100E047A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6EB04411268016C200E047A7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				6EBE37B026783D1C008BB15D /* Flash.storyboard */,
 				6EBE37C826786A13008BB15D /* Tutorial.storyboard */,
 				6EBE37D2267A2656008BB15D /* Login.storyboard */,
+				6EB04411268016C200E047A7 /* SignUp.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				6EBE37AE26783D1C008BB15D /* FlashViewController.swift */,
 				6EBE37CA267871B6008BB15D /* TutorialViewController.swift */,
 				6EBE37D0267A262E008BB15D /* LoginViewController.swift */,
+				6EB0440F2680169100E047A7 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			files = (
 				6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */,
 				6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */,
+				6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */,
 				6EBE37B226783D1C008BB15D /* Flash.storyboard in Resources */,
 				6EBE37D3267A2656008BB15D /* Login.storyboard in Resources */,
 				6EBE37C926786A13008BB15D /* Tutorial.storyboard in Resources */,
@@ -315,6 +322,7 @@
 				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
 				6EBE37D1267A262E008BB15D /* LoginViewController.swift in Sources */,
 				6EBE37DD267F38F0008BB15D /* LoginSignUpReturn.swift in Sources */,
+				6EB044102680169100E047A7 /* SignUpViewController.swift in Sources */,
 				6EBE37D9267F2C46008BB15D /* AlamofireManager.swift in Sources */,
 				6EBE37CB267871B6008BB15D /* TutorialViewController.swift in Sources */,
 				6EBE37D7267ED4FB008BB15D /* LoginRequest.swift in Sources */,
