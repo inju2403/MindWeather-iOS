@@ -15,6 +15,7 @@
 		6EB0441826804FA400E047A7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441726804FA400E047A7 /* MainTabBarViewController.swift */; };
 		6EB0441A26808A4E00E047A7 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441926808A4E00E047A7 /* BaseLogger.swift */; };
 		6EB0441C2680B92800E047A7 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441B2680B92800E047A7 /* BaseRouter.swift */; };
+		6EB0441E2680D2FF00E047A7 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441D2680D2FF00E047A7 /* Diary.swift */; };
 		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
 		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
 		6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* FlashViewController.swift */; };
@@ -41,6 +42,7 @@
 		6EB0441726804FA400E047A7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		6EB0441926808A4E00E047A7 /* BaseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLogger.swift; sourceTree = "<group>"; };
 		6EB0441B2680B92800E047A7 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		6EB0441D2680D2FF00E047A7 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				6EBE37DC267F38F0008BB15D /* LoginSignUpReturn.swift */,
 				6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */,
 				6EB044132680306900E047A7 /* SignUpRequest.swift */,
+				6EB0441D2680D2FF00E047A7 /* Diary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				6EB0441C2680B92800E047A7 /* BaseRouter.swift in Sources */,
 				6EB044102680169100E047A7 /* SignUpViewController.swift in Sources */,
 				6EB044142680306900E047A7 /* SignUpRequest.swift in Sources */,
+				6EB0441E2680D2FF00E047A7 /* Diary.swift in Sources */,
 				6EBE37D9267F2C46008BB15D /* AlamofireManager.swift in Sources */,
 				6EBE37CB267871B6008BB15D /* TutorialViewController.swift in Sources */,
 				6EB0441826804FA400E047A7 /* MainTabBarViewController.swift in Sources */,
