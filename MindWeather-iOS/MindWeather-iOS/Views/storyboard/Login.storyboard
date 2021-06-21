@@ -89,11 +89,20 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Kww-Mv-pWp" id="Ln7-Nh-mQr"/>
                         <outlet property="usernameTextField" destination="rEk-Lv-Daj" id="g6k-ti-2wB"/>
+                        <segue destination="Eth-Pp-nqK" kind="presentation" identifier="moveSignUpIdentifier" modalPresentationStyle="fullScreen" id="6g3-ah-256"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="116"/>
+        </scene>
+        <!--SignUpViewContoller-->
+        <scene sceneID="0fs-fX-3fs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" referencedIdentifier="SignUpViewContoller" id="Eth-Pp-nqK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbG-dX-NNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="115"/>
         </scene>
     </scenes>
     <resources>
