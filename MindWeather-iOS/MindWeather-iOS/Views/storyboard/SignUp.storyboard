@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="width" constant="250" id="vAb-Jb-MAE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-h5-ldn">
                                 <rect key="frame" x="82" y="350" width="250" height="40"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="250" id="aae-sk-oMP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F60-bN-bU6">
                                 <rect key="frame" x="0.0" y="797" width="414" height="65"/>
