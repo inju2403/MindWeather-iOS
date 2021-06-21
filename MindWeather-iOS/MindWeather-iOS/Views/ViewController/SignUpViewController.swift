@@ -29,6 +29,35 @@ class SignUpViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        
+        guard let username = usernameTextField.text,
+             let email = emailTextField.text,
+             let password1 = passwordTextField.text,
+             let password2 = passwordVerificationTextField.text else {
+            return
+        }
+        
+        let signUpRequest = SignUpRequest(username: username, email: email, password1: password1, password2: password2)
+        
+        AF.request("\(K.API_BASE_URL)auth/registration/",
+                   method: .post,
+                   parameters: signUpRequest,
+                   encoder: JSONParameterEncoder())
+                .responseDecodable(of: SignUpRequest.self) { response in
+                    debugPrint(response)
+                    switch response.response?.statusCode {
+                    case 201:
+                        print("회원가입 성공")
+                        self.dismiss(animated: true, completion: nil)
+                        break
+                    case 400:
+                        print("error")
+                        break
+                    default:
+                        break
+                    }
+                    
+                }
     }
     
     // 사용자가 바로 입력할 수 있도록 세팅
