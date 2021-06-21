@@ -23,6 +23,7 @@ class LoginViewController : UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "moveSignUpIdentifier", sender: self)
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {

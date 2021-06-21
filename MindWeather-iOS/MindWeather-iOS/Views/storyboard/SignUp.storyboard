@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,48 +9,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewContoller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewContoller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SignUpViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-DG-0d1">
-                                <rect key="frame" x="62.666666666666657" y="144" width="249.99999999999997" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-DG-0d1">
+                                <rect key="frame" x="82" y="134" width="250" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H58-s5-F0l"/>
                                     <constraint firstAttribute="width" constant="250" id="SwZ-79-tIC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-N9-HhH">
-                                <rect key="frame" x="62.666666666666657" y="210" width="249.99999999999997" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-N9-HhH">
+                                <rect key="frame" x="82" y="206" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="pub-XF-vnD"/>
+                                    <constraint firstAttribute="height" constant="40" id="tCF-b8-dI2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-4H-Nel">
-                                <rect key="frame" x="62.666666666666657" y="276" width="249.99999999999997" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-4H-Nel">
+                                <rect key="frame" x="82" y="278" width="250" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="irn-EV-AMm"/>
                                     <constraint firstAttribute="width" constant="250" id="vAb-Jb-MAE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-h5-ldn">
-                                <rect key="frame" x="62.666666666666657" y="342" width="249.99999999999997" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-h5-ldn">
+                                <rect key="frame" x="82" y="350" width="250" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="640-bd-s7C"/>
                                     <constraint firstAttribute="width" constant="250" id="aae-sk-oMP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F60-bN-bU6">
-                                <rect key="frame" x="0.0" y="713" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="797" width="414" height="65"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="P8q-sM-Oq5"/>
@@ -59,19 +63,25 @@
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W47-QS-G4o"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-eS-WoA">
-                                <rect key="frame" x="0.0" y="778" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-j3-9La">
-                                <rect key="frame" x="161.66666666666666" y="408" width="52" height="40"/>
+                                <rect key="frame" x="181" y="422" width="52" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eQf-sL-UkV"/>
                                 </constraints>
                                 <state key="normal" title="돌아가기">
                                     <color key="titleColor" systemColor="placeholderTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="F1p-Ru-0S4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -80,7 +90,7 @@
                             <constraint firstItem="jZQ-h5-ldn" firstAttribute="top" secondItem="gDE-4H-Nel" secondAttribute="bottom" constant="32" id="0AA-0r-vzO"/>
                             <constraint firstItem="gDE-4H-Nel" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="38M-6h-eYl"/>
                             <constraint firstItem="gDE-4H-Nel" firstAttribute="top" secondItem="3R7-N9-HhH" secondAttribute="bottom" constant="32" id="A1p-vu-gGX"/>
-                            <constraint firstItem="iAH-DG-0d1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="FOg-n6-8BK"/>
+                            <constraint firstItem="iAH-DG-0d1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="FOg-n6-8BK"/>
                             <constraint firstItem="F60-bN-bU6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GtW-7k-4id"/>
                             <constraint firstItem="jZQ-h5-ldn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QsV-hK-zpM"/>
                             <constraint firstItem="NBU-j3-9La" firstAttribute="top" secondItem="jZQ-h5-ldn" secondAttribute="bottom" constant="32" id="VGT-iY-hbt"/>
@@ -96,6 +106,12 @@
                             <constraint firstItem="PQh-eS-WoA" firstAttribute="top" secondItem="F60-bN-bU6" secondAttribute="bottom" id="qSg-fU-hTm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="3R7-N9-HhH" id="i15-IZ-gVJ"/>
+                        <outlet property="passwordTextField" destination="gDE-4H-Nel" id="yIG-Yn-rgK"/>
+                        <outlet property="passwordVerificationTextField" destination="jZQ-h5-ldn" id="dRs-CZ-jny"/>
+                        <outlet property="usernameTextField" destination="iAH-DG-0d1" id="iJc-hm-w5r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

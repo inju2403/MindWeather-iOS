@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEk-Lv-Daj" userLabel="usernameTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEk-Lv-Daj" userLabel="usernameTextField">
                                 <rect key="frame" x="62.666666666666657" y="274" width="249.99999999999997" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-Mv-pWp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-Mv-pWp">
                                 <rect key="frame" x="62.666666666666657" y="346" width="249.99999999999997" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -89,7 +89,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Kww-Mv-pWp" id="Ln7-Nh-mQr"/>
                         <outlet property="usernameTextField" destination="rEk-Lv-Daj" id="g6k-ti-2wB"/>
-                        <segue destination="Eth-Pp-nqK" kind="presentation" identifier="moveSignUpIdentifier" modalPresentationStyle="fullScreen" id="6g3-ah-256"/>
+                        <segue destination="Eth-Pp-nqK" kind="show" identifier="moveSignUpIdentifier" id="6g3-ah-256"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,9 @@
         <!--SignUpViewContoller-->
         <scene sceneID="0fs-fX-3fs">
             <objects>
-                <viewControllerPlaceholder storyboardName="SignUp" referencedIdentifier="SignUpViewContoller" id="Eth-Pp-nqK" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SignUp" referencedIdentifier="SignUpViewContoller" id="Eth-Pp-nqK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ui1-sQ-8c9"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbG-dX-NNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="879" y="115"/>
