@@ -11,6 +11,7 @@
 		6EB044102680169100E047A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0440F2680169100E047A7 /* SignUpViewController.swift */; };
 		6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB04411268016C200E047A7 /* SignUp.storyboard */; };
 		6EB044142680306900E047A7 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB044132680306900E047A7 /* SignUpRequest.swift */; };
+		6EB04416268035CC00E047A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB04415268035CC00E047A7 /* Main.storyboard */; };
 		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
 		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
 		6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* FlashViewController.swift */; };
@@ -33,6 +34,7 @@
 		6EB0440F2680169100E047A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6EB04411268016C200E047A7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		6EB044132680306900E047A7 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		6EB04415268035CC00E047A7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				6EBE37C826786A13008BB15D /* Tutorial.storyboard */,
 				6EBE37D2267A2656008BB15D /* Login.storyboard */,
 				6EB04411268016C200E047A7 /* SignUp.storyboard */,
+				6EB04415268035CC00E047A7 /* Main.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB04416268035CC00E047A7 /* Main.storyboard in Resources */,
 				6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */,
 				6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */,
 				6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */,
