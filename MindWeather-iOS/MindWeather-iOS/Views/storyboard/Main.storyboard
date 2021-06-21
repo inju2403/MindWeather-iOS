@@ -9,23 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--감정 변화-->
         <scene sceneID="HhZ-R1-3bY">
             <objects>
-                <viewController id="Wmm-iU-1kg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wmm-iU-1kg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRF-FD-mEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Mxf-bu-MvF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4eg-VK-bEA"/>
+                    <tabBarItem key="tabBarItem" title="감정 변화" id="4eg-VK-bEA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="636" y="777"/>
         </scene>
-        <!--Item 1-->
+        <!--일기 목록-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
                 <viewController id="gAP-U5-w5R" sceneMemberID="viewController">
@@ -35,16 +35,16 @@
                         <viewLayoutGuide key="safeArea" id="pBP-mK-g0L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Dyg-fC-yXE"/>
+                    <tabBarItem key="tabBarItem" title="일기 목록" id="Dyg-fC-yXE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-603" y="777"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar View Controller-->
         <scene sceneID="0sv-E5-qf1">
             <objects>
-                <tabBarController id="sfx-jd-3Nu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MyTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yf1-uc-7Su">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
