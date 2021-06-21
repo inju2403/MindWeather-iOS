@@ -47,7 +47,7 @@ class LoginViewController : UIViewController {
                         UserDefaults.standard.set(response.value?.user.username, forKey: "username")
                         UserDefaults.standard.set(response.value?.user.email, forKey: "email")
                         
-                        //자동로그인, 일기리스트 화면으로 이동 작성 예정
+                        //일기리스트 화면으로 이동
                         self.performSegue(withIdentifier: "moveMainTabBarIdentifier", sender: self)
                         break
                     case 400:

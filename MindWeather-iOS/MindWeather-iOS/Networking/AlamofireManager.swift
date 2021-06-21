@@ -16,10 +16,16 @@ final class AlamofireManager {
     //interceptors
     let interceptors = Interceptor(interceptors: [BaseInterceptor()])
     
+    //logger
+    let monitors = [BaseLogger()] as [EventMonitor]
+    
     //session
     var session = Session()
     
     private init() {
-        session = Session(interceptor: interceptors)
+        session = Session(
+            interceptor: interceptors,
+            eventMonitors: monitors
+        )
     }
 }
