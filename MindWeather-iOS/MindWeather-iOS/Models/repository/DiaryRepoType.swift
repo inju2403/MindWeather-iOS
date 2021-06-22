@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol IDiaryRepository {
+protocol DiaryRepoType {
     func getDiarys() -> [Diary]
     func getDiaryById(diaryId: String) -> Diary
     func updateDiary(content: Content, diaryId: String)

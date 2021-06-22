@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class DiaryRepoImpl: IDiaryRepository {
+class DiaryRepoImpl: DiaryRepoType {
     func getDiarys() -> [Diary] {
         <#code#>
     }
