@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MyTabBarViewController: UITabBarController {
     
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 

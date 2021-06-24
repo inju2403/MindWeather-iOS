@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import RxSwift
 import Alamofire
 
 class DiaryRepoImpl: DiaryRepoType {
-    func getDiarys() -> [Diary] {
-        <#code#>
+    
+    let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
+    
+    func getDiarys() -> Single<[Diary]> {
+        
     }
     
-    func getDiaryById(diaryId: String) -> Diary {
+    func getDiaryById(diaryId: String) -> Single<Diary> {
         <#code#>
     }
     

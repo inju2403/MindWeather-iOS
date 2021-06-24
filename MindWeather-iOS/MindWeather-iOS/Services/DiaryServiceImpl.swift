@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import RxSwift
 
 class DiaryServiceImpl: DiaryServiceType {
-    func getDiarys() -> [Diary] {
+    func getDiarys() -> Single<[Diary]> {
         <#code#>
     }
     
-    func getDiaryById(diaryId: String) -> Diary {
+    func getDiaryById(diaryId: String) -> Single<Diary> {
         <#code#>
     }
     
