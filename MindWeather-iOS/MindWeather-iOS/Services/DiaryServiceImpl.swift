@@ -9,25 +9,28 @@ import Foundation
 import RxSwift
 
 class DiaryServiceImpl: DiaryServiceType {
+    
+    let repo = DiaryRepoImpl()
+    
     func getDiarys() -> Single<[Diary]> {
-        <#code#>
+        return repo.getDiarys()
     }
-    
-    func getDiaryById(diaryId: String) -> Single<Diary> {
-        <#code#>
-    }
-    
-    func updateDiary(content: Content, diaryId: String) {
-        <#code#>
-    }
-    
-    func deleteDiary(diaryId: String) {
-        <#code#>
-    }
-    
-    func getEmotions() -> [Emotion] {
-        <#code#>
-    }
+//
+//    func getDiaryById(diaryId: String) -> Single<Diary> {
+//        <#code#>
+//    }
+//
+//    func updateDiary(content: Content, diaryId: String) {
+//        <#code#>
+//    }
+//
+//    func deleteDiary(diaryId: String) {
+//        <#code#>
+//    }
+//
+//    func getEmotions() -> [Emotion] {
+//        <#code#>
+//    }
     
     
 }

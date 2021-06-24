@@ -12,10 +12,14 @@ import RxCocoa
 class MyTabBarViewController: UITabBarController {
     
     var disposeBag = DisposeBag()
+    let service = DiaryRepoImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _ = service.getDiarys()
+            .subscribe({_ in print("ok")})
+            .disposed(by: disposeBag)
     }
 }
 
