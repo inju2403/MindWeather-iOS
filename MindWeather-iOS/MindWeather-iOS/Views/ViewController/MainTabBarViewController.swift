@@ -18,7 +18,15 @@ class MyTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         _ = service.getDiarys()
-            .subscribe({_ in print("ok")})
+            .subscribe { event in
+                switch event {
+                case .success(let diarys):
+                    print("diarys: ", diarys)
+                case .failure(let error):
+                    print("Error: ", error)
+                }
+                
+            }
             .disposed(by: disposeBag)
     }
 }

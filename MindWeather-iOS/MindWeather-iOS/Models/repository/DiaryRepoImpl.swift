@@ -19,11 +19,13 @@ class DiaryRepoImpl: DiaryRepoType {
         
             AF.request(urlString,
                     method: .get,
-                    headers: ["Authorization" : self.token]).responseJSON { response in
+                    headers: ["Authorization" : self.token])
+                .responseDecodable(of: [Diary].self) { response in
                     guard let value = response.value else {
+                        single(.failure(response.error!))
                         return
                     }
-                    single(.success([]))
+                    single(.success(value))
             }
         
             return Disposables.create()
