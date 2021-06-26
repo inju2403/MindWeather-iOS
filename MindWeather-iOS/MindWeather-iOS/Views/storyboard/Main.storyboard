@@ -28,14 +28,31 @@
         <!--일기 목록-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
-                <viewController id="gAP-U5-w5R" sceneMemberID="viewController">
+                <viewController id="gAP-U5-w5R" customClass="DiaryListController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DhZ-Me-Eo4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-bd-KAI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pBP-mK-g0L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="yv5-bd-KAI" secondAttribute="bottom" id="2AM-vY-Npi"/>
+                            <constraint firstItem="yv5-bd-KAI" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" id="Lo2-AC-ZrE"/>
+                            <constraint firstItem="yv5-bd-KAI" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="SJZ-S6-Twm"/>
+                            <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="yv5-bd-KAI" secondAttribute="trailing" id="xU9-P1-SCs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="일기 목록" id="Dyg-fC-yXE"/>
+                    <connections>
+                        <outlet property="testLabel" destination="yv5-bd-KAI" id="tfL-dF-vTi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

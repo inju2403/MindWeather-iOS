@@ -40,6 +40,7 @@
 		6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
+		6EEC0A922687063B00F3ABEC /* DiaryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpUser.swift; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
+		6EEC0A912687063B00F3ABEC /* DiaryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListController.swift; sourceTree = "<group>"; };
 		848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindWeather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.release.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				6EBE37D0267A262E008BB15D /* LoginViewController.swift */,
 				6EB0440F2680169100E047A7 /* SignUpViewController.swift */,
 				6EB0441726804FA400E047A7 /* MainTabBarViewController.swift */,
+				6EEC0A912687063B00F3ABEC /* DiaryListController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
 				6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */,
 				6EBE37D1267A262E008BB15D /* LoginViewController.swift in Sources */,
+				6EEC0A922687063B00F3ABEC /* DiaryListController.swift in Sources */,
 				6EB044202680D3F400E047A7 /* Content.swift in Sources */,
 				6EBE37DD267F38F0008BB15D /* LoginSignUpReturn.swift in Sources */,
 				6EB0441A26808A4E00E047A7 /* BaseLogger.swift in Sources */,
