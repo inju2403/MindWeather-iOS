@@ -16,7 +16,7 @@ class DiaryListViewModel {
     
     var testContent = BehaviorRelay(value: "content...")
     
-    var diaryList = BehaviorRelay(value: [])
+    var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
     var diaryItemCnt = BehaviorRelay(value: 0)
     
     func getDiarys() {

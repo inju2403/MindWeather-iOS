@@ -29,20 +29,14 @@ class DiaryListController : UIViewController {
 //            .disposed(by: disposeBag)
         
         bindTableView()
-        
         diaryListViewModel.getDiarys()
     }
     
     private func bindTableView() {
-
-        let cities = ["London", "Vienna", "Lisbon"]
-        let citiesOb: Observable<[String]> = Observable.of(cities)
-        citiesOb.bind(to: diaryListTableView.rx.items) { (tableView: UITableView, index: Int, element: String) -> UITableViewCell in
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: K.diaryListCellIdentifier) else { return UITableViewCell() }
-            cell.textLabel?.text = element
-            return cell
-        }.disposed(by: disposeBag)
-
+        diaryListViewModel.diaryList
+            .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier)) { (index: Int, element: Diary, cell: UITableViewCell) in
+                cell.textLabel?.text = element.content
+            }.disposed(by: disposeBag)
     }
 
 
