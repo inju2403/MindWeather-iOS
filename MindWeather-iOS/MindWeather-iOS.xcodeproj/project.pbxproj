@@ -38,6 +38,8 @@
 		6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */; };
 		6EBE37DD267F38F0008BB15D /* LoginSignUpReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DC267F38F0008BB15D /* LoginSignUpReturn.swift */; };
 		6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */; };
+		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
+		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		6EBE37DC267F38F0008BB15D /* LoginSignUpReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpReturn.swift; sourceTree = "<group>"; };
 		6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpUser.swift; sourceTree = "<group>"; };
+		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
+		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		848834E156DDFBB32D9B0308 /* Pods_MindWeather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindWeather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4C3D47ABB0C7D2B9A582AD /* Pods-MindWeather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CF7A0408CF898E6F103749 /* Pods-MindWeather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindWeather-iOS.release.xcconfig"; path = "Target Support Files/Pods-MindWeather-iOS/Pods-MindWeather-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		6EBE37C02678421E008BB15D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */,
+				6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */,
 				6EB0442D26816B4400E047A7 /* Emotion.swift in Sources */,
 				6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */,
+				6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */,
 				6EBE37D1267A262E008BB15D /* LoginViewController.swift in Sources */,
 				6EB044202680D3F400E047A7 /* Content.swift in Sources */,
 				6EBE37DD267F38F0008BB15D /* LoginSignUpReturn.swift in Sources */,
@@ -381,6 +388,7 @@
 				6EBE37D7267ED4FB008BB15D /* LoginRequest.swift in Sources */,
 				6EB044252680D57800E047A7 /* DiaryRepoType.swift in Sources */,
 				6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */,
+				6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */,
 				6EBE37D5267A2ACA008BB15D /* Constants.swift in Sources */,
 				6EB044272680D66F00E047A7 /* DiaryRepoImpl.swift in Sources */,
 				6EB0442B26816AD100E047A7 /* DiaryServiceImpl.swift in Sources */,
