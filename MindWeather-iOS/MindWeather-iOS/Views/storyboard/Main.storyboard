@@ -33,25 +33,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-bd-KAI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-C5-0dd">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="7A4-Rf-NTB">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7A4-Rf-NTB" id="jEq-in-i80">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pBP-mK-g0L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="yv5-bd-KAI" secondAttribute="bottom" id="2AM-vY-Npi"/>
-                            <constraint firstItem="yv5-bd-KAI" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" id="Lo2-AC-ZrE"/>
-                            <constraint firstItem="yv5-bd-KAI" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="SJZ-S6-Twm"/>
-                            <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="yv5-bd-KAI" secondAttribute="trailing" id="xU9-P1-SCs"/>
+                            <constraint firstItem="Eic-C5-0dd" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="9eK-ML-ook"/>
+                            <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="Eic-C5-0dd" secondAttribute="bottom" id="NCT-VU-Fco"/>
+                            <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" id="iib-Yf-sQI"/>
+                            <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="Eic-C5-0dd" secondAttribute="trailing" id="kyf-2a-Qyu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="일기 목록" id="Dyg-fC-yXE"/>
                     <connections>
-                        <outlet property="testLabel" destination="yv5-bd-KAI" id="tfL-dF-vTi"/>
+                        <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
