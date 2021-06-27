@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_happiness" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-n6-YGf">
-                        <rect key="frame" x="85" y="28" width="40" height="40"/>
+                        <rect key="frame" x="85" y="35" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="8nv-Ov-rmF"/>
                             <constraint firstAttribute="height" constant="40" id="nJ9-3X-16x"/>
@@ -56,7 +56,7 @@
                     <constraint firstItem="zCF-9b-0aF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="37" id="LCC-T8-auw"/>
                     <constraint firstAttribute="bottom" secondItem="bCh-eS-P9V" secondAttribute="bottom" constant="32" id="SHC-it-zbe"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aBs-Cn-Zb6"/>
-                    <constraint firstItem="R3G-n6-YGf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="28" id="wdK-K0-Ycq"/>
+                    <constraint firstItem="R3G-n6-YGf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="wdK-K0-Ycq"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="x0k-5b-FGL"/>
                     <constraint firstAttribute="trailing" secondItem="zCF-9b-0aF" secondAttribute="trailing" constant="30" id="yhL-o7-MRG"/>
                 </constraints>
