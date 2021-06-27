@@ -13,6 +13,9 @@ class DiaryDetailViewController : UIViewController {
     
     var diaryId = 0
     
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var content: UITextView!
+    
     override func viewDidLoad() {
         print(diaryId)
         
