@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class DiaryListController : UIViewController {
+class DiaryListViewController : UIViewController {
     
     @IBOutlet weak var diaryListTableView: UITableView!
     
@@ -18,6 +18,8 @@ class DiaryListController : UIViewController {
     
     var diaryList: [String] = []
     var diaryListSize: Int = 0
+    
+    var selectedDiaryId: Int = 0
     
     override func viewDidLoad() {
 //        diaryListViewModel.testContent
@@ -40,11 +42,25 @@ class DiaryListController : UIViewController {
                 cell.summaryView?.text = element.content
                 cell.dateView?.text = element.updated_at
             }.disposed(by: disposeBag)
+        
+        //일기 아이템 클릭시 보낼 일기 아이디 저장
+        diaryListTableView.rx.modelSelected(Diary.self)
+                    .subscribe(onNext: { [weak self] diary in
+                        guard let self = self else { return }
+                        self.selectedDiaryId = diary.id ?? 0
+                    }).disposed(by: disposeBag)
+        
+        //일기 아이템 클릭시 일기 상세화면으로 이동
+        diaryListTableView.rx.itemSelected
+                    .subscribe(onNext: { [weak self] indexPath in
+                        guard let self = self else { return }
+                        self.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
+                    }).disposed(by: disposeBag)
     }
 
 }
 
-extension DiaryListController: UITableViewDataSource {
+extension DiaryListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return diaryListSize
     }
@@ -56,10 +72,11 @@ extension DiaryListController: UITableViewDataSource {
     }
 }
 
-extension DiaryListController: UITabBarDelegate {
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
+extension DiaryListViewController: UITableViewDelegate {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DiaryDetailViewController
+
+        guard diaryListTableView.indexPathForSelectedRow != nil else { return }
+        destinationVC.diaryId = selectedDiaryId
     }
 }
-
-

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1067" y="372"/>
         </scene>
-        <!--Diary List Controller-->
+        <!--Diary List View Controller-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
-                <viewController id="gAP-U5-w5R" customClass="DiaryListController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gAP-U5-w5R" customClass="DiaryListViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DhZ-Me-Eo4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,11 +51,28 @@
                     <navigationItem key="navigationItem" id="Qwn-QZ-aCI"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
+                        <segue destination="Bev-tC-wGA" kind="show" identifier="moveDiaryDetailIdentifier" id="dxa-ap-96z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1912" y="-348"/>
+        </scene>
+        <!--Diary Detail View Controller-->
+        <scene sceneID="M7x-4D-HzS">
+            <objects>
+                <viewController id="Bev-tC-wGA" customClass="DiaryDetailViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Af-vw-BV8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="riw-1P-e9t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Vs-Pr-rje"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIP-rB-Gir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733" y="-348"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="VPT-hr-iKU">
@@ -114,5 +132,8 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
