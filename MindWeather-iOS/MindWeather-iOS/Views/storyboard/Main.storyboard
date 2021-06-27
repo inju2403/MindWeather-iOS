@@ -129,6 +129,7 @@
             <point key="canvasLocation" x="1067" y="-347"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>

@@ -15,5 +15,11 @@ class DiaryDetailViewController : UIViewController {
     
     override func viewDidLoad() {
         print(diaryId)
+        
+        setUI()
+    }
+    
+    private func setUI() {
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
 }
