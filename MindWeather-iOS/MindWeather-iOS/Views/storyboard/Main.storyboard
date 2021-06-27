@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-C5-0dd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
@@ -43,7 +43,7 @@
                         <constraints>
                             <constraint firstItem="Eic-C5-0dd" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="9eK-ML-ook"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="Eic-C5-0dd" secondAttribute="bottom" id="NCT-VU-Fco"/>
-                            <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" id="iib-Yf-sQI"/>
+                            <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" constant="50" id="iib-Yf-sQI"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="Eic-C5-0dd" secondAttribute="trailing" id="kyf-2a-Qyu"/>
                         </constraints>
                     </view>
