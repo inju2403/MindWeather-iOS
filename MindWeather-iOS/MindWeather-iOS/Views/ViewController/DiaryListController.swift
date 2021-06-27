@@ -54,5 +54,12 @@ extension DiaryListController: UITableViewDataSource {
 //        cell.textLabel?.text =
         return cell
     }
-
 }
+
+extension DiaryListController: UITabBarDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+}
+
+
