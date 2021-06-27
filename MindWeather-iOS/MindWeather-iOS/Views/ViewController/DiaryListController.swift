@@ -28,14 +28,17 @@ class DiaryListController : UIViewController {
 //            .bind(to: diaryList)
 //            .disposed(by: disposeBag)
         
+        diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
+        
         bindTableView()
         diaryListViewModel.getDiarys()
     }
     
     private func bindTableView() {
         diaryListViewModel.diaryList
-            .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier)) { (index: Int, element: Diary, cell: UITableViewCell) in
-                cell.textLabel?.text = element.content
+            .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
+                cell.summaryView?.text = element.content
+                cell.dateView?.text = element.updated_at
             }.disposed(by: disposeBag)
     }
 
@@ -52,6 +55,5 @@ extension DiaryListController: UITableViewDataSource {
 //        cell.textLabel?.text =
         return cell
     }
-
 
 }

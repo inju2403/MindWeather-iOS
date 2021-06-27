@@ -9,6 +9,10 @@ import UIKit
 
 class DiaryListCell: UITableViewCell {
 
+    @IBOutlet weak var diaryCardImage: UIImageView!
+    @IBOutlet weak var summaryView: UILabel!
+    @IBOutlet weak var dateView: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
