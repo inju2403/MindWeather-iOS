@@ -22,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="777"/>
+            <point key="canvasLocation" x="1067" y="372"/>
         </scene>
-        <!--일기 목록-->
+        <!--Diary List Controller-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
                 <viewController id="gAP-U5-w5R" customClass="DiaryListController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-C5-0dd">
-                                <rect key="frame" x="0.0" y="104" width="414" height="709"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="705"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
@@ -43,18 +43,18 @@
                         <constraints>
                             <constraint firstItem="Eic-C5-0dd" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="9eK-ML-ook"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="Eic-C5-0dd" secondAttribute="bottom" id="NCT-VU-Fco"/>
-                            <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" constant="60" id="iib-Yf-sQI"/>
+                            <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" constant="20" id="iib-Yf-sQI"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="Eic-C5-0dd" secondAttribute="trailing" id="kyf-2a-Qyu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
+                    <navigationItem key="navigationItem" id="Qwn-QZ-aCI"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-603" y="777"/>
+            <point key="canvasLocation" x="1912" y="-348"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="VPT-hr-iKU">
@@ -81,13 +81,34 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="gAP-U5-w5R" kind="relationship" relationship="viewControllers" id="2Ot-0E-g4V"/>
+                        <segue destination="H9j-i1-MFO" kind="relationship" relationship="viewControllers" id="2Ot-0E-g4V"/>
                         <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="qFv-Vt-xYv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5" y="-4"/>
+        </scene>
+        <!--일기 목록-->
+        <scene sceneID="GIz-ht-3Hi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9j-i1-MFO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dwo-o8-BTG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gAP-U5-w5R" kind="relationship" relationship="rootViewController" id="tcA-lH-84S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="-347"/>
         </scene>
     </scenes>
     <resources>

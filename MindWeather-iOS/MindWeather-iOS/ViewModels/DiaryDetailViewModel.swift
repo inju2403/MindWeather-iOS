@@ -29,15 +29,15 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
     
     func addOrUpdateDiary() {
-        <#code#>
+        //todo
     }
     
     func deleteDiary() {
-        <#code#>
+        //todo
     }
     
     func loadDiary() {
-        <#code#>
+        //todo
     }
     
     
