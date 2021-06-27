@@ -6,7 +6,39 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
-class DiaryDetailViewModel {
+protocol DiaryDetailViewModelType {
+    var date: BehaviorRelay<String> { get set }
+    var dayOfTheWeek: BehaviorRelay<String> { get set }
+    var emotion: BehaviorRelay<String> { get set }
+    var content: BehaviorRelay<String> { get set }
+    var year: BehaviorRelay<String> { get set }
+    
+    func loadDiary()
+    func addOrUpdateDiary()
+    func deleteDiary()
+}
+
+class DiaryDetailViewModel: DiaryDetailViewModelType {
+    var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
+    var dayOfTheWeek: BehaviorRelay<String> = BehaviorRelay(value: "dayOfTheWeek")
+    var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
+    var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
+    var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
+    
+    func addOrUpdateDiary() {
+        <#code#>
+    }
+    
+    func deleteDiary() {
+        <#code#>
+    }
+    
+    func loadDiary() {
+        <#code#>
+    }
+    
     
 }
