@@ -23,7 +23,7 @@ class LoginViewController : UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "moveSignUpIdentifier", sender: self)
+        self.performSegue(withIdentifier: K.signupSegue, sender: self)
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -48,7 +48,7 @@ class LoginViewController : UIViewController {
                         UserDefaults.standard.set(response.value?.user.email, forKey: "email")
                         
                         //일기리스트 화면으로 이동
-                        self.performSegue(withIdentifier: "moveMainTabBarIdentifier", sender: self)
+                        self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
                         break
                     case 400:
                         print("error")
