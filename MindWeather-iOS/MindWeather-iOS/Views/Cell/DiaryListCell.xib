@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCF-9b-0aF">
-                        <rect key="frame" x="145" y="54" width="406" height="20.5"/>
+                        <rect key="frame" x="145" y="52" width="406" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                     <constraint firstItem="zCF-9b-0aF" firstAttribute="leading" secondItem="R3G-n6-YGf" secondAttribute="trailing" constant="20" id="BIM-fO-itY"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CFY-vh-LS0"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JXe-Rc-gbb"/>
-                    <constraint firstItem="zCF-9b-0aF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="54" id="LCC-T8-auw"/>
+                    <constraint firstItem="zCF-9b-0aF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="52" id="LCC-T8-auw"/>
                     <constraint firstAttribute="bottom" secondItem="bCh-eS-P9V" secondAttribute="bottom" constant="50" id="WOw-z8-riH"/>
                     <constraint firstAttribute="bottom" secondItem="sh9-OS-lBh" secondAttribute="bottom" constant="10" id="on5-FX-Xdb"/>
                     <constraint firstItem="R3G-n6-YGf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="wdK-K0-Ycq"/>
