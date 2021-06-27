@@ -16,12 +16,16 @@ protocol DiaryDetailViewModelType {
     var content: BehaviorRelay<String> { get set }
     var year: BehaviorRelay<String> { get set }
     
-    func loadDiary()
-    func addOrUpdateDiary()
-    func deleteDiary()
+//    func loadDiary(diaryId: String)
+//    func addOrUpdateDiary(diaryId: String)
+//    func deleteDiary(diaryId: String)
 }
 
 class DiaryDetailViewModel: DiaryDetailViewModelType {
+    
+    var disposeBag = DisposeBag()
+    private let service = DiaryServiceImpl()
+    
     var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
     var dayOfTheWeek: BehaviorRelay<String> = BehaviorRelay(value: "dayOfTheWeek")
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
@@ -36,8 +40,19 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
         //todo
     }
     
-    func loadDiary() {
-        //todo
+    func loadDiary(diaryId: Int) {
+        _ = service.getDiaryById(diaryId: diaryId)
+            .subscribe { event in
+                switch event {
+                case .success(let diary):
+                    self.date.accept(diary.updated_at ?? "")
+                    self.content.accept(diary.content ?? "")
+                case .failure(let error):
+                    print("Error: ", error)
+                }
+                
+            }
+            .disposed(by: disposeBag)
     }
     
     
