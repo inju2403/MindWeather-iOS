@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,7 +68,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diary_detail_background" translatesAutoresizingMaskIntoConstraints="NO" id="eQB-cN-AEe">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWA-QU-tjm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWA-QU-tjm">
                                 <rect key="frame" x="190" y="238" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -82,34 +81,33 @@
                                     <constraint firstAttribute="height" constant="40" id="sOe-zq-GHd"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-SO-FBa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEe-Fv-kW7">
                                 <rect key="frame" x="80" y="339" width="254" height="394"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="riw-1P-e9t"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="riw-1P-e9t" firstAttribute="bottom" secondItem="PC8-SO-FBa" secondAttribute="bottom" constant="80" id="3pq-a7-BNb"/>
+                            <constraint firstItem="mEe-Fv-kW7" firstAttribute="top" secondItem="yRf-XN-ue4" secondAttribute="bottom" constant="20" id="30J-km-jEQ"/>
+                            <constraint firstItem="riw-1P-e9t" firstAttribute="trailing" secondItem="mEe-Fv-kW7" secondAttribute="trailing" constant="80" id="EcR-9Q-tXw"/>
                             <constraint firstItem="eQB-cN-AEe" firstAttribute="leading" secondItem="riw-1P-e9t" secondAttribute="leading" id="N2Q-QN-Osb"/>
-                            <constraint firstItem="PC8-SO-FBa" firstAttribute="top" secondItem="yRf-XN-ue4" secondAttribute="bottom" constant="20" id="NDw-V6-LsJ"/>
-                            <constraint firstItem="PC8-SO-FBa" firstAttribute="leading" secondItem="riw-1P-e9t" secondAttribute="leading" constant="80" id="Nd6-GK-pdK"/>
                             <constraint firstItem="lWA-QU-tjm" firstAttribute="top" secondItem="riw-1P-e9t" secondAttribute="top" constant="150" id="QZa-ac-7OI"/>
+                            <constraint firstItem="mEe-Fv-kW7" firstAttribute="leading" secondItem="riw-1P-e9t" secondAttribute="leading" constant="80" id="Ruh-XE-zXL"/>
                             <constraint firstItem="riw-1P-e9t" firstAttribute="bottom" secondItem="eQB-cN-AEe" secondAttribute="bottom" id="SmS-4V-lLj"/>
                             <constraint firstItem="eQB-cN-AEe" firstAttribute="top" secondItem="riw-1P-e9t" secondAttribute="top" id="T78-jX-0BR"/>
                             <constraint firstItem="lWA-QU-tjm" firstAttribute="centerX" secondItem="1Af-vw-BV8" secondAttribute="centerX" id="fRu-6c-tgO"/>
                             <constraint firstItem="yRf-XN-ue4" firstAttribute="top" secondItem="lWA-QU-tjm" secondAttribute="bottom" constant="20" id="i4i-nW-BVP"/>
                             <constraint firstItem="yRf-XN-ue4" firstAttribute="leading" secondItem="riw-1P-e9t" secondAttribute="leading" constant="80" id="jIm-j9-gYC"/>
-                            <constraint firstItem="riw-1P-e9t" firstAttribute="trailing" secondItem="PC8-SO-FBa" secondAttribute="trailing" constant="80" id="uwA-vB-j3m"/>
+                            <constraint firstItem="riw-1P-e9t" firstAttribute="bottom" secondItem="mEe-Fv-kW7" secondAttribute="bottom" constant="80" id="wWc-gK-g3t"/>
                             <constraint firstItem="riw-1P-e9t" firstAttribute="trailing" secondItem="eQB-cN-AEe" secondAttribute="trailing" id="yGL-tz-50Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Vs-Pr-rje"/>
                     <connections>
-                        <outlet property="content" destination="PC8-SO-FBa" id="Fd3-kV-Uit"/>
+                        <outlet property="content" destination="mEe-Fv-kW7" id="eTP-pp-hae"/>
                         <outlet property="date" destination="lWA-QU-tjm" id="Edy-gc-Ln5"/>
                     </connections>
                 </viewController>
@@ -178,8 +176,5 @@
         <image name="diary_detail_background" width="2827" height="4000"/>
         <image name="ic_happiness" width="512" height="512"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

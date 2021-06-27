@@ -17,7 +17,7 @@ class DiaryDetailViewController : UIViewController {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var content: UILabel!
     
     override func viewDidLoad() {
         print(diaryId)
