@@ -42,7 +42,6 @@ class DiaryListController : UIViewController {
             }.disposed(by: disposeBag)
     }
 
-
 }
 
 extension DiaryListController: UITableViewDataSource {

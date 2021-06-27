@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="Mxf-bu-MvF"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="감정 변화" id="4eg-VK-bEA"/>
+                    <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +47,7 @@
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="Eic-C5-0dd" secondAttribute="trailing" id="kyf-2a-Qyu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="일기 목록" id="Dyg-fC-yXE"/>
+                    <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
                     </connections>
@@ -66,6 +66,11 @@
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="selectedImageTintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.84584265950000004" green="0.72740191219999994" blue="0.55291527510000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="gAP-U5-w5R" kind="relationship" relationship="viewControllers" id="2Ot-0E-g4V"/>
@@ -77,4 +82,8 @@
             <point key="canvasLocation" x="5" y="-4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="text.book.closed" catalog="system" width="115" height="128"/>
+    </resources>
 </document>
