@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MyTabBarViewController: UITabBarController {
+class MainTabBarViewController: UITabBarController {
     
     var disposeBag = DisposeBag()
     let service = DiaryRepoImpl()

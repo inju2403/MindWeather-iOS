@@ -12,7 +12,7 @@
         <!--감정 변화-->
         <scene sceneID="HhZ-R1-3bY">
             <objects>
-                <viewController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wmm-iU-1kg" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wmm-iU-1kg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRF-FD-mEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-603" y="777"/>
         </scene>
-        <!--My Tab Bar View Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="0sv-E5-qf1">
             <objects>
-                <tabBarController storyboardIdentifier="MyTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MyTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MainTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yf1-uc-7Su">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

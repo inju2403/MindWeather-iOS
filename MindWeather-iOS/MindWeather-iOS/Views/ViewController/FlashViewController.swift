@@ -13,9 +13,12 @@ class FlashViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let runFirst = UserDefaults.standard.value(forKey: "runFirst")
+        let token = UserDefaults.standard.value(forKey: "token")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if runFirst == nil {
+            if token != nil { //자동 로그인
+                self.performSegue(withIdentifier: "moveMainTabBarIdentifier", sender: self)
+            } else if runFirst == nil {
                 self.performSegue(withIdentifier: "moveTutorialIdentifier", sender: self)
             } else {
                 self.performSegue(withIdentifier: "moveLoginIdentifier", sender: self)

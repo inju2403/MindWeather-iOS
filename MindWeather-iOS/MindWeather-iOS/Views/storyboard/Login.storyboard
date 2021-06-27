@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="116"/>
         </scene>
-        <!--MyTabBarViewController-->
+        <!--MainTabBarViewController-->
         <scene sceneID="Vom-x6-ll2">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainTabBarViewController" storyboardName="Main" referencedIdentifier="MyTabBarViewController" id="zlQ-mx-8lC" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabBarViewController" id="zlQ-mx-8lC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIh-Xe-DEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="873" y="39"/>
