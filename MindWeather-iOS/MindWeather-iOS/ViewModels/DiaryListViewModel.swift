@@ -9,7 +9,13 @@ import Foundation
 import RxSwift
 import RxRelay
 
-class DiaryListViewModel {
+protocol DiaryListViewModelType {
+    var diaryList: BehaviorRelay<[Diary]> { get }
+    
+    func getDiarys()
+}
+
+class DiaryListViewModel: DiaryListViewModelType {
     
     var disposeBag = DisposeBag()
     private let service = DiaryServiceImpl()
