@@ -73,6 +73,7 @@ extension DiaryListViewController: UITableViewDataSource {
 }
 
 extension DiaryListViewController: UITableViewDelegate {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DiaryDetailViewController
 

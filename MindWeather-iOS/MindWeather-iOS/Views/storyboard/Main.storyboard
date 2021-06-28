@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sfx-jd-3Nu">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="-348"/>
+            <point key="canvasLocation" x="1817" y="-348"/>
         </scene>
         <!--Diary Detail View Controller-->
         <scene sceneID="M7x-4D-HzS">
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIP-rB-Gir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730.434782608696" y="-348.21428571428572"/>
+            <point key="canvasLocation" x="2551" y="-348"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="VPT-hr-iKU">
@@ -151,6 +151,7 @@
         <scene sceneID="0sv-E5-qf1">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MainTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bqn-Zt-RAo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yf1-uc-7Su">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,11 +171,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="-4"/>
+            <point key="canvasLocation" x="188" y="1"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9j-i1-MFO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
                     <toolbarItems/>
@@ -189,7 +191,6 @@
                         <segue destination="gAP-U5-w5R" kind="relationship" relationship="rootViewController" id="tcA-lH-84S"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1067" y="-347"/>
         </scene>
