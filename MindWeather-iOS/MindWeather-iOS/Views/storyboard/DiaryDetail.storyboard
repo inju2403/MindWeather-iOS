@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xCj-tT-Gm2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diary Detail View Controller-->
+        <scene sceneID="4Zz-Aa-uak">
+            <objects>
+                <viewController storyboardIdentifier="DiaryDetailViewController" id="xCj-tT-Gm2" customClass="DiaryDetailViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AAE-MG-Hre">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diary_detail_background" translatesAutoresizingMaskIntoConstraints="NO" id="o51-av-wEs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmt-Nb-wIv">
+                                <rect key="frame" x="0.0" y="144" width="414" height="648"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-5Y-Ptx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="151.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-cT-I26">
+                                                <rect key="frame" x="190" y="20" width="34" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_happiness" translatesAutoresizingMaskIntoConstraints="NO" id="J0u-QF-yLZ">
+                                                <rect key="frame" x="70" y="61" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Xi6-bx-8Aq"/>
+                                                    <constraint firstAttribute="width" constant="40" id="jrS-Xq-NZa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-Qe-jaO">
+                                                <rect key="frame" x="70" y="121" width="274" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="PTQ-Qe-jaO" secondAttribute="bottom" constant="10" id="5MN-6X-KaK"/>
+                                            <constraint firstItem="YfB-cT-I26" firstAttribute="centerX" secondItem="PTr-5Y-Ptx" secondAttribute="centerX" id="9TD-kk-brE"/>
+                                            <constraint firstItem="YfB-cT-I26" firstAttribute="top" secondItem="PTr-5Y-Ptx" secondAttribute="top" constant="20" id="9ZO-YL-FDc"/>
+                                            <constraint firstAttribute="trailing" secondItem="PTQ-Qe-jaO" secondAttribute="trailing" constant="70" id="Lrg-Fa-BTe"/>
+                                            <constraint firstItem="PTQ-Qe-jaO" firstAttribute="leading" secondItem="PTr-5Y-Ptx" secondAttribute="leading" constant="70" id="W1c-WT-t3V"/>
+                                            <constraint firstItem="J0u-QF-yLZ" firstAttribute="leading" secondItem="PTr-5Y-Ptx" secondAttribute="leading" constant="70" id="lsl-GM-XaQ"/>
+                                            <constraint firstItem="J0u-QF-yLZ" firstAttribute="top" secondItem="YfB-cT-I26" secondAttribute="bottom" constant="20" id="r7D-T3-wjm"/>
+                                            <constraint firstItem="PTQ-Qe-jaO" firstAttribute="top" secondItem="J0u-QF-yLZ" secondAttribute="bottom" constant="20" id="xAU-ef-vaa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PTr-5Y-Ptx" secondAttribute="bottom" id="0lF-bX-f7O"/>
+                                    <constraint firstItem="PTr-5Y-Ptx" firstAttribute="top" secondItem="Jmt-Nb-wIv" secondAttribute="top" id="Dn3-ia-du5"/>
+                                    <constraint firstAttribute="trailing" secondItem="PTr-5Y-Ptx" secondAttribute="trailing" id="S8F-oz-liR"/>
+                                    <constraint firstItem="PTr-5Y-Ptx" firstAttribute="width" secondItem="Jmt-Nb-wIv" secondAttribute="width" id="p6u-N4-oQd"/>
+                                    <constraint firstItem="PTr-5Y-Ptx" firstAttribute="leading" secondItem="Jmt-Nb-wIv" secondAttribute="leading" id="zBu-u1-2zz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1hD-gS-XK2"/>
+                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Jmt-Nb-wIv" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="100" id="ASE-nA-j3U"/>
+                            <constraint firstItem="o51-av-wEs" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" id="DNn-OK-m1x"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="o51-av-wEs" secondAttribute="trailing" id="cws-B3-ixa"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="Jmt-Nb-wIv" secondAttribute="trailing" id="gTq-IK-a5Y"/>
+                            <constraint firstItem="Jmt-Nb-wIv" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="hrS-5q-r5n"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="70" id="tcB-Ts-ccj"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="o51-av-wEs" secondAttribute="bottom" id="teq-uv-EPH"/>
+                            <constraint firstItem="o51-av-wEs" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="xbP-yV-Up4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6qy-cW-jwW"/>
+                    <connections>
+                        <outlet property="content" destination="PTQ-Qe-jaO" id="gHu-eH-Tkh"/>
+                        <outlet property="date" destination="YfB-cT-I26" id="tvJ-6F-bQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHg-k8-t8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2551" y="-348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="diary_detail_background" width="2827" height="4000"/>
+        <image name="ic_happiness" width="512" height="512"/>
+    </resources>
+</document>

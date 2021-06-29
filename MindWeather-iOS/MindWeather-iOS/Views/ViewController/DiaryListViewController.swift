@@ -22,6 +22,7 @@ class DiaryListViewController : UIViewController {
     var selectedDiaryId: Int = 0
     
     override func viewDidLoad() {
+        super.viewDidLoad()
 //        diaryListViewModel.testContent
 //            .bind(to: testLabel.rx.text)
 //            .disposed(by: disposeBag)

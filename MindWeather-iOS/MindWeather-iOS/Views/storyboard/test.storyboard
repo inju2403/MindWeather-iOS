@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="Lnb-ia-JLl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yzM-8Q-Oyi"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="calendar" catalog="system" id="yzM-8Q-Oyi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMO-Oz-yyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="5tO-77-Fvh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="CLK-1q-NHs"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="pencil" catalog="system" id="CLK-1q-NHs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNe-oV-5Pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +112,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

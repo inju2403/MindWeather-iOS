@@ -9,13 +9,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainTabBarViewController: UITabBarController {
+class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     var disposeBag = DisposeBag()
     let service = DiaryRepoImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let diaryListIcon = UITabBarItem(title: nil, image: UIImage(named: "text.book.closed"), selectedImage: UIImage(named: "text.book.closed"))
+        let emotionIcon = UITabBarItem(title: nil, image: UIImage(named: "calendar"), selectedImage: UIImage(named: "calendar"))
         
         _ = service.getDiarys()
             .subscribe { event in
@@ -30,4 +33,9 @@ class MainTabBarViewController: UITabBarController {
             .disposed(by: disposeBag)
     }
 }
+
+//extension MainTabBarViewController: UITabBarControllerDelegate {
+//    let diaryListVC = DiaryListViewController()
+//    let emotionVC = EmotionViewController()
+//}
 

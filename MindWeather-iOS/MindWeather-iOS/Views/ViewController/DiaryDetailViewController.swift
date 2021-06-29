@@ -20,6 +20,7 @@ class DiaryDetailViewController : UIViewController {
     @IBOutlet weak var content: UILabel!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         print(diaryId)
         
         setUI()
