@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1067" y="372"/>
+            <point key="canvasLocation" x="-788" y="1146"/>
         </scene>
         <!--Diary List View Controller-->
         <scene sceneID="2fj-YQ-VX0">
@@ -55,7 +56,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1817" y="-348"/>
+            <point key="canvasLocation" x="-1525" y="1839"/>
         </scene>
         <!--DiaryDetailViewController-->
         <scene sceneID="3zW-4q-Rey">
@@ -65,7 +66,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEq-9L-sx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2461" y="-348"/>
+            <point key="canvasLocation" x="-1526" y="2225"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="VPT-hr-iKU">
@@ -73,7 +74,7 @@
                 <viewControllerPlaceholder id="Txb-f7-vkj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHS-NO-mOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="1290"/>
+            <point key="canvasLocation" x="2088" y="1673"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="0sv-E5-qf1">
@@ -95,11 +96,45 @@
                     <connections>
                         <segue destination="H9j-i1-MFO" kind="relationship" relationship="viewControllers" id="2Ot-0E-g4V"/>
                         <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="qFv-Vt-xYv"/>
+                        <segue destination="veB-p0-f3Q" kind="relationship" relationship="viewControllers" id="zcQ-rs-j1B"/>
+                        <segue destination="DzL-Hh-8Dj" kind="relationship" relationship="viewControllers" id="r4B-eZ-G9F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="1"/>
+            <point key="canvasLocation" x="-414" y="417"/>
+        </scene>
+        <!--일기 쓰기-->
+        <scene sceneID="2w7-k1-mkN">
+            <objects>
+                <viewController id="veB-p0-f3Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Osi-Hf-NNc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rns-Sy-I1j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="일기 쓰기" image="plus" catalog="system" id="YLc-n8-WYY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUz-LG-kB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="1146"/>
+        </scene>
+        <!--더보기-->
+        <scene sceneID="wZX-LY-fiK">
+            <objects>
+                <viewController id="DzL-Hh-8Dj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ONS-3J-dtp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="arH-hL-zKk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="더보기" image="person" catalog="system" id="Lpt-Eu-hgv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="1146"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
@@ -120,12 +155,17 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1067" y="-347"/>
+            <point key="canvasLocation" x="-1525" y="1146"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
