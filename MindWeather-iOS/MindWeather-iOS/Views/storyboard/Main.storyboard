@@ -17,8 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="QRF-FD-mEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emotion graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-aM-cz3">
+                                <rect key="frame" x="151.66666666666666" y="437.66666666666669" width="110.99999999999997" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mxf-bu-MvF"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RtS-aM-cz3" firstAttribute="centerY" secondItem="QRF-FD-mEh" secondAttribute="centerY" id="Zrn-lw-ccK"/>
+                            <constraint firstItem="RtS-aM-cz3" firstAttribute="centerX" secondItem="QRF-FD-mEh" secondAttribute="centerX" id="qIU-N4-U5N"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
                 </viewController>
@@ -98,16 +110,27 @@
                         <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="qFv-Vt-xYv"/>
                         <segue destination="veB-p0-f3Q" kind="relationship" relationship="viewControllers" id="zcQ-rs-j1B"/>
                         <segue destination="DzL-Hh-8Dj" kind="relationship" relationship="viewControllers" id="r4B-eZ-G9F"/>
+                        <segue destination="Bzr-56-2u1" kind="show" identifier="moveDiaryEditIdentifier" id="Wbo-uq-sPx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-414" y="417"/>
         </scene>
+        <!--DiaryEditViewController-->
+        <scene sceneID="Riu-51-UM8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DiaryEdit" referencedIdentifier="DiaryEditViewController" id="Bzr-56-2u1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oz2-Fb-XGD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CL-Xz-WCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="1509"/>
+        </scene>
         <!--일기 쓰기-->
         <scene sceneID="2w7-k1-mkN">
             <objects>
-                <viewController id="veB-p0-f3Q" sceneMemberID="viewController">
+                <viewController id="veB-p0-f3Q" customClass="EditClickViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Osi-Hf-NNc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,8 +150,20 @@
                     <view key="view" contentMode="scaleToFill" id="ONS-3J-dtp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="myPage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-k2-NXa">
+                                <rect key="frame" x="176" y="437.66666666666669" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="arH-hL-zKk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HBX-k2-NXa" firstAttribute="centerY" secondItem="ONS-3J-dtp" secondAttribute="centerY" id="olq-Gg-bKg"/>
+                            <constraint firstItem="HBX-k2-NXa" firstAttribute="centerX" secondItem="ONS-3J-dtp" secondAttribute="centerX" id="znX-dy-Lgu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="더보기" image="person" catalog="system" id="Lpt-Eu-hgv"/>
                 </viewController>

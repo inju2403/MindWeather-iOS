@@ -32,12 +32,12 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController.isKind(of: DiaryDetailViewController.self) {
-            let vc = DiaryDetailViewController()
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: true, completion: nil)
+        if viewController.isKind(of: EditClickViewController.self) {
+            self.performSegue(withIdentifier: K.diaryEditSegue, sender: self)
+            print("ok")
             return false
         }
+        print("no")
         return true
     }
 }
