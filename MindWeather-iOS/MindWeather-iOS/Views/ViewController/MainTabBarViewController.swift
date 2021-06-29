@@ -30,4 +30,14 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
             }
             .disposed(by: disposeBag)
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.isKind(of: DiaryDetailViewController.self) {
+            let vc = DiaryDetailViewController()
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+            return false
+        }
+        return true
+    }
 }
