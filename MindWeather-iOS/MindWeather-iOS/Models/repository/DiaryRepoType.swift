@@ -11,6 +11,6 @@ import RxSwift
 protocol DiaryRepoType {
     func getDiarys() -> Single<[Diary]>
     func getDiaryById(diaryId: Int) -> Single<Diary>
-//    func updateDiary(content: Content, diaryId: String)
-//    func deleteDiary(diaryId: String)
+    func updateDiary(content: Content, diaryId: Int) -> Single<Bool>
+//    func deleteDiary(diaryId: Int)
 }

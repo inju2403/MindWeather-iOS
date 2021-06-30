@@ -20,11 +20,11 @@ class DiaryServiceImpl: DiaryServiceType {
         return repo.getDiaryById(diaryId: diaryId)
     }
 
-//    func updateDiary(content: Content, diaryId: String) {
-//        <#code#>
-//    }
+    func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
+        return repo.updateDiary(content: content, diaryId: diaryId)
+    }
 //
-//    func deleteDiary(diaryId: String) {
+//    func deleteDiary(diaryId: Int) {
 //        <#code#>
 //    }
 //

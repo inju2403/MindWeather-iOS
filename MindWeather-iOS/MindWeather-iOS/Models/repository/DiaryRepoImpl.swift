@@ -50,12 +50,34 @@ class DiaryRepoImpl: DiaryRepoType {
             return Disposables.create()
       }
     }
+    
+    func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
+        return Single<Bool>.create { single in
+            let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
+        
+            AF.request(urlString,
+                    method: .patch,
+                    parameters: content,
+                    encoder: JSONParameterEncoder(),
+                    headers: ["Authorization" : self.token])
+                .responseJSON {  response in
+                    switch response.response?.statusCode {
+                    case 200:
+                        single(.success(true))
+                        break
+                    case 400:
+                        single(.failure(response.error!))
+                        break
+                    default:
+                        break
+                    }
+            }
+            
+            return Disposables.create()
+      }
+    }
 //    
-//    func updateDiary(content: Content, diaryId: String) {
-//        <#code#>
-//    }
-//    
-//    func deleteDiary(diaryId: String) {
+//    func deleteDiary(diaryId: Int) {
 //        <#code#>
 //    }
     

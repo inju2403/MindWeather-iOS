@@ -53,6 +53,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABe-S4-r28">
+                                <rect key="frame" x="355" y="168" width="19" height="22"/>
+                                <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="checkmark" catalog="system"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="r98-hG-4q8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -61,6 +69,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f9G-jN-lND" secondAttribute="trailing" id="ClJ-yx-4w9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wbn-SK-SSB" secondAttribute="trailing" constant="60" id="DMk-5W-OQh"/>
                             <constraint firstItem="f9G-jN-lND" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GAG-2i-ZU8"/>
+                            <constraint firstItem="ABe-S4-r28" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="GDt-OL-2Nt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f9G-jN-lND" secondAttribute="bottom" id="Ggi-Pr-fLv"/>
                             <constraint firstItem="NWz-LC-t33" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MLD-gp-Ero"/>
                             <constraint firstItem="91h-oM-Jdh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="140" id="Oej-cu-ntE"/>
@@ -71,6 +80,7 @@
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="jlW-ea-VjR"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="20" id="pvv-XL-hSh"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="q6e-Nt-5QW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ABe-S4-r28" secondAttribute="trailing" constant="40" id="sU8-fc-DMn"/>
                             <constraint firstItem="Pxl-VK-oTF" firstAttribute="leading" secondItem="91h-oM-Jdh" secondAttribute="trailing" constant="15" id="yaP-El-RjC"/>
                             <constraint firstItem="Pxl-VK-oTF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="140" id="zR8-8u-bdU"/>
                         </constraints>
@@ -87,6 +97,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="diary_detail_background" width="2827" height="4000"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>

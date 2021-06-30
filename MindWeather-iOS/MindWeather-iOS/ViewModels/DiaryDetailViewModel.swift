@@ -32,8 +32,20 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
     
-    func addOrUpdateDiary() {
-        //todo
+    var addOk: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    
+    func addOrUpdateDiary(content: Content, diaryId: Int) {
+        _ = service.updateDiary(content: content, diaryId: diaryId)
+            .subscribe { event in
+                switch event {
+                case .success(let value):
+                    self.addOk.accept(value)
+                    break
+                case .failure(let error):
+                    print("Error: ", error)
+                    break
+                }
+            }
     }
     
     func deleteDiary() {
@@ -47,8 +59,10 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                 case .success(let diary):
                     self.date.accept(diary.updated_at ?? "")
                     self.content.accept(diary.content ?? "")
+                    break
                 case .failure(let error):
                     print("Error: ", error)
+                    break
                 }
                 
             }
