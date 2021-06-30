@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Diary Edit View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DiaryEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DiaryEditViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,15 +23,18 @@
                                 <rect key="frame" x="40" y="168" width="18" height="22"/>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KKL-xB-5hb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0630" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91h-oM-Jdh">
-                                <rect key="frame" x="161" y="184" width="42" height="21"/>
+                                <rect key="frame" x="159" y="184" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxl-VK-oTF">
-                                <rect key="frame" x="218" y="184" width="35" height="21"/>
+                                <rect key="frame" x="216" y="184" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +66,7 @@
                             <constraint firstItem="91h-oM-Jdh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="140" id="Oej-cu-ntE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wbn-SK-SSB" secondAttribute="bottom" constant="60" id="Tp4-fJ-yNI"/>
                             <constraint firstItem="f9G-jN-lND" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="X6F-Rr-AJW"/>
-                            <constraint firstItem="91h-oM-Jdh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-25" id="ZOc-kd-ULK"/>
+                            <constraint firstItem="91h-oM-Jdh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-27" id="ZOc-kd-ULK"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="bhq-xK-fqt"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="jlW-ea-VjR"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="20" id="pvv-XL-hSh"/>
@@ -72,6 +75,11 @@
                             <constraint firstItem="Pxl-VK-oTF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="140" id="zR8-8u-bdU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="content" destination="Wbn-SK-SSB" id="6Ll-DC-6An"/>
+                        <outlet property="dateText" destination="91h-oM-Jdh" id="inL-C3-2pH"/>
+                        <outlet property="dayText" destination="Pxl-VK-oTF" id="tgn-vE-zb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

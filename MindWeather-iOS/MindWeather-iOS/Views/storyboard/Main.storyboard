@@ -110,7 +110,7 @@
                         <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="qFv-Vt-xYv"/>
                         <segue destination="veB-p0-f3Q" kind="relationship" relationship="viewControllers" id="zcQ-rs-j1B"/>
                         <segue destination="DzL-Hh-8Dj" kind="relationship" relationship="viewControllers" id="r4B-eZ-G9F"/>
-                        <segue destination="Bzr-56-2u1" kind="show" identifier="moveDiaryEditIdentifier" id="Wbo-uq-sPx"/>
+                        <segue destination="Bzr-56-2u1" kind="presentation" identifier="moveDiaryEditIdentifier" modalPresentationStyle="fullScreen" id="Wbo-uq-sPx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
