@@ -29,11 +29,14 @@ class DiaryEditViewController : UIViewController {
     
     private func bindViewModel() {
         diaryDetailViewModel.addOk
-            .do(onDispose:  {
-                self.dismiss(animated: true, completion: nil)
-            })
-            .subscribe(onDisposed:  {
-            })
+            .do(
+                onSubscribe: {
+                    //로딩 ui 켜기
+                })
+            .subscribe(
+                onNext: { _ in
+                    self.dismiss(animated: true, completion: nil)
+                })
             .disposed(by: disposeBag)
     }
     
