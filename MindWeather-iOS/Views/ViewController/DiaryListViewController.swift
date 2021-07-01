@@ -37,6 +37,11 @@ class DiaryListViewController : UIViewController {
         diaryListViewModel.getDiarys()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        diaryListViewModel.getDiarys()
+    }
+    
     private func bindTableView() {
         diaryListViewModel.diaryList
             .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
