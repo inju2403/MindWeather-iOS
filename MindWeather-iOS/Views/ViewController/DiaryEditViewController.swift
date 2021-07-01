@@ -12,7 +12,7 @@ import RxCocoa
 
 class DiaryEditViewController : UIViewController {
     
-    var diaryId = 987654321
+    var diaryId = K.newDiaryValue
     
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
@@ -25,6 +25,9 @@ class DiaryEditViewController : UIViewController {
         super.viewDidLoad()
         
         bindViewModel()
+        if diaryId != K.newDiaryValue {
+            diaryDetailViewModel.loadDiary(diaryId: diaryId)
+        }
     }
     
     private func bindViewModel() {
@@ -34,8 +37,16 @@ class DiaryEditViewController : UIViewController {
                     //로딩 ui 켜기
                 })
             .subscribe(
-                onNext: { _ in
-                    self.dismiss(animated: true, completion: nil)
+                onNext: { value in
+                    if value == "addOrUpdateDiary" {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+//                        self.dateText.text = self.diaryDetailViewModel.date.value
+//                        self.dayText.text = self.diaryDetailViewModel.dayOfTheWeek.value
+                        self.content.text = self.diaryDetailViewModel.content.value
+                        
+                        //로딩 ui 끄기
+                    }
                 })
             .disposed(by: disposeBag)
     }

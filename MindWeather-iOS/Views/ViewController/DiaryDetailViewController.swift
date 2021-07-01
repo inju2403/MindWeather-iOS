@@ -28,6 +28,23 @@ class DiaryDetailViewController : UIViewController {
         diaryDetailViewModel.loadDiary(diaryId: diaryId)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        diaryDetailViewModel.loadDiary(diaryId: diaryId)
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.diaryEditSegue, sender: self)
+    }
+    
+    @IBAction func delteButtonClicked(_ sender: UIButton) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DiaryEditViewController
+        destinationVC.diaryId = diaryId
+    }
+    
     private func bindViewModel() {
         diaryDetailViewModel.date
             .bind(to: date.rx.text)

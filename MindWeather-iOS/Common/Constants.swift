@@ -19,4 +19,6 @@ struct K {
     
     static let diaryListCellIdentifier = "ReusableCell"
     static let diaryCellNibName = "DiaryListCell"
+    
+    static let newDiaryValue = 987654321
 }

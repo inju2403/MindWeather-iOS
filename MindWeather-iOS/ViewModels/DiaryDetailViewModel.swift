@@ -32,14 +32,14 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
     
-    var addOk: PublishSubject<Bool> = PublishSubject<Bool>()
+    var addOk: PublishSubject<String> = PublishSubject<String>()
     
     func addOrUpdateDiary(content: Content, diaryId: Int) {
         _ = service.updateDiary(content: content, diaryId: diaryId)
             .subscribe { event in
                 switch event {
-                case .success(let value):
-                    self.addOk.onNext(value)
+                case .success(_):
+                    self.addOk.onNext("addOrUpdateDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
@@ -59,6 +59,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                 case .success(let diary):
                     self.date.accept(diary.updated_at ?? "")
                     self.content.accept(diary.content ?? "")
+                    self.addOk.onNext("loadDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
