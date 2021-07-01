@@ -23,10 +23,10 @@ class DiaryServiceImpl: DiaryServiceType {
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
         return repo.updateDiary(content: content, diaryId: diaryId)
     }
-//
-//    func deleteDiary(diaryId: Int) {
-//        <#code#>
-//    }
+
+    func deleteDiary(diaryId: Int) -> Single<Bool> {
+        return repo.deleteDiary(diaryId: diaryId)
+    }
 //
 //    func getEmotions() -> [Emotion] {
 //        <#code#>

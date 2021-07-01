@@ -12,7 +12,7 @@ protocol DiaryServiceType {
     func getDiarys() -> Single<[Diary]>
     func getDiaryById(diaryId: Int) -> Single<Diary>
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool>
-//    func deleteDiary(diaryId: Int)
+    func deleteDiary(diaryId: Int) -> Single<Bool>
 //    
 //    func getEmotions() -> [Emotion]
 }

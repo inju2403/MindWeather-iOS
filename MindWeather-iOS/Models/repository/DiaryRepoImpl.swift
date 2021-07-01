@@ -29,7 +29,7 @@ class DiaryRepoImpl: DiaryRepoType {
             }
         
             return Disposables.create()
-      }
+        }
     }
     
     func getDiaryById(diaryId: Int) -> Single<Diary> {
@@ -48,7 +48,7 @@ class DiaryRepoImpl: DiaryRepoType {
             }
             
             return Disposables.create()
-      }
+        }
     }
     
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
@@ -74,11 +74,31 @@ class DiaryRepoImpl: DiaryRepoType {
             }
             
             return Disposables.create()
-      }
+        }
     }
-//    
-//    func deleteDiary(diaryId: Int) {
-//        <#code#>
-//    }
+    
+    func deleteDiary(diaryId: Int) -> Single<Bool> {
+        return Single<Bool>.create { single in
+            let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
+        
+            AF.request(urlString,
+                    method: .delete,
+                    headers: ["Authorization" : self.token])
+                .responseJSON {  response in
+                    switch response.response?.statusCode {
+                    case 204:
+                        single(.success(true))
+                        break
+                    case 400:
+                        single(.failure(response.error!))
+                        break
+                    default:
+                        break
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }
     
 }

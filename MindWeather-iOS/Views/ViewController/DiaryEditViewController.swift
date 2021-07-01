@@ -31,7 +31,7 @@ class DiaryEditViewController : UIViewController {
     }
     
     private func bindViewModel() {
-        diaryDetailViewModel.addOk
+        diaryDetailViewModel.receiver
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기

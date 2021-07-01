@@ -38,6 +38,7 @@ class DiaryDetailViewController : UIViewController {
     }
     
     @IBAction func delteButtonClicked(_ sender: UIButton) {
+        diaryDetailViewModel.deleteDiary(diaryId: diaryId)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +53,19 @@ class DiaryDetailViewController : UIViewController {
         
         diaryDetailViewModel.content
             .bind(to: content.rx.text)
+            .disposed(by: disposeBag)
+        
+        diaryDetailViewModel.receiver
+            .do(
+                onSubscribe: {
+                    //로딩 ui 켜기
+                })
+            .subscribe(
+                onNext: { value in
+                    if value == "deleteDiary" {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                })
             .disposed(by: disposeBag)
     }
     

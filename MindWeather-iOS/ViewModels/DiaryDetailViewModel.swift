@@ -32,14 +32,14 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
     
-    var addOk: PublishSubject<String> = PublishSubject<String>()
+    var receiver: PublishSubject<String> = PublishSubject<String>()
     
     func addOrUpdateDiary(content: Content, diaryId: Int) {
         _ = service.updateDiary(content: content, diaryId: diaryId)
             .subscribe { event in
                 switch event {
                 case .success(_):
-                    self.addOk.onNext("addOrUpdateDiary")
+                    self.receiver.onNext("addOrUpdateDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
@@ -48,8 +48,20 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
             }
     }
     
-    func deleteDiary() {
-        //todo
+    func deleteDiary(diaryId: Int) {
+        _ = service.deleteDiary(diaryId: diaryId)
+            .subscribe { event in
+                switch event {
+                case .success(_):
+                    print("kk")
+                    self.receiver.onNext("deleteDiary")
+                    break
+                case .failure(let error):
+                    print("Error: ", error)
+                    break
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     func loadDiary(diaryId: Int) {
@@ -59,7 +71,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                 case .success(let diary):
                     self.date.accept(diary.updated_at ?? "")
                     self.content.accept(diary.content ?? "")
-                    self.addOk.onNext("loadDiary")
+                    self.receiver.onNext("loadDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
