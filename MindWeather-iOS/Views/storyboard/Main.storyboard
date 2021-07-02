@@ -12,7 +12,6 @@
         <!--감정 변화-->
         <scene sceneID="HhZ-R1-3bY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wmm-iU-1kg" customClass="EmotionViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRF-FD-mEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -34,13 +33,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-788" y="1146"/>
         </scene>
         <!--Diary List View Controller-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="gAP-U5-w5R" customClass="DiaryListViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DhZ-Me-Eo4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -67,6 +66,7 @@
                         <segue destination="tIG-eR-GDD" kind="show" identifier="moveDiaryDetailIdentifier" id="OmC-uY-QU2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1525" y="1839"/>
         </scene>
@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="-61" y="1146"/>
         </scene>
-        <!--더보기-->
+        <!--마이페이지-->
         <scene sceneID="wZX-LY-fiK">
             <objects>
                 <viewController id="DzL-Hh-8Dj" sceneMemberID="viewController">
@@ -151,30 +151,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="myPage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-k2-NXa">
-                                <rect key="frame" x="176" y="437.66666666666669" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-6F-IpG">
+                                <rect key="frame" x="329" y="230" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abcd@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co2-Sl-59i">
+                                <rect key="frame" x="225" y="264" width="139" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34e-lT-77U">
+                                <rect key="frame" x="0.0" y="311" width="414" height="502"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날씨 설명 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U46-rH-wya">
+                                        <rect key="frame" x="261" y="60" width="103" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-d0-Ex9">
+                                        <rect key="frame" x="266" y="174" width="98" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그아웃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-bW-QVt">
+                                        <rect key="frame" x="301" y="231" width="63" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정 삭제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G23-XN-Tec">
+                                        <rect key="frame" x="297" y="288" width="67" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-bi-wid">
+                                        <rect key="frame" x="281" y="117" width="83" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="U46-rH-wya" firstAttribute="top" secondItem="34e-lT-77U" secondAttribute="top" constant="60" id="8iF-Hg-lTv"/>
+                                    <constraint firstItem="G23-XN-Tec" firstAttribute="top" secondItem="T7g-bW-QVt" secondAttribute="bottom" constant="35" id="Pqk-eq-0nb"/>
+                                    <constraint firstItem="T7g-bW-QVt" firstAttribute="top" secondItem="rLI-d0-Ex9" secondAttribute="bottom" constant="35" id="SAf-wj-zZA"/>
+                                    <constraint firstAttribute="trailing" secondItem="G23-XN-Tec" secondAttribute="trailing" constant="50" id="T5X-If-wH0"/>
+                                    <constraint firstItem="ojW-bi-wid" firstAttribute="top" secondItem="U46-rH-wya" secondAttribute="bottom" constant="35" id="a0x-1J-AaO"/>
+                                    <constraint firstAttribute="trailing" secondItem="T7g-bW-QVt" secondAttribute="trailing" constant="50" id="gGz-4X-GfQ"/>
+                                    <constraint firstItem="rLI-d0-Ex9" firstAttribute="top" secondItem="ojW-bi-wid" secondAttribute="bottom" constant="35" id="m2M-Hi-rq6"/>
+                                    <constraint firstAttribute="trailing" secondItem="rLI-d0-Ex9" secondAttribute="trailing" constant="50" id="qTj-B1-JyX"/>
+                                    <constraint firstAttribute="trailing" secondItem="U46-rH-wya" secondAttribute="trailing" constant="50" id="qqp-lo-1pB"/>
+                                    <constraint firstAttribute="trailing" secondItem="ojW-bi-wid" secondAttribute="trailing" constant="50" id="y97-2W-wKd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음의 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4N-t2-prq">
+                                <rect key="frame" x="209" y="124" width="155" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="arH-hL-zKk"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="HBX-k2-NXa" firstAttribute="centerY" secondItem="ONS-3J-dtp" secondAttribute="centerY" id="olq-Gg-bKg"/>
-                            <constraint firstItem="HBX-k2-NXa" firstAttribute="centerX" secondItem="ONS-3J-dtp" secondAttribute="centerX" id="znX-dy-Lgu"/>
+                            <constraint firstItem="l4N-t2-prq" firstAttribute="top" secondItem="arH-hL-zKk" secondAttribute="top" constant="80" id="54d-go-sDs"/>
+                            <constraint firstItem="arH-hL-zKk" firstAttribute="trailing" secondItem="co2-Sl-59i" secondAttribute="trailing" constant="50" id="6yo-rv-QYk"/>
+                            <constraint firstItem="34e-lT-77U" firstAttribute="top" secondItem="co2-Sl-59i" secondAttribute="bottom" constant="25" id="PKw-Jl-uQp"/>
+                            <constraint firstItem="34e-lT-77U" firstAttribute="trailing" secondItem="arH-hL-zKk" secondAttribute="trailing" id="d2B-eW-DlZ"/>
+                            <constraint firstItem="gf8-6F-IpG" firstAttribute="top" secondItem="l4N-t2-prq" secondAttribute="bottom" constant="65" id="ewF-3D-r8v"/>
+                            <constraint firstItem="34e-lT-77U" firstAttribute="bottom" secondItem="arH-hL-zKk" secondAttribute="bottom" id="fYK-gi-kwl"/>
+                            <constraint firstItem="arH-hL-zKk" firstAttribute="trailing" secondItem="l4N-t2-prq" secondAttribute="trailing" constant="50" id="fh1-Hs-r9T"/>
+                            <constraint firstItem="34e-lT-77U" firstAttribute="leading" secondItem="arH-hL-zKk" secondAttribute="leading" id="meh-tE-71f"/>
+                            <constraint firstItem="co2-Sl-59i" firstAttribute="top" secondItem="gf8-6F-IpG" secondAttribute="bottom" constant="10" id="ugv-9q-fpe"/>
+                            <constraint firstItem="arH-hL-zKk" firstAttribute="trailing" secondItem="gf8-6F-IpG" secondAttribute="trailing" constant="50" id="zpR-st-tqL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="더보기" image="person" catalog="system" id="Lpt-Eu-hgv"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="Lpt-Eu-hgv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="1146"/>
+            <point key="canvasLocation" x="630.43478260869574" y="1144.4196428571429"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9j-i1-MFO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
                     <toolbarItems/>
@@ -189,6 +256,7 @@
                         <segue destination="gAP-U5-w5R" kind="relationship" relationship="rootViewController" id="tcA-lH-84S"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1525" y="1146"/>
         </scene>
