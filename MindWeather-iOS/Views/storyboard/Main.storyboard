@@ -146,7 +146,7 @@
         <!--마이페이지-->
         <scene sceneID="wZX-LY-fiK">
             <objects>
-                <viewController id="DzL-Hh-8Dj" sceneMemberID="viewController">
+                <viewController id="DzL-Hh-8Dj" customClass="MyPageViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONS-3J-dtp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,21 +178,33 @@
                                         <rect key="frame" x="266" y="178" width="98" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="비밀번호 변경"/>
+                                        <connections>
+                                            <action selector="ChangePasswordButtionPressed:" destination="DzL-Hh-8Dj" eventType="touchUpInside" id="f8Y-6C-6Ij"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-mV-g1k">
                                         <rect key="frame" x="281" y="119" width="83" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="닉네임 변경"/>
+                                        <connections>
+                                            <action selector="changeUserNameButtonPressed:" destination="DzL-Hh-8Dj" eventType="touchUpInside" id="zh4-YS-tzY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86W-5q-JgJ">
                                         <rect key="frame" x="301" y="237" width="63" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="로그아웃"/>
+                                        <connections>
+                                            <action selector="logOutButtonPressed:" destination="DzL-Hh-8Dj" eventType="touchUpInside" id="xL7-Sy-Hd6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94u-SP-hLF">
                                         <rect key="frame" x="297" y="296" width="67" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="계정 삭제"/>
+                                        <connections>
+                                            <action selector="deleteUserButtonPressed:" destination="DzL-Hh-8Dj" eventType="touchUpInside" id="Nn9-z8-2nz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -232,6 +244,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="Lpt-Eu-hgv"/>
+                    <connections>
+                        <outlet property="emailText" destination="co2-Sl-59i" id="DTw-fO-jVi"/>
+                        <outlet property="usernameText" destination="gf8-6F-IpG" id="cXq-de-DtF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

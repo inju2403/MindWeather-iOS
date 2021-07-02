@@ -46,6 +46,7 @@
 		6EC26BBF268B6A1100391916 /* DiaryEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BBE268B6A1100391916 /* DiaryEdit.storyboard */; };
 		6EC26BC1268F351300391916 /* WeatherDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BC0268F351300391916 /* WeatherDescription.storyboard */; };
 		6EC26BC3268F423900391916 /* WeatherDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BC2268F423900391916 /* WeatherDescriptionViewController.swift */; };
+		6EC26BC5268F443C00391916 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BC4268F443C00391916 /* MyPageViewController.swift */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 		6EEC0A922687063B00F3ABEC /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */; };
@@ -95,6 +96,7 @@
 		6EC26BBE268B6A1100391916 /* DiaryEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryEdit.storyboard; sourceTree = "<group>"; };
 		6EC26BC0268F351300391916 /* WeatherDescription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = WeatherDescription.storyboard; path = ../../../../../WeatherDescription.storyboard; sourceTree = "<group>"; };
 		6EC26BC2268F423900391916 /* WeatherDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherDescriptionViewController.swift; path = ../../../../../WeatherDescriptionViewController.swift; sourceTree = "<group>"; };
+		6EC26BC4268F443C00391916 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = ../../../../../MyPageViewController.swift; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				6EC26BB6268B533100391916 /* DiaryEditViewController.swift */,
 				6EC26BBC268B69F800391916 /* EditClickViewController.swift */,
 				6EC26BC2268F423900391916 /* WeatherDescriptionViewController.swift */,
+				6EC26BC4268F443C00391916 /* MyPageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */,
 				6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */,
 				6EBE37D5267A2ACA008BB15D /* Constants.swift in Sources */,
+				6EC26BC5268F443C00391916 /* MyPageViewController.swift in Sources */,
 				6EB044272680D66F00E047A7 /* DiaryRepoImpl.swift in Sources */,
 				6EC26BB5268B3D7600391916 /* EmotionViewController.swift in Sources */,
 				6EEC0A962687801100F3ABEC /* DiaryListCell.swift in Sources */,
