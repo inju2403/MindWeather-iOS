@@ -166,49 +166,44 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34e-lT-77U">
                                 <rect key="frame" x="0.0" y="311" width="414" height="502"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날씨 설명 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U46-rH-wya">
-                                        <rect key="frame" x="261" y="60" width="103" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-wf-3uv">
+                                        <rect key="frame" x="261" y="60" width="103" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-d0-Ex9">
-                                        <rect key="frame" x="266" y="174" width="98" height="22"/>
+                                        <state key="normal" title="날씨 설명 보기"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-xb-zL9">
+                                        <rect key="frame" x="266" y="178" width="98" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그아웃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-bW-QVt">
-                                        <rect key="frame" x="301" y="231" width="63" height="22"/>
+                                        <state key="normal" title="비밀번호 변경"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-mV-g1k">
+                                        <rect key="frame" x="281" y="119" width="83" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정 삭제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G23-XN-Tec">
-                                        <rect key="frame" x="297" y="288" width="67" height="22"/>
+                                        <state key="normal" title="닉네임 변경"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86W-5q-JgJ">
+                                        <rect key="frame" x="301" y="237" width="63" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-bi-wid">
-                                        <rect key="frame" x="281" y="117" width="83" height="22"/>
+                                        <state key="normal" title="로그아웃"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94u-SP-hLF">
+                                        <rect key="frame" x="297" y="296" width="67" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="계정 삭제"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="U46-rH-wya" firstAttribute="top" secondItem="34e-lT-77U" secondAttribute="top" constant="60" id="8iF-Hg-lTv"/>
-                                    <constraint firstItem="G23-XN-Tec" firstAttribute="top" secondItem="T7g-bW-QVt" secondAttribute="bottom" constant="35" id="Pqk-eq-0nb"/>
-                                    <constraint firstItem="T7g-bW-QVt" firstAttribute="top" secondItem="rLI-d0-Ex9" secondAttribute="bottom" constant="35" id="SAf-wj-zZA"/>
-                                    <constraint firstAttribute="trailing" secondItem="G23-XN-Tec" secondAttribute="trailing" constant="50" id="T5X-If-wH0"/>
-                                    <constraint firstItem="ojW-bi-wid" firstAttribute="top" secondItem="U46-rH-wya" secondAttribute="bottom" constant="35" id="a0x-1J-AaO"/>
-                                    <constraint firstAttribute="trailing" secondItem="T7g-bW-QVt" secondAttribute="trailing" constant="50" id="gGz-4X-GfQ"/>
-                                    <constraint firstItem="rLI-d0-Ex9" firstAttribute="top" secondItem="ojW-bi-wid" secondAttribute="bottom" constant="35" id="m2M-Hi-rq6"/>
-                                    <constraint firstAttribute="trailing" secondItem="rLI-d0-Ex9" secondAttribute="trailing" constant="50" id="qTj-B1-JyX"/>
-                                    <constraint firstAttribute="trailing" secondItem="U46-rH-wya" secondAttribute="trailing" constant="50" id="qqp-lo-1pB"/>
-                                    <constraint firstAttribute="trailing" secondItem="ojW-bi-wid" secondAttribute="trailing" constant="50" id="y97-2W-wKd"/>
+                                    <constraint firstItem="86W-5q-JgJ" firstAttribute="top" secondItem="Udn-xb-zL9" secondAttribute="bottom" constant="25" id="0oP-1q-g2W"/>
+                                    <constraint firstAttribute="trailing" secondItem="m6Z-wf-3uv" secondAttribute="trailing" constant="50" id="17k-2e-0ad"/>
+                                    <constraint firstAttribute="trailing" secondItem="86W-5q-JgJ" secondAttribute="trailing" constant="50" id="81n-ki-YS3"/>
+                                    <constraint firstAttribute="trailing" secondItem="dFd-mV-g1k" secondAttribute="trailing" constant="50" id="Q4f-na-yak"/>
+                                    <constraint firstItem="m6Z-wf-3uv" firstAttribute="top" secondItem="34e-lT-77U" secondAttribute="top" constant="60" id="QEl-4q-Mfs"/>
+                                    <constraint firstItem="94u-SP-hLF" firstAttribute="top" secondItem="86W-5q-JgJ" secondAttribute="bottom" constant="25" id="UVa-de-AFT"/>
+                                    <constraint firstAttribute="trailing" secondItem="94u-SP-hLF" secondAttribute="trailing" constant="50" id="abF-6i-E7u"/>
+                                    <constraint firstItem="Udn-xb-zL9" firstAttribute="top" secondItem="dFd-mV-g1k" secondAttribute="bottom" constant="25" id="ekR-Tf-Iiu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Udn-xb-zL9" secondAttribute="trailing" constant="50" id="qpS-dM-Vuk"/>
+                                    <constraint firstItem="dFd-mV-g1k" firstAttribute="top" secondItem="m6Z-wf-3uv" secondAttribute="bottom" constant="25" id="x7T-M9-a5j"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음의 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4N-t2-prq">
