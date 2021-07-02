@@ -170,6 +170,9 @@
                                         <rect key="frame" x="261" y="60" width="103" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="날씨 설명 보기"/>
+                                        <connections>
+                                            <segue destination="FGZ-rT-aK5" kind="presentation" modalPresentationStyle="fullScreen" id="zMk-fZ-uUx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-xb-zL9">
                                         <rect key="frame" x="266" y="178" width="98" height="34"/>
@@ -233,6 +236,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630.43478260869574" y="1144.4196428571429"/>
+        </scene>
+        <!--WeatherDescriptionViewController-->
+        <scene sceneID="aL0-Yf-CSn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WeatherDescription" referencedIdentifier="WeatherDescriptionViewController" id="FGZ-rT-aK5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-g0-fyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="1104"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
