@@ -52,7 +52,7 @@ class DiaryListViewController : UIViewController {
                 dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
                 
                 let updatedAt = element.updated_at!
-                if let index = element.updated_at!.firstIndex(of: "T") {
+                if let index = updatedAt.firstIndex(of: "T") {
                     let substring = updatedAt[..<index]
                     let time = String(substring)
                     let date: Date = dateFormatter.date(from: time)!

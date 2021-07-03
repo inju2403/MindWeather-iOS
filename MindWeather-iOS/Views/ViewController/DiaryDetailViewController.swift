@@ -18,6 +18,9 @@ class DiaryDetailViewController : UIViewController {
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var weatherDescription: UILabel!
+    @IBOutlet weak var yearText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,10 @@ class DiaryDetailViewController : UIViewController {
         
         diaryDetailViewModel.content
             .bind(to: content.rx.text)
+            .disposed(by: disposeBag)
+        
+        diaryDetailViewModel.year
+            .bind(to: yearText.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.receiver

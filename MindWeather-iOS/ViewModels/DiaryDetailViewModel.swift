@@ -11,14 +11,13 @@ import RxRelay
 
 protocol DiaryDetailViewModelType {
     var date: BehaviorRelay<String> { get set }
-    var dayOfTheWeek: BehaviorRelay<String> { get set }
     var emotion: BehaviorRelay<String> { get set }
     var content: BehaviorRelay<String> { get set }
     var year: BehaviorRelay<String> { get set }
     
-//    func loadDiary(diaryId: String)
-//    func addOrUpdateDiary(diaryId: String)
-//    func deleteDiary(diaryId: String)
+    func loadDiary(diaryId: Int)
+    func addOrUpdateDiary(content: Content, diaryId: Int)
+    func deleteDiary(diaryId: Int)
 }
 
 class DiaryDetailViewModel: DiaryDetailViewModelType {
@@ -27,7 +26,6 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     private let service = DiaryServiceImpl()
     
     var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
-    var dayOfTheWeek: BehaviorRelay<String> = BehaviorRelay(value: "dayOfTheWeek")
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
     var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
@@ -69,9 +67,25 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
             .subscribe { event in
                 switch event {
                 case .success(let diary):
-                    self.date.accept(diary.updated_at ?? "")
                     self.content.accept(diary.content ?? "")
                     self.receiver.onNext("loadDiary")
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+                    
+                    let updatedAt = diary.updated_at!
+                    if let index = updatedAt.firstIndex(of: "T") {
+                        let substring = updatedAt[..<index]
+                        let time = String(substring)
+                        let date: Date = dateFormatter.date(from: time)!
+                        
+                        dateFormatter.dateFormat = "MMdd  eee"
+                        self.date.accept(dateFormatter.string(from: date))
+                        
+                        dateFormatter.dateFormat = "''yy"
+                        self.year.accept(dateFormatter.string(from: date))
+                    }
                     break
                 case .failure(let error):
                     print("Error: ", error)
