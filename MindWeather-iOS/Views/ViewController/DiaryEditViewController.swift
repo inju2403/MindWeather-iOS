@@ -32,6 +32,7 @@ class DiaryEditViewController : UIViewController {
     
     private func bindViewModel() {
         diaryDetailViewModel.receiver
+            .observe(on: MainScheduler.instance)
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기
@@ -39,8 +40,9 @@ class DiaryEditViewController : UIViewController {
             .subscribe(
                 onNext: { value in
                     if value == "addOrUpdateDiary" {
+                        //일기 작성 or 수정 후 dismiss
                         self.dismiss(animated: true, completion: nil)
-                    } else {
+                    } else if value == "loadDiary" {
 //                        self.dateText.text = self.diaryDetailViewModel.date.value
 //                        self.dayText.text = self.diaryDetailViewModel.dayOfTheWeek.value
                         self.content.text = self.diaryDetailViewModel.content.value
