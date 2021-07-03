@@ -20,8 +20,6 @@ class DiaryListViewModel: DiaryListViewModelType {
     var disposeBag = DisposeBag()
     private let service = DiaryServiceImpl()
     
-//    var testContent = BehaviorRelay(value: "content...")
-    
     var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
     var diaryItemCnt = BehaviorRelay(value: 0)
     
@@ -30,7 +28,6 @@ class DiaryListViewModel: DiaryListViewModelType {
             .subscribe { event in
                 switch event {
                 case .success(let diarys):
-//                    self.testContent.accept(diarys[0].content ?? "")
                     self.diaryList.accept(diarys)
                     self.diaryItemCnt.accept(diarys.count)
                 case .failure(let error):
