@@ -77,6 +77,9 @@ class DiaryListViewController : UIViewController {
                 } else if element.neutrality == 1 {
                     let image = UIImage(named: "ic_neutrality")
                     cell.diaryCardImage.image = image
+                } else {
+                    let image = UIImage(named: "ic_unknowability")!
+                    cell.diaryCardImage.image = image
                 }
             }.disposed(by: disposeBag)
         

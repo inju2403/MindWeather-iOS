@@ -62,6 +62,18 @@ class DiaryDetailViewController : UIViewController {
             .bind(to: yearText.rx.text)
             .disposed(by: disposeBag)
         
+        diaryDetailViewModel.weatherImage
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { value in
+                    self.weatherImage.image = value
+            })
+            .disposed(by: disposeBag)
+        
+        diaryDetailViewModel.weatherImageDescription
+            .bind(to: weatherDescription.rx.text)
+            .disposed(by: disposeBag)
+        
         diaryDetailViewModel.receiver
             .do(
                 onSubscribe: {

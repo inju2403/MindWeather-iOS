@@ -14,6 +14,8 @@ protocol DiaryDetailViewModelType {
     var emotion: BehaviorRelay<String> { get set }
     var content: BehaviorRelay<String> { get set }
     var year: BehaviorRelay<String> { get set }
+    var weatherImage: BehaviorRelay<UIImage> { get set }
+    var weatherImageDescription: BehaviorRelay<String> { get set }
     
     func loadDiary(diaryId: Int)
     func addOrUpdateDiary(content: Content, diaryId: Int)
@@ -29,6 +31,8 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
     var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
+    var weatherImage: BehaviorRelay<UIImage> = BehaviorRelay(value: UIImage(named: "ic_happiness")!)
+    var weatherImageDescription: BehaviorRelay<String> = BehaviorRelay(value: "행복을 느낀 하루")
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
@@ -85,6 +89,32 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                         
                         dateFormatter.dateFormat = "''yy"
                         self.year.accept(dateFormatter.string(from: date))
+                    }
+                    
+                    if diary.happiness == 1 {
+                        let image = UIImage(named: "ic_happiness")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                    } else if diary.anger == 1 {
+                        let image = UIImage(named: "ic_anger")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("화가 났던 하루")
+                    } else if diary.sadness == 1 {
+                        let image = UIImage(named: "ic_sadness")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("슬픔을 느낀 하루")
+                    } else if diary.worry == 1 {
+                        let image = UIImage(named: "ic_worry")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                    } else if diary.neutrality == 1 {
+                        let image = UIImage(named: "ic_neutrality")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("감정이 중립인 하루")
+                    } else {
+                        let image = UIImage(named: "ic_unknowability")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("복합적인 감정의 하루")
                     }
                     break
                 case .failure(let error):
