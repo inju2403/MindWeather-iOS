@@ -17,6 +17,7 @@ struct K {
     static let diaryDetailSegue = "moveDiaryDetailIdentifier"
     static let diaryEditSegue = "moveDiaryEditIdentifier"
     static let nickNameEditSegue = "moveNickNameEditIdentifier"
+    static let passwordEditSegue = "movePasswordEditIdentifier"
     
     static let diaryListCellIdentifier = "ReusableCell"
     static let diaryCellNibName = "DiaryListCell"

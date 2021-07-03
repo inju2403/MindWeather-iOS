@@ -248,6 +248,7 @@
                         <outlet property="emailText" destination="co2-Sl-59i" id="DTw-fO-jVi"/>
                         <outlet property="usernameText" destination="gf8-6F-IpG" id="cXq-de-DtF"/>
                         <segue destination="u2W-eq-EWX" kind="show" identifier="moveNickNameEditIdentifier" id="Xhe-te-E8s"/>
+                        <segue destination="BXe-jl-UDb" kind="show" identifier="movePasswordEditIdentifier" id="MKn-8l-wb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,7 +261,7 @@
                 <viewControllerPlaceholder storyboardName="WeatherDescription" referencedIdentifier="WeatherDescriptionViewController" id="FGZ-rT-aK5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-g0-fyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1331" y="1104"/>
+            <point key="canvasLocation" x="1324" y="1067"/>
         </scene>
         <!--NickNameEditViewController-->
         <scene sceneID="kxl-UE-nn1">
@@ -270,7 +271,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6go-15-d2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="1160"/>
+            <point key="canvasLocation" x="1299" y="1132"/>
+        </scene>
+        <!--PasswordEditViewController-->
+        <scene sceneID="pfN-Qc-DGc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PasswordEdit" referencedIdentifier="PasswordEditViewController" id="BXe-jl-UDb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vT0-I5-JVn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAw-VW-NFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="1189"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
