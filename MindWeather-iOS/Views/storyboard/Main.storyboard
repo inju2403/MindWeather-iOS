@@ -49,6 +49,10 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="705"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="F0p-rp-bWv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pBP-mK-g0L"/>
@@ -63,6 +67,7 @@
                     <navigationItem key="navigationItem" id="Qwn-QZ-aCI"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
+                        <outlet property="loadingUI" destination="F0p-rp-bWv" id="n7b-7D-fub"/>
                         <segue destination="tIG-eR-GDD" kind="show" identifier="moveDiaryDetailIdentifier" id="OmC-uY-QU2"/>
                     </connections>
                 </viewController>
