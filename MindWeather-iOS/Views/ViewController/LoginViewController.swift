@@ -48,6 +48,8 @@ class LoginViewController : UIViewController {
                         UserDefaults.standard.set(response.value?.user.email, forKey: "email")
                         
                         //일기리스트 화면으로 이동
+                        self.usernameTextField.text = "";
+                        self.passwordTextField.text = "";
                         self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
                         break
                     case 400:

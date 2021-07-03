@@ -247,6 +247,7 @@
                     <connections>
                         <outlet property="emailText" destination="co2-Sl-59i" id="DTw-fO-jVi"/>
                         <outlet property="usernameText" destination="gf8-6F-IpG" id="cXq-de-DtF"/>
+                        <segue destination="u2W-eq-EWX" kind="show" identifier="moveNickNameEditIdentifier" id="Xhe-te-E8s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,6 +261,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-g0-fyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1331" y="1104"/>
+        </scene>
+        <!--NickNameEditViewController-->
+        <scene sceneID="kxl-UE-nn1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NickNameEdit" referencedIdentifier="NickNameEditViewController" id="u2W-eq-EWX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h6h-17-eg1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6go-15-d2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="1160"/>
         </scene>
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
