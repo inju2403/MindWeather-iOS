@@ -62,23 +62,26 @@ class DiaryListViewController : UIViewController {
                     cell.dateText?.text = dateFormatter.string(from: date)
                 }
                 
-                if element.happiness == 1 {
+                var emotions = [element.happiness!, element.anger!, element.sadness!, element.worry!, element.neutrality!]
+                
+                emotions = emotions.sorted(by: >)
+                if emotions[0] == emotions[1] {
+                    let image = UIImage(named: "ic_unknowability")
+                    cell.diaryCardImage.image = image
+                } else if emotions[0] == element.happiness {
                     let image = UIImage(named: "ic_happiness")
                     cell.diaryCardImage.image = image
-                } else if element.anger == 1 {
+                } else if emotions[0] == element.anger {
                     let image = UIImage(named: "ic_anger")
                     cell.diaryCardImage.image = image
-                } else if element.sadness == 1 {
+                } else if emotions[0] == element.sadness {
                     let image = UIImage(named: "ic_sadness")
                     cell.diaryCardImage.image = image
-                } else if element.worry == 1 {
+                } else if emotions[0] == element.worry {
                     let image = UIImage(named: "ic_worry")
                     cell.diaryCardImage.image = image
-                } else if element.neutrality == 1 {
+                } else if emotions[0] == element.neutrality{
                     let image = UIImage(named: "ic_neutrality")
-                    cell.diaryCardImage.image = image
-                } else {
-                    let image = UIImage(named: "ic_unknowability")!
                     cell.diaryCardImage.image = image
                 }
             }.disposed(by: disposeBag)
