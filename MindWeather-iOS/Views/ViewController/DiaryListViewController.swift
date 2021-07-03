@@ -61,6 +61,23 @@ class DiaryListViewController : UIViewController {
                     
                     cell.dateText?.text = dateFormatter.string(from: date)
                 }
+                
+                if element.happiness == 1 {
+                    let image = UIImage(named: "ic_happiness")
+                    cell.diaryCardImage.image = image
+                } else if element.anger == 1 {
+                    let image = UIImage(named: "ic_anger")
+                    cell.diaryCardImage.image = image
+                } else if element.sadness == 1 {
+                    let image = UIImage(named: "ic_sadness")
+                    cell.diaryCardImage.image = image
+                } else if element.worry == 1 {
+                    let image = UIImage(named: "ic_worry")
+                    cell.diaryCardImage.image = image
+                } else if element.neutrality == 1 {
+                    let image = UIImage(named: "ic_neutrality")
+                    cell.diaryCardImage.image = image
+                }
             }.disposed(by: disposeBag)
         
         //일기 아이템 클릭시 보낼 일기 아이디 저장
