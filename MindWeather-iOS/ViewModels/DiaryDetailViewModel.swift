@@ -30,7 +30,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
-    var content: BehaviorRelay<String> = BehaviorRelay(value: "content")
+    var content: BehaviorRelay<String> = BehaviorRelay(value: "")
     var year: BehaviorRelay<String> = BehaviorRelay(value: "year")
     var weatherImage: BehaviorRelay<UIImage> = BehaviorRelay(value: UIImage(named: "ic_happiness")!)
     var weatherImageDescription: BehaviorRelay<String> = BehaviorRelay(value: "행복을 느낀 하루")

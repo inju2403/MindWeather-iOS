@@ -61,13 +61,28 @@
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-8h-Idn">
+                                <rect key="frame" x="187" y="360.66666666666669" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rgr-xk-YbO"/>
+                                    <constraint firstAttribute="width" constant="40" id="WMd-v4-Tc2"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정을 분석하는 중이에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOp-aF-NRM">
+                                <rect key="frame" x="131.66666666666666" y="410.66666666666669" width="150.99999999999997" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="HMg-8h-Idn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0Zf-3y-SV3"/>
                             <constraint firstItem="NWz-LC-t33" firstAttribute="top" secondItem="91h-oM-Jdh" secondAttribute="bottom" constant="20" id="3Hj-YI-tp3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f9G-jN-lND" secondAttribute="trailing" id="ClJ-yx-4w9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wbn-SK-SSB" secondAttribute="trailing" constant="60" id="DMk-5W-OQh"/>
+                            <constraint firstItem="oOp-aF-NRM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Exy-O4-wcW"/>
                             <constraint firstItem="f9G-jN-lND" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GAG-2i-ZU8"/>
                             <constraint firstItem="ABe-S4-r28" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="GDt-OL-2Nt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f9G-jN-lND" secondAttribute="bottom" id="Ggi-Pr-fLv"/>
@@ -79,6 +94,8 @@
                             <constraint firstItem="f9G-jN-lND" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="X6F-Rr-AJW"/>
                             <constraint firstItem="91h-oM-Jdh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZOc-kd-ULK"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="bhq-xK-fqt"/>
+                            <constraint firstItem="HMg-8h-Idn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.85" id="dZr-Ku-k9F"/>
+                            <constraint firstItem="oOp-aF-NRM" firstAttribute="top" secondItem="HMg-8h-Idn" secondAttribute="bottom" constant="10" id="dge-Wd-mz5"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="jlW-ea-VjR"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="20" id="pvv-XL-hSh"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="q6e-Nt-5QW"/>
@@ -88,6 +105,9 @@
                     <connections>
                         <outlet property="content" destination="Wbn-SK-SSB" id="6Ll-DC-6An"/>
                         <outlet property="dateText" destination="91h-oM-Jdh" id="inL-C3-2pH"/>
+                        <outlet property="explainText" destination="NWz-LC-t33" id="ZLr-yz-lvt"/>
+                        <outlet property="loadingText" destination="oOp-aF-NRM" id="hUt-9C-MWm"/>
+                        <outlet property="loadingUI" destination="HMg-8h-Idn" id="NTY-jP-3Br"/>
                         <outlet property="yearText" destination="xNt-Sd-F6v" id="AmW-vI-mtg"/>
                     </connections>
                 </viewController>

@@ -20,19 +20,36 @@ class DiaryEditViewController : UIViewController {
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var yearText: UILabel!
+    @IBOutlet weak var explainText: UILabel!
+    @IBOutlet weak var loadingUI: UIActivityIndicatorView!
+    @IBOutlet weak var loadingText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindViewModel()
         if diaryId != K.newDiaryValue {
+            dateText.isHidden = true
+            content.isHidden = true
+            yearText.isHidden = true
+            explainText.isHidden = true
+            
+            loadingUI.isHidden = false
+            loadingText.isHidden = true
             diaryDetailViewModel.loadDiary(diaryId: diaryId)
         } else {
             diaryDetailViewModel.newStateDiary()
+            
+            loadingUI.isHidden = true
+            loadingText.isHidden = true
         }
     }
     
     private func bindViewModel() {
+        diaryDetailViewModel.content
+            .bind(to: content.rx.text)
+            .disposed(by: disposeBag)
+        
         diaryDetailViewModel.date
             .bind(to: dateText.rx.text)
             .disposed(by: disposeBag)
@@ -43,21 +60,30 @@ class DiaryEditViewController : UIViewController {
         
         diaryDetailViewModel.receiver
             .observe(on: MainScheduler.instance)
-            .do(
-                onSubscribe: {
-                    //로딩 ui 켜기
-                })
             .subscribe(
                 onNext: { value in
                     if value == "addOrUpdateDiary" {
                         //일기 작성 or 수정 후 dismiss
+                        
+                        self.dateText.isHidden = false
+                        self.content.isHidden = false
+                        self.yearText.isHidden = false
+                        self.explainText.isHidden = false
+                        
+                        self.loadingUI.isHidden = true
+                        self.loadingText.isHidden = true
+                        
                         self.dismiss(animated: true, completion: nil)
                     } else if value == "loadDiary" {
-//                        self.dateText.text = self.diaryDetailViewModel.date.value
-//                        self.dayText.text = self.diaryDetailViewModel.dayOfTheWeek.value
-                        self.content.text = self.diaryDetailViewModel.content.value
                         
                         //로딩 ui 끄기
+                        self.dateText.isHidden = false
+                        self.content.isHidden = false
+                        self.yearText.isHidden = false
+                        self.explainText.isHidden = false
+                        
+                        self.loadingUI.isHidden = true
+                        self.loadingText.isHidden = true
                     }
                 })
             .disposed(by: disposeBag)
@@ -71,6 +97,10 @@ class DiaryEditViewController : UIViewController {
         guard let content = content.text else {
             return
         }
+        
+        //로딩 ui 켜기
+        self.loadingUI.isHidden = false
+        self.loadingText.isHidden = false
         
         let sendContent = Content(content: content)
         diaryDetailViewModel.addOrUpdateDiary(content: sendContent, diaryId: diaryId)
