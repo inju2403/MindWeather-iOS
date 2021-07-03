@@ -26,16 +26,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCF-9b-0aF">
                         <rect key="frame" x="145" y="52" width="406" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-eS-P9V">
-                        <rect key="frame" x="411" y="128" width="140" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="140" id="1pI-25-KZV"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_happiness" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-n6-YGf">
@@ -45,16 +36,38 @@
                             <constraint firstAttribute="height" constant="40" id="nJ9-3X-16x"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4f-p9-SVo">
+                        <rect key="frame" x="516" y="151" width="25" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0703" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCJ-Eb-JZe">
+                        <rect key="frame" x="472" y="151" width="34" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="'21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZs-a7-8Eg">
+                        <rect key="frame" x="443" y="151" width="19" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstItem="R3G-n6-YGf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="85" id="1Ao-WJ-KW2"/>
-                    <constraint firstAttribute="trailing" secondItem="bCh-eS-P9V" secondAttribute="trailing" constant="30" id="94m-iq-Hle"/>
                     <constraint firstItem="zCF-9b-0aF" firstAttribute="leading" secondItem="R3G-n6-YGf" secondAttribute="trailing" constant="20" id="BIM-fO-itY"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CFY-vh-LS0"/>
+                    <constraint firstItem="jCJ-Eb-JZe" firstAttribute="leading" secondItem="hZs-a7-8Eg" secondAttribute="trailing" constant="10" id="CS8-jU-Qhy"/>
                     <constraint firstItem="sh9-OS-lBh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JXe-Rc-gbb"/>
                     <constraint firstItem="zCF-9b-0aF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="52" id="LCC-T8-auw"/>
-                    <constraint firstAttribute="bottom" secondItem="bCh-eS-P9V" secondAttribute="bottom" constant="50" id="WOw-z8-riH"/>
+                    <constraint firstAttribute="trailing" secondItem="I4f-p9-SVo" secondAttribute="trailing" constant="40" id="MJt-GV-H2z"/>
+                    <constraint firstAttribute="bottom" secondItem="hZs-a7-8Eg" secondAttribute="bottom" constant="40" id="TBa-fj-7ek"/>
+                    <constraint firstAttribute="bottom" secondItem="jCJ-Eb-JZe" secondAttribute="bottom" constant="40" id="b3i-Mg-yML"/>
+                    <constraint firstAttribute="bottom" secondItem="I4f-p9-SVo" secondAttribute="bottom" constant="40" id="cE3-WM-KW9"/>
+                    <constraint firstItem="I4f-p9-SVo" firstAttribute="leading" secondItem="jCJ-Eb-JZe" secondAttribute="trailing" constant="10" id="jsO-f5-K4t"/>
                     <constraint firstAttribute="bottom" secondItem="sh9-OS-lBh" secondAttribute="bottom" constant="10" id="on5-FX-Xdb"/>
                     <constraint firstItem="R3G-n6-YGf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="wdK-K0-Ycq"/>
                     <constraint firstAttribute="trailing" secondItem="sh9-OS-lBh" secondAttribute="trailing" constant="10" id="xI9-0C-sJx"/>
@@ -64,9 +77,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
-                <outlet property="dateView" destination="bCh-eS-P9V" id="cS9-PC-vlX"/>
+                <outlet property="dateText" destination="jCJ-Eb-JZe" id="ejM-aV-PHP"/>
+                <outlet property="dayText" destination="I4f-p9-SVo" id="cuU-li-Q64"/>
                 <outlet property="diaryCardImage" destination="R3G-n6-YGf" id="vye-w6-fv9"/>
                 <outlet property="summaryView" destination="zCF-9b-0aF" id="k5V-PA-fQJ"/>
+                <outlet property="yearText" destination="hZs-a7-8Eg" id="OfT-2I-s1K"/>
             </connections>
             <point key="canvasLocation" x="210.86956521739131" y="132.25446428571428"/>
         </tableViewCell>

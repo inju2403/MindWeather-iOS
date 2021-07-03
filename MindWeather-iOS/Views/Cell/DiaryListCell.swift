@@ -11,8 +11,10 @@ class DiaryListCell: UITableViewCell {
 
     @IBOutlet weak var diaryCardImage: UIImageView!
     @IBOutlet weak var summaryView: UILabel!
-    @IBOutlet weak var dateView: UILabel!
     
+    @IBOutlet weak var yearText: UILabel!
+    @IBOutlet weak var dateText: UILabel!
+    @IBOutlet weak var dayText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

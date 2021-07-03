@@ -46,7 +46,7 @@ class DiaryListViewController : UIViewController {
         diaryListViewModel.diaryList
             .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
-                cell.dateView?.text = element.updated_at
+//                cell.dateView?.text = element.updated_at
             }.disposed(by: disposeBag)
         
         //일기 아이템 클릭시 보낼 일기 아이디 저장
