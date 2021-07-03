@@ -12,6 +12,9 @@ class FlashViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let runFirst = UserDefaults.standard.value(forKey: "runFirst")
         let token = UserDefaults.standard.value(forKey: "token")
         
