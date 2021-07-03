@@ -91,30 +91,35 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                         self.year.accept(dateFormatter.string(from: date))
                     }
                     
-                    if diary.happiness == 1 {
-                        let image = UIImage(named: "ic_happiness")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("행복을 느낀 하루")
-                    } else if diary.anger == 1 {
-                        let image = UIImage(named: "ic_anger")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("화가 났던 하루")
-                    } else if diary.sadness == 1 {
-                        let image = UIImage(named: "ic_sadness")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("슬픔을 느낀 하루")
-                    } else if diary.worry == 1 {
-                        let image = UIImage(named: "ic_worry")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("행복을 느낀 하루")
-                    } else if diary.neutrality == 1 {
-                        let image = UIImage(named: "ic_neutrality")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("감정이 중립인 하루")
-                    } else {
+                    
+                    var emotions = [diary.happiness!, diary.anger!, diary.sadness!, diary.worry!, diary.neutrality!]
+                    
+                    emotions = emotions.sorted(by: >)
+                    
+                    if emotions[0] == emotions[1] {
                         let image = UIImage(named: "ic_unknowability")!
                         self.weatherImage.accept(image)
                         self.weatherImageDescription.accept("복합적인 감정의 하루")
+                    } else if emotions[0] == diary.happiness {
+                        let image = UIImage(named: "ic_happiness")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                    } else if emotions[0] == diary.anger {
+                        let image = UIImage(named: "ic_anger")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("화가 났던 하루")
+                    } else if emotions[0] == diary.sadness {
+                        let image = UIImage(named: "ic_sadness")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("슬픔을 느낀 하루")
+                    } else if emotions[0] == diary.worry {
+                        let image = UIImage(named: "ic_worry")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                    } else if emotions[0] == diary.neutrality {
+                        let image = UIImage(named: "ic_neutrality")!
+                        self.weatherImage.accept(image)
+                        self.weatherImageDescription.accept("감정이 중립인 하루")
                     }
                     break
                 case .failure(let error):
