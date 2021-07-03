@@ -116,7 +116,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                     } else if emotions[0] == diary.worry {
                         let image = UIImage(named: "ic_worry")!
                         self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                        self.weatherImageDescription.accept("걱정을 느낀 하루")
                     } else if emotions[0] == diary.neutrality {
                         let image = UIImage(named: "ic_neutrality")!
                         self.weatherImage.accept(image)
