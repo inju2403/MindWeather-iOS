@@ -21,6 +21,8 @@ class DiaryDetailViewController : UIViewController {
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var weatherDescription: UILabel!
     @IBOutlet weak var yearText: UILabel!
+    @IBOutlet weak var loadingUI: UIActivityIndicatorView!
+    @IBOutlet weak var loadingText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,15 +77,34 @@ class DiaryDetailViewController : UIViewController {
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.receiver
+            .observe(on: MainScheduler.instance)
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기
+                    self.date.isHidden = true
+                    self.content.isHidden = true
+                    self.weatherImage.isHidden = true
+                    self.weatherDescription.isHidden = true
+                    self.yearText.isHidden = true
+                    
+                    self.loadingUI.isHidden = false
+                    self.loadingText.isHidden = false
                 })
             .subscribe(
                 onNext: { value in
                     if value == "deleteDiary" {
                         self.navigationController?.popViewController(animated: true)
                     }
+                    
+                    //로딩 ui 끄기
+                    self.loadingUI.isHidden = true
+                    self.loadingText.isHidden = true
+                    
+                    self.date.isHidden = false
+                    self.content.isHidden = false
+                    self.weatherImage.isHidden = false
+                    self.weatherDescription.isHidden = false
+                    self.yearText.isHidden = false
                 })
             .disposed(by: disposeBag)
     }

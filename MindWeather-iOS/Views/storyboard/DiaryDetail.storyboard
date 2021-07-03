@@ -65,11 +65,28 @@
                                             <constraint firstItem="PTQ-Qe-jaO" firstAttribute="top" secondItem="J0u-QF-yLZ" secondAttribute="bottom" constant="20" id="xAU-ef-vaa"/>
                                         </constraints>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-60-8lj">
+                                        <rect key="frame" x="187" y="159.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4vH-rZ-0jh"/>
+                                            <constraint firstAttribute="width" constant="40" id="bkv-EL-BJ9"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기를 불러오는 중이에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wK2-u4-Gbm">
+                                        <rect key="frame" x="131.5" y="209.5" width="151" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PTr-5Y-Ptx" secondAttribute="bottom" id="0lF-bX-f7O"/>
+                                    <constraint firstItem="yfo-60-8lj" firstAttribute="centerY" secondItem="Jmt-Nb-wIv" secondAttribute="centerY" multiplier="0.6" id="Bej-Fl-2zf"/>
                                     <constraint firstItem="PTr-5Y-Ptx" firstAttribute="top" secondItem="Jmt-Nb-wIv" secondAttribute="top" id="Dn3-ia-du5"/>
+                                    <constraint firstItem="yfo-60-8lj" firstAttribute="centerX" secondItem="Jmt-Nb-wIv" secondAttribute="centerX" id="KX6-Qd-89o"/>
                                     <constraint firstAttribute="trailing" secondItem="PTr-5Y-Ptx" secondAttribute="trailing" id="S8F-oz-liR"/>
+                                    <constraint firstItem="wK2-u4-Gbm" firstAttribute="top" secondItem="yfo-60-8lj" secondAttribute="bottom" constant="10" id="cXv-Yn-3JD"/>
+                                    <constraint firstItem="wK2-u4-Gbm" firstAttribute="centerX" secondItem="Jmt-Nb-wIv" secondAttribute="centerX" id="kVV-ms-7Uy"/>
                                     <constraint firstItem="PTr-5Y-Ptx" firstAttribute="width" secondItem="Jmt-Nb-wIv" secondAttribute="width" id="p6u-N4-oQd"/>
                                     <constraint firstItem="PTr-5Y-Ptx" firstAttribute="leading" secondItem="Jmt-Nb-wIv" secondAttribute="leading" id="zBu-u1-2zz"/>
                                 </constraints>
@@ -120,6 +137,8 @@
                     <connections>
                         <outlet property="content" destination="PTQ-Qe-jaO" id="gHu-eH-Tkh"/>
                         <outlet property="date" destination="YfB-cT-I26" id="tvJ-6F-bQg"/>
+                        <outlet property="loadingText" destination="wK2-u4-Gbm" id="B1x-UD-gso"/>
+                        <outlet property="loadingUI" destination="yfo-60-8lj" id="rcV-8V-vIL"/>
                         <outlet property="weatherDescription" destination="Mhg-FF-1kp" id="e6f-3X-4DB"/>
                         <outlet property="weatherImage" destination="J0u-QF-yLZ" id="SNW-YC-geh"/>
                         <outlet property="yearText" destination="web-lY-aUn" id="8f5-rf-OW3"/>
