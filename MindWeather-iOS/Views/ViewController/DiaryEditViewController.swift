@@ -18,8 +18,8 @@ class DiaryEditViewController : UIViewController {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var dateText: UILabel!
-    @IBOutlet weak var dayText: UILabel!
     @IBOutlet weak var content: UITextView!
+    @IBOutlet weak var yearText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,20 @@ class DiaryEditViewController : UIViewController {
         bindViewModel()
         if diaryId != K.newDiaryValue {
             diaryDetailViewModel.loadDiary(diaryId: diaryId)
+        } else {
+            diaryDetailViewModel.newStateDiary()
         }
     }
     
     private func bindViewModel() {
+        diaryDetailViewModel.date
+            .bind(to: dateText.rx.text)
+            .disposed(by: disposeBag)
+        
+        diaryDetailViewModel.year
+            .bind(to: yearText.rx.text)
+            .disposed(by: disposeBag)
+        
         diaryDetailViewModel.receiver
             .observe(on: MainScheduler.instance)
             .do(

@@ -20,6 +20,7 @@ protocol DiaryDetailViewModelType {
     func loadDiary(diaryId: Int)
     func addOrUpdateDiary(content: Content, diaryId: Int)
     func deleteDiary(diaryId: Int)
+    func newStateDiary()
 }
 
 class DiaryDetailViewModel: DiaryDetailViewModelType {
@@ -129,6 +130,17 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                 
             }
             .disposed(by: disposeBag)
+    }
+    
+    func newStateDiary() {
+        self.receiver.onNext("newStateDiary")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMdd  eee"
+        self.date.accept(dateFormatter.string(from: Date()))
+        
+        dateFormatter.dateFormat = "''yy"
+        self.year.accept(dateFormatter.string(from: Date()))
     }
     
     
