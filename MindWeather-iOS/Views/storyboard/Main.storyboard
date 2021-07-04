@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="32" y="144" width="350" height="637"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
