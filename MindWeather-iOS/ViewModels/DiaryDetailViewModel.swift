@@ -17,6 +17,8 @@ protocol DiaryDetailViewModelType {
     var weatherImage: BehaviorRelay<UIImage> { get set }
     var weatherImageDescription: BehaviorRelay<String> { get set }
     
+    var receiver: PublishSubject<String> { get set }
+    
     func loadDiary(diaryId: Int)
     func addOrUpdateDiary(content: Content, diaryId: Int)
     func deleteDiary(diaryId: Int)
