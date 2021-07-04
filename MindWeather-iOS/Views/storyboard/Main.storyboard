@@ -27,7 +27,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-8d-MjM">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="1년">
-                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="aYearButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="SH6-dY-Mlm"/>
@@ -36,7 +36,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSS-bU-rJh">
                                         <rect key="frame" x="70" y="0.0" width="36" height="30"/>
                                         <state key="normal" title="6개월">
-                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="sixMonthButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="muH-eW-QTs"/>
@@ -45,7 +45,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZT-Ro-5TR">
                                         <rect key="frame" x="146" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="한달">
-                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="aMonthButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="GqX-h2-IMI"/>
@@ -54,7 +54,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vd-u1-j1J">
                                         <rect key="frame" x="216" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="한주">
-                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="aWeekButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="AdY-S9-uGz"/>
@@ -76,7 +76,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
                     <connections>
+                        <outlet property="aMonthButton" destination="jZT-Ro-5TR" id="5Kh-IW-jh9"/>
+                        <outlet property="aWeekButton" destination="2Vd-u1-j1J" id="nor-xf-41B"/>
+                        <outlet property="aYearButton" destination="yhc-8d-MjM" id="Atg-eW-yG1"/>
                         <outlet property="emotionGraph" destination="qLR-zj-lEo" id="vkI-m9-1iz"/>
+                        <outlet property="sixMonthButton" destination="TSS-bU-rJh" id="KPu-KW-th5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -356,9 +360,6 @@
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

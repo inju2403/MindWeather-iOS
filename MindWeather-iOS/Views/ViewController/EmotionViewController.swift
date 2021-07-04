@@ -14,6 +14,8 @@ import Charts
 
 class EmotionViewController : UIViewController {
     
+    let emotions = ["행복", "중립", "걱정", "슬픔", "분노"]
+    
     var mainColor = 0xFDF5E6 // 메인 색상
     var brownColor = 0x8B4513 // 텍스트 색상
 
@@ -23,6 +25,10 @@ class EmotionViewController : UIViewController {
     var blueColor = 0x42A5F5 // 슬픔
     var redColor = 0xFF4950 // 분노
 
+    @IBOutlet weak var aYearButton: UIButton!
+    @IBOutlet weak var sixMonthButton: UIButton!
+    @IBOutlet weak var aMonthButton: UIButton!
+    @IBOutlet weak var aWeekButton: UIButton!
     
     @IBOutlet weak var emotionGraph: PieChartView!
     
@@ -33,21 +39,106 @@ class EmotionViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        let emotions = ["행복", "중립", "걱정", "슬픔", "분노"]
-        let goals = [36, 8, 26, 13, 18, 10]
-        
-        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) })
-    }
-    @IBAction func aYearButtonPressed(_ sender: UIButton) {
-    }
-    @IBAction func sixMonthButtonPressed(_ sender: Any) {
-    }
-    @IBAction func aMonthButtonPressed(_ sender: UIButton) {
-    }
-    @IBAction func aWeekButtonPressed(_ sender: UIButton) {
+        makeChartaYear()
     }
     
-    func customizeChart(dataPoints: [String], values: [Double]) {
+    @IBAction func aYearButtonPressed(_ sender: UIButton) {
+        makeChartaYear()
+    }
+    
+    @IBAction func sixMonthButtonPressed(_ sender: UIButton) {
+        makeChartSixMonth()
+    }
+    
+    @IBAction func aMonthButtonPressed(_ sender: UIButton) {
+        makeChartaMonth()
+    }
+    
+    @IBAction func aWeekButtonPressed(_ sender: UIButton) {
+        makeChartaWeek()
+    }
+    
+    private func makeChartaYear() {
+        // 1년의 감정
+        
+        // 폰트 설정
+        aYearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        
+        // 텍스트 컬러 설정
+        aYearButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
+        let goals = [36, 8, 26, 13, 18, 10]
+        
+        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "1년의 감정")
+    }
+    
+    private func makeChartSixMonth() {
+        // 6개월의 감정
+        
+        // 폰트 설정
+        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        
+        // 텍스트 컬러 설정
+        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
+        sixMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
+        let goals = [36, 8, 26, 13, 18, 10]
+        
+        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "6개월의 감정")
+    }
+    
+    private func makeChartaMonth() {
+        // 한달의 감정
+        
+        // 폰트 설정
+        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        
+        // 텍스트 컬러 설정
+        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
+        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
+        let goals = [36, 8, 26, 13, 18, 10]
+        
+        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "한달의 감정")
+    }
+    
+    private func makeChartaWeek() {
+        // 한주의 감정
+        
+        // 폰트 설정
+        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aWeekButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        
+        // 텍스트 컬러 설정
+        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
+        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        
+        let goals = [36, 8, 26, 13, 18, 10]
+        
+        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "한주의 감정")
+    }
+    
+    private func customizeChart(dataPoints: [String], values: [Double], title: String) {
       // TO-DO: customize the chart here
         
         // 1. Set ChartDataEntry
@@ -76,7 +167,7 @@ class EmotionViewController : UIViewController {
             .font: UIFont(name: "ArialHebrew", size: 18)!,
             .foregroundColor: UIColor(rgb: brownColor)
         ]
-        let myAttrString = NSAttributedString(string: "나의 감정", attributes: myAttribute)
+        let myAttrString = NSAttributedString(string: title, attributes: myAttribute)
         emotionGraph.centerAttributedText = myAttrString
         emotionGraph.drawCenterTextEnabled = true
         
