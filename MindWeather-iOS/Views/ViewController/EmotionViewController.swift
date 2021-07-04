@@ -62,6 +62,9 @@ class EmotionViewController : UIViewController {
         
         emotionGraph.holeColor = UIColor(argb: mainColor)
         emotionGraph.centerText = "나의 감정"
+        emotionGraph.drawCenterTextEnabled = true
+        emotionGraph.entryLabelFont = UIFont(name: "ArialHebrew", size: 14)
+        
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
     
