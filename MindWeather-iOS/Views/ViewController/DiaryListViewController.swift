@@ -26,7 +26,6 @@ class DiaryListViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadingUI.startAnimating()
 //        diaryListViewModel.testContent
 //            .bind(to: testLabel.rx.text)
 //            .disposed(by: disposeBag)
@@ -54,12 +53,14 @@ class DiaryListViewController : UIViewController {
                 onSubscribe: {
                     //로딩 ui 켜기
                     self.loadingUI.isHidden = false
+                    self.loadingUI.startAnimating()
                 })
             .subscribe(
                 onNext: { value in
                     if value == "getDiarys" {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
+                        self.loadingUI.stopAnimating()
                     }
                 })
             .disposed(by: disposeBag)

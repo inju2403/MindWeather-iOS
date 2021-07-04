@@ -26,7 +26,6 @@ class DiaryEditViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadingUI.startAnimating()
         
         bindViewModel()
         if diaryId != K.newDiaryValue {
@@ -36,12 +35,14 @@ class DiaryEditViewController : UIViewController {
             explainText.isHidden = true
             
             loadingUI.isHidden = false
+            loadingUI.startAnimating()
             loadingText.isHidden = true
             diaryDetailViewModel.loadDiary(diaryId: diaryId)
         } else {
             diaryDetailViewModel.newStateDiary()
             
             loadingUI.isHidden = true
+            loadingUI.stopAnimating()
             loadingText.isHidden = true
         }
     }
@@ -72,6 +73,7 @@ class DiaryEditViewController : UIViewController {
                         self.explainText.isHidden = false
                         
                         self.loadingUI.isHidden = true
+                        self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
                         
                         self.dismiss(animated: true, completion: nil)
@@ -84,6 +86,7 @@ class DiaryEditViewController : UIViewController {
                         self.explainText.isHidden = false
                         
                         self.loadingUI.isHidden = true
+                        self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
                     }
                 })
@@ -100,8 +103,9 @@ class DiaryEditViewController : UIViewController {
         }
         
         //로딩 ui 켜기
-        self.loadingUI.isHidden = false
-        self.loadingText.isHidden = false
+        loadingUI.isHidden = false
+        loadingUI.startAnimating()
+        loadingText.isHidden = false
         
         let sendContent = Content(content: content)
         diaryDetailViewModel.addOrUpdateDiary(content: sendContent, diaryId: diaryId)

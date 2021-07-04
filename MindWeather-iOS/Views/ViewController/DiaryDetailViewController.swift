@@ -88,6 +88,7 @@ class DiaryDetailViewController : UIViewController {
                     self.yearText.isHidden = true
                     
                     self.loadingUI.isHidden = false
+                    self.loadingUI.startAnimating()
                     self.loadingText.isHidden = false
                 })
             .subscribe(
@@ -98,6 +99,7 @@ class DiaryDetailViewController : UIViewController {
                     
                     //로딩 ui 끄기
                     self.loadingUI.isHidden = true
+                    self.loadingUI.stopAnimating()
                     self.loadingText.isHidden = true
                     
                     self.date.isHidden = false
@@ -110,7 +112,6 @@ class DiaryDetailViewController : UIViewController {
     }
     
     private func setUI() {
-        loadingUI.startAnimating()
         self.navigationController?.navigationBar.topItem?.title = ""
     }
 }
