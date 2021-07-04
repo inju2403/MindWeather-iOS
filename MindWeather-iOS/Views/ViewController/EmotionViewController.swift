@@ -76,7 +76,8 @@ class EmotionViewController : UIViewController {
         emotionGraph.entryLabelFont = UIFont(name: "ArialHebrew", size: 14)
 
         // 하단 텍스트 속성 설정
-//        emotionGraph.legend.font = UIFont(name: "ArialHebrew", size: 8)
+//        emotionGraph.legend.font = UIFont(name: "ArialHebrew", size: 12)!
+        emotionGraph.legend.textColor = UIColor(rgb: brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
