@@ -41,6 +41,7 @@ class DiaryListViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.emptyStateText.isHidden = true
         diaryListViewModel.getDiarys()
     }
     
