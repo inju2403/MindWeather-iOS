@@ -13,6 +13,7 @@ class DiaryListViewController : UIViewController {
     
     @IBOutlet weak var diaryListTableView: UITableView!
     @IBOutlet weak var loadingUI: UIActivityIndicatorView!
+    @IBOutlet weak var emptyStateText: UILabel!
     
     let diaryListViewModel = DiaryListViewModel()
     let disposeBag = DisposeBag()
@@ -45,6 +46,7 @@ class DiaryListViewController : UIViewController {
     
     private func bindTableView() {
         diaryListViewModel.receiver
+            .observe(on: MainScheduler.instance)
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기
@@ -55,6 +57,19 @@ class DiaryListViewController : UIViewController {
                     if value == "getDiarys" {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
+                    }
+                })
+            .disposed(by: disposeBag)
+        
+        diaryListViewModel.diaryItemCnt
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { value in
+                    if value == 0 {
+                        // 일기 리스트 사이즈가 0이면 문구 노출
+                        self.emptyStateText.isHidden = false
+                    } else {
+                        self.emptyStateText.isHidden = true
                     }
                 })
             .disposed(by: disposeBag)

@@ -104,19 +104,28 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫 일기를 작성해보세요:)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-52-UP2">
+                                <rect key="frame" x="133.33333333333337" y="439" width="147.66666666666663" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.54664494869482771" green="0.54664494869482771" blue="0.54664494869482771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pBP-mK-g0L"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Eic-C5-0dd" firstAttribute="leading" secondItem="pBP-mK-g0L" secondAttribute="leading" id="9eK-ML-ook"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="bottom" secondItem="Eic-C5-0dd" secondAttribute="bottom" id="NCT-VU-Fco"/>
+                            <constraint firstItem="Gpb-52-UP2" firstAttribute="centerY" secondItem="DhZ-Me-Eo4" secondAttribute="centerY" id="adr-no-ciu"/>
                             <constraint firstItem="Eic-C5-0dd" firstAttribute="top" secondItem="pBP-mK-g0L" secondAttribute="top" constant="20" id="iib-Yf-sQI"/>
                             <constraint firstItem="pBP-mK-g0L" firstAttribute="trailing" secondItem="Eic-C5-0dd" secondAttribute="trailing" id="kyf-2a-Qyu"/>
+                            <constraint firstItem="Gpb-52-UP2" firstAttribute="centerX" secondItem="DhZ-Me-Eo4" secondAttribute="centerX" id="sqM-cu-2Al"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qwn-QZ-aCI"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
+                        <outlet property="emptyStateText" destination="Gpb-52-UP2" id="ijv-cy-7mS"/>
                         <outlet property="loadingUI" destination="F0p-rp-bWv" id="n7b-7D-fub"/>
                         <segue destination="tIG-eR-GDD" kind="show" identifier="moveDiaryDetailIdentifier" id="OmC-uY-QU2"/>
                     </connections>
