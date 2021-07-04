@@ -18,17 +18,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="32" y="124" width="350" height="657"/>
+                                <rect key="frame" x="32" y="155" width="350" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="H61-Bu-dRF">
+                                <rect key="frame" x="84" y="124" width="246" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-8d-MjM">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="1년">
+                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aYearButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="SH6-dY-Mlm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSS-bU-rJh">
+                                        <rect key="frame" x="70" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="6개월">
+                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sixMonthButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="muH-eW-QTs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZT-Ro-5TR">
+                                        <rect key="frame" x="146" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="한달">
+                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aMonthButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="GqX-h2-IMI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vd-u1-j1J">
+                                        <rect key="frame" x="216" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="한주">
+                                            <color key="titleColor" systemColor="systemGray2Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aWeekButtonPressed:" destination="Wmm-iU-1kg" eventType="touchUpInside" id="AdY-S9-uGz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mxf-bu-MvF"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Mxf-bu-MvF" firstAttribute="trailing" secondItem="qLR-zj-lEo" secondAttribute="trailing" constant="32" id="8Jo-zy-qDw"/>
                             <constraint firstItem="qLR-zj-lEo" firstAttribute="leading" secondItem="Mxf-bu-MvF" secondAttribute="leading" constant="32" id="LMs-5T-Lj9"/>
-                            <constraint firstItem="qLR-zj-lEo" firstAttribute="top" secondItem="Mxf-bu-MvF" secondAttribute="top" constant="80" id="iFI-yx-her"/>
+                            <constraint firstItem="H61-Bu-dRF" firstAttribute="centerX" secondItem="QRF-FD-mEh" secondAttribute="centerX" id="cd7-69-rSE"/>
                             <constraint firstItem="Mxf-bu-MvF" firstAttribute="bottom" secondItem="qLR-zj-lEo" secondAttribute="bottom" constant="32" id="osa-65-LMr"/>
+                            <constraint firstItem="H61-Bu-dRF" firstAttribute="top" secondItem="Mxf-bu-MvF" secondAttribute="top" constant="80" id="rMs-Ej-OIw"/>
+                            <constraint firstItem="qLR-zj-lEo" firstAttribute="top" secondItem="H61-Bu-dRF" secondAttribute="bottom" constant="1" id="v4u-cc-GA8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
@@ -313,6 +356,9 @@
         <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

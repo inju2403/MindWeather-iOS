@@ -38,6 +38,14 @@ class EmotionViewController : UIViewController {
         
         customizeChart(dataPoints: emotions, values: goals.map{ Double($0) })
     }
+    @IBAction func aYearButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func sixMonthButtonPressed(_ sender: Any) {
+    }
+    @IBAction func aMonthButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func aWeekButtonPressed(_ sender: UIButton) {
+    }
     
     func customizeChart(dataPoints: [String], values: [Double]) {
       // TO-DO: customize the chart here
