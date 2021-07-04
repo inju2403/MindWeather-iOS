@@ -17,21 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emotion graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-aM-cz3">
-                                <rect key="frame" x="151.66666666666666" y="437.66666666666669" width="110.99999999999997" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="32" y="144" width="350" height="637"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mxf-bu-MvF"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="RtS-aM-cz3" firstAttribute="centerY" secondItem="QRF-FD-mEh" secondAttribute="centerY" id="Zrn-lw-ccK"/>
-                            <constraint firstItem="RtS-aM-cz3" firstAttribute="centerX" secondItem="QRF-FD-mEh" secondAttribute="centerX" id="qIU-N4-U5N"/>
+                            <constraint firstItem="Mxf-bu-MvF" firstAttribute="trailing" secondItem="qLR-zj-lEo" secondAttribute="trailing" constant="32" id="8Jo-zy-qDw"/>
+                            <constraint firstItem="qLR-zj-lEo" firstAttribute="leading" secondItem="Mxf-bu-MvF" secondAttribute="leading" constant="32" id="LMs-5T-Lj9"/>
+                            <constraint firstItem="qLR-zj-lEo" firstAttribute="top" secondItem="Mxf-bu-MvF" secondAttribute="top" constant="100" id="iFI-yx-her"/>
+                            <constraint firstItem="Mxf-bu-MvF" firstAttribute="bottom" secondItem="qLR-zj-lEo" secondAttribute="bottom" constant="32" id="osa-65-LMr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="감정 변화" image="calendar" catalog="system" id="4eg-VK-bEA"/>
+                    <connections>
+                        <outlet property="emotionGraph" destination="qLR-zj-lEo" id="vkI-m9-1iz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoY-kb-xhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

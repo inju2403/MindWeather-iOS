@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import Charts
 
 class EmotionViewController : UIViewController {
     
+    @IBOutlet weak var emotionGraph: BarChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
