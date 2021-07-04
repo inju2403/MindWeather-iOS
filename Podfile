@@ -9,5 +9,5 @@ target 'MindWeather-iOS' do
   pod 'RxSwift', '~> 6.2.0'
   pod 'RxCocoa', '~> 6.2.0'
   pod 'Alamofire', '~> 5.4'
-  pod 'Charts', '~> 4.0.0'
+  pod 'Charts'
 end
