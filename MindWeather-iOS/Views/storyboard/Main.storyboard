@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="32" y="144" width="350" height="637"/>
+                                <rect key="frame" x="32" y="124" width="350" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -27,7 +27,7 @@
                         <constraints>
                             <constraint firstItem="Mxf-bu-MvF" firstAttribute="trailing" secondItem="qLR-zj-lEo" secondAttribute="trailing" constant="32" id="8Jo-zy-qDw"/>
                             <constraint firstItem="qLR-zj-lEo" firstAttribute="leading" secondItem="Mxf-bu-MvF" secondAttribute="leading" constant="32" id="LMs-5T-Lj9"/>
-                            <constraint firstItem="qLR-zj-lEo" firstAttribute="top" secondItem="Mxf-bu-MvF" secondAttribute="top" constant="100" id="iFI-yx-her"/>
+                            <constraint firstItem="qLR-zj-lEo" firstAttribute="top" secondItem="Mxf-bu-MvF" secondAttribute="top" constant="80" id="iFI-yx-her"/>
                             <constraint firstItem="Mxf-bu-MvF" firstAttribute="bottom" secondItem="qLR-zj-lEo" secondAttribute="bottom" constant="32" id="osa-65-LMr"/>
                         </constraints>
                     </view>

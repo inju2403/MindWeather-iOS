@@ -14,6 +14,7 @@ import Charts
 
 class EmotionViewController : UIViewController {
     
+    var mainColor = 0xFDF5E6 // 메인 색상
     var brownColor = 0x8B4513 // 텍스트 색상
 
     var goldColor = 0xFFA700 // 행복
@@ -59,7 +60,7 @@ class EmotionViewController : UIViewController {
         // 4. Assign it to the chart’s data
         emotionGraph.data = pieChartData
         
-        
+        emotionGraph.holeColor = UIColor(argb: mainColor)
         emotionGraph.centerText = "나의 감정"
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
