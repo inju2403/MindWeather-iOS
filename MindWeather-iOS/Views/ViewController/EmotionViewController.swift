@@ -60,10 +60,23 @@ class EmotionViewController : UIViewController {
         // 4. Assign it to the chart’s data
         emotionGraph.data = pieChartData
         
-        emotionGraph.holeColor = UIColor(argb: mainColor)
-        emotionGraph.centerText = "나의 감정"
+        // 가운데 빈 원형 부분 색상 설정
+        emotionGraph.holeColor = UIColor(rgb: mainColor)
+        
+        // 센터 텍스트 속성 설정
+        let myAttribute: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "ArialHebrew", size: 18)!,
+            .foregroundColor: UIColor(rgb: brownColor)
+        ]
+        let myAttrString = NSAttributedString(string: "나의 감정", attributes: myAttribute)
+        emotionGraph.centerAttributedText = myAttrString
         emotionGraph.drawCenterTextEnabled = true
+        
+        // 엔트리 텍스트 속성 설정
         emotionGraph.entryLabelFont = UIFont(name: "ArialHebrew", size: 14)
+
+        // 하단 텍스트 속성 설정
+//        emotionGraph.legend.font = UIFont(name: "ArialHebrew", size: 8)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
