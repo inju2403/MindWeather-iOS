@@ -12,6 +12,8 @@ import RxRelay
 protocol DiaryListViewModelType {
     var diaryList: BehaviorRelay<[Diary]> { get }
     
+    var receiver: PublishSubject<String> { get set }
+    
     func getDiarys()
 }
 
@@ -23,6 +25,8 @@ class DiaryListViewModel: DiaryListViewModelType {
     var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
     var diaryItemCnt = BehaviorRelay(value: 0)
     
+    var receiver: PublishSubject<String> = PublishSubject<String>()
+    
     func getDiarys() {
         _ = service.getDiarys()
             .subscribe { event in
@@ -30,6 +34,7 @@ class DiaryListViewModel: DiaryListViewModelType {
                 case .success(let diarys):
                     self.diaryList.accept(diarys)
                     self.diaryItemCnt.accept(diarys.count)
+                    self.receiver.onNext("getDiarys")
                 case .failure(let error):
                     print("Error: ", error)
                 }

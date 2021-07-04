@@ -44,12 +44,23 @@ class DiaryListViewController : UIViewController {
     }
     
     private func bindTableView() {
-        diaryListViewModel.diaryList
+        diaryListViewModel.receiver
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기
                     self.loadingUI.isHidden = false
                 })
+            .subscribe(
+                onNext: { value in
+                    if value == "getDiarys" {
+                        //로딩 ui 끄기
+                        self.loadingUI.isHidden = true
+                    }
+                })
+            .disposed(by: disposeBag)
+        
+        
+        diaryListViewModel.diaryList
             .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
                 
@@ -90,9 +101,6 @@ class DiaryListViewController : UIViewController {
                     let image = UIImage(named: "ic_neutrality")
                     cell.diaryCardImage.image = image
                 }
-                
-                //로딩 ui 끄기
-                self.loadingUI.isHidden = true
             }.disposed(by: disposeBag)
         
         //일기 아이템 클릭시 보낼 일기 아이디 저장
