@@ -110,6 +110,7 @@ class DiaryDetailViewController : UIViewController {
     }
     
     private func setUI() {
+        loadingUI.startAnimating()
         self.navigationController?.navigationBar.topItem?.title = ""
     }
 }

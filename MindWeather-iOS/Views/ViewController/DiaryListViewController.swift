@@ -25,6 +25,8 @@ class DiaryListViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadingUI.startAnimating()
 //        diaryListViewModel.testContent
 //            .bind(to: testLabel.rx.text)
 //            .disposed(by: disposeBag)

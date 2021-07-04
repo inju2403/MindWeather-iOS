@@ -26,6 +26,7 @@ class DiaryEditViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadingUI.startAnimating()
         
         bindViewModel()
         if diaryId != K.newDiaryValue {
