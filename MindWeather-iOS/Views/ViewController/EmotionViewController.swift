@@ -23,7 +23,7 @@ class EmotionViewController : UIViewController {
     var redColor = 0xFF4950 // 분노
 
     
-    @IBOutlet weak var emotionGraph: BarChartView!
+    @IBOutlet weak var emotionGraph: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,10 @@ class EmotionViewController : UIViewController {
         pieChartData.setValueFormatter(formatter)
         // 4. Assign it to the chart’s data
         emotionGraph.data = pieChartData
+        
+        
+        emotionGraph.centerText = "나의 감정"
+        emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
