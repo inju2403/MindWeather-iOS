@@ -47,14 +47,12 @@ class EmotionViewController : UIViewController {
         
         bindViewModel()
         emotionViewModel.getEmotions()
-        makeChartaYear()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         emotionViewModel.getEmotions()
-        makeChartaYear()
     }
     
     private func bindViewModel() {
