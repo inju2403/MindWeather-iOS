@@ -53,6 +53,7 @@
 		6EC26BCD269022FB00391916 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BCC269022FB00391916 /* ChangePassword.swift */; };
 		6EC26BCF2690235A00391916 /* PasswordEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */; };
 		6EC26BD12690236E00391916 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD02690236E00391916 /* PasswordEditViewController.swift */; };
+		6EC26BD3269328DC00391916 /* EmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD2269328DB00391916 /* EmotionViewModel.swift */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 		6EEC0A922687063B00F3ABEC /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */; };
@@ -109,6 +110,7 @@
 		6EC26BCC269022FB00391916 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangePassword.swift; path = ../../../../ChangePassword.swift; sourceTree = "<group>"; };
 		6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = PasswordEdit.storyboard; path = ../../../../../PasswordEdit.storyboard; sourceTree = "<group>"; };
 		6EC26BD02690236E00391916 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordEditViewController.swift; path = ../../../../../PasswordEditViewController.swift; sourceTree = "<group>"; };
+		6EC26BD2269328DB00391916 /* EmotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */,
 				6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */,
+				6EC26BD2269328DB00391916 /* EmotionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				6EC26BC9268F4B7F00391916 /* NickNameEditViewController.swift in Sources */,
 				6EC26BB5268B3D7600391916 /* EmotionViewController.swift in Sources */,
 				6EEC0A962687801100F3ABEC /* DiaryListCell.swift in Sources */,
+				6EC26BD3269328DC00391916 /* EmotionViewModel.swift in Sources */,
 				6EB0442B26816AD100E047A7 /* DiaryServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

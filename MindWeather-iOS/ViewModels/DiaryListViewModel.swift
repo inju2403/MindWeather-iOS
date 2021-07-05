@@ -11,6 +11,7 @@ import RxRelay
 
 protocol DiaryListViewModelType {
     var diaryList: BehaviorRelay<[Diary]> { get }
+    var diaryItemCnt: BehaviorRelay<Int> { get set }
     
     var receiver: PublishSubject<String> { get set }
     
@@ -35,8 +36,10 @@ class DiaryListViewModel: DiaryListViewModelType {
                     self.diaryList.accept(diarys)
                     self.diaryItemCnt.accept(diarys.count)
                     self.receiver.onNext("getDiarys")
+                    break
                 case .failure(let error):
                     print("Error: ", error)
+                    break
                 }
                 
             }
