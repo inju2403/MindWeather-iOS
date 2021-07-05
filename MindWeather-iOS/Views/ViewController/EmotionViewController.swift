@@ -22,7 +22,7 @@ class EmotionViewController : UIViewController {
     var sixMonthEmotion = Emotion()
     var aYearEmotion = Emotion()
     
-    let emotionNames = ["행복", "중립", "걱정", "슬픔", "분노"]
+    var emotionNames: [String] = []
     
     var mainColor = 0xFDF5E6 // 메인 색상
     var brownColor = 0x8B4513 // 텍스트 색상
@@ -32,6 +32,8 @@ class EmotionViewController : UIViewController {
     var pupleColor = 0xA575CD // 걱정
     var blueColor = 0x42A5F5 // 슬픔
     var redColor = 0xFF4950 // 분노
+    
+    var emotionsRate: [Double] = []
 
     @IBOutlet weak var aYearButton: UIButton!
     @IBOutlet weak var sixMonthButton: UIButton!
@@ -43,6 +45,17 @@ class EmotionViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
+        emotionViewModel.getEmotions()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        makeChartaYear()
+    }
+    
+    private func bindViewModel() {
         emotionViewModel.aWeekEmotion
             .subscribe(
                 onNext: { value in
@@ -68,14 +81,9 @@ class EmotionViewController : UIViewController {
             .subscribe(
                 onNext: { value in
                     self.aYearEmotion = value
+                    self.makeChartaYear()
             })
             .disposed(by: disposeBag)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        makeChartaYear()
     }
     
     @IBAction func aYearButtonPressed(_ sender: UIButton) {
@@ -94,44 +102,45 @@ class EmotionViewController : UIViewController {
         makeChartaWeek()
     }
     
-    private func makeChartaYear() {
-        // 1년의 감정
-        
-        // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        
-        // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
-        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
-        
-        let goals = [36, 8, 26, 13, 18, 10]
-        
-        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "1년의 감정")
-    }
-    
-    private func makeChartSixMonth() {
-        // 6개월의 감정
+    private func makeChartaWeek() {
+        // 한주의 감정
         
         // 폰트 설정
         aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
         aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aWeekButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
-        sixMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
         
-        let goals = [36, 8, 26, 13, 18, 10]
+        emotionNames = []
+        emotionsRate = []
+        if aWeekEmotion.happiness > 0 {
+            emotionsRate.append(aWeekEmotion.happiness)
+            emotionNames.append("행복")
+        }
+        if aWeekEmotion.neutrality > 0 {
+            emotionsRate.append(aWeekEmotion.neutrality)
+            emotionNames.append("중립")
+        }
+        if aWeekEmotion.worry > 0 {
+            emotionsRate.append(aWeekEmotion.worry)
+            emotionNames.append("걱정")
+        }
+        if aWeekEmotion.sadness > 0 {
+            emotionsRate.append(aWeekEmotion.sadness)
+            emotionNames.append("슬픔")
+        }
+        if aWeekEmotion.anger > 0 {
+            emotionsRate.append(aWeekEmotion.anger)
+            emotionNames.append("분노")
+        }
         
-        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "6개월의 감정")
+        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "한주의 감정")
     }
     
     private func makeChartaMonth() {
@@ -149,30 +158,114 @@ class EmotionViewController : UIViewController {
         aMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
         
-        let goals = [36, 8, 26, 13, 18, 10]
+        emotionNames = []
+        emotionsRate = []
+        if aMonthEmotion.happiness > 0 {
+            emotionsRate.append(aMonthEmotion.happiness)
+            emotionNames.append("행복")
+        }
+        if aMonthEmotion.neutrality > 0 {
+            emotionsRate.append(aMonthEmotion.neutrality)
+            emotionNames.append("중립")
+        }
+        if aMonthEmotion.worry > 0 {
+            emotionsRate.append(aMonthEmotion.worry)
+            emotionNames.append("걱정")
+        }
+        if aMonthEmotion.sadness > 0 {
+            emotionsRate.append(aMonthEmotion.sadness)
+            emotionNames.append("슬픔")
+        }
+        if aMonthEmotion.anger > 0 {
+            emotionsRate.append(aMonthEmotion.anger)
+            emotionNames.append("분노")
+        }
         
-        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "한달의 감정")
+        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "한달의 감정")
     }
     
-    private func makeChartaWeek() {
-        // 한주의 감정
+    private func makeChartSixMonth() {
+        // 6개월의 감정
         
         // 폰트 설정
         aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
+        sixMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
+        emotionNames = []
+        emotionsRate = []
+        if sixMonthEmotion.happiness > 0 {
+            emotionsRate.append(sixMonthEmotion.happiness)
+            emotionNames.append("행복")
+        }
+        if sixMonthEmotion.neutrality > 0 {
+            emotionsRate.append(sixMonthEmotion.neutrality)
+            emotionNames.append("중립")
+        }
+        if sixMonthEmotion.worry > 0 {
+            emotionsRate.append(sixMonthEmotion.worry)
+            emotionNames.append("걱정")
+        }
+        if sixMonthEmotion.sadness > 0 {
+            emotionsRate.append(sixMonthEmotion.sadness)
+            emotionNames.append("슬픔")
+        }
+        if sixMonthEmotion.anger > 0 {
+            emotionsRate.append(sixMonthEmotion.anger)
+            emotionNames.append("분노")
+        }
+        
+        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "6개월의 감정")
+    }
+    
+    private func makeChartaYear() {
+        // 1년의 감정
+        
+        // 폰트 설정
+        aYearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        
+        // 텍스트 컬러 설정
+        aYearButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
         
-        let goals = [36, 8, 26, 13, 18, 10]
+        emotionNames = []
+        emotionsRate = []
+        if aYearEmotion.happiness > 0 {
+            emotionsRate.append(aYearEmotion.happiness)
+            emotionNames.append("행복")
+        }
+        if aYearEmotion.neutrality > 0 {
+            emotionsRate.append(aYearEmotion.neutrality)
+            emotionNames.append("중립")
+        }
+        if aYearEmotion.worry > 0 {
+            emotionsRate.append(aYearEmotion.worry)
+            emotionNames.append("걱정")
+        }
+        if aYearEmotion.sadness > 0 {
+            emotionsRate.append(aYearEmotion.sadness)
+            emotionNames.append("슬픔")
+        }
+        if aYearEmotion.anger > 0 {
+            emotionsRate.append(aYearEmotion.anger)
+            emotionNames.append("분노")
+        }
         
-        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "한주의 감정")
+        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "1년의 감정")
     }
+    
     
     private func customizeChart(dataPoints: [String], values: [Double], title: String) {
       // TO-DO: customize the chart here
