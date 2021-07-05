@@ -83,6 +83,15 @@
                                     <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="F1p-Ru-0S4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*비밀번호는 영문, 숫자, 특수문자를 조합해서 만들어 주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-Ye-wes">
+                                <rect key="frame" x="107" y="492" width="200" height="33.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OGD-TR-PgH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="placeholderTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,6 +99,7 @@
                             <constraint firstItem="jZQ-h5-ldn" firstAttribute="top" secondItem="gDE-4H-Nel" secondAttribute="bottom" constant="32" id="0AA-0r-vzO"/>
                             <constraint firstItem="gDE-4H-Nel" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="38M-6h-eYl"/>
                             <constraint firstItem="gDE-4H-Nel" firstAttribute="top" secondItem="3R7-N9-HhH" secondAttribute="bottom" constant="32" id="A1p-vu-gGX"/>
+                            <constraint firstItem="EDw-Ye-wes" firstAttribute="top" secondItem="NBU-j3-9La" secondAttribute="bottom" constant="30" id="D1Y-NQ-huM"/>
                             <constraint firstItem="iAH-DG-0d1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="FOg-n6-8BK"/>
                             <constraint firstItem="F60-bN-bU6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GtW-7k-4id"/>
                             <constraint firstItem="jZQ-h5-ldn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QsV-hK-zpM"/>
@@ -104,6 +114,7 @@
                             <constraint firstItem="NBU-j3-9La" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nPT-vZ-g8s"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PQh-eS-WoA" secondAttribute="trailing" id="pLo-5b-pc5"/>
                             <constraint firstItem="PQh-eS-WoA" firstAttribute="top" secondItem="F60-bN-bU6" secondAttribute="bottom" id="qSg-fU-hTm"/>
+                            <constraint firstItem="EDw-Ye-wes" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tL0-qf-PeE"/>
                         </constraints>
                     </view>
                     <connections>
