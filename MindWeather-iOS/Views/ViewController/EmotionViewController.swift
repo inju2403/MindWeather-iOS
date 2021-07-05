@@ -14,7 +14,15 @@ import Charts
 
 class EmotionViewController : UIViewController {
     
-    let emotions = ["행복", "중립", "걱정", "슬픔", "분노"]
+    let emotionViewModel = EmotionViewModel()
+    let disposeBag = DisposeBag()
+    
+    var aWeekEmotion = Emotion()
+    var aMonthEmotion = Emotion()
+    var sixMonthEmotion = Emotion()
+    var aYearEmotion = Emotion()
+    
+    let emotionNames = ["행복", "중립", "걱정", "슬픔", "분노"]
     
     var mainColor = 0xFDF5E6 // 메인 색상
     var brownColor = 0x8B4513 // 텍스트 색상
@@ -34,6 +42,34 @@ class EmotionViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emotionViewModel.aWeekEmotion
+            .subscribe(
+                onNext: { value in
+                    self.aWeekEmotion = value
+            })
+            .disposed(by: disposeBag)
+        
+        emotionViewModel.aMonthEmotion
+            .subscribe(
+                onNext: { value in
+                    self.aMonthEmotion = value
+            })
+            .disposed(by: disposeBag)
+        
+        emotionViewModel.sixMonthEmotion
+            .subscribe(
+                onNext: { value in
+                    self.sixMonthEmotion = value
+            })
+            .disposed(by: disposeBag)
+        
+        emotionViewModel.aYearEmotion
+            .subscribe(
+                onNext: { value in
+                    self.aYearEmotion = value
+            })
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,7 +111,7 @@ class EmotionViewController : UIViewController {
         
         let goals = [36, 8, 26, 13, 18, 10]
         
-        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "1년의 감정")
+        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "1년의 감정")
     }
     
     private func makeChartSixMonth() {
@@ -95,7 +131,7 @@ class EmotionViewController : UIViewController {
         
         let goals = [36, 8, 26, 13, 18, 10]
         
-        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "6개월의 감정")
+        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "6개월의 감정")
     }
     
     private func makeChartaMonth() {
@@ -115,7 +151,7 @@ class EmotionViewController : UIViewController {
         
         let goals = [36, 8, 26, 13, 18, 10]
         
-        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "한달의 감정")
+        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "한달의 감정")
     }
     
     private func makeChartaWeek() {
@@ -135,7 +171,7 @@ class EmotionViewController : UIViewController {
         
         let goals = [36, 8, 26, 13, 18, 10]
         
-        customizeChart(dataPoints: emotions, values: goals.map{ Double($0) }, title: "한주의 감정")
+        customizeChart(dataPoints: emotionNames, values: goals.map{ Double($0) }, title: "한주의 감정")
     }
     
     private func customizeChart(dataPoints: [String], values: [Double], title: String) {
