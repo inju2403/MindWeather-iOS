@@ -7,6 +7,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+        <array key="NanumMyeongjoBold.ttf">
+            <string>NanumMyeongjoBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Diary Edit View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -28,23 +36,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0630" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91h-oM-Jdh">
-                                <rect key="frame" x="189.66666666666666" y="194" width="35" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="191" y="194" width="32.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="15"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 이야기를 들려주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWz-LC-t33">
-                                <rect key="frame" x="117.33333333333333" y="231" width="179.33333333333337" height="19.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="108" y="231" width="198" height="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="16"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-SK-SSB">
-                                <rect key="frame" x="60" y="270.33333333333331" width="294" height="521.66666666666674"/>
+                                <rect key="frame" x="60" y="279" width="294" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABe-S4-r28">
@@ -56,8 +64,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNt-Sd-F6v">
-                                <rect key="frame" x="335.33333333333331" y="797" width="18.666666666666686" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="336.33333333333331" y="797" width="17.666666666666686" height="16"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="14"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,8 +77,8 @@
                                 </constraints>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정을 분석하는 중이에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOp-aF-NRM">
-                                <rect key="frame" x="131.66666666666666" y="410.66666666666669" width="150.99999999999997" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="124" y="410.66666666666669" width="166" height="17.333333333333314"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -97,7 +105,7 @@
                             <constraint firstItem="HMg-8h-Idn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.85" id="dZr-Ku-k9F"/>
                             <constraint firstItem="oOp-aF-NRM" firstAttribute="top" secondItem="HMg-8h-Idn" secondAttribute="bottom" constant="10" id="dge-Wd-mz5"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="jlW-ea-VjR"/>
-                            <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="20" id="pvv-XL-hSh"/>
+                            <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="30" id="pvv-XL-hSh"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="q6e-Nt-5QW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ABe-S4-r28" secondAttribute="trailing" constant="40" id="sU8-fc-DMn"/>
                         </constraints>
