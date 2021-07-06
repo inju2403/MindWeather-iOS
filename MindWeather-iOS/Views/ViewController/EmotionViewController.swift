@@ -106,10 +106,10 @@ class EmotionViewController : UIViewController {
         // 한주의 감정
         
         // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
@@ -147,10 +147,10 @@ class EmotionViewController : UIViewController {
         // 한달의 감정
         
         // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
+        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
@@ -188,10 +188,10 @@ class EmotionViewController : UIViewController {
         // 6개월의 감정
         
         // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
+        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
@@ -229,10 +229,10 @@ class EmotionViewController : UIViewController {
         // 1년의 감정
         
         // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        sixMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aMonthButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        aWeekButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
+        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
@@ -293,7 +293,7 @@ class EmotionViewController : UIViewController {
         
         // 센터 텍스트 속성 설정
         let myAttribute: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "ArialHebrew", size: 18)!,
+            .font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 17)!,
             .foregroundColor: UIColor(rgb: brownColor)
         ]
         let myAttrString = NSAttributedString(string: title, attributes: myAttribute)
@@ -301,10 +301,10 @@ class EmotionViewController : UIViewController {
         emotionGraph.drawCenterTextEnabled = true
         
         // 엔트리 텍스트 속성 설정
-        emotionGraph.entryLabelFont = UIFont(name: "ArialHebrew", size: 14)
+        emotionGraph.entryLabelFont = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 14)
 
         // 하단 텍스트 속성 설정
-//        emotionGraph.legend.font = UIFont(name: "ArialHebrew", size: 12)!
+        emotionGraph.legend.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 11)!
         emotionGraph.legend.textColor = UIColor(rgb: brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)

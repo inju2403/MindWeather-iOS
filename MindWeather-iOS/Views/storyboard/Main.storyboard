@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+        <array key="NanumMyeongjoBold.ttf">
+            <string>NanumMyeongjoBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--감정 변화-->
         <scene sceneID="HhZ-R1-3bY">
@@ -18,15 +26,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="32" y="158" width="350" height="623"/>
+                                <rect key="frame" x="32" y="157" width="350" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="H61-Bu-dRF">
-                                <rect key="frame" x="74.666666666666686" y="124" width="265" height="33"/>
+                                <rect key="frame" x="70.666666666666686" y="124" width="273" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-8d-MjM">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="17"/>
                                         <state key="normal" title="1년">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -35,8 +43,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSS-bU-rJh">
-                                        <rect key="frame" x="74.999999999999986" y="0.0" width="40" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="74.999999999999986" y="0.0" width="42" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="17"/>
                                         <state key="normal" title="6개월">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -45,8 +53,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZT-Ro-5TR">
-                                        <rect key="frame" x="160" y="0.0" width="30" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="162" y="0.0" width="33" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="17"/>
                                         <state key="normal" title="한달">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -55,8 +63,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vd-u1-j1J">
-                                        <rect key="frame" x="235" y="0.0" width="30" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="240" y="0.0" width="33" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="17"/>
                                         <state key="normal" title="한주">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
