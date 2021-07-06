@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Sign Up View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -23,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="40" id="H58-s5-F0l"/>
                                     <constraint firstAttribute="width" constant="250" id="SwZ-79-tIC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R7-N9-HhH">
@@ -32,7 +37,7 @@
                                     <constraint firstAttribute="width" constant="250" id="pub-XF-vnD"/>
                                     <constraint firstAttribute="height" constant="40" id="tCF-b8-dI2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-4H-Nel">
@@ -41,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="40" id="irn-EV-AMm"/>
                                     <constraint firstAttribute="width" constant="250" id="vAb-Jb-MAE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인 (8자리 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-h5-ldn">
@@ -50,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="40" id="640-bd-s7C"/>
                                     <constraint firstAttribute="width" constant="250" id="aae-sk-oMP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F60-bN-bU6">
@@ -59,7 +64,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="P8q-sM-Oq5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="22"/>
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -72,10 +77,11 @@
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-j3-9La">
-                                <rect key="frame" x="181" y="422" width="52" height="40"/>
+                                <rect key="frame" x="178" y="422" width="58" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eQf-sL-UkV"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="15"/>
                                 <state key="normal" title="돌아가기">
                                     <color key="titleColor" systemColor="placeholderTextColor"/>
                                 </state>
@@ -84,11 +90,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*비밀번호는 영문, 숫자, 특수문자를 조합해서 만들어 주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-Ye-wes">
-                                <rect key="frame" x="107" y="492" width="200" height="33.666666666666629"/>
+                                <rect key="frame" x="97" y="492" width="220" height="32.333333333333371"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="OGD-TR-PgH"/>
+                                    <constraint firstAttribute="width" constant="220" id="OGD-TR-PgH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="14"/>
                                 <color key="textColor" systemColor="placeholderTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

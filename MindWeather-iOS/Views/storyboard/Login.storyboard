@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -24,7 +29,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="7NE-k3-zMK"/>
                                     <constraint firstAttribute="width" constant="250" id="Ec6-an-AaA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-Mv-pWp">
@@ -34,16 +39,17 @@
                                     <constraint firstAttribute="width" constant="250" id="4Gh-PE-6C7"/>
                                     <constraint firstAttribute="height" constant="40" id="bCd-jV-L7J"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-4V-wyA">
-                                <rect key="frame" x="131.66666666666666" y="418" width="112" height="40"/>
+                                <rect key="frame" x="139" y="418" width="97" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GOO-Vy-5eJ"/>
                                 </constraints>
-                                <state key="normal" title="회원가입 하러 가기">
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="16"/>
+                                <state key="normal" title="회원 가입하기">
                                     <color key="titleColor" systemColor="placeholderTextColor"/>
                                 </state>
                                 <connections>
@@ -56,7 +62,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="FqS-Pa-wpy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="22"/>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="로그인"/>
                                 <connections>
