@@ -55,6 +55,7 @@
 		6EC26BD12690236E00391916 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD02690236E00391916 /* PasswordEditViewController.swift */; };
 		6EC26BD3269328DC00391916 /* EmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD2269328DB00391916 /* EmotionViewModel.swift */; };
 		6EC26BD62694716700391916 /* BMHANNAAir_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */; };
+		6EC26BD82694736300391916 /* nanumpen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BD72694736300391916 /* nanumpen.ttf */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 		6EEC0A922687063B00F3ABEC /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */; };
@@ -113,6 +114,7 @@
 		6EC26BD02690236E00391916 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordEditViewController.swift; path = ../../../../../PasswordEditViewController.swift; sourceTree = "<group>"; };
 		6EC26BD2269328DB00391916 /* EmotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewModel.swift; sourceTree = "<group>"; };
 		6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAAir_otf.otf; sourceTree = "<group>"; };
+		6EC26BD72694736300391916 /* nanumpen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nanumpen.ttf; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		6EC26BD42694713800391916 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6EC26BD72694736300391916 /* nanumpen.ttf */,
 				6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */,
 			);
 			path = Fonts;
@@ -397,6 +400,7 @@
 				6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */,
 				6EBE37B226783D1C008BB15D /* Flash.storyboard in Resources */,
 				6EBE37D3267A2656008BB15D /* Login.storyboard in Resources */,
+				6EC26BD82694736300391916 /* nanumpen.ttf in Resources */,
 				6EC26BB1268B3A3200391916 /* DiaryDetail.storyboard in Resources */,
 				6EBE37C926786A13008BB15D /* Tutorial.storyboard in Resources */,
 				6EC26BCF2690235A00391916 /* PasswordEdit.storyboard in Resources */,
