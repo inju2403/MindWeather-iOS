@@ -305,8 +305,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" id="Lpt-Eu-hgv"/>
                     <connections>
+                        <outlet property="changePasswordButton" destination="Udn-xb-zL9" id="BeP-cO-opd"/>
+                        <outlet property="changeUserNameButton" destination="dFd-mV-g1k" id="3u9-4f-UIB"/>
+                        <outlet property="deleteUserButton" destination="94u-SP-hLF" id="4cV-Rs-g0f"/>
                         <outlet property="emailText" destination="co2-Sl-59i" id="DTw-fO-jVi"/>
+                        <outlet property="logoText" destination="l4N-t2-prq" id="2FH-Pk-0pv"/>
+                        <outlet property="logoutButton" destination="86W-5q-JgJ" id="2fl-jZ-tj5"/>
                         <outlet property="usernameText" destination="gf8-6F-IpG" id="cXq-de-DtF"/>
+                        <outlet property="weatherExplainButton" destination="m6Z-wf-3uv" id="pWR-Z7-tgG"/>
                         <segue destination="u2W-eq-EWX" kind="show" identifier="moveNickNameEditIdentifier" id="Xhe-te-E8s"/>
                         <segue destination="BXe-jl-UDb" kind="show" identifier="movePasswordEditIdentifier" id="MKn-8l-wb5"/>
                     </connections>

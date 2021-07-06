@@ -19,7 +19,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음의 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbS-9c-hhJ">
                                 <rect key="frame" x="172" y="144" width="182" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -32,6 +32,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoText" destination="PbS-9c-hhJ" id="sj6-b9-6XC"/>
                         <segue destination="BjJ-ur-ge5" kind="presentation" identifier="moveTutorialIdentifier" modalPresentationStyle="fullScreen" id="aay-wp-7TF"/>
                         <segue destination="QcP-ly-QCM" kind="presentation" identifier="moveLoginIdentifier" modalPresentationStyle="fullScreen" id="qCG-vM-xT6"/>
                         <segue destination="yXf-fx-PKX" kind="presentation" identifier="moveMainTabBarIdentifier" modalPresentationStyle="fullScreen" id="r1q-lQ-oCM"/>
