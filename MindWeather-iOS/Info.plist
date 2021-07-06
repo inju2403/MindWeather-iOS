@@ -4,8 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BMHANNAAir_otf.otf</string>
+		<string>NanumMyeongjo.ttf</string>
+		<string>NanumGothic.ttf</string>
 		<string>nanumpen.ttf</string>
+		<string>NanumMyeongjoBold.ttf</string>
+		<string>NanumSquareRoundB.ttf</string>
+		<string>NanumSquareRoundR.ttf</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

@@ -54,8 +54,12 @@
 		6EC26BCF2690235A00391916 /* PasswordEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */; };
 		6EC26BD12690236E00391916 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD02690236E00391916 /* PasswordEditViewController.swift */; };
 		6EC26BD3269328DC00391916 /* EmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BD2269328DB00391916 /* EmotionViewModel.swift */; };
-		6EC26BD62694716700391916 /* BMHANNAAir_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */; };
 		6EC26BD82694736300391916 /* nanumpen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BD72694736300391916 /* nanumpen.ttf */; };
+		6EC26BEA26948C8D00391916 /* NanumGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BE926948C8D00391916 /* NanumGothic.ttf */; };
+		6EC26BEE26948E2C00391916 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BED26948E2C00391916 /* NanumMyeongjo.ttf */; };
+		6EC26BF026948E9700391916 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BEF26948E9700391916 /* NanumMyeongjoBold.ttf */; };
+		6EC26BF72694907000391916 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BF52694907000391916 /* NanumSquareRoundR.ttf */; };
+		6EC26BF82694907000391916 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BF62694907000391916 /* NanumSquareRoundB.ttf */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 		6EEC0A922687063B00F3ABEC /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */; };
@@ -113,8 +117,12 @@
 		6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = PasswordEdit.storyboard; path = ../../../../../PasswordEdit.storyboard; sourceTree = "<group>"; };
 		6EC26BD02690236E00391916 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordEditViewController.swift; path = ../../../../../PasswordEditViewController.swift; sourceTree = "<group>"; };
 		6EC26BD2269328DB00391916 /* EmotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewModel.swift; sourceTree = "<group>"; };
-		6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAAir_otf.otf; sourceTree = "<group>"; };
 		6EC26BD72694736300391916 /* nanumpen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nanumpen.ttf; sourceTree = "<group>"; };
+		6EC26BE926948C8D00391916 /* NanumGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.ttf; sourceTree = "<group>"; };
+		6EC26BED26948E2C00391916 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
+		6EC26BEF26948E9700391916 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
+		6EC26BF52694907000391916 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		6EC26BF62694907000391916 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
@@ -308,8 +316,12 @@
 		6EC26BD42694713800391916 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6EC26BED26948E2C00391916 /* NanumMyeongjo.ttf */,
+				6EC26BE926948C8D00391916 /* NanumGothic.ttf */,
 				6EC26BD72694736300391916 /* nanumpen.ttf */,
-				6EC26BD52694716600391916 /* BMHANNAAir_otf.otf */,
+				6EC26BEF26948E9700391916 /* NanumMyeongjoBold.ttf */,
+				6EC26BF62694907000391916 /* NanumSquareRoundB.ttf */,
+				6EC26BF52694907000391916 /* NanumSquareRoundR.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -391,21 +403,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC26BC1268F351300391916 /* WeatherDescription.storyboard in Resources */,
+				6EC26BF72694907000391916 /* NanumSquareRoundR.ttf in Resources */,
 				6EC26BBF268B6A1100391916 /* DiaryEdit.storyboard in Resources */,
 				6EC26BC7268F4B6200391916 /* NickNameEdit.storyboard in Resources */,
 				6EB04416268035CC00E047A7 /* Main.storyboard in Resources */,
-				6EC26BD62694716700391916 /* BMHANNAAir_otf.otf in Resources */,
 				6EBE37B726783D28008BB15D /* LaunchScreen.storyboard in Resources */,
+				6EC26BEA26948C8D00391916 /* NanumGothic.ttf in Resources */,
 				6EBE37B426783D28008BB15D /* Assets.xcassets in Resources */,
+				6EC26BEE26948E2C00391916 /* NanumMyeongjo.ttf in Resources */,
 				6EB04412268016C200E047A7 /* SignUp.storyboard in Resources */,
 				6EBE37B226783D1C008BB15D /* Flash.storyboard in Resources */,
 				6EBE37D3267A2656008BB15D /* Login.storyboard in Resources */,
 				6EC26BD82694736300391916 /* nanumpen.ttf in Resources */,
 				6EC26BB1268B3A3200391916 /* DiaryDetail.storyboard in Resources */,
+				6EC26BF026948E9700391916 /* NanumMyeongjoBold.ttf in Resources */,
 				6EBE37C926786A13008BB15D /* Tutorial.storyboard in Resources */,
 				6EC26BCF2690235A00391916 /* PasswordEdit.storyboard in Resources */,
 				6EC26BAD2689F93400391916 /* test.storyboard in Resources */,
 				6EEC0A972687801100F3ABEC /* DiaryListCell.xib in Resources */,
+				6EC26BF82694907000391916 /* NanumSquareRoundB.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

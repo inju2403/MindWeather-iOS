@@ -43,14 +43,26 @@ extension UIFont {
 
     public enum AppleSDGothicType {
         case nanumpen
-        case hanna
+        case Nanumgothic
+        case NanumMyeongjo
+        case NanumMyeongjoBold
+        case NanumSquareRoundB
+        case NanumSquareRoundR
 
         var name: String {
             switch self {
             case .nanumpen:
                 return "nanumpen"
-            case .hanna:
-                return "BMHANNAAir_otf"
+            case .Nanumgothic:
+                return "NanumGothic"
+            case .NanumMyeongjo:
+                return "NanumMyeongjo"
+            case .NanumMyeongjoBold:
+                return "NanumMyeongjoBold"
+            case .NanumSquareRoundB:
+                return "NanumSquareRoundB"
+            case .NanumSquareRoundR:
+                return "NanumSquareRoundR"
             }
         }
     }

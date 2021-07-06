@@ -22,6 +22,9 @@ class DiaryListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+        summaryView.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        dateText.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 14)
     }
     
 }
