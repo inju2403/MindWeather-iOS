@@ -17,8 +17,6 @@ class DiaryEditViewController : UIViewController {
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
     
-    var brownColor = 0x8B4513
-    
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var yearText: UILabel!
@@ -136,6 +134,6 @@ class DiaryEditViewController : UIViewController {
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
         content.attributedText = attrString
         content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
-        content.textColor = UIColor(rgb: brownColor)
+        content.textColor = UIColor(rgb: K.brownColor)
     }
 }

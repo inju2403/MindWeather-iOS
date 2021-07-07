@@ -23,4 +23,13 @@ struct K {
     static let diaryCellNibName = "DiaryListCell"
     
     static let newDiaryValue = 987654321
+    
+    static let mainColor = 0xFDF5E6 // 메인 색상
+    static let brownColor = 0x8B4513 // 텍스트 색상
+
+    static let goldColor = 0xFFA700 // 행복
+    static let greyColor = 0xBBBBBB // 중립
+    static let pupleColor = 0xA575CD // 걱정
+    static let blueColor = 0x42A5F5 // 슬픔
+    static let redColor = 0xFF4950 // 분노
 }

@@ -23,16 +23,6 @@ class EmotionViewController : UIViewController {
     var aYearEmotion = Emotion()
     
     var emotionNames: [String] = []
-    
-    var mainColor = 0xFDF5E6 // 메인 색상
-    var brownColor = 0x8B4513 // 텍스트 색상
-
-    var goldColor = 0xFFA700 // 행복
-    var greyColor = 0xBBBBBB // 중립
-    var pupleColor = 0xA575CD // 걱정
-    var blueColor = 0x42A5F5 // 슬픔
-    var redColor = 0xFF4950 // 분노
-    
     var emotionsRate: [Double] = []
 
     @IBOutlet weak var aYearButton: UIButton!
@@ -115,7 +105,7 @@ class EmotionViewController : UIViewController {
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aWeekButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         
         emotionNames = []
         emotionsRate = []
@@ -155,7 +145,7 @@ class EmotionViewController : UIViewController {
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
         
         emotionNames = []
@@ -195,7 +185,7 @@ class EmotionViewController : UIViewController {
         
         // 텍스트 컬러 설정
         aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
-        sixMonthButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        sixMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
         
@@ -235,7 +225,7 @@ class EmotionViewController : UIViewController {
         aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
         
         // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor(rgb: brownColor), for: .normal)
+        aYearButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
@@ -289,12 +279,12 @@ class EmotionViewController : UIViewController {
         emotionGraph.data = pieChartData
         
         // 가운데 빈 원형 부분 색상 설정
-        emotionGraph.holeColor = UIColor(rgb: mainColor)
+        emotionGraph.holeColor = UIColor(rgb: K.mainColor)
         
         // 센터 텍스트 속성 설정
         let myAttribute: [NSAttributedString.Key: Any] = [
             .font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 17)!,
-            .foregroundColor: UIColor(rgb: brownColor)
+            .foregroundColor: UIColor(rgb: K.brownColor)
         ]
         let myAttrString = NSAttributedString(string: title, attributes: myAttribute)
         emotionGraph.centerAttributedText = myAttrString
@@ -305,13 +295,13 @@ class EmotionViewController : UIViewController {
 
         // 하단 텍스트 속성 설정
         emotionGraph.legend.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 11)!
-        emotionGraph.legend.textColor = UIColor(rgb: brownColor)
+        emotionGraph.legend.textColor = UIColor(rgb: K.brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-        let colors: [UIColor] = [UIColor(rgb: goldColor), UIColor(rgb: greyColor), UIColor(rgb: pupleColor), UIColor(rgb: blueColor), UIColor(rgb: redColor)]
+        let colors: [UIColor] = [UIColor(rgb: K.goldColor), UIColor(rgb: K.greyColor), UIColor(rgb: K.pupleColor), UIColor(rgb: K.blueColor), UIColor(rgb: K.redColor)]
         return colors
     }
 }
