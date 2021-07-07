@@ -47,8 +47,8 @@
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-SK-SSB">
-                                <rect key="frame" x="60" y="279" width="294" height="513"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-SK-SSB">
+                                <rect key="frame" x="60" y="289" width="294" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -105,7 +105,7 @@
                             <constraint firstItem="HMg-8h-Idn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.85" id="dZr-Ku-k9F"/>
                             <constraint firstItem="oOp-aF-NRM" firstAttribute="top" secondItem="HMg-8h-Idn" secondAttribute="bottom" constant="10" id="dge-Wd-mz5"/>
                             <constraint firstItem="Wbn-SK-SSB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="jlW-ea-VjR"/>
-                            <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="30" id="pvv-XL-hSh"/>
+                            <constraint firstItem="Wbn-SK-SSB" firstAttribute="top" secondItem="NWz-LC-t33" secondAttribute="bottom" constant="40" id="pvv-XL-hSh"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="q6e-Nt-5QW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ABe-S4-r28" secondAttribute="trailing" constant="40" id="sU8-fc-DMn"/>
                         </constraints>

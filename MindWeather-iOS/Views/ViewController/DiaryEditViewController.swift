@@ -135,5 +135,6 @@ class DiaryEditViewController : UIViewController {
         content.attributedText = attrString
         content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
         content.textColor = UIColor(rgb: K.brownColor)
+        content.textAlignment = .center
     }
 }

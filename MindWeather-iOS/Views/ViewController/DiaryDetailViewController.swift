@@ -119,5 +119,7 @@ class DiaryDetailViewController : UIViewController {
         paragraphStyle.lineSpacing = 6
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
         content.attributedText = attrString
+        
+        content.textAlignment = .center
     }
 }
