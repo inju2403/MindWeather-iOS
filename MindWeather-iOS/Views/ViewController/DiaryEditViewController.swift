@@ -10,12 +10,24 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class DiaryEditViewController : UIViewController {
+class DiaryEditViewController : UIViewController, UITextViewDelegate {
     
     var diaryId = K.newDiaryValue
     
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
+    
+    var willShowToken: NSObjectProtocol?
+    var willHideToken: NSObjectProtocol?
+    
+    deinit {
+        if let token = willShowToken {
+            NotificationCenter.default.removeObserver(token)
+        }
+        if let token = willHideToken {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
     
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UITextView!
@@ -27,6 +39,9 @@ class DiaryEditViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        content.delegate = self
+        
+        setTextView()
         bindViewModel()
         if diaryId != K.newDiaryValue {
             dateText.isHidden = true
@@ -125,6 +140,39 @@ class DiaryEditViewController : UIViewController {
     // 키보드 밖을 클릭하면 키보드가 내려가도록 세팅
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.content.resignFirstResponder()
+    }
+    
+    // 키보드가 올라올 때 텍스트뷰를 가리지 않도록 세팅
+    private func setTextView() {
+        willShowToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
+            
+            guard let strongSelf = self else { return }
+            
+            if let frame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let height = frame.cgRectValue.height
+                
+                var inset = strongSelf.content.contentInset
+                inset.bottom = height - 80
+                strongSelf.content.contentInset = inset
+                
+                inset = strongSelf.content.scrollIndicatorInsets
+                inset.bottom = height - 80
+                strongSelf.content.scrollIndicatorInsets = inset
+            }
+        })
+        
+        willHideToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
+            
+            guard let strongSelf = self else { return }
+                
+            var inset = strongSelf.content.contentInset
+            inset.bottom = 0
+            strongSelf.content.contentInset = inset
+            
+            inset = strongSelf.content.scrollIndicatorInsets
+            inset.bottom = 0
+            strongSelf.content.scrollIndicatorInsets = inset
+        })
     }
     
     private func setUI() {
