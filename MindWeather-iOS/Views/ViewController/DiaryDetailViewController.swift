@@ -113,5 +113,11 @@ class DiaryDetailViewController : UIViewController {
     
     private func setUI() {
         self.navigationController?.navigationBar.topItem?.title = ""
+        
+        let attrString = NSMutableAttributedString(string: content.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        content.attributedText = attrString
     }
 }

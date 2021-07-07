@@ -17,6 +17,8 @@ class DiaryEditViewController : UIViewController {
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
     
+    var brownColor = 0x8B4513
+    
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var yearText: UILabel!
@@ -84,10 +86,15 @@ class DiaryEditViewController : UIViewController {
                         self.content.isHidden = false
                         self.yearText.isHidden = false
                         self.explainText.isHidden = false
+                        self.setUI()
                         
                         self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
+                    } else if value == "newStateDiary" {
+                        self.content.text = " "
+                        self.setUI()
+                        self.content.text = ""
                     }
                 })
             .disposed(by: disposeBag)
@@ -122,4 +129,13 @@ class DiaryEditViewController : UIViewController {
         self.content.resignFirstResponder()
     }
     
+    private func setUI() {
+        let attrString = NSMutableAttributedString(string: content.text ?? "")
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        content.attributedText = attrString
+        content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
+        content.textColor = UIColor(rgb: brownColor)
+    }
 }

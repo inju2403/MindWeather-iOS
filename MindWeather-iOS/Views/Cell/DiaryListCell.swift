@@ -22,9 +22,17 @@ class DiaryListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        
-        summaryView.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        dateText.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 14)
+        setUI()
     }
     
+    private func setUI() {
+        summaryView.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
+        dateText.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 13)
+        
+        let attrString = NSMutableAttributedString(string: summaryView.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        summaryView.attributedText = attrString
+    }
 }
