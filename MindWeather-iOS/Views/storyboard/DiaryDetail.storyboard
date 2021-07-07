@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmt-Nb-wIv">
-                                <rect key="frame" x="0.0" y="184" width="414" height="608"/>
+                                <rect key="frame" x="0.0" y="184" width="414" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-5Y-Ptx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="133.33333333333334"/>
@@ -74,14 +74,14 @@
                                         </constraints>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-60-8lj">
-                                        <rect key="frame" x="187" y="162.33333333333331" width="40" height="40"/>
+                                        <rect key="frame" x="187" y="159.33333333333331" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4vH-rZ-0jh"/>
                                             <constraint firstAttribute="width" constant="40" id="bkv-EL-BJ9"/>
                                         </constraints>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기를 불러오는 중이에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wK2-u4-Gbm">
-                                        <rect key="frame" x="124" y="212.33333333333331" width="166" height="17.333333333333343"/>
+                                        <rect key="frame" x="124" y="209.33333333333331" width="166" height="17.333333333333343"/>
                                         <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -129,13 +129,13 @@
                             <constraint firstItem="Jmt-Nb-wIv" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="140" id="ASE-nA-j3U"/>
                             <constraint firstItem="o51-av-wEs" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" id="DNn-OK-m1x"/>
                             <constraint firstItem="r8d-t2-esW" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="120" id="LbA-da-s53"/>
-                            <constraint firstItem="web-lY-aUn" firstAttribute="top" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="5" id="M5E-lw-NyO"/>
+                            <constraint firstItem="web-lY-aUn" firstAttribute="top" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="15" id="M5E-lw-NyO"/>
                             <constraint firstItem="8ZX-wj-2Wi" firstAttribute="leading" secondItem="r8d-t2-esW" secondAttribute="trailing" constant="25" id="PCF-a7-rpd"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="web-lY-aUn" secondAttribute="trailing" constant="70" id="PX4-Ug-Z7h"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="o51-av-wEs" secondAttribute="trailing" id="cws-B3-ixa"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="Jmt-Nb-wIv" secondAttribute="trailing" id="gTq-IK-a5Y"/>
                             <constraint firstItem="Jmt-Nb-wIv" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="hrS-5q-r5n"/>
-                            <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="70" id="tcB-Ts-ccj"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="80" id="tcB-Ts-ccj"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="o51-av-wEs" secondAttribute="bottom" id="teq-uv-EPH"/>
                             <constraint firstItem="8ZX-wj-2Wi" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="120" id="uT4-Xl-qvB"/>
                             <constraint firstItem="o51-av-wEs" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="xbP-yV-Up4"/>
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHg-k8-t8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2551" y="-348"/>
+            <point key="canvasLocation" x="2550.7246376811595" y="-348.21428571428572"/>
         </scene>
         <!--DiaryEditViewController-->
         <scene sceneID="H0g-ER-c06">

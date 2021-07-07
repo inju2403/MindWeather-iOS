@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-SK-SSB">
-                                <rect key="frame" x="60" y="289" width="294" height="503"/>
+                                <rect key="frame" x="60" y="289" width="294" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.51261866089999997" green="0.3112256229" blue="0.1764379442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -94,11 +94,11 @@
                             <constraint firstItem="f9G-jN-lND" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GAG-2i-ZU8"/>
                             <constraint firstItem="ABe-S4-r28" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="GDt-OL-2Nt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="f9G-jN-lND" secondAttribute="bottom" id="Ggi-Pr-fLv"/>
-                            <constraint firstItem="xNt-Sd-F6v" firstAttribute="top" secondItem="Wbn-SK-SSB" secondAttribute="bottom" constant="5" id="H3O-od-c4x"/>
+                            <constraint firstItem="xNt-Sd-F6v" firstAttribute="top" secondItem="Wbn-SK-SSB" secondAttribute="bottom" constant="15" id="H3O-od-c4x"/>
                             <constraint firstItem="NWz-LC-t33" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MLD-gp-Ero"/>
                             <constraint firstItem="91h-oM-Jdh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="Oej-cu-ntE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xNt-Sd-F6v" secondAttribute="trailing" constant="60" id="RTn-12-We1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wbn-SK-SSB" secondAttribute="bottom" constant="70" id="Tp4-fJ-yNI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wbn-SK-SSB" secondAttribute="bottom" constant="80" id="Tp4-fJ-yNI"/>
                             <constraint firstItem="f9G-jN-lND" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="X6F-Rr-AJW"/>
                             <constraint firstItem="91h-oM-Jdh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZOc-kd-ULK"/>
                             <constraint firstItem="84f-Og-tQc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="bhq-xK-fqt"/>
