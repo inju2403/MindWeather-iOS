@@ -43,7 +43,7 @@ class DiaryDetailViewController : UIViewController {
     }
     
     @IBAction func delteButtonClicked(_ sender: UIButton) {
-        diaryDetailViewModel.deleteDiary(diaryId: diaryId)
+        showAlert(style: .actionSheet)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -121,5 +121,19 @@ class DiaryDetailViewController : UIViewController {
         content.attributedText = attrString
         
         content.textAlignment = .center
+    }
+    
+    func showAlert(style: UIAlertController.Style) {
+        let alert = UIAlertController(title: nil, message: "일기를 삭제하시겠어요?", preferredStyle: style)
+        let success = UIAlertAction(title: "확인", style: .default, handler: {_ in
+            self.diaryDetailViewModel.deleteDiary(diaryId: self.diaryId)
+        })
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(success)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
