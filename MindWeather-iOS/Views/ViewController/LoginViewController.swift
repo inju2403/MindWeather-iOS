@@ -50,12 +50,14 @@ class LoginViewController : UIViewController {
                         //일기리스트 화면으로 이동
                         self.usernameTextField.text = "";
                         self.passwordTextField.text = "";
+                        
                         self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
                         break
                     case 400:
-                        print("error")
+                        self.showAlert(style: .alert, message: "계정정보를 확인해주세요", type: "default")
                         break
                     default:
+                        self.showAlert(style: .alert, message: "서버가 불안정해요.\n잠시 후에 다시 시도해주세요", type: "default")
                         break
                     }
                     
@@ -76,6 +78,30 @@ class LoginViewController : UIViewController {
     private func setUI() {
         usernameTextField.underlined()
         passwordTextField.underlined()
+    }
+    
+    func showAlert(style: UIAlertController.Style, message: String, type: String) {
+        let titleFont = [NSAttributedString.Key.font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)]
+        let titleAttrString = NSMutableAttributedString(string: message, attributes: titleFont)
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: style)
+        
+        alert.setValue(titleAttrString, forKey:"attributedTitle")
+        
+        let failure = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let error = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        
+        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        error.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        
+        if type == "400" {
+            alert.addAction(failure)
+        } else if type == "default" {
+            alert.addAction(error)
+        }
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
