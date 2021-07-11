@@ -60,6 +60,7 @@
 		6EC26BF72694907000391916 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BF52694907000391916 /* NanumSquareRoundR.ttf */; };
 		6EC26BF82694907000391916 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BF62694907000391916 /* NanumSquareRoundB.ttf */; };
 		6EC26BFC2699FF9E00391916 /* Flash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BFB2699FF9E00391916 /* Flash.storyboard */; };
+		6EC26C00269AA34100391916 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26C02269AA34100391916 /* InfoPlist.strings */; };
 		6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */; };
 		6EEC0A902686FF1E00F3ABEC /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */; };
 		6EEC0A922687063B00F3ABEC /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */; };
@@ -123,6 +124,9 @@
 		6EC26BF52694907000391916 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		6EC26BF62694907000391916 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		6EC26BFB2699FF9E00391916 /* Flash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flash.storyboard; sourceTree = "<group>"; };
+		6EC26BFD269AA29700391916 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6EC26C01269AA34100391916 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6EC26C03269AA34700391916 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EEC0A8D2686FF0E00F3ABEC /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A8F2686FF1E00F3ABEC /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
 		6EEC0A912687063B00F3ABEC /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		6EBE379E26783D1C008BB15D = {
 			isa = PBXGroup;
 			children = (
+				6EC26C02269AA34100391916 /* InfoPlist.strings */,
 				6EBE37A926783D1C008BB15D /* MindWeather-iOS */,
 				6EBE37A826783D1C008BB15D /* Products */,
 				456D6035C3D1BC3621ECB02B /* Pods */,
@@ -386,6 +391,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 6EBE379E26783D1C008BB15D;
 			productRefGroup = 6EBE37A826783D1C008BB15D /* Products */;
@@ -403,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC26BC1268F351300391916 /* WeatherDescription.storyboard in Resources */,
+				6EC26C00269AA34100391916 /* InfoPlist.strings in Resources */,
 				6EC26BF72694907000391916 /* NanumSquareRoundR.ttf in Resources */,
 				6EC26BBF268B6A1100391916 /* DiaryEdit.storyboard in Resources */,
 				6EC26BC7268F4B6200391916 /* NickNameEdit.storyboard in Resources */,
@@ -522,8 +529,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6EBE37B626783D28008BB15D /* Base */,
+				6EC26BFD269AA29700391916 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6EC26C02269AA34100391916 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EC26C01269AA34100391916 /* ko */,
+				6EC26C03269AA34700391916 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -533,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -594,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
