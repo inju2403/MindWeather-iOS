@@ -61,8 +61,6 @@ func getDiarys() {
         }
         .disposed(by: disposeBag)
 }
-private val diaryListState = MutableLiveData<List<Diary>>()
-val diaryList: LiveData<List<Diary>> get() = diaryListState
 ```
 
 ## Author
