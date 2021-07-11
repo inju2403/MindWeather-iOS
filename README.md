@@ -74,7 +74,7 @@ func loadDiary(diaryId: Int) {
     
     
 ## Licence
-    ```
+```
     MIT License
 
     Copyright (c) 2021 inju2403
