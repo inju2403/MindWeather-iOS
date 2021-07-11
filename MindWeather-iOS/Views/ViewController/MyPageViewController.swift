@@ -25,11 +25,18 @@ class MyPageViewController : UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
         setFonts()
         usernameText.text = UserDefaults.standard.string(forKey: "username")
         emailText.text = UserDefaults.standard.string(forKey: "email")
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func changeUserNameButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.nickNameEditSegue, sender: self)
     }

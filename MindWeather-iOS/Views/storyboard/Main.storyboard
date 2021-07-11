@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sfx-jd-3Nu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TWj-iK-uNq">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -26,11 +26,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-zj-lEo" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="32" y="157" width="350" height="624"/>
+                                <rect key="frame" x="32" y="201" width="350" height="580"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="H61-Bu-dRF">
-                                <rect key="frame" x="70.666666666666686" y="124" width="273" height="32"/>
+                                <rect key="frame" x="70.666666666666686" y="168" width="273" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-8d-MjM">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-788" y="1146"/>
         </scene>
-        <!--Diary List View Controller-->
+        <!--일기목록-->
         <scene sceneID="2fj-YQ-VX0">
             <objects>
                 <viewController id="gAP-U5-w5R" customClass="DiaryListViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,6 +134,7 @@
                             <constraint firstItem="Gpb-52-UP2" firstAttribute="centerX" secondItem="DhZ-Me-Eo4" secondAttribute="centerX" id="sqM-cu-2Al"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="일기목록" image="text.book.closed" catalog="system" id="351-RI-PZz"/>
                     <navigationItem key="navigationItem" id="Qwn-QZ-aCI"/>
                     <connections>
                         <outlet property="diaryListTableView" destination="Eic-C5-0dd" id="Bbd-EG-zgM"/>
@@ -144,22 +145,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QO-mU-Jgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1525" y="1839"/>
+            <point key="canvasLocation" x="-1526" y="1144"/>
         </scene>
         <!--DiaryDetailViewController-->
         <scene sceneID="3zW-4q-Rey">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEq-9L-sx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="DiaryDetail" referencedIdentifier="DiaryDetailViewController" id="tIG-eR-GDD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nhQ-MI-4SP"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LEq-9L-sx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1526" y="2225"/>
+            <point key="canvasLocation" x="-1526" y="1550"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="36d-fH-xkl">
+            <objects>
+                <navigationController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TWj-iK-uNq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aok-J5-9Wj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sfx-jd-3Nu" kind="relationship" relationship="rootViewController" id="x1t-0T-RbG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTh-j5-uwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1138" y="417"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="0sv-E5-qf1">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MainTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="MainTabBarViewControllerOrigin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sfx-jd-3Nu" customClass="MainTabBarViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Bqn-Zt-RAo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yf1-uc-7Su">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -174,14 +194,13 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="H9j-i1-MFO" kind="relationship" relationship="viewControllers" id="2Ot-0E-g4V"/>
-                        <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="qFv-Vt-xYv"/>
-                        <segue destination="veB-p0-f3Q" kind="relationship" relationship="viewControllers" id="zcQ-rs-j1B"/>
-                        <segue destination="DzL-Hh-8Dj" kind="relationship" relationship="viewControllers" id="r4B-eZ-G9F"/>
                         <segue destination="Bzr-56-2u1" kind="presentation" identifier="moveDiaryEditIdentifier" modalPresentationStyle="fullScreen" id="Wbo-uq-sPx"/>
+                        <segue destination="gAP-U5-w5R" kind="relationship" relationship="viewControllers" id="SBp-S1-lKI"/>
+                        <segue destination="Wmm-iU-1kg" kind="relationship" relationship="viewControllers" id="Vq9-NZ-5KS"/>
+                        <segue destination="veB-p0-f3Q" kind="relationship" relationship="viewControllers" id="r2N-Ig-d0g"/>
+                        <segue destination="DzL-Hh-8Dj" kind="relationship" relationship="viewControllers" id="O8b-ye-BGB"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ye8-aF-b7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-414" y="417"/>
         </scene>
@@ -220,19 +239,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-6F-IpG">
-                                <rect key="frame" x="336" y="232.33333333333334" width="28" height="19.333333333333343"/>
+                                <rect key="frame" x="336" y="276.33333333333331" width="28" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abcd@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co2-Sl-59i">
-                                <rect key="frame" x="246" y="266.66666666666669" width="118" height="18"/>
+                                <rect key="frame" x="246" y="310.66666666666669" width="118" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34e-lT-77U">
-                                <rect key="frame" x="0.0" y="314.66666666666674" width="414" height="498.33333333333326"/>
+                                <rect key="frame" x="0.0" y="358.66666666666674" width="414" height="454.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-wf-3uv">
                                         <rect key="frame" x="278" y="55" width="86" height="30"/>
@@ -243,7 +262,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-xb-zL9">
-                                        <rect key="frame" x="282" y="155" width="82" height="30"/>
+                                        <rect key="frame" x="282" y="154.99999999999994" width="82" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="비밀번호 변경"/>
                                         <connections>
@@ -290,7 +309,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음의 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4N-t2-prq">
-                                <rect key="frame" x="218.33333333333337" y="123.99999999999999" width="145.66666666666663" height="38.333333333333329"/>
+                                <rect key="frame" x="218.33333333333337" y="168" width="145.66666666666663" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -356,27 +375,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAw-VW-NFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1296" y="1189"/>
-        </scene>
-        <!--일기 목록-->
-        <scene sceneID="GIz-ht-3Hi">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9j-i1-MFO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dwo-o8-BTG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gAP-U5-w5R" kind="relationship" relationship="rootViewController" id="tcA-lH-84S"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-1525" y="1146"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

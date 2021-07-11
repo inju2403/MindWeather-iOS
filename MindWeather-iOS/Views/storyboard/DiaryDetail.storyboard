@@ -19,7 +19,7 @@
         <!--Diary Detail View Controller-->
         <scene sceneID="4Zz-Aa-uak">
             <objects>
-                <viewController storyboardIdentifier="DiaryDetailViewController" id="xCj-tT-Gm2" customClass="DiaryDetailViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xCj-tT-Gm2" customClass="DiaryDetailViewController" customModule="MindWeather_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AAE-MG-Hre">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
