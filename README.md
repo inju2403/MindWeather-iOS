@@ -37,25 +37,27 @@ This iOS AI Diary app uses MVVM architecture. The repository imports entities, t
 ```kt
 
 // View
-diaryListViewModel.diaryList
-    .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
-            // todo
-        }
-    }.disposed(by: disposeBag)
+@IBOutlet weak var content: UILabel!
+
+diaryDetailViewModel.content
+    .bind(to: content.rx.text)
+    .disposed(by: disposeBag)
+
 
 // ViewModel
 var disposeBag = DisposeBag()
 private let service = DiaryServiceImpl()
-var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
+var content: BehaviorRelay<String> = BehaviorRelay(value: "")
 
-func getDiarys() {
-    _ = service.getDiarys()
+func loadDiary(diaryId: Int) {
+    _ = service.getDiaryById(diaryId: diaryId)
         .subscribe { event in
             switch event {
-            case .success(let diarys):
-                self.diaryList.accept(diarys)
+            case .success(let diary):
+                self.content.accept(diary.content ?? "")
                 break
             case .failure(let error):
+                print("Error: ", error)
                 break
             }
         }
