@@ -40,7 +40,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_happiness" translatesAutoresizingMaskIntoConstraints="NO" id="J0u-QF-yLZ">
-                                                <rect key="frame" x="70" y="26" width="40" height="40"/>
+                                                <rect key="frame" x="84" y="26" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Xi6-bx-8Aq"/>
                                                     <constraint firstAttribute="width" constant="40" id="jrS-Xq-NZa"/>
@@ -53,7 +53,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="행복을 느낀 하루" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhg-FF-1kp">
-                                                <rect key="frame" x="135" y="40" width="116.33333333333331" height="18"/>
+                                                <rect key="frame" x="149" y="40" width="116.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" name="NanumMyeongjoBold" family="NanumMyeongjo" pointSize="16"/>
                                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                                             <constraint firstAttribute="trailing" secondItem="PTQ-Qe-jaO" secondAttribute="trailing" constant="70" id="Lrg-Fa-BTe"/>
                                             <constraint firstItem="PTQ-Qe-jaO" firstAttribute="leading" secondItem="PTr-5Y-Ptx" secondAttribute="leading" constant="70" id="W1c-WT-t3V"/>
                                             <constraint firstItem="Mhg-FF-1kp" firstAttribute="top" secondItem="PTr-5Y-Ptx" secondAttribute="top" constant="40" id="aaR-wi-QX7"/>
-                                            <constraint firstItem="J0u-QF-yLZ" firstAttribute="leading" secondItem="PTr-5Y-Ptx" secondAttribute="leading" constant="70" id="lsl-GM-XaQ"/>
+                                            <constraint firstItem="Mhg-FF-1kp" firstAttribute="centerX" secondItem="PTr-5Y-Ptx" secondAttribute="centerX" id="de6-PR-POf"/>
                                             <constraint firstItem="J0u-QF-yLZ" firstAttribute="top" secondItem="YfB-cT-I26" secondAttribute="bottom" constant="10" id="r7D-T3-wjm"/>
                                             <constraint firstItem="PTQ-Qe-jaO" firstAttribute="top" secondItem="J0u-QF-yLZ" secondAttribute="bottom" constant="40" id="xAU-ef-vaa"/>
                                         </constraints>

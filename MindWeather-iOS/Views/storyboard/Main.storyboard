@@ -360,6 +360,7 @@
         <!--일기 목록-->
         <scene sceneID="GIz-ht-3Hi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9j-i1-MFO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="일기 목록" image="text.book.closed" catalog="system" id="Dyg-fC-yXE"/>
                     <toolbarItems/>
@@ -374,7 +375,6 @@
                         <segue destination="gAP-U5-w5R" kind="relationship" relationship="rootViewController" id="tcA-lH-84S"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt9-ho-XiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1525" y="1146"/>
         </scene>
