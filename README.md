@@ -37,11 +37,11 @@ This iOS AI Diary app uses MVVM architecture. The repository imports entities, t
 ```kt
 
 // View
-diaryListTableView.rx.itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                guard let self = self else { return }
-                self.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
-            }).disposed(by: disposeBag)
+diaryListViewModel.diaryList
+    .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
+            // todo
+        }
+    }.disposed(by: disposeBag)
 
 // ViewModel
 var disposeBag = DisposeBag()
