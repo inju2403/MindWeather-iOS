@@ -67,7 +67,12 @@ class MyPageViewController : UIViewController {
     }
     
     func showAlert(style: UIAlertController.Style, message: String, type: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: style)
+        let titleFont = [NSAttributedString.Key.font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)]
+        let titleAttrString = NSMutableAttributedString(string: message, attributes: titleFont)
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: style)
+        alert.setValue(titleAttrString, forKey:"attributedTitle")
+        
         let success = UIAlertAction(title: "확인", style: .default, handler: {_ in
             if type == "logout" {
                 self.resetDefaults()
@@ -101,6 +106,13 @@ class MyPageViewController : UIViewController {
         
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         let destructive = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        
+        if type == "logout" {
+            success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        } else if type == "deleteUser" {
+            success.setValue(UIColor(rgb: K.greyColor), forKey: "titleTextColor")
+        }
+        cancel.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
         
         alert.addAction(success)
         if type == "logout" {

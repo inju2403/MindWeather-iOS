@@ -85,7 +85,12 @@ class NickNameEditViewController: UIViewController {
     }
     
     func showAlert(style: UIAlertController.Style, message: String, type: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: style)
+        let titleFont = [NSAttributedString.Key.font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)]
+        let titleAttrString = NSMutableAttributedString(string: message, attributes: titleFont)
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: style)
+        alert.setValue(titleAttrString, forKey:"attributedTitle")
+        
         let success = UIAlertAction(title: "확인", style: .default, handler: {_ in
                 self.resetDefaults()
                 UserDefaults.standard.set(false, forKey: "runFirst")
@@ -93,8 +98,12 @@ class NickNameEditViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
         })
         
-        let failure = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-        let error = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        let failure = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let error = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        error.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
         
         if type == "200" {
             alert.addAction(success)
