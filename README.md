@@ -73,7 +73,7 @@ func loadDiary(diaryId: Int) {
     
     
     
-    ## Licence
+## Licence
     ```
     MIT License
 
