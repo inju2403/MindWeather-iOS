@@ -23,7 +23,7 @@ class NickNameEditViewController: UIViewController {
     }
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func changeButtonPressed(_ sender: UIButton) {
