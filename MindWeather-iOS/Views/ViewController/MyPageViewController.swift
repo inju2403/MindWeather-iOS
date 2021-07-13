@@ -24,8 +24,12 @@ class MyPageViewController : UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+       
         self.navigationController?.isNavigationBarHidden = true
+        
+        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         setFonts()
         usernameText.text = UserDefaults.standard.string(forKey: "username")
         emailText.text = UserDefaults.standard.string(forKey: "email")
