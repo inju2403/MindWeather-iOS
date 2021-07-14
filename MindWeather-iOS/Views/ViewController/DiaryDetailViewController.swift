@@ -52,27 +52,28 @@ class DiaryDetailViewController : UIViewController {
     
     private func bindViewModel() {
         diaryDetailViewModel.date
-            .bind(to: date.rx.text)
+            .asDriver()
+            .drive(date.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.content
-            .bind(to: content.rx.text)
+            .asDriver()
+            .drive(content.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.year
-            .bind(to: yearText.rx.text)
+            .asDriver()
+            .drive(yearText.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.weatherImage
-            .observe(on: MainScheduler.instance)
-            .subscribe(
-                onNext: { value in
-                    self.weatherImage.image = value
-            })
+            .asDriver()
+            .drive(weatherImage.rx.image)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.weatherImageDescription
-            .bind(to: weatherDescription.rx.text)
+            .asDriver()
+            .drive(weatherDescription.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.receiver
