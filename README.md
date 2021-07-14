@@ -40,7 +40,8 @@ This iOS AI Diary app uses MVVM architecture. The repository imports entities, t
 @IBOutlet weak var content: UILabel!
 
 diaryDetailViewModel.content
-    .bind(to: content.rx.text)
+    .asDriver()
+    .drive(content.rx.text)
     .disposed(by: disposeBag)
 
 
