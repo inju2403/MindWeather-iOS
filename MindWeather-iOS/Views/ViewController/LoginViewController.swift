@@ -64,11 +64,6 @@ class LoginViewController : UIViewController {
                 }
     }
     
-    // 사용자가 바로 입력할 수 있도록 세팅
-    override func viewWillAppear(_ animated: Bool) {
-        self.usernameTextField.becomeFirstResponder()
-    }
-    
     // 키보드 밖을 클릭하면 키보드가 내려가도록 세팅
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.usernameTextField.resignFirstResponder()
