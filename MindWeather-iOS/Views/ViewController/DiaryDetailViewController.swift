@@ -131,6 +131,9 @@ class DiaryDetailViewController : UIViewController {
         
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
+        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        cancel.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        
         alert.addAction(success)
         alert.addAction(cancel)
         
