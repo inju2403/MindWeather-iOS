@@ -81,7 +81,8 @@ class DiaryListViewController : UIViewController {
         
         
         diaryListViewModel.diaryList
-            .bind(to: diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
+            .asDriver()
+            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
                 
                 let dateFormatter = DateFormatter()
