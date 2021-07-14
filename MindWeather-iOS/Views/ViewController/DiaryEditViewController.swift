@@ -64,15 +64,18 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate {
     
     private func bindViewModel() {
         diaryDetailViewModel.content
-            .bind(to: content.rx.text)
+            .asDriver()
+            .drive(content.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.date
-            .bind(to: dateText.rx.text)
+            .asDriver()
+            .drive(dateText.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.year
-            .bind(to: yearText.rx.text)
+            .asDriver()
+            .drive(yearText.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.receiver

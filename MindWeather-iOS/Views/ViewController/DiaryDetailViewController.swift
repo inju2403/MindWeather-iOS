@@ -16,7 +16,7 @@ class DiaryDetailViewController : UIViewController {
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
     
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var weatherDescription: UILabel!
@@ -53,7 +53,7 @@ class DiaryDetailViewController : UIViewController {
     private func bindViewModel() {
         diaryDetailViewModel.date
             .asDriver()
-            .drive(date.rx.text)
+            .drive(dateText.rx.text)
             .disposed(by: disposeBag)
         
         diaryDetailViewModel.content
@@ -81,7 +81,7 @@ class DiaryDetailViewController : UIViewController {
             .do(
                 onSubscribe: {
                     //로딩 ui 켜기
-                    self.date.isHidden = true
+                    self.dateText.isHidden = true
                     self.content.isHidden = true
                     self.weatherImage.isHidden = true
                     self.weatherDescription.isHidden = true
@@ -102,7 +102,7 @@ class DiaryDetailViewController : UIViewController {
                     self.loadingUI.stopAnimating()
                     self.loadingText.isHidden = true
                     
-                    self.date.isHidden = false
+                    self.dateText.isHidden = false
                     self.content.isHidden = false
                     self.weatherImage.isHidden = false
                     self.weatherDescription.isHidden = false

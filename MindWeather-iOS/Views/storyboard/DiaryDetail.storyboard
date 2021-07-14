@@ -144,7 +144,7 @@
                     <navigationItem key="navigationItem" id="6qy-cW-jwW"/>
                     <connections>
                         <outlet property="content" destination="PTQ-Qe-jaO" id="gHu-eH-Tkh"/>
-                        <outlet property="date" destination="YfB-cT-I26" id="tvJ-6F-bQg"/>
+                        <outlet property="dateText" destination="YfB-cT-I26" id="svd-1e-x5k"/>
                         <outlet property="loadingText" destination="wK2-u4-Gbm" id="B1x-UD-gso"/>
                         <outlet property="loadingUI" destination="yfo-60-8lj" id="rcV-8V-vIL"/>
                         <outlet property="weatherDescription" destination="Mhg-FF-1kp" id="e6f-3X-4DB"/>
