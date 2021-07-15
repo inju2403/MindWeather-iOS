@@ -14,8 +14,8 @@ class WeatherDescriptionViewController : UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func closeButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

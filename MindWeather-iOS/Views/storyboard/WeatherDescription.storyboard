@@ -25,51 +25,51 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26N-72-7kZ">
-                                <rect key="frame" x="40" y="168" width="18" height="22"/>
+                                <rect key="frame" x="40" y="167" width="12.666666666666664" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="xmark" catalog="system"/>
+                                <state key="normal" image="chevron.backward" catalog="system"/>
                                 <connections>
-                                    <action selector="closeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="asR-XD-yLb"/>
+                                    <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8bD-29-btQ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_happiness" translatesAutoresizingMaskIntoConstraints="NO" id="Qee-aM-KuD">
-                                <rect key="frame" x="55" y="230" width="40" height="40"/>
+                                <rect key="frame" x="55" y="229" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="hkX-rO-rnK"/>
                                     <constraint firstAttribute="height" constant="40" id="l5v-0w-LJo"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sadness" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-CC-RX2">
-                                <rect key="frame" x="55" y="300" width="40" height="40"/>
+                                <rect key="frame" x="55" y="299" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="4Bx-Lu-JWv"/>
                                     <constraint firstAttribute="height" constant="40" id="HK4-sZ-NIZ"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_worry" translatesAutoresizingMaskIntoConstraints="NO" id="RTe-7Y-T1d">
-                                <rect key="frame" x="55" y="370" width="40" height="40"/>
+                                <rect key="frame" x="55" y="369" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Eey-Tf-l2j"/>
                                     <constraint firstAttribute="height" constant="40" id="wZw-jF-Dix"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_anger" translatesAutoresizingMaskIntoConstraints="NO" id="s03-KF-pcN">
-                                <rect key="frame" x="55" y="440" width="40" height="40"/>
+                                <rect key="frame" x="55" y="439" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RBG-im-dad"/>
                                     <constraint firstAttribute="width" constant="40" id="XcZ-au-YnS"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_neutrality" translatesAutoresizingMaskIntoConstraints="NO" id="Ifi-XJ-eQZ">
-                                <rect key="frame" x="55" y="510" width="40" height="40"/>
+                                <rect key="frame" x="55" y="509" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="2aD-wz-oER"/>
                                     <constraint firstAttribute="height" constant="40" id="s5b-8H-gqD"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_unknowability" translatesAutoresizingMaskIntoConstraints="NO" id="12S-dG-0fc">
-                                <rect key="frame" x="55" y="580" width="40" height="40"/>
+                                <rect key="frame" x="55" y="579" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="V3q-GR-ZPp"/>
                                     <constraint firstAttribute="width" constant="40" id="rlO-CU-t8P"/>
@@ -115,7 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="26N-72-7kZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="124" id="7lc-gl-6aI"/>
+                            <constraint firstItem="26N-72-7kZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="123" id="7lc-gl-6aI"/>
                             <constraint firstItem="Ifi-XJ-eQZ" firstAttribute="top" secondItem="s03-KF-pcN" secondAttribute="bottom" constant="30" id="7zL-mQ-Rx1"/>
                             <constraint firstItem="E7j-Yx-VVi" firstAttribute="top" secondItem="Zje-PX-TzU" secondAttribute="bottom" constant="46" id="Ccj-Jk-HC5"/>
                             <constraint firstItem="s03-KF-pcN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="Dyb-6R-QNy"/>
@@ -154,6 +154,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="diary_detail_background" width="2827" height="4000"/>
         <image name="ic_anger" width="512" height="512"/>
         <image name="ic_happiness" width="512" height="512"/>
@@ -161,6 +162,5 @@
         <image name="ic_sadness" width="512" height="512"/>
         <image name="ic_unknowability" width="512" height="512"/>
         <image name="ic_worry" width="512" height="512"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

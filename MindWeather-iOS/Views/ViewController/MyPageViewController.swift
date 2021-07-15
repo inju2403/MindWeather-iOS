@@ -32,6 +32,10 @@ class MyPageViewController : UIViewController {
         
     }
     
+    @IBAction func weatherDescriptionButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: K.weatherDescriptionSegue, sender: self)
+    }
+    
     @IBAction func changeUserNameButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.nickNameEditSegue, sender: self)
     }

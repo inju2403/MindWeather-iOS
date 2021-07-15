@@ -268,7 +268,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="날씨 설명 보기"/>
                                         <connections>
-                                            <segue destination="FGZ-rT-aK5" kind="presentation" modalPresentationStyle="fullScreen" id="zMk-fZ-uUx"/>
+                                            <action selector="weatherDescriptionButtonPressed:" destination="DzL-Hh-8Dj" eventType="touchUpInside" id="DGU-OK-Kl3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-xb-zL9">
@@ -352,6 +352,7 @@
                         <outlet property="weatherExplainButton" destination="m6Z-wf-3uv" id="pWR-Z7-tgG"/>
                         <segue destination="u2W-eq-EWX" kind="show" identifier="moveNickNameEditIdentifier" id="Xhe-te-E8s"/>
                         <segue destination="BXe-jl-UDb" kind="show" identifier="movePasswordEditIdentifier" id="MKn-8l-wb5"/>
+                        <segue destination="FGZ-rT-aK5" kind="show" identifier="moveWeatherDescriptionIdentifier" id="38a-C9-CZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC2-aI-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -361,10 +362,12 @@
         <!--WeatherDescriptionViewController-->
         <scene sceneID="aL0-Yf-CSn">
             <objects>
-                <viewControllerPlaceholder storyboardName="WeatherDescription" referencedIdentifier="WeatherDescriptionViewController" id="FGZ-rT-aK5" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="WeatherDescription" referencedIdentifier="WeatherDescriptionViewController" id="FGZ-rT-aK5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CSw-Sy-2IL"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-g0-fyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="1067"/>
+            <point key="canvasLocation" x="1322" y="1068"/>
         </scene>
         <!--NickNameEditViewController-->
         <scene sceneID="kxl-UE-nn1">
@@ -374,7 +377,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6go-15-d2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="1132"/>
+            <point key="canvasLocation" x="1299" y="1144"/>
         </scene>
         <!--PasswordEditViewController-->
         <scene sceneID="pfN-Qc-DGc">
@@ -384,7 +387,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAw-VW-NFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="1189"/>
+            <point key="canvasLocation" x="1295" y="1217"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
