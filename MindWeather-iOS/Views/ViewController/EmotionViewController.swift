@@ -35,13 +35,13 @@ class EmotionViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         bindViewModel()
         emotionViewModel.getEmotions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.isNavigationBarHidden = true
         emotionViewModel.getEmotions()
     }
     
@@ -74,6 +74,11 @@ class EmotionViewController : UIViewController {
                     self.makeChartaYear()
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func setUI() {
+        //네비게이션 바 숨김
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func aYearButtonPressed(_ sender: UIButton) {

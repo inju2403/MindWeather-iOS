@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmt-Nb-wIv">
-                                <rect key="frame" x="0.0" y="184" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="207" width="414" height="575"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-5Y-Ptx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="133.33333333333334"/>
@@ -74,14 +74,14 @@
                                         </constraints>
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-60-8lj">
-                                        <rect key="frame" x="187" y="159.33333333333331" width="40" height="40"/>
+                                        <rect key="frame" x="187" y="152.66666666666669" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4vH-rZ-0jh"/>
                                             <constraint firstAttribute="width" constant="40" id="bkv-EL-BJ9"/>
                                         </constraints>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기를 불러오는 중이에요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wK2-u4-Gbm">
-                                        <rect key="frame" x="124" y="209.33333333333331" width="166" height="17.333333333333343"/>
+                                        <rect key="frame" x="124" y="202.66666666666669" width="166" height="17.333333333333343"/>
                                         <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -100,7 +100,11 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8d-t2-esW" userLabel="editButton">
-                                <rect key="frame" x="299" y="164" width="21" height="22"/>
+                                <rect key="frame" x="299" y="167" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="LmW-nP-aNk"/>
+                                    <constraint firstAttribute="height" constant="25" id="NtD-rt-MZM"/>
+                                </constraints>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="square.and.pencil" catalog="system"/>
                                 <connections>
@@ -108,7 +112,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZX-wj-2Wi" userLabel="deleteButton">
-                                <rect key="frame" x="345" y="164" width="19" height="22"/>
+                                <rect key="frame" x="349" y="167" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="lcd-NW-mUu"/>
+                                    <constraint firstAttribute="height" constant="25" id="prf-1W-Jzd"/>
+                                </constraints>
                                 <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="trash" catalog="system"/>
                                 <connections>
@@ -121,24 +129,40 @@
                                 <color key="textColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbw-Ud-HOL">
+                                <rect key="frame" x="40" y="167" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="VAf-wc-pxb"/>
+                                    <constraint firstAttribute="width" constant="35" id="mOJ-FS-179"/>
+                                </constraints>
+                                <color key="tintColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="xCj-tT-Gm2" eventType="touchUpInside" id="pKv-Gc-x0s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1hD-gS-XK2"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="8ZX-wj-2Wi" secondAttribute="trailing" constant="50" id="8Ej-s0-kNA"/>
-                            <constraint firstItem="Jmt-Nb-wIv" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="140" id="ASE-nA-j3U"/>
+                            <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="8ZX-wj-2Wi" secondAttribute="trailing" constant="40" id="8Ej-s0-kNA"/>
+                            <constraint firstItem="Jmt-Nb-wIv" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="163" id="ASE-nA-j3U"/>
                             <constraint firstItem="o51-av-wEs" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" id="DNn-OK-m1x"/>
-                            <constraint firstItem="r8d-t2-esW" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="120" id="LbA-da-s53"/>
+                            <constraint firstItem="r8d-t2-esW" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="123" id="LbA-da-s53"/>
                             <constraint firstItem="web-lY-aUn" firstAttribute="top" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="15" id="M5E-lw-NyO"/>
                             <constraint firstItem="8ZX-wj-2Wi" firstAttribute="leading" secondItem="r8d-t2-esW" secondAttribute="trailing" constant="25" id="PCF-a7-rpd"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="web-lY-aUn" secondAttribute="trailing" constant="70" id="PX4-Ug-Z7h"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="o51-av-wEs" secondAttribute="trailing" id="cws-B3-ixa"/>
+                            <constraint firstItem="tbw-Ud-HOL" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="123" id="fH0-ZT-E25"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="Jmt-Nb-wIv" secondAttribute="trailing" id="gTq-IK-a5Y"/>
                             <constraint firstItem="Jmt-Nb-wIv" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="hrS-5q-r5n"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="Jmt-Nb-wIv" secondAttribute="bottom" constant="80" id="tcB-Ts-ccj"/>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="bottom" secondItem="o51-av-wEs" secondAttribute="bottom" id="teq-uv-EPH"/>
-                            <constraint firstItem="8ZX-wj-2Wi" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="120" id="uT4-Xl-qvB"/>
+                            <constraint firstItem="8ZX-wj-2Wi" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="123" id="uT4-Xl-qvB"/>
                             <constraint firstItem="o51-av-wEs" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" id="xbP-yV-Up4"/>
+                            <constraint firstItem="tbw-Ud-HOL" firstAttribute="leading" secondItem="1hD-gS-XK2" secondAttribute="leading" constant="40" id="xgo-aE-uQa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6qy-cW-jwW"/>
@@ -167,6 +191,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="diary_detail_background" width="2827" height="4000"/>
         <image name="ic_happiness" width="512" height="512"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>

@@ -25,20 +25,11 @@ class MyPageViewController : UIViewController {
         
         super.viewDidLoad()
        
-        self.navigationController?.isNavigationBarHidden = true
-        
-        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
-        navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        
+        setUI()
         setFonts()
         usernameText.text = UserDefaults.standard.string(forKey: "username")
         emailText.text = UserDefaults.standard.string(forKey: "email")
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func changeUserNameButtonPressed(_ sender: UIButton) {
@@ -62,6 +53,13 @@ class MyPageViewController : UIViewController {
         dictionary.keys.forEach { key in
             defaults.removeObject(forKey: key)
         }
+    }
+    
+    private func setUI() {
+        // 네비게이션 바 숨김
+        self.navigationController?.isNavigationBarHidden = true
+        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     private func setFonts() {

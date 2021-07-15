@@ -37,6 +37,10 @@ class DiaryDetailViewController : UIViewController {
         diaryDetailViewModel.loadDiary(diaryId: diaryId)
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func editButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.diaryEditSegue, sender: self)
     }
@@ -113,6 +117,11 @@ class DiaryDetailViewController : UIViewController {
     
     private func setUI() {
         self.navigationController?.navigationBar.topItem?.title = ""
+        
+        // 네비게이션 바 숨김
+        self.navigationController?.isNavigationBarHidden = true
+        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         let attrString = NSMutableAttributedString(string: content.text!)
         let paragraphStyle = NSMutableParagraphStyle()
