@@ -1,6 +1,6 @@
 # 마음의 날씨 (iOS AI Diary App)    
 
-<div><img src="https://user-images.githubusercontent.com/56947879/125198482-05347980-e29d-11eb-8adc-990753102912.png"  width="100%"></div>
+<div><img src="https://user-images.githubusercontent.com/56947879/125778307-ae0c2098-753d-4349-9581-9a1dae55e238.png"  width="100%"></div>
 
 ## Project Description    
 
