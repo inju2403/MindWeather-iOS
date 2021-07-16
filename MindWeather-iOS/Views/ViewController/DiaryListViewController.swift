@@ -26,14 +26,6 @@ class DiaryListViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        diaryListViewModel.testContent
-//            .bind(to: testLabel.rx.text)
-//            .disposed(by: disposeBag)
-//
-//        diaryListViewModel.diaryList
-//            .bind(to: diaryList)
-//            .disposed(by: disposeBag)
-        
         diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
         
         setUI()
@@ -155,7 +147,6 @@ extension DiaryListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.diaryListCellIdentifier, for: indexPath)
-//        cell.textLabel?.text =
         return cell
     }
 }
