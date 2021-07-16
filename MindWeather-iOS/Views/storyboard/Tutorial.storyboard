@@ -5,8 +5,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tutorial View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,20 +22,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="튜토리얼 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCm-8Y-pYr">
-                                <rect key="frame" x="161" y="415" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-xS-2h5">
+                                <rect key="frame" x="0.0" y="797" width="414" height="65"/>
+                                <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lnO-ay-CRr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="22"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t81-Tu-FZH">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-1L-iOa" customClass="CHIBasePageControl" customModule="MindWeather_iOS" customModuleProvider="target">
+                                <rect key="frame" x="157" y="737" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Pb-cP-q3o"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7sQ-51-iw2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="pix-7r-chX"/>
+                                    <constraint firstAttribute="height" constant="30" id="xFX-Ib-AWH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                        <color key="value" systemColor="systemTealColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UCm-8Y-pYr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="161" id="G2V-26-9Be"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UCm-8Y-pYr" secondAttribute="trailing" constant="160" id="Ovt-eL-M9c"/>
-                            <constraint firstItem="UCm-8Y-pYr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="371" id="wzT-zw-ZIB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UCm-8Y-pYr" secondAttribute="bottom" constant="426" id="xlt-DC-DmC"/>
+                            <constraint firstItem="wYt-1L-iOa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6HV-W5-6My"/>
+                            <constraint firstItem="7hY-xS-2h5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6wb-Aj-UI6"/>
+                            <constraint firstItem="t81-Tu-FZH" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="G40-EE-Zxw"/>
+                            <constraint firstAttribute="bottom" secondItem="t81-Tu-FZH" secondAttribute="bottom" id="GVA-ra-Pkd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7hY-xS-2h5" secondAttribute="bottom" id="IYH-ZV-yfz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7hY-xS-2h5" secondAttribute="trailing" id="fQE-Th-8wG"/>
+                            <constraint firstItem="7hY-xS-2h5" firstAttribute="top" secondItem="wYt-1L-iOa" secondAttribute="bottom" constant="30" id="oaR-wG-XE4"/>
+                            <constraint firstItem="t81-Tu-FZH" firstAttribute="top" secondItem="7hY-xS-2h5" secondAttribute="bottom" id="xDh-c0-hKt"/>
+                            <constraint firstAttribute="trailing" secondItem="t81-Tu-FZH" secondAttribute="trailing" id="zA4-fQ-n1Q"/>
                         </constraints>
                     </view>
                     <connections>
@@ -38,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="97"/>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="7m6-hR-5wU">
@@ -49,4 +96,12 @@
             <point key="canvasLocation" x="735" y="95"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

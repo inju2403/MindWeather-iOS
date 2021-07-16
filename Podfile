@@ -11,4 +11,5 @@ target 'MindWeather-iOS' do
   pod 'Alamofire', '~> 5.4'
   pod 'Charts'
   pod 'CHIPageControl', '~> 0.1.3'
+  pod 'FSPagerView'
 end
