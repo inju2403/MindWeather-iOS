@@ -10,4 +10,5 @@ target 'MindWeather-iOS' do
   pod 'RxCocoa', '~> 6.2.0'
   pod 'Alamofire', '~> 5.4'
   pod 'Charts'
+  pod 'CHIPageControl', '~> 0.1.3'
 end
