@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,44 +36,55 @@
                                 <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                                 <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-1L-iOa" customClass="CHIBasePageControl" customModule="MindWeather_iOS" customModuleProvider="target">
-                                <rect key="frame" x="157" y="737" width="100" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhz-WD-spS" userLabel="PageControll">
+                                <rect key="frame" x="0.0" y="757" width="414" height="40"/>
+                                <color key="backgroundColor" red="0.76445990799999997" green="0.74544137720000003" blue="0.71764951939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1Pb-cP-q3o"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7sQ-51-iw2"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="pix-7r-chX"/>
-                                    <constraint firstAttribute="height" constant="30" id="xFX-Ib-AWH"/>
+                                    <constraint firstAttribute="height" constant="40" id="2a3-4h-St2"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
-                                        <integer key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
-                                        <color key="value" systemColor="systemTealColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-3Z-nXc" userLabel="PageContainer">
+                                <rect key="frame" x="0.0" y="44" width="414" height="713"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-wk-FUc">
+                                        <rect key="frame" x="40" y="20" width="33" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="17"/>
+                                        <state key="normal" title="이전">
+                                            <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dd-hC-Qbv">
+                                        <rect key="frame" x="341" y="20" width="33" height="32"/>
+                                        <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="17"/>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" red="0.54381096360000003" green="0.27234542369999998" blue="0.074424900109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76445990799999997" green="0.74544137720000003" blue="0.71764951939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2dd-hC-Qbv" secondAttribute="trailing" constant="40" id="CDA-Xo-HgZ"/>
+                                    <constraint firstItem="tFl-wk-FUc" firstAttribute="leading" secondItem="ZKW-3Z-nXc" secondAttribute="leading" constant="40" id="HRt-Uo-iEW"/>
+                                    <constraint firstItem="tFl-wk-FUc" firstAttribute="top" secondItem="ZKW-3Z-nXc" secondAttribute="top" constant="20" id="M9f-ne-l2R"/>
+                                    <constraint firstItem="2dd-hC-Qbv" firstAttribute="top" secondItem="ZKW-3Z-nXc" secondAttribute="top" constant="20" id="Zwy-X1-JXq"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.76445990799999997" green="0.74544137720000003" blue="0.71764951939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wYt-1L-iOa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6HV-W5-6My"/>
+                            <constraint firstItem="Rhz-WD-spS" firstAttribute="top" secondItem="ZKW-3Z-nXc" secondAttribute="bottom" id="0YD-xR-3RP"/>
+                            <constraint firstItem="ZKW-3Z-nXc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2mF-f4-X6z"/>
                             <constraint firstItem="7hY-xS-2h5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6wb-Aj-UI6"/>
+                            <constraint firstItem="Rhz-WD-spS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9ho-bW-rFo"/>
                             <constraint firstItem="t81-Tu-FZH" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="G40-EE-Zxw"/>
                             <constraint firstAttribute="bottom" secondItem="t81-Tu-FZH" secondAttribute="bottom" id="GVA-ra-Pkd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7hY-xS-2h5" secondAttribute="bottom" id="IYH-ZV-yfz"/>
+                            <constraint firstItem="ZKW-3Z-nXc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Jee-bz-4M2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZKW-3Z-nXc" secondAttribute="trailing" id="b65-c7-x2y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Rhz-WD-spS" secondAttribute="trailing" id="cDf-KV-WUL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7hY-xS-2h5" secondAttribute="trailing" id="fQE-Th-8wG"/>
-                            <constraint firstItem="7hY-xS-2h5" firstAttribute="top" secondItem="wYt-1L-iOa" secondAttribute="bottom" constant="30" id="oaR-wG-XE4"/>
+                            <constraint firstItem="7hY-xS-2h5" firstAttribute="top" secondItem="Rhz-WD-spS" secondAttribute="bottom" id="s8P-CZ-bq5"/>
                             <constraint firstItem="t81-Tu-FZH" firstAttribute="top" secondItem="7hY-xS-2h5" secondAttribute="bottom" id="xDh-c0-hKt"/>
                             <constraint firstAttribute="trailing" secondItem="t81-Tu-FZH" secondAttribute="trailing" id="zA4-fQ-n1Q"/>
                         </constraints>
@@ -96,12 +106,4 @@
             <point key="canvasLocation" x="735" y="95"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
