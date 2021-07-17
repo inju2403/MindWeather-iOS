@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class DiaryEditViewController : UIViewController, UITextViewDelegate {
+class DiaryEditViewController : UIViewController, UITextViewDelegate{
     
     var diaryId = K.newDiaryValue
     
@@ -93,6 +93,8 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate {
                         self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
+                        
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
                         
                         self.dismiss(animated: true, completion: nil)
                     } else if value == "loadDiary" {
@@ -187,10 +189,5 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate {
         content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
         content.textColor = UIColor(rgb: K.brownColor)
         content.textAlignment = .center
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! DiaryListViewController
-        destinationVC.diaryListIsUpdated.accept(true)
     }
 }

@@ -98,6 +98,7 @@ class DiaryDetailViewController : UIViewController {
             .subscribe(
                 onNext: { value in
                     if value == "deleteDiary" {
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
                         self.navigationController?.popViewController(animated: true)
                     }
                     

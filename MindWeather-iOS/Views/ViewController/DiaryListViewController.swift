@@ -18,6 +18,8 @@ class DiaryListViewController : UIViewController {
     let diaryListViewModel = DiaryListViewModel()
     let disposeBag = DisposeBag()
     
+    var diaryListIsUpdated: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    
     var diaryList: [String] = []
     var diaryListSize: Int = 0
     
@@ -25,6 +27,9 @@ class DiaryListViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 일기 리스트에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에 사용
+        NotificationCenter.default.addObserver(self, selector: #selector(isUpdateDiarys), name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object:  nil)
         
         diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
         
@@ -36,6 +41,10 @@ class DiaryListViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.emptyStateText.isHidden = true
+    }
+    
+    @objc private func isUpdateDiarys() {
+        diaryListViewModel.getDiarys()
     }
     
     private func setUI() {
@@ -62,6 +71,13 @@ class DiaryListViewController : UIViewController {
                         self.loadingUI.stopAnimating()
                         self.animateTable(tblVW: self.diaryListTableView)
                     }
+                })
+            .disposed(by: disposeBag)
+        
+        diaryListIsUpdated
+            .subscribe(
+                onNext: { value in
+                    self.diaryListViewModel.getDiarys()
                 })
             .disposed(by: disposeBag)
         
@@ -149,7 +165,7 @@ class DiaryListViewController : UIViewController {
         var index = 0
         for a in cells {
             let cell: UITableViewCell = a as UITableViewCell
-            UIView.animate(withDuration: 1, delay: 0.01 * Double(index), options: .allowAnimatedContent, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.01 * Double(index), options: .allowAnimatedContent, animations: {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0);
             }, completion: nil)
             index += 1

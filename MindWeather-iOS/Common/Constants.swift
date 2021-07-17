@@ -23,6 +23,8 @@ struct K {
     static let diaryListCellIdentifier = "ReusableCell"
     static let diaryCellNibName = "DiaryListCell"
     
+    static let isUpdateDiarysNotificationName = "isUpdateDiarys"
+    
     static let newDiaryValue = 987654321
     
     static let mainColor = 0xFDF5E6 // 메인 색상
