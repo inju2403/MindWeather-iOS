@@ -36,7 +36,6 @@ class DiaryListViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.emptyStateText.isHidden = true
-        diaryListViewModel.getDiarys()
     }
     
     private func setUI() {
@@ -61,8 +60,16 @@ class DiaryListViewController : UIViewController {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
+                        self.animateTable(tblVW: self.diaryListTableView)
                     }
                 })
+            .disposed(by: disposeBag)
+        
+        diaryListIsUpdated
+            .asDriver()
+            .drive(onDisposed: {
+                self.animateTable(tblVW: self.diaryListTableView)
+            })
             .disposed(by: disposeBag)
         
         diaryListViewModel.diaryItemCnt
@@ -136,6 +143,24 @@ class DiaryListViewController : UIViewController {
                         guard let self = self else { return }
                         self.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
                     }).disposed(by: disposeBag)
+    }
+    
+    func animateTable(tblVW: UITableView) {
+        tblVW.reloadData()
+        let cells = tblVW.visibleCells
+        let tableHeight: CGFloat = tblVW.bounds.size.height
+        for i in cells {
+            let cell: UITableViewCell = i as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        var index = 0
+        for a in cells {
+            let cell: UITableViewCell = a as UITableViewCell
+            UIView.animate(withDuration: 1, delay: 0.01 * Double(index), options: .allowAnimatedContent, animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+            index += 1
+        }
     }
 
 }
