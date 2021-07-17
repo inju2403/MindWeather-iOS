@@ -28,6 +28,9 @@ class SignUpViewController : UIViewController {
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func personalInformationProcessingButtonClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: K.personalInformationProcessingSegue, sender: self)
+    }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         
         guard let username = usernameTextField.text,
@@ -87,6 +90,11 @@ class SignUpViewController : UIViewController {
         emailTextField.underlined()
         passwordTextField.underlined()
         passwordVerificationTextField.underlined()
+        
+        // 네비게이션 바 숨김
+        self.navigationController?.isNavigationBarHidden = true
+        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     func isValidEmail(email: String) -> Bool {

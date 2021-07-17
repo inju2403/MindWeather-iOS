@@ -22,6 +22,8 @@
 		6EB0442926816AC300E047A7 /* DiaryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0442826816AC300E047A7 /* DiaryServiceType.swift */; };
 		6EB0442B26816AD100E047A7 /* DiaryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0442A26816AD100E047A7 /* DiaryServiceImpl.swift */; };
 		6EB0442D26816B4400E047A7 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0442C26816B4400E047A7 /* Emotion.swift */; };
+		6EB6F96B26A282F30087B19F /* PersonalInformationProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6F96A26A282F30087B19F /* PersonalInformationProcessingViewController.swift */; };
+		6EB6F96D26A283410087B19F /* PersonalInformationProcessing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6F96C26A283410087B19F /* PersonalInformationProcessing.storyboard */; };
 		6EBE37AB26783D1C008BB15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AA26783D1C008BB15D /* AppDelegate.swift */; };
 		6EBE37AD26783D1C008BB15D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */; };
 		6EBE37AF26783D1C008BB15D /* FlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37AE26783D1C008BB15D /* FlashViewController.swift */; };
@@ -84,6 +86,8 @@
 		6EB0442826816AC300E047A7 /* DiaryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryServiceType.swift; sourceTree = "<group>"; };
 		6EB0442A26816AD100E047A7 /* DiaryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryServiceImpl.swift; sourceTree = "<group>"; };
 		6EB0442C26816B4400E047A7 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		6EB6F96A26A282F30087B19F /* PersonalInformationProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationProcessingViewController.swift; sourceTree = "<group>"; };
+		6EB6F96C26A283410087B19F /* PersonalInformationProcessing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalInformationProcessing.storyboard; sourceTree = "<group>"; };
 		6EBE37A726783D1C008BB15D /* MindWeather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindWeather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE37AA26783D1C008BB15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EBE37AC26783D1C008BB15D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				6EC26BC0268F351300391916 /* WeatherDescription.storyboard */,
 				6EC26BC6268F4B6200391916 /* NickNameEdit.storyboard */,
 				6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */,
+				6EB6F96C26A283410087B19F /* PersonalInformationProcessing.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				6EC26BC4268F443C00391916 /* MyPageViewController.swift */,
 				6EC26BC8268F4B7F00391916 /* NickNameEditViewController.swift */,
 				6EC26BD02690236E00391916 /* PasswordEditViewController.swift */,
+				6EB6F96A26A282F30087B19F /* PersonalInformationProcessingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 				6EBE37D3267A2656008BB15D /* Login.storyboard in Resources */,
 				6EC26BD82694736300391916 /* nanumpen.ttf in Resources */,
 				6EC26BB1268B3A3200391916 /* DiaryDetail.storyboard in Resources */,
+				6EB6F96D26A283410087B19F /* PersonalInformationProcessing.storyboard in Resources */,
 				6EC26BF026948E9700391916 /* NanumMyeongjoBold.ttf in Resources */,
 				6EBE37C926786A13008BB15D /* Tutorial.storyboard in Resources */,
 				6EC26BFC2699FF9E00391916 /* Flash.storyboard in Resources */,
@@ -508,6 +515,7 @@
 				6EC26BCB2690091800391916 /* ChangeUserName.swift in Sources */,
 				6EB044252680D57800E047A7 /* DiaryRepoType.swift in Sources */,
 				6EC26BBD268B69F800391916 /* EditClickViewController.swift in Sources */,
+				6EB6F96B26A282F30087B19F /* PersonalInformationProcessingViewController.swift in Sources */,
 				6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */,
 				6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */,
 				6EC26BCD269022FB00391916 /* ChangePassword.swift in Sources */,

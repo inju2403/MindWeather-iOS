@@ -95,7 +95,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Kww-Mv-pWp" id="Ln7-Nh-mQr"/>
                         <outlet property="usernameTextField" destination="rEk-Lv-Daj" id="g6k-ti-2wB"/>
-                        <segue destination="Eth-Pp-nqK" kind="show" identifier="moveSignUpIdentifier" id="6g3-ah-256"/>
+                        <segue destination="Eth-Pp-nqK" kind="presentation" identifier="moveSignUpIdentifier" modalPresentationStyle="fullScreen" id="6g3-ah-256"/>
                         <segue destination="zlQ-mx-8lC" kind="presentation" identifier="moveMainTabBarIdentifier" modalPresentationStyle="fullScreen" id="3cj-XA-rqD"/>
                     </connections>
                 </viewController>
