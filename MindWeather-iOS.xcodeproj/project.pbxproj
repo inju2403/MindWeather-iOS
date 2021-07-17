@@ -116,8 +116,8 @@
 		6EC26BC4268F443C00391916 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		6EC26BC6268F4B6200391916 /* NickNameEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NickNameEdit.storyboard; sourceTree = "<group>"; };
 		6EC26BC8268F4B7F00391916 /* NickNameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameEditViewController.swift; sourceTree = "<group>"; };
-		6EC26BCA2690091800391916 /* ChangeUserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUserName.swift; path = ../../../../ChangeUserName.swift; sourceTree = "<group>"; };
-		6EC26BCC269022FB00391916 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangePassword.swift; path = ../../../../ChangePassword.swift; sourceTree = "<group>"; };
+		6EC26BCA2690091800391916 /* ChangeUserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserName.swift; sourceTree = "<group>"; };
+		6EC26BCC269022FB00391916 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordEdit.storyboard; sourceTree = "<group>"; };
 		6EC26BD02690236E00391916 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEditViewController.swift; sourceTree = "<group>"; };
 		6EC26BD2269328DB00391916 /* EmotionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewModel.swift; sourceTree = "<group>"; };
