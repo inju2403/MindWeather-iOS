@@ -65,13 +65,6 @@ class DiaryListViewController : UIViewController {
                 })
             .disposed(by: disposeBag)
         
-        diaryListIsUpdated
-            .asDriver()
-            .drive(onDisposed: {
-                self.animateTable(tblVW: self.diaryListTableView)
-            })
-            .disposed(by: disposeBag)
-        
         diaryListViewModel.diaryItemCnt
             .observe(on: MainScheduler.instance)
             .subscribe(

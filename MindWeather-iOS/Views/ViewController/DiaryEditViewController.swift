@@ -188,4 +188,9 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate {
         content.textColor = UIColor(rgb: K.brownColor)
         content.textAlignment = .center
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DiaryListViewController
+        destinationVC.diaryListIsUpdated.accept(true)
+    }
 }
