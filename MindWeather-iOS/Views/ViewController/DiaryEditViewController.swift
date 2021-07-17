@@ -160,7 +160,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                 inset.bottom = height - 80
                 strongSelf.content.contentInset = inset
                 
-                inset = strongSelf.content.scrollIndicatorInsets
+                inset = strongSelf.content.horizontalScrollIndicatorInsets
                 inset.bottom = height - 80
                 strongSelf.content.scrollIndicatorInsets = inset
             }
@@ -174,7 +174,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
             inset.bottom = 0
             strongSelf.content.contentInset = inset
             
-            inset = strongSelf.content.scrollIndicatorInsets
+            inset = strongSelf.content.horizontalScrollIndicatorInsets
             inset.bottom = 0
             strongSelf.content.scrollIndicatorInsets = inset
         })
