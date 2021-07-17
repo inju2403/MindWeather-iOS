@@ -20,7 +20,7 @@ class FlashViewController: UIViewController {
         let runFirst = UserDefaults.standard.value(forKey: "runFirst")
         let token = UserDefaults.standard.value(forKey: "token")
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if token != nil { //자동 로그인
                 self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
             } else if runFirst == nil {
