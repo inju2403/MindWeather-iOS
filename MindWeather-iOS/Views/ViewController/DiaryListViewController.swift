@@ -69,7 +69,6 @@ class DiaryListViewController : UIViewController {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
-//                        self.animateTable(tblVW: self.diaryListTableView)
                     }
                 })
             .disposed(by: disposeBag)
@@ -152,24 +151,17 @@ class DiaryListViewController : UIViewController {
                         guard let self = self else { return }
                         self.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
                     }).disposed(by: disposeBag)
-    }
-    
-    func animateTable(tblVW: UITableView) {
-        tblVW.reloadData()
-        let cells = tblVW.visibleCells
-        let tableHeight: CGFloat = tblVW.bounds.size.height
-        for i in cells {
-            let cell: UITableViewCell = i as UITableViewCell
-            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
-        }
-        var index = 0
-        for a in cells {
-            let cell: UITableViewCell = a as UITableViewCell
-            UIView.animate(withDuration: 0.5, delay: 0.01 * Double(index), options: .allowAnimatedContent, animations: {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0);
-            }, completion: nil)
-            index += 1
-        }
+        
+        //테이블뷰에 애니메이션 추가
+        diaryListTableView.rx
+                    .willDisplayCell
+                    .subscribe(onNext: { cell, indexPath in
+                            cell.alpha = 0
+                            UIView.animate(withDuration: 0.15) {
+                                cell.alpha = 1.0
+                            }
+                       })
+                    .disposed(by: disposeBag)
     }
 
 }
@@ -193,4 +185,5 @@ extension DiaryListViewController: UITableViewDelegate {
         guard diaryListTableView.indexPathForSelectedRow != nil else { return }
         destinationVC.diaryId = selectedDiaryId
     }
+    
 }
