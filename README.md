@@ -54,20 +54,18 @@ diaryDetailViewModel.content
 
 
 // ViewModel
-var content: BehaviorRelay<String> 
-            = BehaviorRelay(value: "")
+var content: BehaviorRelay<String> = BehaviorRelay(value: "")
 
 func loadDiary(diaryId: Int) {
     _ = service.getDiaryById(diaryId: diaryId)
         .subscribe { event in
             switch event {
             case .success(let diary):
-            self.content
-                .accept(diary.content ?? "")
-            break
+                self.content.accept(diary.content ?? "")
+                break
             case .failure(let error):
-            print("Error: ", error)
-            break
+                print("Error: ", error)
+                break
             }
         }
         .disposed(by: disposeBag)
