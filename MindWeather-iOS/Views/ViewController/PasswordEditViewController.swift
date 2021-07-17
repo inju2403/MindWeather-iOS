@@ -36,7 +36,13 @@ class PasswordEditViewController: UIViewController {
         }
         
         //비밀번호들을 확인하는 로직
-        if new1 != new2 {
+        if old == "" {
+            self.showAlert(style: .alert, message: "현재 비밀번호를 입력해주세요", type: "failure")
+        } else if new1 == "" {
+            showAlert(style: .alert, message: "새 비밀번호를 입력해주세요", type: "failure")
+        } else if new2 == "" {
+            showAlert(style: .alert, message: "새 비밀번호 확인을 입력해주세요", type: "failure")
+        } else if new1 != new2 {
             showAlert(style: .alert, message: "비밀번호가 일치하지 않아요", type: "failure")
         } else if isValidPassword(password: new1) == false {
             showAlert(style: .alert, message: "새 비밀번호는 영문, 숫자, 특수문자를 조합해서 만들어 주세요", type: "failure")

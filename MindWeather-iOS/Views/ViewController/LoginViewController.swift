@@ -32,36 +32,43 @@ class LoginViewController : UIViewController {
             return
         }
         
-        let loginRequest = LoginRequest(username: username, password: password)
+        if username == "" {
+            self.showAlert(style: .alert, message: "닉네임을 입력해주세요", type: "400")
+        } else if password == "" {
+            self.showAlert(style: .alert, message: "비밀번호를 입력해주세요", type: "400")
+        } else {
         
-        AF.request("\(K.API_BASE_URL)auth/login/",
-                   method: .post,
-                   parameters: loginRequest,
-                   encoder: JSONParameterEncoder())
-                .responseDecodable(of: LoginSignUpReturn.self) { response in
-                    debugPrint(response)
-                    switch response.response?.statusCode {
-                    case 200:
-                        UserDefaults.standard.set(response.value?.token, forKey: "token")
-                        UserDefaults.standard.set(response.value?.user.pk, forKey: "pk")
-                        UserDefaults.standard.set(response.value?.user.username, forKey: "username")
-                        UserDefaults.standard.set(response.value?.user.email, forKey: "email")
+            let loginRequest = LoginRequest(username: username, password: password)
+            
+            AF.request("\(K.API_BASE_URL)auth/login/",
+                       method: .post,
+                       parameters: loginRequest,
+                       encoder: JSONParameterEncoder())
+                    .responseDecodable(of: LoginSignUpReturn.self) { response in
+                        debugPrint(response)
+                        switch response.response?.statusCode {
+                        case 200:
+                            UserDefaults.standard.set(response.value?.token, forKey: "token")
+                            UserDefaults.standard.set(response.value?.user.pk, forKey: "pk")
+                            UserDefaults.standard.set(response.value?.user.username, forKey: "username")
+                            UserDefaults.standard.set(response.value?.user.email, forKey: "email")
+                            
+                            //일기리스트 화면으로 이동
+                            self.usernameTextField.text = "";
+                            self.passwordTextField.text = "";
+                            
+                            self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
+                            break
+                        case 400:
+                            self.showAlert(style: .alert, message: "계정정보를 확인해주세요", type: "default")
+                            break
+                        default:
+                            self.showAlert(style: .alert, message: "서버가 불안정해요.\n잠시 후에 다시 시도해주세요", type: "default")
+                            break
+                        }
                         
-                        //일기리스트 화면으로 이동
-                        self.usernameTextField.text = "";
-                        self.passwordTextField.text = "";
-                        
-                        self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
-                        break
-                    case 400:
-                        self.showAlert(style: .alert, message: "계정정보를 확인해주세요", type: "default")
-                        break
-                    default:
-                        self.showAlert(style: .alert, message: "서버가 불안정해요.\n잠시 후에 다시 시도해주세요", type: "default")
-                        break
                     }
-                    
-                }
+        }
     }
     
     // 키보드 밖을 클릭하면 키보드가 내려가도록 세팅

@@ -32,26 +32,31 @@ class NickNameEditViewController: UIViewController {
             return
         }
         
-        let changeUserName = ChangeUserName(username: username)
+        if username == "" {
+            self.showAlert(style: .alert, message: "새로운 닉네임을 입력해주세요", type: "400")
+        } else {
         
-        AF.request("\(K.API_BASE_URL)auth/user/",
-                   method: .patch,
-                   parameters: changeUserName,
-                   encoder: JSONParameterEncoder(), headers: ["Authorization" : self.token])
-                .responseJSON { response in
-                    debugPrint(response.response?.statusCode)
-                    switch response.response?.statusCode {
-                    case 200:
-                        self.showAlert(style: .alert, message: "닉네임 변경 성공.\n새 닉네임으로 다시 로그인해주세요", type: "200")
-                        break
-                    case 400:
-                        self.showAlert(style: .alert, message: "이미 존재하는 닉네임이에요", type: "400")
-                        break
-                    default:
-                        self.showAlert(style: .alert, message: "서버가 불안정해요.\n잠시 후에 다시 시도해주세요", type: "default")
-                        break
+            let changeUserName = ChangeUserName(username: username)
+            
+            AF.request("\(K.API_BASE_URL)auth/user/",
+                       method: .patch,
+                       parameters: changeUserName,
+                       encoder: JSONParameterEncoder(), headers: ["Authorization" : self.token])
+                    .responseJSON { response in
+                        debugPrint(response.response?.statusCode)
+                        switch response.response?.statusCode {
+                        case 200:
+                            self.showAlert(style: .alert, message: "닉네임 변경 성공.\n새 닉네임으로 다시 로그인해주세요", type: "200")
+                            break
+                        case 400:
+                            self.showAlert(style: .alert, message: "이미 존재하는 닉네임이에요", type: "400")
+                            break
+                        default:
+                            self.showAlert(style: .alert, message: "서버가 불안정해요.\n잠시 후에 다시 시도해주세요", type: "default")
+                            break
+                        }
                     }
-                }
+        }
     }
     
     // 사용자가 바로 입력할 수 있도록 세팅

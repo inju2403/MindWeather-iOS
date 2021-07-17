@@ -40,7 +40,9 @@ class SignUpViewController : UIViewController {
             return
         }
         
-        if isValidEmail(email: email) == false {
+        if username == "" {
+            self.showAlert(style: .alert, message: "닉네임을 입력해주세요", type: "failure")
+        } else if isValidEmail(email: email) == false {
             showAlert(style: .alert, message: "이메일 형식을 확인해주세요", type: "failure")
         } else if password1 != password2 {
             showAlert(style: .alert, message: "비밀번호가 일치하지 않아요", type: "failure")
