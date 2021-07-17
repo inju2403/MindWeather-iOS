@@ -37,7 +37,7 @@ iOS 모바일 어플리케이션 UI/UX, 아키텍쳐 설계 및 구축, 데이�
 
 ## Architecture
 
-<img src="https://user-images.githubusercontent.com/56947879/126030176-ff993351-b655-490c-86f5-9b1521e09638.png" align="right" width="30%">
+<img src="https://user-images.githubusercontent.com/56947879/126030176-ff993351-b655-490c-86f5-9b1521e09638.png" align="right" width="40%">
 
 This iOS AI Diary app uses MVVM architecture. The repository imports entities, the service processes these entities and processes business logic. The view model handles presentation logic.
 
@@ -53,14 +53,16 @@ diaryDetailViewModel.content
 
 
 // ViewModel
-var content: BehaviorRelay<String> = BehaviorRelay(value: "")
+var content: BehaviorRelay<String> 
+            = BehaviorRelay(value: "")
 
 func loadDiary(diaryId: Int) {
     _ = service.getDiaryById(diaryId: diaryId)
         .subscribe { event in
             switch event {
             case .success(let diary):
-                self.content.accept(diary.content ?? "")
+                self.content
+                    .accept(diary.content ?? "")
                 break
             case .failure(let error):
                 print("Error: ", error)
