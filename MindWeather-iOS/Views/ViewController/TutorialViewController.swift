@@ -36,7 +36,7 @@ class TutorialViewController : UIViewController, FSPagerViewDelegate, FSPagerVie
         self.pagerView.delegate = self
         self.pagerView.dataSource = self
         
-        pagerView.transformer = FSPagerViewTransformer(type: .cubic)
+        pagerView.transformer = FSPagerViewTransformer(type: .coverFlow)
         pageControl.setFillColor(UIColor(rgb: K.mainColor), for: .normal)
         pageControl.setFillColor(UIColor(rgb: K.brownColor), for: .selected)
     }
