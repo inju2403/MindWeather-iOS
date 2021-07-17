@@ -93,14 +93,6 @@ class PasswordEditViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        //비밀번호 변경 후에는 로그인 화면으로 이동
-        if UserDefaults.standard.string(forKey: "username") == nil {
-            self.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    
-    }
-    
     func isValidPassword(password : String) -> Bool {
         //영문+숫자+특수문자 포함해서 8~50글자 사이의 text 체크하는 정규표현식
         let passwordreg = ("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,50}")

@@ -76,14 +76,6 @@ class NickNameEditViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        //닉네임 변경 후에는 로그인 화면으로 이동
-        if UserDefaults.standard.string(forKey: "username") == nil {
-            self.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    
-    }
-    
     func showAlert(style: UIAlertController.Style, message: String, type: String) {
         let titleFont = [NSAttributedString.Key.font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)]
         let titleAttrString = NSMutableAttributedString(string: message, attributes: titleFont)
