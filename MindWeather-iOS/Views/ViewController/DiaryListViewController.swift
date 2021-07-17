@@ -69,7 +69,7 @@ class DiaryListViewController : UIViewController {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
-                        self.animateTable(tblVW: self.diaryListTableView)
+//                        self.animateTable(tblVW: self.diaryListTableView)
                     }
                 })
             .disposed(by: disposeBag)
