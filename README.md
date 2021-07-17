@@ -40,7 +40,7 @@ iOS 모바일 어플리케이션 UI/UX, 아키텍쳐 설계 및 구축, 데이�
 
 This iOS AI Diary app uses MVVM architecture. The repository imports entities, the service processes these entities and processes business logic. The view model handles presentation logic.
 
-<img src="https://user-images.githubusercontent.com/56947879/126038313-d42e5cb5-0727-4f5d-a037-15b707da9b7f.png" align="right" width="39%">
+<img src="https://user-images.githubusercontent.com/56947879/126041005-21a150fd-87c5-4904-9841-3558fdb7de34.png" align="right" width="39%">
 
 ```kt
 
