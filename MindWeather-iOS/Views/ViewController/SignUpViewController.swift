@@ -8,23 +8,28 @@
 import UIKit
 import Alamofire
 
-class SignUpViewController : UIViewController {
+class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordVerificationTextField: UITextField!
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         setUI()
         usernameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
         passwordVerificationTextField.delegate = self
-        super.viewDidLoad()
-        
-        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // 네비게이션 컨트롤러 루트에서만 스와이프가 안먹히게 함
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = (self.navigationController?.viewControllers.count)! > 1
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -96,7 +101,7 @@ class SignUpViewController : UIViewController {
         // 네비게이션 바 숨김
         self.navigationController?.isNavigationBarHidden = true
         // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     func isValidEmail(email: String) -> Bool {
@@ -153,3 +158,10 @@ extension SignUpViewController: UITextFieldDelegate {
         return true
     }
 }
+
+//extension SignUpViewController: UINavigationControllerDelegate {
+//
+//    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+//        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = navigationController.viewControllers.count > 1
+//    }
+//}

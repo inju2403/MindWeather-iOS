@@ -21,7 +21,11 @@ class PasswordEditViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // 네비게이션 컨트롤러 루트에서만 스와이프가 안먹히게 함
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = (self.navigationController?.viewControllers.count)! > 1
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
