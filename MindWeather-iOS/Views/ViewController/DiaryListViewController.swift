@@ -28,7 +28,7 @@ class DiaryListViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 일기 리스트에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에 사용
+        // 일기 리스트에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
         NotificationCenter.default.addObserver(self, selector: #selector(isUpdateDiarys), name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object:  nil)
         
         diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)

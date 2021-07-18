@@ -25,6 +25,7 @@ struct K {
     static let diaryCellNibName = "DiaryListCell"
     
     static let isUpdateDiarysNotificationName = "isUpdateDiarys"
+    static let isUpdateEmotionsNotificationName = "isUpdateEmotions"
     
     static let newDiaryValue = 987654321
     

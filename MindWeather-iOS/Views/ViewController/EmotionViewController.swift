@@ -35,6 +35,9 @@ class EmotionViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 감정 그래프에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
+        NotificationCenter.default.addObserver(self, selector: #selector(isUpdateEmotions), name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object:  nil)
+        
         setUI()
         bindViewModel()
         emotionViewModel.getEmotions()
@@ -42,6 +45,10 @@ class EmotionViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
+    }
+    
+    @objc private func isUpdateEmotions() {
         emotionViewModel.getEmotions()
     }
     

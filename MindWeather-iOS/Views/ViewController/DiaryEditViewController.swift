@@ -96,6 +96,8 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         
                         NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
                         
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName), object: nil)
+                        
                         self.dismiss(animated: true, completion: nil)
                     } else if value == "loadDiary" {
                         
