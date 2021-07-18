@@ -122,7 +122,7 @@ class DiaryDetailViewController : UIViewController {
         // 네비게이션 바 숨김
         self.navigationController?.isNavigationBarHidden = true
         // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
-        navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         let attrString = NSMutableAttributedString(string: content.text!)
         let paragraphStyle = NSMutableParagraphStyle()
