@@ -146,7 +146,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1hD-gS-XK2"/>
                         <color key="backgroundColor" red="0.98783415559999999" green="0.9614126086" blue="0.90980452300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1hD-gS-XK2" firstAttribute="trailing" secondItem="8ZX-wj-2Wi" secondAttribute="trailing" constant="40" id="8Ej-s0-kNA"/>
                             <constraint firstItem="Jmt-Nb-wIv" firstAttribute="top" secondItem="1hD-gS-XK2" secondAttribute="top" constant="167" id="ASE-nA-j3U"/>
