@@ -39,7 +39,6 @@
 		6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */; };
 		6EBE37DD267F38F0008BB15D /* LoginSignUpReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DC267F38F0008BB15D /* LoginSignUpReturn.swift */; };
 		6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */; };
-		6EC26BAD2689F93400391916 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BAC2689F93400391916 /* test.storyboard */; };
 		6EC26BB1268B3A3200391916 /* DiaryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC26BB0268B3A3200391916 /* DiaryDetail.storyboard */; };
 		6EC26BB5268B3D7600391916 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BB4268B3D7600391916 /* EmotionViewController.swift */; };
 		6EC26BB7268B533100391916 /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC26BB6268B533100391916 /* DiaryEditViewController.swift */; };
@@ -105,7 +104,6 @@
 		6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		6EBE37DC267F38F0008BB15D /* LoginSignUpReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpReturn.swift; sourceTree = "<group>"; };
 		6EBE37DE267F391F008BB15D /* LoginSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpUser.swift; sourceTree = "<group>"; };
-		6EC26BAC2689F93400391916 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		6EC26BB0268B3A3200391916 /* DiaryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryDetail.storyboard; sourceTree = "<group>"; };
 		6EC26BB4268B3D7600391916 /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 		6EC26BB6268B533100391916 /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				6EB04415268035CC00E047A7 /* Main.storyboard */,
 				6EC26BB0268B3A3200391916 /* DiaryDetail.storyboard */,
 				6EC26BBE268B6A1100391916 /* DiaryEdit.storyboard */,
-				6EC26BAC2689F93400391916 /* test.storyboard */,
 				6EC26BC0268F351300391916 /* WeatherDescription.storyboard */,
 				6EC26BC6268F4B6200391916 /* NickNameEdit.storyboard */,
 				6EC26BCE2690235A00391916 /* PasswordEdit.storyboard */,
@@ -433,7 +430,6 @@
 				6EBE37C926786A13008BB15D /* Tutorial.storyboard in Resources */,
 				6EC26BFC2699FF9E00391916 /* Flash.storyboard in Resources */,
 				6EC26BCF2690235A00391916 /* PasswordEdit.storyboard in Resources */,
-				6EC26BAD2689F93400391916 /* test.storyboard in Resources */,
 				6EEC0A972687801100F3ABEC /* DiaryListCell.xib in Resources */,
 				6EC26BF82694907000391916 /* NanumSquareRoundB.ttf in Resources */,
 			);
