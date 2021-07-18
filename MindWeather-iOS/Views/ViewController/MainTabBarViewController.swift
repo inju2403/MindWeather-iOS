@@ -18,17 +18,10 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         self.delegate = self
         
-        _ = service.getDiarys()
-            .subscribe { event in
-                switch event {
-                case .success(let diarys):
-                    print("diarys: ", diarys)
-                case .failure(let error):
-                    print("Error: ", error)
-                }
-                
-            }
-            .disposed(by: disposeBag)
+        // 네비게이션 바 숨김
+        self.navigationController?.isNavigationBarHidden = true
+        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {

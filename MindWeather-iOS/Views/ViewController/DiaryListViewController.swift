@@ -33,7 +33,6 @@ class DiaryListViewController : UIViewController {
         
         diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
         
-        setUI()
         bindTableView()
         diaryListViewModel.getDiarys()
     }
@@ -45,13 +44,6 @@ class DiaryListViewController : UIViewController {
     
     @objc private func isUpdateDiarys() {
         diaryListViewModel.getDiarys()
-    }
-    
-    private func setUI() {
-        // 네비게이션 바 숨김
-        self.navigationController?.isNavigationBarHidden = true
-        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     private func bindTableView() {

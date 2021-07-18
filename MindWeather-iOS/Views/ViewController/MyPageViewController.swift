@@ -25,7 +25,6 @@ class MyPageViewController : UIViewController {
         
         super.viewDidLoad()
        
-        setUI()
         setFonts()
         usernameText.text = UserDefaults.standard.string(forKey: "username")
         emailText.text = UserDefaults.standard.string(forKey: "email")
@@ -57,13 +56,6 @@ class MyPageViewController : UIViewController {
         dictionary.keys.forEach { key in
             defaults.removeObject(forKey: key)
         }
-    }
-    
-    private func setUI() {
-        // 네비게이션 바 숨김
-        self.navigationController?.isNavigationBarHidden = true
-        // 네비게이션 바를 숨기면서 스와이프 동작이 가능하게 함
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     private func setFonts() {
