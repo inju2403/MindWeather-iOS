@@ -21,6 +21,7 @@ class PasswordEditViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        anywhereAllowsBackSwipeGesture()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -135,6 +136,16 @@ class PasswordEditViewController: UIViewController {
         }
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func anywhereAllowsBackSwipeGesture() {
+        // 네비게이션 컨트롤러 화면의 왼쪽 모서리 이외의 부분에서도 Back Swipe Gesture가 작동할 수 있도록 함
+        let popGestureRecognizer = self.navigationController!.interactivePopGestureRecognizer!
+        if let targets = popGestureRecognizer.value(forKey: "targets") as? NSMutableArray {
+            let gestureRecognizer = UIPanGestureRecognizer()
+            gestureRecognizer.setValue(targets, forKey: "targets")
+            self.view.addGestureRecognizer(gestureRecognizer)
+        }
     }
 }
 
