@@ -24,7 +24,7 @@ class DiaryListViewModel: DiaryListViewModelType {
     private let service = DiaryServiceImpl()
     
     var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
-    var diaryItemCnt = BehaviorRelay(value: 0)
+    var diaryItemCnt = BehaviorRelay(value: -1)
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
