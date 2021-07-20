@@ -33,13 +33,13 @@ class DiaryListViewController : UIViewController {
         
         diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
         
+        emptyStateText.isHidden = true
         bindTableView()
         diaryListViewModel.getDiarys()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.emptyStateText.isHidden = true
     }
     
     @objc private func isUpdateDiarys() {
