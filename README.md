@@ -1,8 +1,22 @@
+
+## Link    
+[App Store](https://apps.apple.com/kr/app/%EB%A7%88%EC%9D%8C%EC%9D%98%EB%82%A0%EC%94%A8/id1577169376)      
+
+<br/>    
+
+    
 # 마음의 날씨 (iOS AI Diary App)    
 
 <div><img src="https://user-images.githubusercontent.com/56947879/125798946-57a5a0a8-cc6f-453e-bf95-49af93bf3eec.png"  width="100%"></div>
 
 <br/>
+
+
+## Version     
+1.1.1      
+
+<br/>    
+
 
 ## Project Description    
 
