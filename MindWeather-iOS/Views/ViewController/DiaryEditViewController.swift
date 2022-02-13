@@ -81,7 +81,8 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
         diaryDetailViewModel.receiver
             .observe(on: MainScheduler.instance)
             .subscribe(
-                onNext: { value in
+                onNext: { [weak self] value in
+                    guard let self = self else { return }
                     if value == "addOrUpdateDiary" {
                         //일기 작성 or 수정 후 dismiss
                         

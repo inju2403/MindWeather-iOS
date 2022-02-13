@@ -49,13 +49,15 @@ class DiaryListViewController : UIViewController {
         diaryListViewModel.receiver
             .observe(on: MainScheduler.instance)
             .do(
-                onSubscribe: {
+                onSubscribe: { [weak self] in
+                    guard let self = self else { return }
                     //로딩 ui 켜기
                     self.loadingUI.isHidden = false
                     self.loadingUI.startAnimating()
                 })
             .subscribe(
-                onNext: { value in
+                onNext: { [weak self] value in
+                    guard let self = self else { return }
                     if value == "getDiarys" {
                         //로딩 ui 끄기
                         self.loadingUI.isHidden = true
@@ -66,7 +68,8 @@ class DiaryListViewController : UIViewController {
         
         diaryListIsUpdated
             .subscribe(
-                onNext: { value in
+                onNext: { [weak self] value in
+                    guard let self = self else { return }
                     self.diaryListViewModel.getDiarys()
                 })
             .disposed(by: disposeBag)
@@ -74,7 +77,8 @@ class DiaryListViewController : UIViewController {
         diaryListViewModel.diaryItemCnt
             .observe(on: MainScheduler.instance)
             .subscribe(
-                onNext: { value in
+                onNext: { [weak self] value in
+                    guard let self = self else { return }
                     if value == 0 {
                         // 일기 리스트 사이즈가 0이면 문구 노출
                         self.emptyStateText.isHidden = false
@@ -87,7 +91,7 @@ class DiaryListViewController : UIViewController {
         
         diaryListViewModel.diaryList
             .asDriver()
-            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { (index: Int, element: Diary, cell: DiaryListCell) in
+            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { [weak self] (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
                 
                 let dateFormatter = DateFormatter()
@@ -146,7 +150,7 @@ class DiaryListViewController : UIViewController {
         //테이블뷰에 애니메이션 추가
         diaryListTableView.rx
                     .willDisplayCell
-                    .subscribe(onNext: { cell, indexPath in
+                    .subscribe(onNext: { [weak self] cell, indexPath in
                             cell.alpha = 0
                             UIView.animate(withDuration: 0.15) {
                                 cell.alpha = 1.0

@@ -90,7 +90,8 @@ class DiaryDetailViewController : UIViewController {
         diaryDetailViewModel.receiver
             .observe(on: MainScheduler.instance)
             .do(
-                onSubscribe: {
+                onSubscribe: { [weak self] in
+                    guard let self = self else { return }
                     //로딩 ui 켜기
                     self.dateText.isHidden = true
                     self.content.isHidden = true
@@ -103,7 +104,8 @@ class DiaryDetailViewController : UIViewController {
                     self.loadingText.isHidden = false
                 })
             .subscribe(
-                onNext: { value in
+                onNext: { [weak self] value in
+                    guard let self = self else { return }
                     if value == "deleteDiary" {
                         NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
                         
