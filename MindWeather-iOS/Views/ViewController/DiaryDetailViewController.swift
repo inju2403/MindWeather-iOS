@@ -98,8 +98,7 @@ class DiaryDetailViewController : UIViewController {
                     self.weatherImage.isHidden = true
                     self.weatherDescription.isHidden = true
                     self.yearText.isHidden = true
-                    
-                    self.loadingUI.isHidden = false
+
                     self.loadingUI.startAnimating()
                     self.loadingText.isHidden = false
                 })
@@ -115,7 +114,6 @@ class DiaryDetailViewController : UIViewController {
                     }
                     
                     //로딩 ui 끄기
-                    self.loadingUI.isHidden = true
                     self.loadingUI.stopAnimating()
                     self.loadingText.isHidden = true
                     

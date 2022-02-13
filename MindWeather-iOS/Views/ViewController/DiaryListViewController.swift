@@ -52,7 +52,6 @@ class DiaryListViewController : UIViewController {
                 onSubscribe: { [weak self] in
                     guard let self = self else { return }
                     //로딩 ui 켜기
-                    self.loadingUI.isHidden = false
                     self.loadingUI.startAnimating()
                 })
             .subscribe(
@@ -60,7 +59,6 @@ class DiaryListViewController : UIViewController {
                     guard let self = self else { return }
                     if value == "getDiarys" {
                         //로딩 ui 끄기
-                        self.loadingUI.isHidden = true
                         self.loadingUI.stopAnimating()
                     }
                 })

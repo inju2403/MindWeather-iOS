@@ -108,8 +108,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         self.yearText.isHidden = false
                         self.explainText.isHidden = false
                         self.setUI()
-                        
-                        self.loadingUI.isHidden = true
+
                         self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
                     } else if value == "newStateDiary" {
@@ -131,7 +130,6 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
         }
         
         //로딩 ui 켜기
-        loadingUI.isHidden = false
         loadingUI.startAnimating()
         loadingText.isHidden = false
         
