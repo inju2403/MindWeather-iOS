@@ -9,14 +9,14 @@ import Foundation
 
 struct Diary: Codable {
     var id: Int? = 987654321
-    var content: String?
-    var created_at: String?
-    var updated_at: String?
-    var happiness: Int?
-    var neutrality: Int?
-    var sadness: Int?
-    var worry: Int?
-    var anger: Int?
-    var qna: String?
-    var user: Int?
+    let content: String?
+    let created_at: String?
+    let updated_at: String?
+    let happiness: Int?
+    let neutrality: Int?
+    let sadness: Int?
+    let worry: Int?
+    let anger: Int?
+    let qna: String?
+    let user: Int?
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct ChangeUserName: Codable {
-    var username: String
+    let username: String
 }

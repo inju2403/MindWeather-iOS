@@ -8,7 +8,7 @@
 import Foundation
 
 struct ChangePassword: Codable {
-    var old_password: String
-    var new_password1: String
-    var new_password2: String
+    let old_password: String
+    let new_password1: String
+    let new_password2: String
 }
