@@ -29,9 +29,17 @@ class DiaryListViewController : UIViewController {
         super.viewDidLoad()
         
         // 일기 리스트에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
-        NotificationCenter.default.addObserver(self, selector: #selector(isUpdateDiarys), name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object:  nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(isUpdateDiarys),
+            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+            object:  nil
+        )
         
-        diaryListTableView.register(UINib(nibName: K.diaryCellNibName, bundle: nil), forCellReuseIdentifier: K.diaryListCellIdentifier)
+        diaryListTableView.register(
+            UINib(nibName: K.diaryCellNibName, bundle: nil),
+            forCellReuseIdentifier: K.diaryListCellIdentifier
+        )
         
         bindTableView()
         diaryListViewModel.getDiarys()
@@ -89,7 +97,8 @@ class DiaryListViewController : UIViewController {
         
         diaryListViewModel.diaryList
             .asDriver()
-            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) { [weak self] (index: Int, element: Diary, cell: DiaryListCell) in
+            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) {
+                [weak self] (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
                 
                 let dateFormatter = DateFormatter()
@@ -146,8 +155,7 @@ class DiaryListViewController : UIViewController {
                     }).disposed(by: disposeBag)
         
         //테이블뷰에 애니메이션 추가
-        diaryListTableView.rx
-                    .willDisplayCell
+        diaryListTableView.rx.willDisplayCell
                     .subscribe(onNext: { [weak self] cell, indexPath in
                             cell.alpha = 0
                             UIView.animate(withDuration: 0.15) {
@@ -174,7 +182,6 @@ extension DiaryListViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DiaryDetailViewController
-
         guard diaryListTableView.indexPathForSelectedRow != nil else { return }
         destinationVC.diaryId = selectedDiaryId
     }

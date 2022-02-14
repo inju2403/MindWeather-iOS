@@ -106,9 +106,14 @@ class DiaryDetailViewController : UIViewController {
                 onNext: { [weak self] value in
                     guard let self = self else { return }
                     if value == "deleteDiary" {
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
-                        
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName), object: nil)
+                        NotificationCenter.default.post(
+                            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+                            object: nil
+                        )
+                        NotificationCenter.default.post(
+                            name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName),
+                            object: nil
+                        )
                         
                         self.navigationController?.popViewController(animated: true)
                     }
@@ -132,7 +137,11 @@ class DiaryDetailViewController : UIViewController {
         let attrString = NSMutableAttributedString(string: content.text!)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 6
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(
+            NSAttributedString.Key.paragraphStyle,
+            value: paragraphStyle,
+            range: NSMakeRange(0, attrString.length)
+        )
         content.attributedText = attrString
         
         content.textAlignment = .center

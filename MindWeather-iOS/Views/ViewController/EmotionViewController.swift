@@ -36,7 +36,11 @@ class EmotionViewController : UIViewController {
         super.viewDidLoad()
         
         // 감정 그래프에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
-        NotificationCenter.default.addObserver(self, selector: #selector(isUpdateEmotions), name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object:  nil)
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(isUpdateEmotions),
+            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+            object:  nil
+        )
         
         setUI()
         bindViewModel()
@@ -146,7 +150,11 @@ class EmotionViewController : UIViewController {
             emotionNames.append("분노")
         }
         
-        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "한주의 감정")
+        customizeChart(
+            dataPoints: emotionNames,
+            values: emotionsRate.map{ $0 },
+            title: "한주의 감정"
+        )
     }
     
     private func makeChartaMonth() {
@@ -187,7 +195,11 @@ class EmotionViewController : UIViewController {
             emotionNames.append("분노")
         }
         
-        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "한달의 감정")
+        customizeChart(
+            dataPoints: emotionNames,
+            values: emotionsRate.map{ $0 },
+            title: "한달의 감정"
+        )
     }
     
     private func makeChartSixMonth() {
@@ -228,7 +240,11 @@ class EmotionViewController : UIViewController {
             emotionNames.append("분노")
         }
         
-        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "6개월의 감정")
+        customizeChart(
+            dataPoints: emotionNames,
+            values: emotionsRate.map{ $0 },
+            title: "6개월의 감정"
+        )
     }
     
     private func makeChartaYear() {
@@ -269,7 +285,11 @@ class EmotionViewController : UIViewController {
             emotionNames.append("분노")
         }
         
-        customizeChart(dataPoints: emotionNames, values: emotionsRate.map{ $0 }, title: "1년의 감정")
+        customizeChart(
+            dataPoints: emotionNames,
+            values: emotionsRate.map{ $0 },
+            title: "1년의 감정"
+        )
     }
     
     
@@ -317,7 +337,13 @@ class EmotionViewController : UIViewController {
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-        let colors: [UIColor] = [UIColor(rgb: K.goldColor), UIColor(rgb: K.greyColor), UIColor(rgb: K.pupleColor), UIColor(rgb: K.blueColor), UIColor(rgb: K.redColor)]
+        let colors: [UIColor] = [
+            UIColor(rgb: K.goldColor),
+            UIColor(rgb: K.greyColor),
+            UIColor(rgb: K.pupleColor),
+            UIColor(rgb: K.blueColor),
+            UIColor(rgb: K.redColor)
+        ]
         return colors
     }
 }

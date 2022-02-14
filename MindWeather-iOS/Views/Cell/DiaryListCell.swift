@@ -11,8 +11,8 @@ class DiaryListCell: UITableViewCell {
 
     @IBOutlet weak var diaryCardImage: UIImageView!
     @IBOutlet weak var summaryView: UILabel!
-    
     @IBOutlet weak var dateText: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +32,11 @@ class DiaryListCell: UITableViewCell {
         let attrString = NSMutableAttributedString(string: summaryView.text!)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 6
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(
+            NSAttributedString.Key.paragraphStyle,
+            value: paragraphStyle,
+            range: NSMakeRange(0, attrString.length)
+        )
         summaryView.attributedText = attrString
     }
 }

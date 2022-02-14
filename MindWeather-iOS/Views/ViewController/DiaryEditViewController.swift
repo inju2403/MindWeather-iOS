@@ -95,13 +95,17 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         self.loadingUI.stopAnimating()
                         self.loadingText.isHidden = true
                         
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName), object: nil)
-                        
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName), object: nil)
+                        NotificationCenter.default.post(
+                            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+                            object: nil
+                        )
+                        NotificationCenter.default.post(
+                            name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName),
+                            object: nil
+                        )
                         
                         self.dismiss(animated: true, completion: nil)
                     } else if value == "loadDiary" {
-                        
                         //로딩 ui 끄기
                         self.dateText.isHidden = false
                         self.content.isHidden = false
@@ -150,34 +154,40 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
     
     // 키보드가 올라올 때 텍스트뷰를 가리지 않도록 세팅
     private func setTextView() {
-        willShowToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
-            
-            guard let strongSelf = self else { return }
+        willShowToken = NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillShowNotification,
+            object: nil,
+            queue: OperationQueue.main,
+            using: { [weak self] (noti) in
+            guard let self = self else { return }
             
             if let frame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let height = frame.cgRectValue.height
                 
-                var inset = strongSelf.content.contentInset
+                var inset = self.content.contentInset
                 inset.bottom = height - 80
-                strongSelf.content.contentInset = inset
+                self.content.contentInset = inset
                 
-                inset = strongSelf.content.horizontalScrollIndicatorInsets
+                inset = self.content.horizontalScrollIndicatorInsets
                 inset.bottom = height - 80
-                strongSelf.content.scrollIndicatorInsets = inset
+                self.content.scrollIndicatorInsets = inset
             }
         })
         
-        willHideToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
-            
-            guard let strongSelf = self else { return }
+        willHideToken = NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            queue: OperationQueue.main,
+            using: { [weak self] (noti) in
+            guard let self = self else { return }
                 
-            var inset = strongSelf.content.contentInset
+            var inset = self.content.contentInset
             inset.bottom = 0
-            strongSelf.content.contentInset = inset
+            self.content.contentInset = inset
             
-            inset = strongSelf.content.horizontalScrollIndicatorInsets
+            inset = self.content.horizontalScrollIndicatorInsets
             inset.bottom = 0
-            strongSelf.content.scrollIndicatorInsets = inset
+            self.content.scrollIndicatorInsets = inset
         })
     }
     
@@ -185,7 +195,11 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
         let attrString = NSMutableAttributedString(string: content.text ?? "")
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 6
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(
+            NSAttributedString.Key.paragraphStyle,
+            value: paragraphStyle,
+            range: NSMakeRange(0, attrString.length)
+        )
         content.attributedText = attrString
         content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
         content.textColor = UIColor(rgb: K.brownColor)
