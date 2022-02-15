@@ -8,7 +8,7 @@
 import Foundation
 
 struct Diary: Codable {
-    var id: Int? = 987654321
+    var id: Int? = K.newDiaryValue
     let content: String?
     let created_at: String?
     let updated_at: String?
