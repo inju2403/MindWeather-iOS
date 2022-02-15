@@ -92,7 +92,6 @@ class EmotionViewController : UIViewController {
     }
     
     private func setUI() {
-        //네비게이션 바 숨김
         self.navigationController?.isNavigationBarHidden = true
     }
     
@@ -111,56 +110,40 @@ class EmotionViewController : UIViewController {
     @IBAction func aWeekButtonPressed(_ sender: UIButton) {
         makeChartaWeek()
     }
-    
+
     private func makeChartaWeek() {
-        // 한주의 감정
-
         setEmotionButtonAttribute(with: aWeekButton)
-
         setEmotionsRate(with: aWeekEmotion)
-        
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
             title: K.aWeekEmotionTitle
         )
     }
-    
+
     private func makeChartaMonth() {
-        // 한달의 감정
-
         setEmotionButtonAttribute(with: aMonthButton)
-
         setEmotionsRate(with: aMonthEmotion)
-        
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
             title: K.aMonthEmotionTitle
         )
     }
-    
+
     private func makeChartSixMonth() {
-        // 6개월의 감정
-
         setEmotionButtonAttribute(with: sixMonthButton)
-
         setEmotionsRate(with: sixMonthEmotion)
-        
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
             title: K.sixMonthEmotionTitle
         )
     }
-    
+
     private func makeChartaYear() {
-        // 1년의 감정
-
         setEmotionButtonAttribute(with: aYearButton)
-
         setEmotionsRate(with: aYearEmotion)
-        
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
