@@ -126,29 +126,8 @@ class EmotionViewController : UIViewController {
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aWeekButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
-        
-        emotionNames = []
-        emotionsRate = []
-        if aWeekEmotion.happiness > 0 {
-            emotionsRate.append(aWeekEmotion.happiness)
-            emotionNames.append(K.happinessName)
-        }
-        if aWeekEmotion.neutrality > 0 {
-            emotionsRate.append(aWeekEmotion.neutrality)
-            emotionNames.append(K.neutralityName)
-        }
-        if aWeekEmotion.worry > 0 {
-            emotionsRate.append(aWeekEmotion.worry)
-            emotionNames.append(K.worryName)
-        }
-        if aWeekEmotion.sadness > 0 {
-            emotionsRate.append(aWeekEmotion.sadness)
-            emotionNames.append(K.sadnessName)
-        }
-        if aWeekEmotion.anger > 0 {
-            emotionsRate.append(aWeekEmotion.anger)
-            emotionNames.append(K.angerName)
-        }
+
+        setEmotionsRate(with: aWeekEmotion)
         
         customizeChart(
             dataPoints: emotionNames,
@@ -171,29 +150,8 @@ class EmotionViewController : UIViewController {
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
-        
-        emotionNames = []
-        emotionsRate = []
-        if aMonthEmotion.happiness > 0 {
-            emotionsRate.append(aMonthEmotion.happiness)
-            emotionNames.append(K.happinessName)
-        }
-        if aMonthEmotion.neutrality > 0 {
-            emotionsRate.append(aMonthEmotion.neutrality)
-            emotionNames.append(K.neutralityName)
-        }
-        if aMonthEmotion.worry > 0 {
-            emotionsRate.append(aMonthEmotion.worry)
-            emotionNames.append(K.worryName)
-        }
-        if aMonthEmotion.sadness > 0 {
-            emotionsRate.append(aMonthEmotion.sadness)
-            emotionNames.append(K.sadnessName)
-        }
-        if aMonthEmotion.anger > 0 {
-            emotionsRate.append(aMonthEmotion.anger)
-            emotionNames.append(K.angerName)
-        }
+
+        setEmotionsRate(with: aMonthEmotion)
         
         customizeChart(
             dataPoints: emotionNames,
@@ -216,29 +174,8 @@ class EmotionViewController : UIViewController {
         sixMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
-        
-        emotionNames = []
-        emotionsRate = []
-        if sixMonthEmotion.happiness > 0 {
-            emotionsRate.append(sixMonthEmotion.happiness)
-            emotionNames.append(K.happinessName)
-        }
-        if sixMonthEmotion.neutrality > 0 {
-            emotionsRate.append(sixMonthEmotion.neutrality)
-            emotionNames.append(K.neutralityName)
-        }
-        if sixMonthEmotion.worry > 0 {
-            emotionsRate.append(sixMonthEmotion.worry)
-            emotionNames.append(K.worryName)
-        }
-        if sixMonthEmotion.sadness > 0 {
-            emotionsRate.append(sixMonthEmotion.sadness)
-            emotionNames.append(K.sadnessName)
-        }
-        if sixMonthEmotion.anger > 0 {
-            emotionsRate.append(sixMonthEmotion.anger)
-            emotionNames.append(K.angerName)
-        }
+
+        setEmotionsRate(with: sixMonthEmotion)
         
         customizeChart(
             dataPoints: emotionNames,
@@ -261,29 +198,8 @@ class EmotionViewController : UIViewController {
         sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
-        
-        emotionNames = []
-        emotionsRate = []
-        if aYearEmotion.happiness > 0 {
-            emotionsRate.append(aYearEmotion.happiness)
-            emotionNames.append(K.happinessName)
-        }
-        if aYearEmotion.neutrality > 0 {
-            emotionsRate.append(aYearEmotion.neutrality)
-            emotionNames.append(K.neutralityName)
-        }
-        if aYearEmotion.worry > 0 {
-            emotionsRate.append(aYearEmotion.worry)
-            emotionNames.append(K.worryName)
-        }
-        if aYearEmotion.sadness > 0 {
-            emotionsRate.append(aYearEmotion.sadness)
-            emotionNames.append(K.sadnessName)
-        }
-        if aYearEmotion.anger > 0 {
-            emotionsRate.append(aYearEmotion.anger)
-            emotionNames.append(K.angerName)
-        }
+
+        setEmotionsRate(with: aYearEmotion)
         
         customizeChart(
             dataPoints: emotionNames,
@@ -334,6 +250,32 @@ class EmotionViewController : UIViewController {
         emotionGraph.legend.textColor = UIColor(rgb: K.brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
+    }
+
+    private func setEmotionsRate(with period: Emotion) {
+        emotionsRate = []
+        emotionNames = []
+
+        if period.happiness > 0 {
+            emotionsRate.append(period.happiness)
+            emotionNames.append(K.happinessName)
+        }
+        if period.neutrality > 0 {
+            emotionsRate.append(period.neutrality)
+            emotionNames.append(K.neutralityName)
+        }
+        if period.worry > 0 {
+            emotionsRate.append(period.worry)
+            emotionNames.append(K.worryName)
+        }
+        if period.sadness > 0 {
+            emotionsRate.append(period.sadness)
+            emotionNames.append(K.sadnessName)
+        }
+        if period.anger > 0 {
+            emotionsRate.append(period.anger)
+            emotionNames.append(K.angerName)
+        }
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
