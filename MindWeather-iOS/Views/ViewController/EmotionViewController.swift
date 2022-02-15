@@ -114,18 +114,8 @@ class EmotionViewController : UIViewController {
     
     private func makeChartaWeek() {
         // 한주의 감정
-        
-        // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
-        
-        // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
-        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
+
+        setEmotionButtonAttribute(with: aWeekButton)
 
         setEmotionsRate(with: aWeekEmotion)
         
@@ -138,18 +128,8 @@ class EmotionViewController : UIViewController {
     
     private func makeChartaMonth() {
         // 한달의 감정
-        
-        // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
-        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        
-        // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
-        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
-        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+
+        setEmotionButtonAttribute(with: aMonthButton)
 
         setEmotionsRate(with: aMonthEmotion)
         
@@ -162,18 +142,8 @@ class EmotionViewController : UIViewController {
     
     private func makeChartSixMonth() {
         // 6개월의 감정
-        
-        // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
-        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        
-        // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
-        sixMonthButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
-        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+
+        setEmotionButtonAttribute(with: sixMonthButton)
 
         setEmotionsRate(with: sixMonthEmotion)
         
@@ -186,18 +156,8 @@ class EmotionViewController : UIViewController {
     
     private func makeChartaYear() {
         // 1년의 감정
-        
-        // 폰트 설정
-        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
-        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
-        
-        // 텍스트 컬러 설정
-        aYearButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
-        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
-        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+
+        setEmotionButtonAttribute(with: aYearButton)
 
         setEmotionsRate(with: aYearEmotion)
         
@@ -250,6 +210,21 @@ class EmotionViewController : UIViewController {
         emotionGraph.legend.textColor = UIColor(rgb: K.brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
+    }
+
+    private func setEmotionButtonAttribute(with periodButton: UIButton) {
+        aYearButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        sixMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aMonthButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+        aWeekButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 16)
+
+        aYearButton.setTitleColor(UIColor.lightGray, for: .normal)
+        sixMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aMonthButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
+
+        periodButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
+        periodButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
     }
 
     private func setEmotionsRate(with period: Emotion) {
