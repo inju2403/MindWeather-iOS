@@ -37,4 +37,15 @@ struct K {
     static let pupleColor = 0xA575CD // 걱정
     static let blueColor = 0x42A5F5 // 슬픔
     static let redColor = 0xFF4950 // 분노
+
+    static let happinessName = "행복"
+    static let neutralityName = "중립"
+    static let worryName = "걱정"
+    static let sadnessName = "슬픔"
+    static let angerName = "분노"
+
+    static let aWeekEmotionTitle = "한주의 감정"
+    static let aMonthEmotionTitle = "한달의 감정"
+    static let sixMonthEmotionTitle = "6개월의 감정"
+    static let aYearEmotionTitle = "1년의 감정"
 }

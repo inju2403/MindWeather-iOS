@@ -131,29 +131,29 @@ class EmotionViewController : UIViewController {
         emotionsRate = []
         if aWeekEmotion.happiness > 0 {
             emotionsRate.append(aWeekEmotion.happiness)
-            emotionNames.append("행복")
+            emotionNames.append(K.happinessName)
         }
         if aWeekEmotion.neutrality > 0 {
             emotionsRate.append(aWeekEmotion.neutrality)
-            emotionNames.append("중립")
+            emotionNames.append(K.neutralityName)
         }
         if aWeekEmotion.worry > 0 {
             emotionsRate.append(aWeekEmotion.worry)
-            emotionNames.append("걱정")
+            emotionNames.append(K.worryName)
         }
         if aWeekEmotion.sadness > 0 {
             emotionsRate.append(aWeekEmotion.sadness)
-            emotionNames.append("슬픔")
+            emotionNames.append(K.sadnessName)
         }
         if aWeekEmotion.anger > 0 {
             emotionsRate.append(aWeekEmotion.anger)
-            emotionNames.append("분노")
+            emotionNames.append(K.angerName)
         }
         
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: "한주의 감정"
+            title: K.aWeekEmotionTitle
         )
     }
     
@@ -176,29 +176,29 @@ class EmotionViewController : UIViewController {
         emotionsRate = []
         if aMonthEmotion.happiness > 0 {
             emotionsRate.append(aMonthEmotion.happiness)
-            emotionNames.append("행복")
+            emotionNames.append(K.happinessName)
         }
         if aMonthEmotion.neutrality > 0 {
             emotionsRate.append(aMonthEmotion.neutrality)
-            emotionNames.append("중립")
+            emotionNames.append(K.neutralityName)
         }
         if aMonthEmotion.worry > 0 {
             emotionsRate.append(aMonthEmotion.worry)
-            emotionNames.append("걱정")
+            emotionNames.append(K.worryName)
         }
         if aMonthEmotion.sadness > 0 {
             emotionsRate.append(aMonthEmotion.sadness)
-            emotionNames.append("슬픔")
+            emotionNames.append(K.sadnessName)
         }
         if aMonthEmotion.anger > 0 {
             emotionsRate.append(aMonthEmotion.anger)
-            emotionNames.append("분노")
+            emotionNames.append(K.angerName)
         }
         
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: "한달의 감정"
+            title: K.aMonthEmotionTitle
         )
     }
     
@@ -221,29 +221,29 @@ class EmotionViewController : UIViewController {
         emotionsRate = []
         if sixMonthEmotion.happiness > 0 {
             emotionsRate.append(sixMonthEmotion.happiness)
-            emotionNames.append("행복")
+            emotionNames.append(K.happinessName)
         }
         if sixMonthEmotion.neutrality > 0 {
             emotionsRate.append(sixMonthEmotion.neutrality)
-            emotionNames.append("중립")
+            emotionNames.append(K.neutralityName)
         }
         if sixMonthEmotion.worry > 0 {
             emotionsRate.append(sixMonthEmotion.worry)
-            emotionNames.append("걱정")
+            emotionNames.append(K.worryName)
         }
         if sixMonthEmotion.sadness > 0 {
             emotionsRate.append(sixMonthEmotion.sadness)
-            emotionNames.append("슬픔")
+            emotionNames.append(K.sadnessName)
         }
         if sixMonthEmotion.anger > 0 {
             emotionsRate.append(sixMonthEmotion.anger)
-            emotionNames.append("분노")
+            emotionNames.append(K.angerName)
         }
         
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: "6개월의 감정"
+            title: K.sixMonthEmotionTitle
         )
     }
     
@@ -266,29 +266,29 @@ class EmotionViewController : UIViewController {
         emotionsRate = []
         if aYearEmotion.happiness > 0 {
             emotionsRate.append(aYearEmotion.happiness)
-            emotionNames.append("행복")
+            emotionNames.append(K.happinessName)
         }
         if aYearEmotion.neutrality > 0 {
             emotionsRate.append(aYearEmotion.neutrality)
-            emotionNames.append("중립")
+            emotionNames.append(K.neutralityName)
         }
         if aYearEmotion.worry > 0 {
             emotionsRate.append(aYearEmotion.worry)
-            emotionNames.append("걱정")
+            emotionNames.append(K.worryName)
         }
         if aYearEmotion.sadness > 0 {
             emotionsRate.append(aYearEmotion.sadness)
-            emotionNames.append("슬픔")
+            emotionNames.append(K.sadnessName)
         }
         if aYearEmotion.anger > 0 {
             emotionsRate.append(aYearEmotion.anger)
-            emotionNames.append("분노")
+            emotionNames.append(K.angerName)
         }
         
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: "1년의 감정"
+            title: K.aYearEmotionTitle
         )
     }
     
