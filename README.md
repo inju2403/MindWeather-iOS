@@ -71,8 +71,8 @@ diaryDetailViewModel.content
 var content: BehaviorRelay<String> 
             = BehaviorRelay(value: "")
 
-func loadDiary(diaryId: Int) {
-    _ = service.getDiaryById(diaryId: diaryId)
+func diary(diaryId: Int) {
+    service.getDiaryById(diaryId: diaryId)
         .subscribe { event in
             switch event {
             case .success(let diary):
