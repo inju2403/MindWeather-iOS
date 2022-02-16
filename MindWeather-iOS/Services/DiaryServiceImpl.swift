@@ -78,7 +78,6 @@ class DiaryServiceImpl: DiaryServiceType {
                         
                         dateFormatter.dateFormat = "dd"
                         let curDay = Int(dateFormatter.string(from: Date()))!
-
                         let curTimeValue = curYear * (12 * 30) + curMonth * 30 + curDay
                         
                         for index in 0..<diarys.count {
@@ -87,9 +86,7 @@ class DiaryServiceImpl: DiaryServiceType {
                             var diaryYear = 0
                             var diaryMonth = 0
                             var diaryDay = 0
-                            
-                            
-                            
+
                             dateFormatter.dateFormat = "yyyy-MM-dd"
                             dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
                             
@@ -110,11 +107,8 @@ class DiaryServiceImpl: DiaryServiceType {
                             }
                             
                             let diaryTimeValue = diaryYear * (12 * 30) + diaryMonth * 30 + diaryDay
-                            
                             let emotionValues = [diary.happiness, diary.neutrality, diary.sadness, diary.worry, diary.anger]
-                            
                             var mx = 0
-                            
                             for i in 0..<emotionValues.count {
                                 if(mx < emotionValues[i]!) {
                                     mx = emotionValues[i]!;
@@ -168,9 +162,7 @@ class DiaryServiceImpl: DiaryServiceType {
                     }
                     
                 }
-        
             return Disposables.create()
         }
     }
-    
 }
