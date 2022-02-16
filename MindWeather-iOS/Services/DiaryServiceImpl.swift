@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class DiaryServiceImpl: DiaryServiceType {
+class DiaryServiceImpl: DiaryService {
     
     let repo = DiaryRepoImpl()
     

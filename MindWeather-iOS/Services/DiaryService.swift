@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-protocol DiaryServiceType {
+protocol DiaryService {
     func diarys() -> Single<[Diary]>
     func diary(diaryId: Int) -> Single<Diary>
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool>
