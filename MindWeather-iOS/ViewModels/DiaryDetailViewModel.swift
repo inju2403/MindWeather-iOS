@@ -38,10 +38,11 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var weatherImageDescription: BehaviorRelay<String> = BehaviorRelay(value: "행복을 느낀 하루")
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
-    
+
     func addOrUpdateDiary(content: Content, diaryId: Int) {
         service.updateDiary(content: content, diaryId: diaryId)
-            .subscribe { event in
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
                 switch event {
                 case .success(_):
                     self.receiver.onNext("addOrUpdateDiary")
@@ -55,7 +56,8 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     func deleteDiary(diaryId: Int) {
         service.deleteDiary(diaryId: diaryId)
-            .subscribe { event in
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
                 switch event {
                 case .success(_):
                     self.receiver.onNext("deleteDiary")
@@ -70,7 +72,8 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     func diary(diaryId: Int) {
         service.diary(diaryId: diaryId)
-            .subscribe { event in
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
                 switch event {
                 case .success(let diary):
                     self.content.accept(diary.content ?? "")
@@ -143,6 +146,4 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
         dateFormatter.dateFormat = "''yy"
         self.year.accept(dateFormatter.string(from: Date()))
     }
-    
-    
 }
