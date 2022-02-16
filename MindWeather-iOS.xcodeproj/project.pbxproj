@@ -17,7 +17,7 @@
 		6EB0441C2680B92800E047A7 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441B2680B92800E047A7 /* BaseRouter.swift */; };
 		6EB0441E2680D2FF00E047A7 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441D2680D2FF00E047A7 /* Diary.swift */; };
 		6EB044202680D3F400E047A7 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0441F2680D3F400E047A7 /* Content.swift */; };
-		6EB044252680D57800E047A7 /* DiaryRepoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB044242680D57800E047A7 /* DiaryRepoType.swift */; };
+		6EB044252680D57800E047A7 /* DiaryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB044242680D57800E047A7 /* DiaryRepo.swift */; };
 		6EB044272680D66F00E047A7 /* DiaryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB044262680D66F00E047A7 /* DiaryRepoImpl.swift */; };
 		6EB0442926816AC300E047A7 /* DiaryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0442826816AC300E047A7 /* DiaryServiceType.swift */; };
 		6EB0442B26816AD100E047A7 /* DiaryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0442A26816AD100E047A7 /* DiaryServiceImpl.swift */; };
@@ -80,7 +80,7 @@
 		6EB0441B2680B92800E047A7 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		6EB0441D2680D2FF00E047A7 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		6EB0441F2680D3F400E047A7 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		6EB044242680D57800E047A7 /* DiaryRepoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepoType.swift; sourceTree = "<group>"; };
+		6EB044242680D57800E047A7 /* DiaryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepo.swift; sourceTree = "<group>"; };
 		6EB044262680D66F00E047A7 /* DiaryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepoImpl.swift; sourceTree = "<group>"; };
 		6EB0442826816AC300E047A7 /* DiaryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryServiceType.swift; sourceTree = "<group>"; };
 		6EB0442A26816AD100E047A7 /* DiaryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryServiceImpl.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		6EB044222680D50200E047A7 /* repository */ = {
 			isa = PBXGroup;
 			children = (
-				6EB044242680D57800E047A7 /* DiaryRepoType.swift */,
+				6EB044242680D57800E047A7 /* DiaryRepo.swift */,
 				6EB044262680D66F00E047A7 /* DiaryRepoImpl.swift */,
 			);
 			path = repository;
@@ -509,7 +509,7 @@
 				6EB0441826804FA400E047A7 /* MainTabBarViewController.swift in Sources */,
 				6EBE37D7267ED4FB008BB15D /* LoginRequest.swift in Sources */,
 				6EC26BCB2690091800391916 /* ChangeUserName.swift in Sources */,
-				6EB044252680D57800E047A7 /* DiaryRepoType.swift in Sources */,
+				6EB044252680D57800E047A7 /* DiaryRepo.swift in Sources */,
 				6EC26BBD268B69F800391916 /* EditClickViewController.swift in Sources */,
 				6EB6F96B26A282F30087B19F /* PersonalInformationProcessingViewController.swift in Sources */,
 				6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */,

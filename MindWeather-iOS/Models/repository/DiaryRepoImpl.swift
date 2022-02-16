@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import Alamofire
 
-class DiaryRepoImpl: DiaryRepoType {
+class DiaryRepoImpl: DiaryRepo {
     
     let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
     
