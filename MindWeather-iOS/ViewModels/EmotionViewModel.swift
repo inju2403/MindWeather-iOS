@@ -32,7 +32,7 @@ class EmotionViewModel: EmotionViewModelType {
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
     func emotions() {
-        _ = service.emotions()
+        service.emotions()
             .subscribe { event in
                 switch event {
                 case .success(let emotions):

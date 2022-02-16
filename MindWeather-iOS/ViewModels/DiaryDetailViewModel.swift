@@ -40,7 +40,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
     func addOrUpdateDiary(content: Content, diaryId: Int) {
-        _ = service.updateDiary(content: content, diaryId: diaryId)
+        service.updateDiary(content: content, diaryId: diaryId)
             .subscribe { event in
                 switch event {
                 case .success(_):
@@ -54,7 +54,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     }
     
     func deleteDiary(diaryId: Int) {
-        _ = service.deleteDiary(diaryId: diaryId)
+        service.deleteDiary(diaryId: diaryId)
             .subscribe { event in
                 switch event {
                 case .success(_):
@@ -69,7 +69,7 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     }
     
     func diary(diaryId: Int) {
-        _ = service.diary(diaryId: diaryId)
+        service.diary(diaryId: diaryId)
             .subscribe { event in
                 switch event {
                 case .success(let diary):

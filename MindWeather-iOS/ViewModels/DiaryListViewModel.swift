@@ -29,7 +29,7 @@ class DiaryListViewModel: DiaryListViewModelType {
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
     func diarys() {
-        _ = service.diarys()
+        service.diarys()
             .subscribe { event in
                 switch event {
                 case .success(let diarys):
