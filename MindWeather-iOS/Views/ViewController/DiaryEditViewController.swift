@@ -52,7 +52,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
             loadingUI.isHidden = false
             loadingUI.startAnimating()
             loadingText.isHidden = true
-            diaryDetailViewModel.loadDiary(diaryId: diaryId)
+            diaryDetailViewModel.diary(diaryId: diaryId)
         } else {
             diaryDetailViewModel.newStateDiary()
             
@@ -105,7 +105,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         )
                         
                         self.dismiss(animated: true, completion: nil)
-                    } else if value == "loadDiary" {
+                    } else if value == "diary" {
                         //로딩 ui 끄기
                         self.dateText.isHidden = false
                         self.content.isHidden = false

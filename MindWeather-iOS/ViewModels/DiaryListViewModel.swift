@@ -15,7 +15,7 @@ protocol DiaryListViewModelType {
     
     var receiver: PublishSubject<String> { get set }
     
-    func getDiarys()
+    func diarys()
 }
 
 class DiaryListViewModel: DiaryListViewModelType {
@@ -28,14 +28,14 @@ class DiaryListViewModel: DiaryListViewModelType {
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
-    func getDiarys() {
-        _ = service.getDiarys()
+    func diarys() {
+        _ = service.diarys()
             .subscribe { event in
                 switch event {
                 case .success(let diarys):
                     self.diaryList.accept(diarys)
                     self.diaryItemCnt.accept(diarys.count)
-                    self.receiver.onNext("getDiarys")
+                    self.receiver.onNext("diarys")
                     break
                 case .failure(let error):
                     print("Error: ", error)

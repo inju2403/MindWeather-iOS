@@ -13,7 +13,7 @@ class DiaryRepoImpl: DiaryRepo {
     
     let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
     
-    func getDiarys() -> Single<[Diary]> {
+    func diarys() -> Single<[Diary]> {
         return Single<[Diary]>.create { single in
             let urlString = K.API_BASE_URL + "diary/"
         
@@ -32,7 +32,7 @@ class DiaryRepoImpl: DiaryRepo {
         }
     }
     
-    func getDiaryById(diaryId: Int) -> Single<Diary> {
+    func diary(diaryId: Int) -> Single<Diary> {
         return Single<Diary>.create { single in
             let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
         

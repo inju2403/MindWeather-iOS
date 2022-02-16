@@ -42,7 +42,7 @@ class DiaryListViewController : UIViewController {
         )
         
         bindTableView()
-        diaryListViewModel.getDiarys()
+        diaryListViewModel.diarys()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +50,7 @@ class DiaryListViewController : UIViewController {
     }
     
     @objc private func isUpdateDiarys() {
-        diaryListViewModel.getDiarys()
+        diaryListViewModel.diarys()
     }
     
     private func bindTableView() {
@@ -65,7 +65,7 @@ class DiaryListViewController : UIViewController {
             .subscribe(
                 onNext: { [weak self] value in
                     guard let self = self else { return }
-                    if value == "getDiarys" {
+                    if value == "diarys" {
                         //로딩 ui 끄기
                         self.loadingUI.stopAnimating()
                     }
@@ -76,7 +76,7 @@ class DiaryListViewController : UIViewController {
             .subscribe(
                 onNext: { [weak self] value in
                     guard let self = self else { return }
-                    self.diaryListViewModel.getDiarys()
+                    self.diaryListViewModel.diarys()
                 })
             .disposed(by: disposeBag)
         

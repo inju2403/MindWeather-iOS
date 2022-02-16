@@ -44,7 +44,7 @@ class EmotionViewController : UIViewController {
         
         setUI()
         bindViewModel()
-        emotionViewModel.getEmotions()
+        emotionViewModel.emotions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +53,7 @@ class EmotionViewController : UIViewController {
     }
     
     @objc private func isUpdateEmotions() {
-        emotionViewModel.getEmotions()
+        emotionViewModel.emotions()
     }
     
     private func bindViewModel() {

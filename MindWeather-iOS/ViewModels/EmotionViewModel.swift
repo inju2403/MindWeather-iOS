@@ -16,7 +16,7 @@ protocol EmotionViewModelType {
     var aYearEmotion: BehaviorRelay<Emotion> { get set }
     
     var receiver: PublishSubject<String> { get set }
-    func getEmotions()
+    func emotions()
 }
 
 class EmotionViewModel: EmotionViewModelType {
@@ -31,8 +31,8 @@ class EmotionViewModel: EmotionViewModelType {
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
     
-    func getEmotions() {
-        _ = service.getEmotions()
+    func emotions() {
+        _ = service.emotions()
             .subscribe { event in
                 switch event {
                 case .success(let emotions):
@@ -41,7 +41,7 @@ class EmotionViewModel: EmotionViewModelType {
                     self.sixMonthEmotion.accept(emotions[2])
                     self.aYearEmotion.accept(emotions[3])
                     
-                    self.receiver.onNext("getEmotions")
+                    self.receiver.onNext("emotions")
                     break
                 case .failure(let error):
                     print("Error: ", error)

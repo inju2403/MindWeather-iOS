@@ -12,12 +12,12 @@ class DiaryServiceImpl: DiaryServiceType {
     
     let repo = DiaryRepoImpl()
     
-    func getDiarys() -> Single<[Diary]> {
-        return repo.getDiarys()
+    func diarys() -> Single<[Diary]> {
+        return repo.diarys()
     }
 
-    func getDiaryById(diaryId: Int) -> Single<Diary> {
-        return repo.getDiaryById(diaryId: diaryId)
+    func diary(diaryId: Int) -> Single<Diary> {
+        return repo.diary(diaryId: diaryId)
     }
 
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
@@ -28,9 +28,9 @@ class DiaryServiceImpl: DiaryServiceType {
         return repo.deleteDiary(diaryId: diaryId)
     }
 
-    func getEmotions() -> Single<[Emotion]> {
+    func emotions() -> Single<[Emotion]> {
         return Single<[Emotion]>.create { single in
-            self.repo.getDiarys()
+            self.repo.diarys()
                 .subscribe { event in
                     switch event {
                     case .success(let diarys):

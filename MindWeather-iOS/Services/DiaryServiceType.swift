@@ -9,10 +9,10 @@ import Foundation
 import RxSwift
 
 protocol DiaryServiceType {
-    func getDiarys() -> Single<[Diary]>
-    func getDiaryById(diaryId: Int) -> Single<Diary>
+    func diarys() -> Single<[Diary]>
+    func diary(diaryId: Int) -> Single<Diary>
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool>
     func deleteDiary(diaryId: Int) -> Single<Bool>
     
-    func getEmotions() -> Single<[Emotion]>
+    func emotions() -> Single<[Emotion]>
 }

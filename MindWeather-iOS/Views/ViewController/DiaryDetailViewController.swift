@@ -29,14 +29,14 @@ class DiaryDetailViewController : UIViewController {
         
         setUI()
         bindViewModel()
-        diaryDetailViewModel.loadDiary(diaryId: diaryId)
+        diaryDetailViewModel.diary(diaryId: diaryId)
         
         anywhereAllowsBackSwipeGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        diaryDetailViewModel.loadDiary(diaryId: diaryId)
+        diaryDetailViewModel.diary(diaryId: diaryId)
     }
     
     override func viewDidAppear(_ animated: Bool) {

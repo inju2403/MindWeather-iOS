@@ -19,7 +19,7 @@ protocol DiaryDetailViewModelType {
     
     var receiver: PublishSubject<String> { get set }
     
-    func loadDiary(diaryId: Int)
+    func diary(diaryId: Int)
     func addOrUpdateDiary(content: Content, diaryId: Int)
     func deleteDiary(diaryId: Int)
     func newStateDiary()
@@ -58,7 +58,6 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
             .subscribe { event in
                 switch event {
                 case .success(_):
-                    print("kk")
                     self.receiver.onNext("deleteDiary")
                     break
                 case .failure(let error):
@@ -69,13 +68,13 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
             .disposed(by: disposeBag)
     }
     
-    func loadDiary(diaryId: Int) {
-        _ = service.getDiaryById(diaryId: diaryId)
+    func diary(diaryId: Int) {
+        _ = service.diary(diaryId: diaryId)
             .subscribe { event in
                 switch event {
                 case .success(let diary):
                     self.content.accept(diary.content ?? "")
-                    self.receiver.onNext("loadDiary")
+                    self.receiver.onNext("diary")
                     
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"

@@ -10,8 +10,8 @@ import Alamofire
 
 enum BaseRouter: URLRequestConvertible {
     
-    case getDiarys
-    case getDiaryById
+    case diarys
+    case diary
     case updateDiary
     case deleteDiary
     
@@ -21,7 +21,7 @@ enum BaseRouter: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case .getDiarys, .getDiaryById:
+        case .diarys, .diary:
             return .get
         case .updateDiary:
             return .patch
@@ -32,7 +32,7 @@ enum BaseRouter: URLRequestConvertible {
     
     var endPoint: String {
         switch self {
-        case .getDiarys, .getDiaryById, .updateDiary, .deleteDiary:
+        case .diarys, .diary, .updateDiary, .deleteDiary:
             return "diary/"
         }
     }
