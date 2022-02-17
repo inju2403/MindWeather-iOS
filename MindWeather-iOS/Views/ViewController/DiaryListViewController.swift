@@ -58,16 +58,14 @@ class DiaryListViewController : UIViewController {
             .observe(on: MainScheduler.instance)
             .do(
                 onSubscribe: { [weak self] in
-                    guard let self = self else { return }
                     //로딩 ui 켜기
-                    self.loadingUI.startAnimating()
+                    self?.loadingUI.startAnimating()
                 })
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
                     if value == "diarys" {
                         //로딩 ui 끄기
-                        self.loadingUI.stopAnimating()
+                        self?.loadingUI.stopAnimating()
                     }
                 })
             .disposed(by: disposeBag)
@@ -75,8 +73,7 @@ class DiaryListViewController : UIViewController {
         diaryListIsUpdated
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
-                    self.diaryListViewModel.diarys()
+                    self?.diaryListViewModel.diarys()
                 })
             .disposed(by: disposeBag)
         
@@ -84,12 +81,11 @@ class DiaryListViewController : UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
                     if value == 0 {
                         // 일기 리스트 사이즈가 0이면 문구 노출
-                        self.emptyStateText.isHidden = false
+                        self?.emptyStateText.isHidden = false
                     } else {
-                        self.emptyStateText.isHidden = true
+                        self?.emptyStateText.isHidden = true
                     }
                 })
             .disposed(by: disposeBag)
@@ -143,15 +139,13 @@ class DiaryListViewController : UIViewController {
         //일기 아이템 클릭시 보낼 일기 아이디 저장
         diaryListTableView.rx.modelSelected(Diary.self)
                     .subscribe(onNext: { [weak self] diary in
-                        guard let self = self else { return }
-                        self.selectedDiaryId = diary.id ?? 0
+                        self?.selectedDiaryId = diary.id ?? 0
                     }).disposed(by: disposeBag)
         
         //일기 아이템 클릭시 일기 상세화면으로 이동
         diaryListTableView.rx.itemSelected
                     .subscribe(onNext: { [weak self] indexPath in
-                        guard let self = self else { return }
-                        self.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
+                        self?.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
                     }).disposed(by: disposeBag)
         
         //테이블뷰에 애니메이션 추가

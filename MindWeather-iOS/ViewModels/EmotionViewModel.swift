@@ -34,15 +34,14 @@ class EmotionViewModel: EmotionViewModelType {
     func emotions() {
         service.emotions()
             .subscribe { [weak self] event in
-                guard let self = self else { return }
                 switch event {
                 case .success(let emotions):
-                    self.aWeekEmotion.accept(emotions[0])
-                    self.aMonthEmotion.accept(emotions[1])
-                    self.sixMonthEmotion.accept(emotions[2])
-                    self.aYearEmotion.accept(emotions[3])
+                    self?.aWeekEmotion.accept(emotions[0])
+                    self?.aMonthEmotion.accept(emotions[1])
+                    self?.sixMonthEmotion.accept(emotions[2])
+                    self?.aYearEmotion.accept(emotions[3])
                     
-                    self.receiver.onNext("emotions")
+                    self?.receiver.onNext("emotions")
                     break
                 case .failure(let error):
                     print("Error: ", error)

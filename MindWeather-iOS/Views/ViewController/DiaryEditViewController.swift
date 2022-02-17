@@ -82,18 +82,17 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
                     if value == "addOrUpdateDiary" {
                         //일기 작성 or 수정 후 dismiss
                         
-                        self.dateText.isHidden = false
-                        self.content.isHidden = false
-                        self.yearText.isHidden = false
-                        self.explainText.isHidden = false
+                        self?.dateText.isHidden = false
+                        self?.content.isHidden = false
+                        self?.yearText.isHidden = false
+                        self?.explainText.isHidden = false
                         
-                        self.loadingUI.isHidden = true
-                        self.loadingUI.stopAnimating()
-                        self.loadingText.isHidden = true
+                        self?.loadingUI.isHidden = true
+                        self?.loadingUI.stopAnimating()
+                        self?.loadingText.isHidden = true
                         
                         NotificationCenter.default.post(
                             name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
@@ -104,21 +103,21 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                             object: nil
                         )
                         
-                        self.dismiss(animated: true, completion: nil)
+                        self?.dismiss(animated: true, completion: nil)
                     } else if value == "diary" {
                         //로딩 ui 끄기
-                        self.dateText.isHidden = false
-                        self.content.isHidden = false
-                        self.yearText.isHidden = false
-                        self.explainText.isHidden = false
-                        self.setUI()
+                        self?.dateText.isHidden = false
+                        self?.content.isHidden = false
+                        self?.yearText.isHidden = false
+                        self?.explainText.isHidden = false
+                        self?.setUI()
 
-                        self.loadingUI.stopAnimating()
-                        self.loadingText.isHidden = true
+                        self?.loadingUI.stopAnimating()
+                        self?.loadingText.isHidden = true
                     } else if value == "newStateDiary" {
-                        self.content.text = " "
-                        self.setUI()
-                        self.content.text = ""
+                        self?.content.text = " "
+                        self?.setUI()
+                        self?.content.text = ""
                     }
                 })
             .disposed(by: disposeBag)

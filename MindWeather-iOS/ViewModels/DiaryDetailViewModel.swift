@@ -42,10 +42,9 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     func addOrUpdateDiary(content: Content, diaryId: Int) {
         service.updateDiary(content: content, diaryId: diaryId)
             .subscribe { [weak self] event in
-                guard let self = self else { return }
                 switch event {
                 case .success(_):
-                    self.receiver.onNext("addOrUpdateDiary")
+                    self?.receiver.onNext("addOrUpdateDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
@@ -57,10 +56,9 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     func deleteDiary(diaryId: Int) {
         service.deleteDiary(diaryId: diaryId)
             .subscribe { [weak self] event in
-                guard let self = self else { return }
                 switch event {
                 case .success(_):
-                    self.receiver.onNext("deleteDiary")
+                    self?.receiver.onNext("deleteDiary")
                     break
                 case .failure(let error):
                     print("Error: ", error)
@@ -73,11 +71,10 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     func diary(diaryId: Int) {
         service.diary(diaryId: diaryId)
             .subscribe { [weak self] event in
-                guard let self = self else { return }
                 switch event {
                 case .success(let diary):
-                    self.content.accept(diary.content ?? "")
-                    self.receiver.onNext("diary")
+                    self?.content.accept(diary.content ?? "")
+                    self?.receiver.onNext("diary")
                     
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -90,10 +87,10 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                         let date: Date = dateFormatter.date(from: time)!
                         
                         dateFormatter.dateFormat = "MMdd  eee"
-                        self.date.accept(dateFormatter.string(from: date))
+                        self?.date.accept(dateFormatter.string(from: date))
                         
                         dateFormatter.dateFormat = "''yy"
-                        self.year.accept(dateFormatter.string(from: date))
+                        self?.year.accept(dateFormatter.string(from: date))
                     }
                     
                     
@@ -103,28 +100,28 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                     
                     if emotions[0] == emotions[1] {
                         let image = UIImage(named: "ic_unknowability")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("복합적인 감정의 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("복합적인 감정의 하루")
                     } else if emotions[0] == diary.happiness {
                         let image = UIImage(named: "ic_happiness")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("행복을 느낀 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("행복을 느낀 하루")
                     } else if emotions[0] == diary.anger {
                         let image = UIImage(named: "ic_anger")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("화가 났던 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("화가 났던 하루")
                     } else if emotions[0] == diary.sadness {
                         let image = UIImage(named: "ic_sadness")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("슬픔을 느낀 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("슬픔을 느낀 하루")
                     } else if emotions[0] == diary.worry {
                         let image = UIImage(named: "ic_worry")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("걱정을 느낀 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("걱정을 느낀 하루")
                     } else if emotions[0] == diary.neutrality {
                         let image = UIImage(named: "ic_neutrality")!
-                        self.weatherImage.accept(image)
-                        self.weatherImageDescription.accept("감정이 중립인 하루")
+                        self?.weatherImage.accept(image)
+                        self?.weatherImageDescription.accept("감정이 중립인 하루")
                     }
                     break
                 case .failure(let error):

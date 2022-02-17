@@ -91,20 +91,18 @@ class DiaryDetailViewController : UIViewController {
             .observe(on: MainScheduler.instance)
             .do(
                 onSubscribe: { [weak self] in
-                    guard let self = self else { return }
                     //로딩 ui 켜기
-                    self.dateText.isHidden = true
-                    self.content.isHidden = true
-                    self.weatherImage.isHidden = true
-                    self.weatherDescription.isHidden = true
-                    self.yearText.isHidden = true
+                    self?.dateText.isHidden = true
+                    self?.content.isHidden = true
+                    self?.weatherImage.isHidden = true
+                    self?.weatherDescription.isHidden = true
+                    self?.yearText.isHidden = true
 
-                    self.loadingUI.startAnimating()
-                    self.loadingText.isHidden = false
+                    self?.loadingUI.startAnimating()
+                    self?.loadingText.isHidden = false
                 })
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
                     if value == "deleteDiary" {
                         NotificationCenter.default.post(
                             name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
@@ -115,18 +113,18 @@ class DiaryDetailViewController : UIViewController {
                             object: nil
                         )
                         
-                        self.navigationController?.popViewController(animated: true)
+                        self?.navigationController?.popViewController(animated: true)
                     }
                     
                     //로딩 ui 끄기
-                    self.loadingUI.stopAnimating()
-                    self.loadingText.isHidden = true
+                    self?.loadingUI.stopAnimating()
+                    self?.loadingText.isHidden = true
                     
-                    self.dateText.isHidden = false
-                    self.content.isHidden = false
-                    self.weatherImage.isHidden = false
-                    self.weatherDescription.isHidden = false
-                    self.yearText.isHidden = false
+                    self?.dateText.isHidden = false
+                    self?.content.isHidden = false
+                    self?.weatherImage.isHidden = false
+                    self?.weatherDescription.isHidden = false
+                    self?.yearText.isHidden = false
                 })
             .disposed(by: disposeBag)
     }

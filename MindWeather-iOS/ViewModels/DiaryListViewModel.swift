@@ -31,12 +31,11 @@ class DiaryListViewModel: DiaryListViewModelType {
     func diarys() {
         service.diarys()
             .subscribe { [weak self] event in
-                guard let self = self else { return }
                 switch event {
                 case .success(let diarys):
-                    self.diaryList.accept(diarys)
-                    self.diaryItemCnt.accept(diarys.count)
-                    self.receiver.onNext("diarys")
+                    self?.diaryList.accept(diarys)
+                    self?.diaryItemCnt.accept(diarys.count)
+                    self?.receiver.onNext("diarys")
                     break
                 case .failure(let error):
                     print("Error: ", error)

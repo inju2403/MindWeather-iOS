@@ -60,33 +60,29 @@ class EmotionViewController : UIViewController {
         emotionViewModel.aWeekEmotion
             .subscribe(
                 onNext: {  [weak self] value in
-                    guard let self = self else { return }
-                    self.aWeekEmotion = value
+                    self?.aWeekEmotion = value
             })
             .disposed(by: disposeBag)
         
         emotionViewModel.aMonthEmotion
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
-                    self.aMonthEmotion = value
+                    self?.aMonthEmotion = value
             })
             .disposed(by: disposeBag)
         
         emotionViewModel.sixMonthEmotion
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
-                    self.sixMonthEmotion = value
+                    self?.sixMonthEmotion = value
             })
             .disposed(by: disposeBag)
         
         emotionViewModel.aYearEmotion
             .subscribe(
                 onNext: { [weak self] value in
-                    guard let self = self else { return }
-                    self.aYearEmotion = value
-                    self.makeChartaYear()
+                    self?.aYearEmotion = value
+                    self?.makeChartaYear()
             })
             .disposed(by: disposeBag)
     }
