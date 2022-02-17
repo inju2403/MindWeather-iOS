@@ -72,11 +72,11 @@ var content: BehaviorRelay<String>
             = BehaviorRelay(value: "")
 
 func diary(diaryId: Int) {
-    service.getDiaryById(diaryId: diaryId)
-        .subscribe { event in
+    service.diary(diaryId: diaryId)
+        .subscribe { [weak self] event in
             switch event {
             case .success(let diary):
-                self.content.accept(diary.content ?? "")
+                self?.content.accept(diary.content ?? "")
                 break
             case .failure(let error):
                 print("Error: ", error)
