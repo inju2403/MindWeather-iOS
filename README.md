@@ -56,8 +56,7 @@ This iOS AI Diary app uses MVVM architecture. The repository imports entities, t
 
 <img src="https://user-images.githubusercontent.com/56947879/126041005-21a150fd-87c5-4904-9841-3558fdb7de34.png" align="right" width="39%">
 
-```kt
-
+```swift
 // View
 @IBOutlet weak var content: UILabel!
 
