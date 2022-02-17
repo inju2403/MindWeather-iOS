@@ -30,7 +30,8 @@ class DiaryListViewModel: DiaryListViewModelType {
     
     func diarys() {
         service.diarys()
-            .subscribe { event in
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
                 switch event {
                 case .success(let diarys):
                     self.diaryList.accept(diarys)
