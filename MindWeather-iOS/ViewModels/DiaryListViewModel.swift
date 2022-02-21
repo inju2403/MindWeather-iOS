@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import RxSwift
+
 import RxRelay
+import RxSwift
 
 protocol DiaryListViewModelType {
     var diaryList: BehaviorRelay<[Diary]> { get }

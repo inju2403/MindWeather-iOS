@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import RxSwift
+
 import RxRelay
+import RxSwift
 
 protocol EmotionViewModelType {
     var aWeekEmotion: BehaviorRelay<Emotion> { get set }

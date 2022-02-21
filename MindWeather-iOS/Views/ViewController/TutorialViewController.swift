@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import FSPagerView
 
 class TutorialViewController : UIViewController, FSPagerViewDelegate, FSPagerViewDataSource {

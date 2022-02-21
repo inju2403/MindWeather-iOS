@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import RxSwift
+
 import RxRelay
+import RxSwift
 
 protocol DiaryDetailViewModelType {
     var date: BehaviorRelay<String> { get set }

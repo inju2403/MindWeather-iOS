@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 import RxSwift
 
 class DiaryServiceImpl: DiaryService {

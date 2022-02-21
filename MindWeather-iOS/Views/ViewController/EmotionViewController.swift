@@ -6,9 +6,10 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+
 import Charts
+import RxCocoa
+import RxSwift
 
 class EmotionViewController : UIViewController {
     

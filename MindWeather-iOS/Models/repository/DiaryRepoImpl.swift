@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import RxSwift
+
 import Alamofire
+import RxSwift
 
 class DiaryRepoImpl: DiaryRepo {
     
