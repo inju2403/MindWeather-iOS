@@ -30,8 +30,6 @@ class DiaryDetailViewController : UIViewController {
         
         setUI()
         bindViewModel()
-        diaryDetailViewModel.diary(diaryId: diaryId)
-        
         anywhereAllowsBackSwipeGesture()
     }
     
