@@ -37,8 +37,8 @@ class TutorialViewController : UIViewController, FSPagerViewDelegate, FSPagerVie
         self.pagerView.delegate = self
         self.pagerView.dataSource = self
         
-        pageControl.setFillColor(UIColor(rgb: K.mainColor), for: .normal)
-        pageControl.setFillColor(UIColor(rgb: K.brownColor), for: .selected)
+        pageControl.setFillColor(UIColor(rgb: Constant.mainColor), for: .normal)
+        pageControl.setFillColor(UIColor(rgb: Constant.brownColor), for: .selected)
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {

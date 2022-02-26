@@ -33,13 +33,13 @@ class DiaryListViewController : UIViewController {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(isUpdateDiarys),
-            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
             object:  nil
         )
         
         diaryListTableView.register(
-            UINib(nibName: K.diaryCellNibName, bundle: nil),
-            forCellReuseIdentifier: K.diaryListCellIdentifier
+            UINib(nibName: Constant.diaryCellNibName, bundle: nil),
+            forCellReuseIdentifier: Constant.diaryListCellIdentifier
         )
         
         bindTableView()
@@ -94,7 +94,7 @@ class DiaryListViewController : UIViewController {
         
         diaryListViewModel.diaryList
             .asDriver()
-            .drive(diaryListTableView.rx.items(cellIdentifier: K.diaryListCellIdentifier, cellType: DiaryListCell.self)) {
+            .drive(diaryListTableView.rx.items(cellIdentifier: Constant.diaryListCellIdentifier, cellType: DiaryListCell.self)) {
                 [weak self] (index: Int, element: Diary, cell: DiaryListCell) in
                 cell.summaryView?.text = element.content
                 
@@ -146,7 +146,7 @@ class DiaryListViewController : UIViewController {
         //일기 아이템 클릭시 일기 상세화면으로 이동
         diaryListTableView.rx.itemSelected
                     .subscribe(onNext: { [weak self] indexPath in
-                        self?.performSegue(withIdentifier: K.diaryDetailSegue, sender: self)
+                        self?.performSegue(withIdentifier: Constant.diaryDetailSegue, sender: self)
                     }).disposed(by: disposeBag)
         
         //테이블뷰에 애니메이션 추가
@@ -168,7 +168,7 @@ extension DiaryListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.diaryListCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.diaryListCellIdentifier, for: indexPath)
         return cell
     }
 }

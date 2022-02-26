@@ -31,14 +31,14 @@ class MyPageViewController : UIViewController {
     }
     
     @IBAction func weatherDescriptionButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.weatherDescriptionSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.weatherDescriptionSegue, sender: self)
     }
     
     @IBAction func changeUserNameButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.nickNameEditSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.nickNameEditSegue, sender: self)
     }
     @IBAction func ChangePasswordButtionPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.passwordEditSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.passwordEditSegue, sender: self)
     }
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         //로그아웃 팝업 작성 예정
@@ -84,9 +84,9 @@ class MyPageViewController : UIViewController {
                 
                 self.dismiss(animated: true, completion: nil)
             } else if type == "deleteUser" {
-                AF.request("\(K.API_BASE_URL)auth/delete/",
+                AF.request("\(Constant.API_BASE_URL)auth/delete/",
                            method: .get,
-                           headers: ["Authorization" : K.token()])
+                           headers: ["Authorization" : Constant.token()])
                     .responseJSON { response in
                         debugPrint(response.response?.statusCode)
                         switch response.response?.statusCode {
@@ -112,11 +112,11 @@ class MyPageViewController : UIViewController {
         let destructive = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         
         if type == "logout" {
-            success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+            success.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         } else if type == "deleteUser" {
-            success.setValue(UIColor(rgb: K.greyColor), forKey: "titleTextColor")
+            success.setValue(UIColor(rgb: Constant.greyColor), forKey: "titleTextColor")
         }
-        cancel.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        cancel.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         alert.addAction(success)
         if type == "logout" {

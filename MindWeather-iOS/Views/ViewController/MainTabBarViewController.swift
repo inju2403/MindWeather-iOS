@@ -31,7 +31,7 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate, 
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.isKind(of: EditClickViewController.self) {
-            self.performSegue(withIdentifier: K.diaryEditSegue, sender: self)
+            self.performSegue(withIdentifier: Constant.diaryEditSegue, sender: self)
             return false
         }
         return true

@@ -35,7 +35,7 @@ class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func personalInformationProcessingButtonClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.personalInformationProcessingSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.personalInformationProcessingSegue, sender: self)
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         
@@ -57,7 +57,7 @@ class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
         } else {
             let signUpRequest = SignUpRequest(username: username, email: email, password1: password1, password2: password2)
             
-            AF.request("\(K.API_BASE_URL)auth/registration/",
+            AF.request("\(Constant.API_BASE_URL)auth/registration/",
                        method: .post,
                        parameters: signUpRequest,
                        encoder: JSONParameterEncoder())
@@ -129,10 +129,10 @@ class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
         let success = UIAlertAction(title: "확인", style: .default, handler: {_ in
             self.dismiss(animated: true, completion: nil)
         })
-        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        success.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         let failure = UIAlertAction(title: "확인", style: .default, handler: nil)
-        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        failure.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         if type == "success" {
             alert.addAction(success)

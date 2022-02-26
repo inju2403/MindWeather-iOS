@@ -43,10 +43,10 @@ class NickNameEditViewController: UIViewController {
         
             let changeUserName = ChangeUserName(username: username)
             
-            AF.request("\(K.API_BASE_URL)auth/user/",
+            AF.request("\(Constant.API_BASE_URL)auth/user/",
                        method: .patch,
                        parameters: changeUserName,
-                       encoder: JSONParameterEncoder(), headers: ["Authorization" : K.token()])
+                       encoder: JSONParameterEncoder(), headers: ["Authorization" : Constant.token()])
                     .responseJSON { response in
                         debugPrint(response.response?.statusCode)
                         switch response.response?.statusCode {
@@ -103,9 +103,9 @@ class NickNameEditViewController: UIViewController {
         let failure = UIAlertAction(title: "확인", style: .default, handler: nil)
         let error = UIAlertAction(title: "확인", style: .default, handler: nil)
         
-        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
-        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
-        error.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        success.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
+        failure.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
+        error.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         if type == "200" {
             alert.addAction(success)

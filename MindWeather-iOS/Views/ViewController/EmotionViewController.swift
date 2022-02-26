@@ -37,7 +37,7 @@ class EmotionViewController : UIViewController {
         // 감정 그래프에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
         NotificationCenter.default.addObserver(
             self, selector: #selector(isUpdateEmotions),
-            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
             object:  nil
         )
         
@@ -112,7 +112,7 @@ class EmotionViewController : UIViewController {
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: K.aWeekEmotionTitle
+            title: Constant.aWeekEmotionTitle
         )
     }
 
@@ -122,7 +122,7 @@ class EmotionViewController : UIViewController {
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: K.aMonthEmotionTitle
+            title: Constant.aMonthEmotionTitle
         )
     }
 
@@ -132,7 +132,7 @@ class EmotionViewController : UIViewController {
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: K.sixMonthEmotionTitle
+            title: Constant.sixMonthEmotionTitle
         )
     }
 
@@ -142,7 +142,7 @@ class EmotionViewController : UIViewController {
         customizeChart(
             dataPoints: emotionNames,
             values: emotionsRate.map{ $0 },
-            title: K.aYearEmotionTitle
+            title: Constant.aYearEmotionTitle
         )
     }
     
@@ -169,12 +169,12 @@ class EmotionViewController : UIViewController {
         emotionGraph.data = pieChartData
         
         // 가운데 빈 원형 부분 색상 설정
-        emotionGraph.holeColor = UIColor(rgb: K.mainColor)
+        emotionGraph.holeColor = UIColor(rgb: Constant.mainColor)
         
         // 센터 텍스트 속성 설정
         let myAttribute: [NSAttributedString.Key: Any] = [
             .font: UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 17)!,
-            .foregroundColor: UIColor(rgb: K.brownColor)
+            .foregroundColor: UIColor(rgb: Constant.brownColor)
         ]
         let myAttrString = NSAttributedString(string: title, attributes: myAttribute)
         emotionGraph.centerAttributedText = myAttrString
@@ -185,7 +185,7 @@ class EmotionViewController : UIViewController {
 
         // 하단 텍스트 속성 설정
         emotionGraph.legend.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 11)!
-        emotionGraph.legend.textColor = UIColor(rgb: K.brownColor)
+        emotionGraph.legend.textColor = UIColor(rgb: Constant.brownColor)
         
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
@@ -202,7 +202,7 @@ class EmotionViewController : UIViewController {
         aWeekButton.setTitleColor(UIColor.lightGray, for: .normal)
 
         periodButton.titleLabel?.font = UIFont.AppleSDGothic(type: .NanumMyeongjoBold, size: 16)
-        periodButton.setTitleColor(UIColor(rgb: K.brownColor), for: .normal)
+        periodButton.setTitleColor(UIColor(rgb: Constant.brownColor), for: .normal)
     }
 
     private func setEmotionsRate(with period: Emotion) {
@@ -211,33 +211,33 @@ class EmotionViewController : UIViewController {
 
         if period.happiness > 0 {
             emotionsRate.append(period.happiness)
-            emotionNames.append(K.happinessName)
+            emotionNames.append(Constant.happinessName)
         }
         if period.neutrality > 0 {
             emotionsRate.append(period.neutrality)
-            emotionNames.append(K.neutralityName)
+            emotionNames.append(Constant.neutralityName)
         }
         if period.worry > 0 {
             emotionsRate.append(period.worry)
-            emotionNames.append(K.worryName)
+            emotionNames.append(Constant.worryName)
         }
         if period.sadness > 0 {
             emotionsRate.append(period.sadness)
-            emotionNames.append(K.sadnessName)
+            emotionNames.append(Constant.sadnessName)
         }
         if period.anger > 0 {
             emotionsRate.append(period.anger)
-            emotionNames.append(K.angerName)
+            emotionNames.append(Constant.angerName)
         }
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
         let colors: [UIColor] = [
-            UIColor(rgb: K.goldColor),
-            UIColor(rgb: K.greyColor),
-            UIColor(rgb: K.pupleColor),
-            UIColor(rgb: K.blueColor),
-            UIColor(rgb: K.redColor)
+            UIColor(rgb: Constant.goldColor),
+            UIColor(rgb: Constant.greyColor),
+            UIColor(rgb: Constant.pupleColor),
+            UIColor(rgb: Constant.blueColor),
+            UIColor(rgb: Constant.redColor)
         ]
         return colors
     }

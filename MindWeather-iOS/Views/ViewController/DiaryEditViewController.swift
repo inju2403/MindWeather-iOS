@@ -12,7 +12,7 @@ import RxSwift
 
 class DiaryEditViewController : UIViewController, UITextViewDelegate{
     
-    var diaryId = K.newDiaryValue
+    var diaryId = Constant.newDiaryValue
     
     let diaryDetailViewModel = DiaryDetailViewModel()
     let disposeBag = DisposeBag()
@@ -43,7 +43,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
         
         setTextView()
         bindViewModel()
-        if diaryId != K.newDiaryValue {
+        if diaryId != Constant.newDiaryValue {
             dateText.isHidden = true
             content.isHidden = true
             yearText.isHidden = true
@@ -95,11 +95,11 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         self?.loadingText.isHidden = true
                         
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+                            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
                             object: nil
                         )
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName),
+                            name: Notification.Name(rawValue: Constant.isUpdateEmotionsNotificationName),
                             object: nil
                         )
                         
@@ -201,7 +201,7 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
         )
         content.attributedText = attrString
         content.font = UIFont.AppleSDGothic(type: .NanumMyeongjo, size: 15)
-        content.textColor = UIColor(rgb: K.brownColor)
+        content.textColor = UIColor(rgb: Constant.brownColor)
         content.textAlignment = .center
     }
 }

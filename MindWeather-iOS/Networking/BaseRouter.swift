@@ -17,7 +17,7 @@ enum BaseRouter: URLRequestConvertible {
     case deleteDiary
     
     var baseURL: URL {
-        return URL(string: K.API_BASE_URL)!
+        return URL(string: Constant.API_BASE_URL)!
     }
     
     var method: HTTPMethod {

@@ -48,7 +48,7 @@ class DiaryDetailViewController : UIViewController {
     }
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.diaryEditSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.diaryEditSegue, sender: self)
     }
     
     @IBAction func delteButtonClicked(_ sender: UIButton) {
@@ -104,11 +104,11 @@ class DiaryDetailViewController : UIViewController {
                 onNext: { [weak self] value in
                     if value == "deleteDiary" {
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: K.isUpdateDiarysNotificationName),
+                            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
                             object: nil
                         )
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: K.isUpdateEmotionsNotificationName),
+                            name: Notification.Name(rawValue: Constant.isUpdateEmotionsNotificationName),
                             object: nil
                         )
                         
@@ -152,8 +152,8 @@ class DiaryDetailViewController : UIViewController {
         
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
-        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
-        cancel.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        success.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
+        cancel.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         alert.addAction(success)
         alert.addAction(cancel)

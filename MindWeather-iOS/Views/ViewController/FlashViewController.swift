@@ -22,11 +22,11 @@ class FlashViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if token != nil { //자동 로그인
-                self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
+                self.performSegue(withIdentifier: Constant.mainTabBarSegue, sender: self)
             } else if runFirst == nil {
-                self.performSegue(withIdentifier: K.tutorialSegue, sender: self)
+                self.performSegue(withIdentifier: Constant.tutorialSegue, sender: self)
             } else {
-                self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                self.performSegue(withIdentifier: Constant.loginSegue, sender: self)
             }
         }
     }

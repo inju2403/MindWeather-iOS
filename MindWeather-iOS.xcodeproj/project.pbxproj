@@ -34,7 +34,7 @@
 		6EBE37CB267871B6008BB15D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37CA267871B6008BB15D /* TutorialViewController.swift */; };
 		6EBE37D1267A262E008BB15D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D0267A262E008BB15D /* LoginViewController.swift */; };
 		6EBE37D3267A2656008BB15D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE37D2267A2656008BB15D /* Login.storyboard */; };
-		6EBE37D5267A2ACA008BB15D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D4267A2ACA008BB15D /* Constants.swift */; };
+		6EBE37D5267A2ACA008BB15D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D4267A2ACA008BB15D /* Constant.swift */; };
 		6EBE37D7267ED4FB008BB15D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D6267ED4FB008BB15D /* LoginRequest.swift */; };
 		6EBE37D9267F2C46008BB15D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37D8267F2C46008BB15D /* AlamofireManager.swift */; };
 		6EBE37DB267F2D25008BB15D /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */; };
@@ -100,7 +100,7 @@
 		6EBE37CA267871B6008BB15D /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		6EBE37D0267A262E008BB15D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6EBE37D2267A2656008BB15D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		6EBE37D4267A2ACA008BB15D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6EBE37D4267A2ACA008BB15D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6EBE37D6267ED4FB008BB15D /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		6EBE37D8267F2C46008BB15D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		6EBE37DA267F2D25008BB15D /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		6EBE37C426784336008BB15D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6EBE37D4267A2ACA008BB15D /* Constants.swift */,
+				6EBE37D4267A2ACA008BB15D /* Constant.swift */,
 				6EA8551727C20F6A0043524F /* UIColor+Extension.swift */,
 			);
 			path = Common;
@@ -518,7 +518,7 @@
 				6EBE37DF267F391F008BB15D /* LoginSignUpUser.swift in Sources */,
 				6EEC0A8E2686FF0E00F3ABEC /* DiaryListViewModel.swift in Sources */,
 				6EC26BCD269022FB00391916 /* ChangePassword.swift in Sources */,
-				6EBE37D5267A2ACA008BB15D /* Constants.swift in Sources */,
+				6EBE37D5267A2ACA008BB15D /* Constant.swift in Sources */,
 				6EC26BC5268F443C00391916 /* MyPageViewController.swift in Sources */,
 				6EB044272680D66F00E047A7 /* DiaryRepoImpl.swift in Sources */,
 				6EC26BC9268F4B7F00391916 /* NickNameEditViewController.swift in Sources */,

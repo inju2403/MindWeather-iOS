@@ -54,10 +54,10 @@ class PasswordEditViewController: UIViewController {
         
             let changePassword = ChangePassword(old_password: old, new_password1: new1, new_password2: new2)
             
-            AF.request("\(K.API_BASE_URL)auth/password/change/",
+            AF.request("\(Constant.API_BASE_URL)auth/password/change/",
                        method: .post,
                        parameters: changePassword,
-                       encoder: JSONParameterEncoder(), headers: ["Authorization" : K.token()])
+                       encoder: JSONParameterEncoder(), headers: ["Authorization" : Constant.token()])
                     .responseJSON { response in
                         debugPrint(response.response?.statusCode)
                         switch response.response?.statusCode {
@@ -123,10 +123,10 @@ class PasswordEditViewController: UIViewController {
             
             self.dismiss(animated: true, completion: nil)
         })
-        success.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        success.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         let failure = UIAlertAction(title: "확인", style: .default, handler: nil)
-        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        failure.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         if type == "success" {
             alert.addAction(success)

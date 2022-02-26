@@ -14,11 +14,11 @@ class DiaryRepoImpl: DiaryRepo {
     
     func diarys() -> Single<[Diary]> {
         return Single<[Diary]>.create { single in
-            let urlString = K.API_BASE_URL + "diary/"
+            let urlString = Constant.API_BASE_URL + "diary/"
 
             AF.request(urlString,
                        method: .get,
-                       headers: ["Authorization" : K.token()])
+                       headers: ["Authorization" : Constant.token()])
                 .responseDecodable(of: [Diary].self) { response in
                     guard let value = response.value else {
                         single(.failure(response.error!))
@@ -33,11 +33,11 @@ class DiaryRepoImpl: DiaryRepo {
     
     func diary(diaryId: Int) -> Single<Diary> {
         return Single<Diary>.create { single in
-            let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
+            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
         
             AF.request(urlString,
                        method: .get,
-                       headers: ["Authorization" : K.token()])
+                       headers: ["Authorization" : Constant.token()])
                 .responseDecodable(of: Diary.self) { response in
                     guard let value = response.value else {
                         single(.failure(response.error!))
@@ -52,13 +52,13 @@ class DiaryRepoImpl: DiaryRepo {
     
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
         return Single<Bool>.create { single in
-            let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
+            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
 
             AF.request(urlString,
                        method: .patch,
                        parameters: content,
                        encoder: JSONParameterEncoder(),
-                       headers: ["Authorization" : K.token()])
+                       headers: ["Authorization" : Constant.token()])
                 .responseJSON {  response in
                     switch response.response?.statusCode {
                     case 200:
@@ -78,11 +78,11 @@ class DiaryRepoImpl: DiaryRepo {
     
     func deleteDiary(diaryId: Int) -> Single<Bool> {
         return Single<Bool>.create { single in
-            let urlString = K.API_BASE_URL + "diary/\(diaryId)/"
+            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
 
             AF.request(urlString,
                        method: .delete,
-                       headers: ["Authorization" : K.token()])
+                       headers: ["Authorization" : Constant.token()])
                 .responseJSON {  response in
                     switch response.response?.statusCode {
                     case 204:

@@ -24,7 +24,7 @@ class LoginViewController : UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.signupSegue, sender: self)
+        self.performSegue(withIdentifier: Constant.signupSegue, sender: self)
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -41,7 +41,7 @@ class LoginViewController : UIViewController {
         
             let loginRequest = LoginRequest(username: username, password: password)
             
-            AF.request("\(K.API_BASE_URL)auth/login/",
+            AF.request("\(Constant.API_BASE_URL)auth/login/",
                        method: .post,
                        parameters: loginRequest,
                        encoder: JSONParameterEncoder())
@@ -58,7 +58,7 @@ class LoginViewController : UIViewController {
                             self.usernameTextField.text = "";
                             self.passwordTextField.text = "";
                             
-                            self.performSegue(withIdentifier: K.mainTabBarSegue, sender: self)
+                            self.performSegue(withIdentifier: Constant.mainTabBarSegue, sender: self)
                             break
                         case 400:
                             self.showAlert(style: .alert, message: "계정정보를 확인해주세요", type: "default")
@@ -95,8 +95,8 @@ class LoginViewController : UIViewController {
         let error = UIAlertAction(title: "확인", style: .default, handler: nil)
         
         
-        failure.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
-        error.setValue(UIColor(rgb: K.brownColor), forKey: "titleTextColor")
+        failure.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
+        error.setValue(UIColor(rgb: Constant.brownColor), forKey: "titleTextColor")
         
         if type == "400" {
             alert.addAction(failure)
