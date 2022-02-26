@@ -13,7 +13,6 @@ import RxSwift
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate, UIGestureRecognizerDelegate {
     
     var disposeBag = DisposeBag()
-    let service = DiaryRepoImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
