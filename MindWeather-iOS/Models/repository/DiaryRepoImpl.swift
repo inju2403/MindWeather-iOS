@@ -20,13 +20,14 @@ class DiaryRepoImpl: DiaryRepo {
                        method: .get,
                        headers: ["Authorization" : Constant.token()])
                 .responseDecodable(of: [Diary].self) { response in
+                    print(CFGetRetainCount(self))
                     guard let value = response.value else {
                         single(.failure(response.error!))
                         return
                     }
                     single(.success(value))
                 }
-        
+
             return Disposables.create()
         }
     }

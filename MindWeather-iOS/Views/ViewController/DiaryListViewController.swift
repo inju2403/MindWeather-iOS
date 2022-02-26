@@ -19,8 +19,6 @@ class DiaryListViewController : UIViewController {
     let diaryListViewModel = DiaryListViewModel()
     let disposeBag = DisposeBag()
     
-    var diaryListIsUpdated: BehaviorRelay<Bool> = BehaviorRelay(value: false)
-    
     var diaryList: [String] = []
     var diaryListSize: Int = 0
     
@@ -68,13 +66,6 @@ class DiaryListViewController : UIViewController {
                         //로딩 ui 끄기
                         self?.loadingUI.stopAnimating()
                     }
-                })
-            .disposed(by: disposeBag)
-        
-        diaryListIsUpdated
-            .subscribe(
-                onNext: { [weak self] value in
-                    self?.diaryListViewModel.diarys()
                 })
             .disposed(by: disposeBag)
         
