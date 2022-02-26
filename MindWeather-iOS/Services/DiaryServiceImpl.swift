@@ -30,9 +30,9 @@ class DiaryServiceImpl: DiaryService {
     }
 
     func emotions() -> Single<[Emotion]> {
-        return Single<[Emotion]>.create { single in
-            self.repo.diarys()
-                .subscribe { [weak self] event in
+        return Single<[Emotion]>.create { [weak self] single in
+            self?.repo.diarys()
+                .subscribe { event in
                     switch event {
                     case .success(let diarys):
                         //emotions 배열 세팅

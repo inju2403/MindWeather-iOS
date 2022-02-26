@@ -13,14 +13,13 @@ import RxSwift
 class DiaryRepoImpl: DiaryRepo {
     
     func diarys() -> Single<[Diary]> {
-        return Single<[Diary]>.create { single in
+        return Single<[Diary]>.create { [weak self] single in
             let urlString = Constant.API_BASE_URL + "diary/"
 
             AF.request(urlString,
                        method: .get,
                        headers: ["Authorization" : Constant.token()])
                 .responseDecodable(of: [Diary].self) { response in
-                    print(CFGetRetainCount(self))
                     guard let value = response.value else {
                         single(.failure(response.error!))
                         return
@@ -33,7 +32,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func diary(diaryId: Int) -> Single<Diary> {
-        return Single<Diary>.create { single in
+        return Single<Diary>.create { [weak self] single in
             let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
         
             AF.request(urlString,
@@ -52,7 +51,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
-        return Single<Bool>.create { single in
+        return Single<Bool>.create { [weak self] single in
             let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
 
             AF.request(urlString,
@@ -78,7 +77,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func deleteDiary(diaryId: Int) -> Single<Bool> {
-        return Single<Bool>.create { single in
+        return Single<Bool>.create { [weak self] single in
             let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
 
             AF.request(urlString,
