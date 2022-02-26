@@ -11,8 +11,6 @@ import Alamofire
 
 class NickNameEditViewController: UIViewController {
     
-    let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
-    
     @IBOutlet weak var nickNameTextField: UITextField!
     
     override func viewDidLoad() {
@@ -48,7 +46,7 @@ class NickNameEditViewController: UIViewController {
             AF.request("\(K.API_BASE_URL)auth/user/",
                        method: .patch,
                        parameters: changeUserName,
-                       encoder: JSONParameterEncoder(), headers: ["Authorization" : self.token])
+                       encoder: JSONParameterEncoder(), headers: ["Authorization" : K.token()])
                     .responseJSON { response in
                         debugPrint(response.response?.statusCode)
                         switch response.response?.statusCode {

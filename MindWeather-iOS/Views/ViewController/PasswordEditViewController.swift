@@ -11,8 +11,6 @@ import Alamofire
 
 class PasswordEditViewController: UIViewController {
     
-    let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
-    
     @IBOutlet weak var oldPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField1: UITextField!
     @IBOutlet weak var newPasswordTextField2: UITextField!
@@ -59,7 +57,7 @@ class PasswordEditViewController: UIViewController {
             AF.request("\(K.API_BASE_URL)auth/password/change/",
                        method: .post,
                        parameters: changePassword,
-                       encoder: JSONParameterEncoder(), headers: ["Authorization" : self.token])
+                       encoder: JSONParameterEncoder(), headers: ["Authorization" : K.token()])
                     .responseJSON { response in
                         debugPrint(response.response?.statusCode)
                         switch response.response?.statusCode {

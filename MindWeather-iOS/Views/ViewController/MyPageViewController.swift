@@ -11,8 +11,6 @@ import Alamofire
 
 class MyPageViewController : UIViewController {
     
-    let token = "JWT " + UserDefaults.standard.string(forKey: "token")!
-    
     @IBOutlet weak var logoText: UILabel!
     @IBOutlet weak var usernameText: UILabel!
     @IBOutlet weak var emailText: UILabel!
@@ -88,25 +86,25 @@ class MyPageViewController : UIViewController {
             } else if type == "deleteUser" {
                 AF.request("\(K.API_BASE_URL)auth/delete/",
                            method: .get,
-                           headers: ["Authorization" : self.token])
-                        .responseJSON { response in
-                            debugPrint(response.response?.statusCode)
-                            switch response.response?.statusCode {
-                            case 200:
-                                
-                                self.resetDefaults()
-                                UserDefaults.standard.set(false, forKey: "runFirst")
-                                
-                                self.dismiss(animated: true, completion: nil)
-                                break
-                            case 400:
-                                print("error")
-                                break
-                            default:
-                                break
-                            }
-                            
+                           headers: ["Authorization" : K.token()])
+                    .responseJSON { response in
+                        debugPrint(response.response?.statusCode)
+                        switch response.response?.statusCode {
+                        case 200:
+
+                            self.resetDefaults()
+                            UserDefaults.standard.set(false, forKey: "runFirst")
+
+                            self.dismiss(animated: true, completion: nil)
+                            break
+                        case 400:
+                            print("error")
+                            break
+                        default:
+                            break
                         }
+
+                    }
             }
         })
         
