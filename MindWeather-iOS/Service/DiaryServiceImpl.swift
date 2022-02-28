@@ -11,7 +11,7 @@ import RxSwift
 
 class DiaryServiceImpl: DiaryService {
     
-    let repo = DiaryRepoImpl()
+    let repo = RepositoryInjector.injectDiaryRepo()
     
     func diarys() -> Single<[Diary]> {
         return repo.diarys()

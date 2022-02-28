@@ -23,7 +23,7 @@ protocol EmotionViewModelType {
 class EmotionViewModel: EmotionViewModelType {
     
     var disposeBag = DisposeBag()
-    private let service = DiaryServiceImpl()
+    private let service = ServiceInjector.injectDiaryService()
     
     var aWeekEmotion: BehaviorRelay<Emotion> = BehaviorRelay(value: Emotion())
     var aMonthEmotion: BehaviorRelay<Emotion> = BehaviorRelay(value: Emotion())

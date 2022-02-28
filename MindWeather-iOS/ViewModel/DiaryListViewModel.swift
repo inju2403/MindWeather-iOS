@@ -22,7 +22,7 @@ protocol DiaryListViewModelType {
 class DiaryListViewModel: DiaryListViewModelType {
     
     var disposeBag = DisposeBag()
-    private let service = DiaryServiceImpl()
+    private let service = ServiceInjector.injectDiaryService()
     
     var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
     var diaryItemCnt = BehaviorRelay(value: -1)

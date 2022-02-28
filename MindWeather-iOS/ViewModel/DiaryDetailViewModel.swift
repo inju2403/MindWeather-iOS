@@ -29,7 +29,7 @@ protocol DiaryDetailViewModelType {
 class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     var disposeBag = DisposeBag()
-    private let service = DiaryServiceImpl()
+    private let service = ServiceInjector.injectDiaryService()
     
     var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
