@@ -57,7 +57,7 @@ class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
         } else {
             let signUpRequest = SignUpRequest(username: username, email: email, password1: password1, password2: password2)
             
-            AF.request("\(Constant.API_BASE_URL)auth/registration/",
+            AF.request("\(Constant.APIBaseUrl)auth/registration/",
                        method: .post,
                        parameters: signUpRequest,
                        encoder: JSONParameterEncoder())

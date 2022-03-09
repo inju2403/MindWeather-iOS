@@ -43,7 +43,7 @@ class NickNameEditViewController: UIViewController {
         
             let changeUserName = ChangeUserName(username: username)
             
-            AF.request("\(Constant.API_BASE_URL)auth/user/",
+            AF.request("\(Constant.APIBaseUrl)auth/user/",
                        method: .patch,
                        parameters: changeUserName,
                        encoder: JSONParameterEncoder(), headers: ["Authorization" : Constant.token()])

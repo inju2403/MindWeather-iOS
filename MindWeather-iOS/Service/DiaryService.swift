@@ -12,7 +12,7 @@ import RxSwift
 protocol DiaryService {
     func diarys() -> Single<[Diary]>
     func diary(diaryId: Int) -> Single<Diary>
-    func updateDiary(content: Content, diaryId: Int) -> Single<Bool>
+    func updateDiary(content: Content, diaryId: Int) -> Single<Diary>
     func deleteDiary(diaryId: Int) -> Single<Bool>
     
     func emotions() -> Single<[Emotion]>

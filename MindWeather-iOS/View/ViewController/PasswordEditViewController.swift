@@ -54,7 +54,7 @@ class PasswordEditViewController: UIViewController {
         
             let changePassword = ChangePassword(old_password: old, new_password1: new1, new_password2: new2)
             
-            AF.request("\(Constant.API_BASE_URL)auth/password/change/",
+            AF.request("\(Constant.APIBaseUrl)auth/password/change/",
                        method: .post,
                        parameters: changePassword,
                        encoder: JSONParameterEncoder(), headers: ["Authorization" : Constant.token()])

@@ -21,7 +21,7 @@ class DiaryServiceImpl: DiaryService {
         return repo.diary(diaryId: diaryId)
     }
 
-    func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
+    func updateDiary(content: Content, diaryId: Int) -> Single<Diary> {
         return repo.updateDiary(content: content, diaryId: diaryId)
     }
 

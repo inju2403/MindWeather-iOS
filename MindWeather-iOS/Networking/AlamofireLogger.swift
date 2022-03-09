@@ -1,15 +1,13 @@
 //
-//  BaseLogger.swift
+//  AlamofireLogger.swift
 //  MindWeather-iOS
 //
 //  Created by 이승주 on 2021/06/21.
 //
 
-import Foundation
-
 import Alamofire
 
-final class BaseLogger: EventMonitor {
+struct AlamofireLogger: EventMonitor {
     
     let queue = DispatchQueue(label: "BaseLogger")
     

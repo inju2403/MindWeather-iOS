@@ -11,21 +11,14 @@ import Alamofire
 import RxSwift
 
 class DiaryRepoImpl: DiaryRepo {
-    
+
     func diarys() -> Single<[Diary]> {
         return Single<[Diary]>.create { [weak self] single in
-            let urlString = Constant.API_BASE_URL + "diary/"
-
-            AF.request(urlString,
-                       method: .get,
-                       headers: ["Authorization" : Constant.token()])
-                .responseDecodable(of: [Diary].self) { response in
-                    guard let value = response.value else {
-                        single(.failure(response.error!))
-                        return
-                    }
-                    single(.success(value))
-                }
+            NetworkManager.shared.request(
+                type: [Diary].self,
+                router: AlamofireRouter.diarys,
+                single: single
+            )
 
             return Disposables.create()
         }
@@ -33,44 +26,23 @@ class DiaryRepoImpl: DiaryRepo {
     
     func diary(diaryId: Int) -> Single<Diary> {
         return Single<Diary>.create { [weak self] single in
-            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
-        
-            AF.request(urlString,
-                       method: .get,
-                       headers: ["Authorization" : Constant.token()])
-                .responseDecodable(of: Diary.self) { response in
-                    guard let value = response.value else {
-                        single(.failure(response.error!))
-                        return
-                    }
-                    single(.success(value))
-                }
+            NetworkManager.shared.request(
+                type: Diary.self,
+                router: AlamofireRouter.diary(diaryId: diaryId),
+                single: single
+            )
             
             return Disposables.create()
         }
     }
     
-    func updateDiary(content: Content, diaryId: Int) -> Single<Bool> {
-        return Single<Bool>.create { [weak self] single in
-            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
-
-            AF.request(urlString,
-                       method: .patch,
-                       parameters: content,
-                       encoder: JSONParameterEncoder(),
-                       headers: ["Authorization" : Constant.token()])
-                .responseJSON {  response in
-                    switch response.response?.statusCode {
-                    case 200:
-                        single(.success(true))
-                        break
-                    case 400:
-                        single(.failure(response.error!))
-                        break
-                    default:
-                        break
-                    }
-                }
+    func updateDiary(content: Content, diaryId: Int) -> Single<Diary> {
+        return Single<Diary>.create { [weak self] single in
+            NetworkManager.shared.request(
+                type: Diary.self,
+                router: AlamofireRouter.updateDiary(diaryId: diaryId, content: content),
+                single: single
+            )
             
             return Disposables.create()
         }
@@ -78,23 +50,11 @@ class DiaryRepoImpl: DiaryRepo {
     
     func deleteDiary(diaryId: Int) -> Single<Bool> {
         return Single<Bool>.create { [weak self] single in
-            let urlString = Constant.API_BASE_URL + "diary/\(diaryId)/"
-
-            AF.request(urlString,
-                       method: .delete,
-                       headers: ["Authorization" : Constant.token()])
-                .responseJSON {  response in
-                    switch response.response?.statusCode {
-                    case 204:
-                        single(.success(true))
-                        break
-                    case 400:
-                        single(.failure(response.error!))
-                        break
-                    default:
-                        break
-                    }
-                }
+            NetworkManager.shared.request(
+                type: Bool.self,
+                router: AlamofireRouter.deleteDiary(diaryId: diaryId),
+                single: single
+            )
             
             return Disposables.create()
         }

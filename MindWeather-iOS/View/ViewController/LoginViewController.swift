@@ -41,7 +41,7 @@ class LoginViewController : UIViewController {
         
             let loginRequest = LoginRequest(username: username, password: password)
             
-            AF.request("\(Constant.API_BASE_URL)auth/login/",
+            AF.request("\(Constant.APIBaseUrl)auth/login/",
                        method: .post,
                        parameters: loginRequest,
                        encoder: JSONParameterEncoder())

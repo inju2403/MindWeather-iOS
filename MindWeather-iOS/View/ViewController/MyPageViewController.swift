@@ -84,7 +84,7 @@ class MyPageViewController : UIViewController {
                 
                 self.dismiss(animated: true, completion: nil)
             } else if type == "deleteUser" {
-                AF.request("\(Constant.API_BASE_URL)auth/delete/",
+                AF.request("\(Constant.APIBaseUrl)auth/delete/",
                            method: .get,
                            headers: ["Authorization" : Constant.token()])
                     .responseJSON { response in
