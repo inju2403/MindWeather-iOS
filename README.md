@@ -13,7 +13,7 @@
 
 
 ## Version     
-1.0.0      
+1.0.1      
 
 <br/>    
 
@@ -46,6 +46,7 @@ iOS 모바일 어플리케이션 UI/UX, 아키텍쳐 설계 및 구축, 데이�
  - [Alamofire](https://github.com/Alamofire/Alamofire)  (Alamofire is an HTTP networking library written in Swift)
  - [Charts](https://github.com/danielgindi/Charts) (Beautiful charts for iOS/tvOS/OSX)
  - [FSPagerView](https://github.com/WenchaoD/FSPagerView) (FSPagerView is an elegant Screen Slide Library implemented primarily with UICollectionView)
+ - [Toast-Swift](https://github.com/scalessec/Toast-Swift) (Toast-Swift is a Swift extension that adds toast notifications to the UIView object class)
 
 <br/>
 
