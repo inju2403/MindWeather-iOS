@@ -1,5 +1,5 @@
 //
-//  Constant.swift
+//  Constants.swift
 //  MindWeather-iOS
 //
 //  Created by 이승주 on 2021/06/16.
@@ -23,9 +23,6 @@ struct Constant {
     
     static let diaryListCellIdentifier = "ReusableCell"
     static let diaryCellNibName = "DiaryListCell"
-    
-    static let isUpdateDiarysNotificationName = "isUpdateDiarys"
-    static let isUpdateEmotionsNotificationName = "isUpdateEmotions"
     
     static let newDiaryValue = 987654321
     
@@ -51,5 +48,17 @@ struct Constant {
 
     static func token() -> String {
         return "JWT " + UserDefaults.standard.string(forKey: "token")!
+    }
+}
+
+enum NOTIFICATION {
+    enum API {
+        static let statusCode = "statusCode"
+        static let networkError = "networkError"
+        static let updateDiarys = "updateDiarys"
+        static let updateEmotions = "updateEmotions"
+
+        static let authFailErrorMessage = "인증정보가 만료됐어요.\n로그아웃 후 재로그인해주세요"
+        static let serverErrorMessage = "서버가 불안정해요.\n잠시 후에 다시 시도해주세요"
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 import Alamofire
 
-class MyPageViewController : UIViewController {
+class MyPageViewController: BaseViewController {
     
     @IBOutlet weak var logoText: UILabel!
     @IBOutlet weak var usernameText: UILabel!

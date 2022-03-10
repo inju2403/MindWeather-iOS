@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class DiaryEditViewController : UIViewController, UITextViewDelegate{
+class DiaryEditViewController: BaseViewController, UITextViewDelegate{
     
     var diaryId = Constant.newDiaryValue
     
@@ -95,11 +95,11 @@ class DiaryEditViewController : UIViewController, UITextViewDelegate{
                         self?.loadingText.isHidden = true
                         
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
+                            name: Notification.Name(rawValue: NOTIFICATION.API.updateDiarys),
                             object: nil
                         )
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: Constant.isUpdateEmotionsNotificationName),
+                            name: Notification.Name(rawValue: NOTIFICATION.API.updateEmotions),
                             object: nil
                         )
                         

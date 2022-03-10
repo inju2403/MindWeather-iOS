@@ -9,7 +9,7 @@ import UIKit
 
 import Alamofire
 
-class PasswordEditViewController: UIViewController {
+class PasswordEditViewController: BaseViewController {
     
     @IBOutlet weak var oldPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField1: UITextField!

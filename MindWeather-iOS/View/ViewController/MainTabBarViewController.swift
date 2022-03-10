@@ -12,8 +12,6 @@ import RxSwift
 
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate, UIGestureRecognizerDelegate {
     
-    var disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self

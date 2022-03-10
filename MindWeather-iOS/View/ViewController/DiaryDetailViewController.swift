@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class DiaryDetailViewController : UIViewController {
+class DiaryDetailViewController: BaseViewController {
     
     var diaryId = 0
     
@@ -104,11 +104,11 @@ class DiaryDetailViewController : UIViewController {
                 onNext: { [weak self] value in
                     if value == "deleteDiary" {
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
+                            name: Notification.Name(rawValue: NOTIFICATION.API.updateDiarys),
                             object: nil
                         )
                         NotificationCenter.default.post(
-                            name: Notification.Name(rawValue: Constant.isUpdateEmotionsNotificationName),
+                            name: Notification.Name(rawValue: NOTIFICATION.API.updateEmotions),
                             object: nil
                         )
                         

@@ -15,23 +15,32 @@ struct NetworkManager {
     static let shared = NetworkManager()
     let alamofireManager = AlamofireManager()
 
-    func request<T: Decodable>(type: T.Type, router: AlamofireRouter, single: @escaping Single<T>.SingleObserver) {
+    func requestModel<T: Decodable>(type: T.Type, router: AlamofireRouter, single: @escaping Single<T>.SingleObserver) {
         alamofireManager
             .session
             .request(router)
+            .validate()
             .responseDecodable(of: T.self) { response in
-                guard let statusCode = response.response?.statusCode else {
-                    single(.failure(response.error!))
-                    return
+                switch response.result {
+                case .success(let value):
+                    single(.success(value))
+                case .failure(let error):
+                    single(.failure(error))
                 }
+            }
+    }
 
-                switch statusCode {
-                case 200...299:
-                    single(.success(response.value ?? true as! T))
-                    break
-                default:
-                    single(.failure(response.error!))
-                    break
+    func requestEmptyResponse(router: AlamofireRouter, single: @escaping Single<Bool>.SingleObserver) {
+        alamofireManager
+            .session
+            .request(router)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(_):
+                    single(.success(true))
+                case .failure(let error):
+                    single(.failure(error))
                 }
             }
     }

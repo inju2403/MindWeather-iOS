@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class DiaryListViewController : UIViewController {
+class DiaryListViewController: BaseViewController {
     
     @IBOutlet weak var diaryListTableView: UITableView!
     @IBOutlet weak var loadingUI: UIActivityIndicatorView!
@@ -30,8 +30,8 @@ class DiaryListViewController : UIViewController {
         // 일기 리스트에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(isUpdateDiarys),
-            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
+            selector: #selector(updateDiarys),
+            name: Notification.Name(rawValue: NOTIFICATION.API.updateDiarys),
             object:  nil
         )
         
@@ -48,7 +48,7 @@ class DiaryListViewController : UIViewController {
         super.viewWillAppear(true)
     }
     
-    @objc private func isUpdateDiarys() {
+    @objc private func updateDiarys() {
         diaryListViewModel.diarys()
     }
     

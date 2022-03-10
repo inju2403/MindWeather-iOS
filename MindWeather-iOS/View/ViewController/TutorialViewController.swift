@@ -9,7 +9,7 @@ import UIKit
 
 import FSPagerView
 
-class TutorialViewController : UIViewController, FSPagerViewDelegate, FSPagerViewDataSource {
+class TutorialViewController: UIViewController, FSPagerViewDelegate, FSPagerViewDataSource {
     
     fileprivate let tutorialImages = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "final.png"]
     

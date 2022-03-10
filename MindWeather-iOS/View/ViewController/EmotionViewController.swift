@@ -11,7 +11,7 @@ import Charts
 import RxCocoa
 import RxSwift
 
-class EmotionViewController : UIViewController {
+class EmotionViewController: BaseViewController {
     
     let emotionViewModel = EmotionViewModel()
     let disposeBag = DisposeBag()
@@ -36,8 +36,8 @@ class EmotionViewController : UIViewController {
         
         // 감정 그래프에 대한 노티피케이션 추가 - 일기 추가, 일기 수정, 일기 삭제에서 사용
         NotificationCenter.default.addObserver(
-            self, selector: #selector(isUpdateEmotions),
-            name: Notification.Name(rawValue: Constant.isUpdateDiarysNotificationName),
+            self, selector: #selector(updateEmotions),
+            name: Notification.Name(rawValue: NOTIFICATION.API.updateEmotions),
             object:  nil
         )
         
@@ -51,7 +51,7 @@ class EmotionViewController : UIViewController {
         emotionGraph.animate(yAxisDuration: 1, easingOption: .easeInOutCubic)
     }
     
-    @objc private func isUpdateEmotions() {
+    @objc private func updateEmotions() {
         emotionViewModel.emotions()
     }
     

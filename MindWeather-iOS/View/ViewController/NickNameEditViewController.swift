@@ -9,7 +9,7 @@ import UIKit
 
 import Alamofire
 
-class NickNameEditViewController: UIViewController {
+class NickNameEditViewController: BaseViewController {
     
     @IBOutlet weak var nickNameTextField: UITextField!
     

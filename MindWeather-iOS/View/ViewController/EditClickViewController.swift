@@ -7,9 +7,8 @@
 
 import UIKit
 
-class EditClickViewController : UIViewController {
-    
-    
+class EditClickViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

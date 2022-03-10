@@ -11,4 +11,5 @@ target 'MindWeather-iOS' do
   pod 'Alamofire', '~> 5.4'
   pod 'Charts'
   pod 'FSPagerView'
+  pod 'Toast-Swift', '~> 5.0.1'
 end

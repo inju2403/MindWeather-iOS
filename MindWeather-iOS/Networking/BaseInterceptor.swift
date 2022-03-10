@@ -5,6 +5,8 @@
 //  Created by 이승주 on 2021/06/20.
 //
 
+import Foundation
+
 import Alamofire
 
 class BaseInterceptor: RequestInterceptor {
@@ -19,6 +21,19 @@ class BaseInterceptor: RequestInterceptor {
     }
     
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
+        print("retry")
+        guard let statusCode = request.response?.statusCode else {
+            completion(.doNotRetry)
+            return
+        }
+
+        let statusCodeDictionary = [NOTIFICATION.API.statusCode: statusCode]
+        NotificationCenter.default.post(
+            name: NSNotification.Name(rawValue: NOTIFICATION.API.networkError),
+            object: nil,
+            userInfo: statusCodeDictionary
+        )
+
         completion(.doNotRetry)
     }
 }

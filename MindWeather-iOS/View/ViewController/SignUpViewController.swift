@@ -9,7 +9,7 @@ import UIKit
 
 import Alamofire
 
-class SignUpViewController : UIViewController, UIGestureRecognizerDelegate {
+class SignUpViewController : BaseViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!

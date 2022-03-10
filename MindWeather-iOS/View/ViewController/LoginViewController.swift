@@ -8,7 +8,7 @@ import UIKit
 
 import Alamofire
 
-class LoginViewController : UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
