@@ -36,7 +36,7 @@ class DiaryListViewModel: DiaryListViewModelType {
                 case .success(let diarys):
                     self?.diaryList.accept(diarys)
                     self?.diaryItemCnt.accept(diarys.count)
-                    self?.receiver.onNext("diarys")
+                    self?.receiver.onNext(Constant.receiver.diarys)
                     break
                 case .failure(let error):
                     print("Error: ", error)

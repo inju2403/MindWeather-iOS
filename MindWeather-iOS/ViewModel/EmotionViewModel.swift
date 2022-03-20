@@ -42,7 +42,7 @@ class EmotionViewModel: EmotionViewModelType {
                     self?.sixMonthEmotion.accept(emotions[2])
                     self?.aYearEmotion.accept(emotions[3])
                     
-                    self?.receiver.onNext("emotions")
+                    self?.receiver.onNext(Constant.receiver.emotions)
                     break
                 case .failure(let error):
                     print("Error: ", error)

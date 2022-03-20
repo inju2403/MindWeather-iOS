@@ -62,7 +62,7 @@ class DiaryListViewController: BaseViewController {
                 })
             .subscribe(
                 onNext: { [weak self] value in
-                    if value == "diarys" {
+                    if value == Constant.receiver.diarys {
                         //로딩 ui 끄기
                         self?.loadingUI.stopAnimating()
                     }

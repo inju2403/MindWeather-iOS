@@ -102,7 +102,7 @@ class DiaryDetailViewController: BaseViewController {
                 })
             .subscribe(
                 onNext: { [weak self] value in
-                    if value == "deleteDiary" {
+                    if value == Constant.receiver.deleteDiary {
                         NotificationCenter.default.post(
                             name: Notification.Name(rawValue: NOTIFICATION.API.updateDiarys),
                             object: nil

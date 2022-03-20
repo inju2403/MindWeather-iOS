@@ -40,65 +40,36 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
 
-    func addOrUpdateDiary(content: Content, diaryId: Int) {
-        service.updateDiary(content: content, diaryId: diaryId)
-            .subscribe { [weak self] event in
-                switch event {
-                case .success(_):
-                    self?.receiver.onNext("addOrUpdateDiary")
-                    break
-                case .failure(let error):
-                    print("Error: ", error)
-                    break
-                }
-            }
-    }
-    
-    func deleteDiary(diaryId: Int) {
-        service.deleteDiary(diaryId: diaryId)
-            .subscribe { [weak self] event in
-                switch event {
-                case .success(_):
-                    self?.receiver.onNext("deleteDiary")
-                    break
-                case .failure(let error):
-                    print("Error: ", error)
-                    break
-                }
-            }
-            .disposed(by: disposeBag)
-    }
-    
     func diary(diaryId: Int) {
         service.diary(diaryId: diaryId)
             .subscribe { [weak self] event in
                 switch event {
                 case .success(let diary):
                     self?.content.accept(diary.content ?? "")
-                    self?.receiver.onNext("diary")
-                    
+                    self?.receiver.onNext(Constant.receiver.diary)
+
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"
                     dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-                    
+
                     let updatedAt = diary.updated_at!
                     if let index = updatedAt.firstIndex(of: "T") {
                         let substring = updatedAt[..<index]
                         let time = String(substring)
                         let date: Date = dateFormatter.date(from: time)!
-                        
+
                         dateFormatter.dateFormat = "MMdd  eee"
                         self?.date.accept(dateFormatter.string(from: date))
-                        
+
                         dateFormatter.dateFormat = "''yy"
                         self?.year.accept(dateFormatter.string(from: date))
                     }
-                    
-                    
+
+
                     var emotions = [diary.happiness!, diary.anger!, diary.sadness!, diary.worry!, diary.neutrality!]
-                    
+
                     emotions = emotions.sorted(by: >)
-                    
+
                     if emotions[0] == emotions[1] {
                         let image = UIImage(named: "ic_unknowability")!
                         self?.weatherImage.accept(image)
@@ -129,13 +100,42 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
                     print("Error: ", error)
                     break
                 }
-                
+
+            }
+            .disposed(by: disposeBag)
+    }
+
+    func addOrUpdateDiary(content: Content, diaryId: Int) {
+        service.updateDiary(content: content, diaryId: diaryId)
+            .subscribe { [weak self] event in
+                switch event {
+                case .success(_):
+                    self?.receiver.onNext(Constant.receiver.addOrUpdateDiary)
+                    break
+                case .failure(let error):
+                    print("Error: ", error)
+                    break
+                }
+            }
+    }
+    
+    func deleteDiary(diaryId: Int) {
+        service.deleteDiary(diaryId: diaryId)
+            .subscribe { [weak self] event in
+                switch event {
+                case .success(_):
+                    self?.receiver.onNext(Constant.receiver.deleteDiary)
+                    break
+                case .failure(let error):
+                    print("Error: ", error)
+                    break
+                }
             }
             .disposed(by: disposeBag)
     }
     
     func newStateDiary() {
-        self.receiver.onNext("newStateDiary")
+        self.receiver.onNext(Constant.receiver.newStateDiary)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMdd  eee"

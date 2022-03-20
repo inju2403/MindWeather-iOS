@@ -82,7 +82,7 @@ class DiaryEditViewController: BaseViewController, UITextViewDelegate{
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] value in
-                    if value == "addOrUpdateDiary" {
+                    if value == Constant.receiver.addOrUpdateDiary {
                         //일기 작성 or 수정 후 dismiss
                         
                         self?.dateText.isHidden = false
@@ -104,7 +104,7 @@ class DiaryEditViewController: BaseViewController, UITextViewDelegate{
                         )
                         
                         self?.dismiss(animated: true, completion: nil)
-                    } else if value == "diary" {
+                    } else if value == Constant.receiver.diary {
                         //로딩 ui 끄기
                         self?.dateText.isHidden = false
                         self?.content.isHidden = false
@@ -114,7 +114,7 @@ class DiaryEditViewController: BaseViewController, UITextViewDelegate{
 
                         self?.loadingUI.stopAnimating()
                         self?.loadingText.isHidden = true
-                    } else if value == "newStateDiary" {
+                    } else if value == Constant.receiver.newStateDiary {
                         self?.content.text = " "
                         self?.setUI()
                         self?.content.text = ""

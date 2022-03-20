@@ -49,6 +49,15 @@ struct Constant {
     static func token() -> String {
         return "JWT " + UserDefaults.standard.string(forKey: "token")!
     }
+
+    enum receiver {
+        static let diarys = "diarys"
+        static let diary = "diary"
+        static let addOrUpdateDiary = "addOrUpdateDiary"
+        static let deleteDiary = "deleteDiary"
+        static let newStateDiary = "newStateDiary"
+        static let emotions = "emotions"
+    }
 }
 
 enum NOTIFICATION {
