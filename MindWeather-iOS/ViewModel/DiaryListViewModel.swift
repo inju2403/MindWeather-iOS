@@ -22,13 +22,17 @@ protocol DiaryListViewModelType {
 class DiaryListViewModel: DiaryListViewModelType {
     
     var disposeBag = DisposeBag()
-    private let service = ServiceInjector.injectDiaryService()
+    private let service: DiaryService
     
     var diaryList: BehaviorRelay<[Diary]> = BehaviorRelay(value: [])
     var diaryItemCnt = BehaviorRelay(value: -1)
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
-    
+
+    init(service: DiaryService) {
+        self.service = service
+    }
+
     func diarys() {
         service.diarys()
             .subscribe { [weak self] event in

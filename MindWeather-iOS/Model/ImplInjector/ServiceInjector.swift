@@ -7,6 +7,6 @@
 
 struct ServiceInjector {
     static func injectDiaryService() -> DiaryService {
-        return DiaryServiceImpl()
+        return DiaryServiceImpl(repo: RepositoryInjector.injectDiaryRepo())
     }
 }

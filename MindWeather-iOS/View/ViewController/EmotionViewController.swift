@@ -13,7 +13,7 @@ import RxSwift
 
 class EmotionViewController: BaseViewController {
     
-    let emotionViewModel = EmotionViewModel()
+    let emotionViewModel = EmotionViewModel(service: ServiceInjector.injectDiaryService())
     let disposeBag = DisposeBag()
     
     var aWeekEmotion = Emotion()

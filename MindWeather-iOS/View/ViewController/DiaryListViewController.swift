@@ -16,7 +16,7 @@ class DiaryListViewController: BaseViewController {
     @IBOutlet weak var loadingUI: UIActivityIndicatorView!
     @IBOutlet weak var emptyStateText: UILabel!
     
-    let diaryListViewModel = DiaryListViewModel()
+    let diaryListViewModel = DiaryListViewModel(service: ServiceInjector.injectDiaryService())
     let disposeBag = DisposeBag()
     
     var diaryList: [String] = []

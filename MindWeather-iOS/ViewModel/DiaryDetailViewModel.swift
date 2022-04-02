@@ -29,7 +29,7 @@ protocol DiaryDetailViewModelType {
 class DiaryDetailViewModel: DiaryDetailViewModelType {
     
     var disposeBag = DisposeBag()
-    private let service = ServiceInjector.injectDiaryService()
+    private let service: DiaryService
     
     var date: BehaviorRelay<String> = BehaviorRelay(value: "date")
     var emotion: BehaviorRelay<String> = BehaviorRelay(value: "emotion")
@@ -39,6 +39,10 @@ class DiaryDetailViewModel: DiaryDetailViewModelType {
     var weatherImageDescription: BehaviorRelay<String> = BehaviorRelay(value: "행복을 느낀 하루")
     
     var receiver: PublishSubject<String> = PublishSubject<String>()
+
+    init(service: DiaryService) {
+        self.service = service
+    }
 
     func diary(diaryId: Int) {
         service.diary(diaryId: diaryId)

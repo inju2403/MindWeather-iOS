@@ -14,7 +14,7 @@ class DiaryEditViewController: BaseViewController, UITextViewDelegate{
     
     var diaryId = Constant.newDiaryValue
     
-    let diaryDetailViewModel = DiaryDetailViewModel()
+    let diaryDetailViewModel = DiaryDetailViewModel(service: ServiceInjector.injectDiaryService())
     let disposeBag = DisposeBag()
     
     var willShowToken: NSObjectProtocol?
