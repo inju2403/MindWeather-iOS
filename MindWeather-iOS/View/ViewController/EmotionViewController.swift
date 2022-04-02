@@ -13,16 +13,16 @@ import RxSwift
 
 class EmotionViewController: BaseViewController {
     
-    let emotionViewModel = EmotionViewModel(service: ServiceInjector.injectDiaryService())
-    let disposeBag = DisposeBag()
+    private let emotionViewModel = EmotionViewModel(service: ServiceInjector.injectDiaryService())
+    private let disposeBag = DisposeBag()
     
-    var aWeekEmotion = Emotion()
-    var aMonthEmotion = Emotion()
-    var sixMonthEmotion = Emotion()
-    var aYearEmotion = Emotion()
+    private var aWeekEmotion = Emotion()
+    private var aMonthEmotion = Emotion()
+    private var sixMonthEmotion = Emotion()
+    private var aYearEmotion = Emotion()
     
-    var emotionNames: [String] = []
-    var emotionsRate: [Double] = []
+    private var emotionNames: [String] = []
+    private var emotionsRate: [Double] = []
 
     @IBOutlet weak var aYearButton: UIButton!
     @IBOutlet weak var sixMonthButton: UIButton!

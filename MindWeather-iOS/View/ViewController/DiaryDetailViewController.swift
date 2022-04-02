@@ -14,8 +14,8 @@ class DiaryDetailViewController: BaseViewController {
     
     var diaryId = 0
     
-    let diaryDetailViewModel = DiaryDetailViewModel(service: ServiceInjector.injectDiaryService())
-    let disposeBag = DisposeBag()
+    private let diaryDetailViewModel = DiaryDetailViewModel(service: ServiceInjector.injectDiaryService())
+    private let disposeBag = DisposeBag()
     
     @IBOutlet weak var dateText: UILabel!
     @IBOutlet weak var content: UILabel!

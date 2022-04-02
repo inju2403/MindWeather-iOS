@@ -16,13 +16,13 @@ class DiaryListViewController: BaseViewController {
     @IBOutlet weak var loadingUI: UIActivityIndicatorView!
     @IBOutlet weak var emptyStateText: UILabel!
     
-    let diaryListViewModel = DiaryListViewModel(service: ServiceInjector.injectDiaryService())
-    let disposeBag = DisposeBag()
+    private let diaryListViewModel = DiaryListViewModel(service: ServiceInjector.injectDiaryService())
+    private let disposeBag = DisposeBag()
     
-    var diaryList: [String] = []
-    var diaryListSize: Int = 0
+    private var diaryList: [String] = []
+    private var diaryListSize: Int = 0
     
-    var selectedDiaryId: Int = 0
+    private var selectedDiaryId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

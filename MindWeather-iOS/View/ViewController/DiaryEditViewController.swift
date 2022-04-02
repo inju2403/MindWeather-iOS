@@ -14,11 +14,11 @@ class DiaryEditViewController: BaseViewController, UITextViewDelegate{
     
     var diaryId = Constant.newDiaryValue
     
-    let diaryDetailViewModel = DiaryDetailViewModel(service: ServiceInjector.injectDiaryService())
-    let disposeBag = DisposeBag()
+    private let diaryDetailViewModel = DiaryDetailViewModel(service: ServiceInjector.injectDiaryService())
+    private let disposeBag = DisposeBag()
     
-    var willShowToken: NSObjectProtocol?
-    var willHideToken: NSObjectProtocol?
+    private var willShowToken: NSObjectProtocol?
+    private var willHideToken: NSObjectProtocol?
     
     deinit {
         if let token = willShowToken {
