@@ -13,7 +13,7 @@ import RxSwift
 class DiaryRepoImpl: DiaryRepo {
 
     func diarys() -> Single<[Diary]> {
-        return Single<[Diary]>.create { [weak self] single in
+        return Single<[Diary]>.create { single in
             NetworkManager.shared.requestModel(
                 type: [Diary].self,
                 router: AlamofireRouter.diarys,
@@ -25,7 +25,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func diary(diaryId: Int) -> Single<Diary> {
-        return Single<Diary>.create { [weak self] single in
+        return Single<Diary>.create { single in
             NetworkManager.shared.requestModel(
                 type: Diary.self,
                 router: AlamofireRouter.diary(diaryId: diaryId),
@@ -37,7 +37,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func updateDiary(content: Content, diaryId: Int) -> Single<Diary> {
-        return Single<Diary>.create { [weak self] single in
+        return Single<Diary>.create { single in
             NetworkManager.shared.requestModel(
                 type: Diary.self,
                 router: AlamofireRouter.updateDiary(diaryId: diaryId, content: content),
@@ -49,7 +49,7 @@ class DiaryRepoImpl: DiaryRepo {
     }
     
     func deleteDiary(diaryId: Int) -> Single<Bool> {
-        return Single<Bool>.create { [weak self] single in
+        return Single<Bool>.create { single in
             NetworkManager.shared.requestEmptyResponse(
                 router: AlamofireRouter.deleteDiary(diaryId: diaryId),
                 single: single
