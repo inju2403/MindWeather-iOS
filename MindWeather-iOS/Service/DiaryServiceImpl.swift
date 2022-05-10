@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 class DiaryServiceImpl: DiaryService {
-    
+
+    var disposeBag = DisposeBag()
     private let repo: DiaryRepo
 
     init(repo: DiaryRepo) {
@@ -167,6 +168,7 @@ class DiaryServiceImpl: DiaryService {
                     }
                     
                 }
+                .disposed(by: disposeBag)
             return Disposables.create()
         }
     }
